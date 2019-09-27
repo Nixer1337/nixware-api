@@ -80,6 +80,7 @@ Tables
   entitylist
       int GetHighestEntityIndex()
       CPlayer* GetPlayerByIndex(int index)
+
 ```
 
 Classes
@@ -127,25 +128,29 @@ Classes
   {
       int command_number
       int tick_count
-      Vector aimdirection;
-      float forwardmove;
-      float sidemove;
-      float upmove;
-      int buttons;
-      char impulse;
-      int weaponselect;
-      int weaponsubtype;
-      int random_seed;
-      short mousedx;
-      short mousedy;
-      bool hasbeenpredicted; 
+      Vector aimdirection
+      float forwardmove
+      float sidemove
+      float upmove
+      int buttons
+      char impulse
+      int weaponselect
+      int weaponsubtype
+      int random_seed
+      short mousedx
+      short mousedy
+      bool hasbeenpredicted
   }
   
   class QAngle
   {
-      float pitch;
-      float yaw;
-      float roll;
+      float pitch
+      float yaw
+      float roll
+      float Length()
+      float LengthSqr()
+      bool IsZero(float tolerance = 0.01f)
+      float Normalize()
   }
 
   class Vector
