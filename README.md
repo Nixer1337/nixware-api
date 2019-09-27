@@ -100,6 +100,9 @@ Classes
       int GetMoveType()
       Vector GetEyePos()
       string GetName()
+      QAngle GetAngles()
+      bool IsLocalPlayer()
+      bool IsTeammate()
   }
 
   class ConVar
