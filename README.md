@@ -98,7 +98,7 @@ Classes
       bool IsFlashed()
       int GetMoveType()
       Vector GetEyePos()
-      char* GetName()
+      string GetName()
   }
 
   class ConVar
