@@ -81,6 +81,10 @@ Tables
       int GetHighestEntityIndex()
       CPlayer* GetPlayerByIndex(int index)
 
+  netchannel
+      void SetTimeout(float seconds, bool forceExact = false)
+      void RequestFile(string filename, bool isReplayDemo)
+
 ```
 
 Classes
