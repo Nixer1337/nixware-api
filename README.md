@@ -69,7 +69,7 @@ Tables
       bool IsKeyPressed(int key)
       int RandomInt(int min, int max)
       float RandomFloat(float min, float max)
-      float SetClantag(string tag)
+      void SetClantag(string tag)
       void LoadScript(string script) 
       void UnloadScript(string script)
       void LoadConfig(string script) 
