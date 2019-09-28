@@ -20,17 +20,17 @@ Tables
   surface
       int GetCursurPosX()
       int GetCursurPosY()
-      int SetupFont(string windowsFontName, int tall, int weight, int blur, int scanlines, int flags)
+      font SetupFont(string windowsFontName, int tall, int weight, int blur, int scanlines, int flags)
       void DrawFilledRect(int x, int y, int x2, int y2)
       void DrawOutlinedRect(int x, int y, int x2, int y2)
       void DrawSetColor(int r, int g, int b, int a)
       int CreateNewTextureID()
       void SetTextureRGBA(int id, const unsigned char* rgba, int w, int h)
-      int GetTextWidth(unsigned long font, const wchar_t* text)
-      int GetTextHeight(unsigned long font, const wchar_t* text)
+      int GetTextWidth(font, const wchar_t* text)
+      int GetTextHeight(font, const wchar_t* text)
       void DrawLine(int x, int y, int x2, int y2)
       void DrawOutlinedCircle(int x, int y, int radius, int segments)
-      void DrawSetTextFont(int font)
+      void DrawSetTextFont(font)
       void DrawSetTextColor(int r, int g, int b, int a)
       void DrawSetTextPos(int x, int y)
       void DrawPrintText(string str)
@@ -71,7 +71,7 @@ Tables
       float RandomFloat(float min, float max)
       float SetClantag(string tag)
       void LoadScript(string script) 
-      void UnoadScript(string script)
+      void UnloadScript(string script)
       void LoadConfig(string script) 
       ConVar* GetConvar(string var) 
       void SetSendPacket(bool v) 
@@ -162,9 +162,9 @@ Classes
 
   class Vector
   {
-      float x;
-      float y;
-      float z;
+      float x
+      float y
+      float z
 
       float Length()
       float LengthSqr()
