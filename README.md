@@ -15,75 +15,76 @@ Tables
 --------------------------
 ```lua
   utilities
-      Vector WorldToScreen(Vector in)
+    Vector WorldToScreen(Vector in)
 
   surface
-      int GetCursurPosX()
-      int GetCursurPosY()
-      font SetupFont(string windowsFontName, int tall, int weight, int blur, int scanlines, int flags)
-      void DrawFilledRect(int x, int y, int x2, int y2)
-      void DrawOutlinedRect(int x, int y, int x2, int y2)
-      void DrawSetColor(int r, int g, int b, int a)
-      int CreateNewTextureID()
-      void SetTextureRGBA(int id, const unsigned char* rgba, int w, int h)
-      int GetTextWidth(font, const wchar_t* text)
-      int GetTextHeight(font, const wchar_t* text)
-      void DrawLine(int x, int y, int x2, int y2)
-      void DrawOutlinedCircle(int x, int y, int radius, int segments)
-      void DrawSetTextFont(font)
-      void DrawSetTextColor(int r, int g, int b, int a)
-      void DrawSetTextPos(int x, int y)
-      void DrawPrintText(string str)
-      void DrawTexturedRect(int x, int y, int x2, int y2)
+    int GetCursurPosX()
+    int GetCursurPosY()
+    font SetupFont(string windowsFontName, int tall, int weight, int blur, int scanlines, int flags)
+    void DrawFilledRect(int x, int y, int x2, int y2)
+    void DrawOutlinedRect(int x, int y, int x2, int y2)
+    void DrawSetColor(int r, int g, int b, int a)
+    int CreateNewTextureID()
+    void SetTextureRGBA(int id, const unsigned char* rgba, int w, int h)
+    int GetTextWidth(font, const wchar_t* text)
+    int GetTextHeight(font, const wchar_t* text)
+    void DrawLine(int x, int y, int x2, int y2)
+    void DrawOutlinedCircle(int x, int y, int radius, int segments)
+    void DrawSetTextFont(font)
+    void DrawSetTextColor(int r, int g, int b, int a)
+    void DrawSetTextPos(int x, int y)
+    void DrawPrintText(string str)
+    void DrawTexturedRect(int x, int y, int x2, int y2)
 
   engine 
-      int GetLocalPlayer()
-      int GetScreenWidth()
-      int GetScreenHeight()
-      bool IsConnected()
-      bool IsInGame()
-      void ExecuteClientCmd(string cmd)
-      void SetViewAngles(QAngle angle)
-      QAngle GetViewAngles()
-      int GetPlayerForUserID(int userID)
+    int GetLocalPlayer()
+    int GetScreenWidth()
+    int GetScreenHeight()
+    bool IsConnected()
+    bool IsInGame()
+    void ExecuteClientCmd(string cmd)
+    void SetViewAngles(QAngle angle)
+    QAngle GetViewAngles()
+    int GetPlayerForUserID(int userID)
 
   globalvars
-      float realtime()
-      int framecount()
-      float absoluteframetime()
-      float absoluteframestarttimestddev() 
-      float curtime()
-      float frametime()
-      int maxClients()
-      int tickcount()
-      float interval_per_tick() 
-      float interpolation_amount()
-      int simTicksThisFrame()
-      int network_protocol()
+    float realtime()
+    int framecount()
+    float absoluteframetime()
+    float absoluteframestarttimestddev() 
+    float curtime()
+    float frametime()
+    int maxClients()
+    int tickcount()
+    float interval_per_tick() 
+    float interpolation_amount()
+    int simTicksThisFrame()
+    int network_protocol()
 
   client
-      void RegisterCallback(string name, function)
-      void Notification(string msg)
-      string GetUsername()
-      bool IsValveDS()
-      bool IsKeyPressed(int key)
-      int RandomInt(int min, int max)
-      float RandomFloat(float min, float max)
-      void SetClantag(string tag)
-      void LoadScript(string script) 
-      void UnloadScript(string script)
-      void LoadConfig(string script) 
-      ConVar* GetConvar(string var) 
-      void SetSendPacket(bool v) 
-      bool GetSendPacket() 
+    void RegisterCallback(string name, function)
+    void Notification(string msg)
+    string GetUsername()
+    bool IsValveDS()
+    bool IsKeyPressed(int key)
+    int RandomInt(int min, int max)
+    float RandomFloat(float min, float max)
+    void SetClantag(string tag)
+    void LoadScript(string script) 
+    void UnloadScript(string script)
+    void LoadConfig(string script) 
+    ConVar* GetConvar(string var) 
+    void SetSendPacket(bool v) 
+    bool GetSendPacket() 
 
   entitylist
-      int GetHighestEntityIndex()
-      CPlayer* GetPlayerByIndex(int index)
+    int GetHighestEntityIndex()
+    CPlayer* GetPlayerByIndex(int index)
+    CWeapon* GetWeaponByIndex(int index)
 
   netchannel
-      void SetTimeout(float seconds, bool forceExact = false)
-      void RequestFile(string filename, bool isReplayDemo)
+    void SetTimeout(float seconds, bool forceExact = false)
+    void RequestFile(string filename, bool isReplayDemo)
 
 ```
 
@@ -92,92 +93,112 @@ Classes
 ```lua
   class CPlayer
   {
-      int GetIndex()
-      bool IsPlayer()
-      bool IsValidPtr()
-      bool IsDormant()
-      int GetHealth()
-      Vector GetAbsOrigin()
-      Vector GetOrigin()
-      int GetMoney()
-      bool IsFlashed()
-      int GetMoveType()
-      Vector GetEyePos()
-      string GetName()
-      QAngle GetAngles()
-      int GetTeamNum()
-      bool IsLocalPlayer()
-      bool IsTeammate()
+    int GetIndex()
+    bool IsPlayer()
+    bool IsValidPtr()
+    bool IsDormant()
+    int GetHealth()
+    Vector GetAbsOrigin()
+    Vector GetOrigin()
+    int GetMoney()
+    bool IsFlashed()
+    int GetMoveType()
+    Vector GetEyePos()
+    string GetName()
+    QAngle GetAngles()
+    int GetTeamNum()
+    bool IsLocalPlayer()
+    bool IsTeammate()
+    CWeapon* GetWeapon()
+    bool IsScoped()
+  }
+
+  class CWeapon
+  {
+    float GetSpread()
+    float GetInaccuracy()
+    bool IsValidPtr()
+    Vector GetAbsOrigin()
+    Vector GetOrigin()
+    string GetName()
+    int GetZoomLevel()
+    bool IsKnife()
+    bool IsGrenade()
+    bool IsZeus()
+    bool IsReloading()
+    float GetNextPrimaryAttack()
+    float GetNextSecondaryAttack()
+    short GetIndex()
   }
 
   class ConVar
   {
-      bool GetBool()
-      int GetInt()
-      float GetFloat()
-      string GetString()
+    bool GetBool()
+    int GetInt()
+    float GetFloat()
+    string GetString()
 
-      void SetBool(bool v)
-      void SetInt(int v)
-      void SetFloat(float v)
-      void SetString(string v)
+    void SetBool(bool v)
+    void SetInt(int v)
+    void SetFloat(float v)
+    void SetString(string v)
   }
 
   class IGameEvent
   {
-      string GetName()
-      bool GetBool()
-      int GetInt()
-      float GetFloat()
-      string GetString()
+    string GetName()
+    bool GetBool()
+    int GetInt()
+    float GetFloat()
+    string GetString()
   }
 
   class CUserCmd
   {
-      int command_number
-      int tick_count
-      Vector aimdirection
-      float forwardmove
-      float sidemove
-      float upmove
-      int buttons
-      char impulse
-      int weaponselect
-      int weaponsubtype
-      int random_seed
-      short mousedx
-      short mousedy
-      bool hasbeenpredicted
+    int command_number
+    int tick_count
+    Vector aimdirection
+    float forwardmove
+    float sidemove
+    float upmove
+    int buttons
+    char impulse
+    int weaponselect
+    int weaponsubtype
+    int random_seed
+    short mousedx
+    short mousedy
+    bool hasbeenpredicted
   }
   
   class QAngle
   {
-      float pitch
-      float yaw
-      float roll
-      float Length()
-      float LengthSqr()
-      bool IsZero(float tolerance = 0.01f)
-      float Normalize()
+    float pitch
+    float yaw
+    float roll
+    float Length()
+    float LengthSqr()
+    bool IsZero(float tolerance = 0.01f)
+    float Normalize()
   }
 
   class Vector
   {
-      float x
-      float y
-      float z
+    float x
+    float y
+    float z
 
-      float Length()
-      float LengthSqr()
-      float Length2D()
-      float Length2DSqr()
-      bool IsZero(float tolerance = 0.01f)
-      bool IsValid()
-      void Zero()
-      float DistTo(const Vector &vOther)
-      float DistToSqr(const Vector &vOther)
-      Vector Cross(const Vector& vOther)
-      float Normalize()
+    float Length()
+    float LengthSqr()
+    float Length2D()
+    float Length2DSqr()
+    bool IsZero(float tolerance = 0.01f)
+    bool IsValid()
+    void Zero()
+    float DistTo(const Vector &vOther)
+    float DistToSqr(const Vector &vOther)
+    Vector Cross(const Vector& vOther)
+    float Normalize()
   }
 ```
 Example of using
