@@ -105,6 +105,7 @@ Classes
       Vector GetEyePos()
       string GetName()
       QAngle GetAngles()
+      int GetTeamNum()
       bool IsLocalPlayer()
       bool IsTeammate()
   }
