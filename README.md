@@ -6,17 +6,14 @@ Nixware - Counter Strike: Global Offensive
 Handlers
 --------------------------
 ```lua
-      createmovement(CUserCmd* cmd)
-      painttraverse()
-      firegameevent(IGameEvent* event)
+      create_movement(CUserCmd* cmd)
+      paint_traverse()
+      fire_game_event(IGameEvent* event)
 ```
 
 Tables
 --------------------------
 ```lua
-  utilities
-    Vector WorldToScreen(Vector in)
-
   surface
     int GetCursurPosX()
     int GetCursurPosY()
@@ -26,8 +23,7 @@ Tables
     void DrawSetColor(int r, int g, int b, int a)
     int CreateNewTextureID()
     void SetTextureRGBA(int id, const unsigned char* rgba, int w, int h)
-    int GetTextWidth(font, const wchar_t* text)
-    int GetTextHeight(font, const wchar_t* text)
+    int, int GetTextSize(font, const wchar_t* text) -- width, height
     void DrawLine(int x, int y, int x2, int y2)
     void DrawOutlinedCircle(int x, int y, int radius, int segments)
     void DrawSetTextFont(font)
@@ -37,15 +33,14 @@ Tables
     void DrawTexturedRect(int x, int y, int x2, int y2)
 
   engine 
+    int GetPlayerIndexByUserID(int userID)
     int GetLocalPlayer()
-    int GetScreenWidth()
-    int GetScreenHeight()
+    int, int GetScreenSize() -- width, height
+    QAngle GetViewAngles()
+    void SetViewAngles(QAngle angle)
     bool IsConnected()
     bool IsInGame()
     void ExecuteClientCmd(string cmd)
-    void SetViewAngles(QAngle angle)
-    QAngle GetViewAngles()
-    int GetPlayerForUserID(int userID)
 
   globalvars
     float realtime()
@@ -62,25 +57,35 @@ Tables
     int network_protocol()
 
   client
-    void RegisterCallback(string name, function)
-    void Notification(string msg)
-    string GetUsername()
     bool IsValveDS()
     bool IsKeyPressed(int key)
+    bool IsVisible(Vector pos)
+    int GetTimeStamp()
+    int, int, int GetSystemTime() -- hours, minutes, seconds
+    float GetFOV(QAngle viewAngle, QAngle aimAngle)
+    float GetLatency()
+    string GetUsername()
+    ConVar* GetConvar(string var) 
+    bool GetSendPacket() 
+    void SetSendPacket(bool v) 
+    void SetClantag(string tag)
+    void RegisterCallback(string name, function)
+    void Notification(string msg)
     int RandomInt(int min, int max)
     float RandomFloat(float min, float max)
-    void SetClantag(string tag)
     void LoadScript(string script) 
     void UnloadScript(string script)
     void LoadConfig(string script) 
-    ConVar* GetConvar(string var) 
-    void SetSendPacket(bool v) 
-    bool GetSendPacket() 
+    Vector WorldToScreen(Vector in)
+    QAngle CalcAngle(Vector src, Vector dst)
+    DWORD FindIDAPattern(string module, string pattern, int offset)
+    DWORD FindCodePattern(string module, string pattern, string mask, int offset)
 
   entitylist
-    int GetHighestEntityIndex()
     CPlayer* GetPlayerByIndex(int index)
     CWeapon* GetWeaponByIndex(int index)
+    CEntity* GetEntityByIndex(int index)
+    int GetHighestEntityIndex()
 
   netchannel
     void SetTimeout(float seconds, bool forceExact = false)
@@ -93,42 +98,63 @@ Classes
 ```lua
   class CPlayer
   {
-    int GetIndex()
-    bool IsPlayer()
     bool IsValidPtr()
+    bool IsPlayer()
     bool IsDormant()
+    bool IsFlashed()
+    bool IsLocalPlayer()
+    bool IsTeammate()
+    bool IsScoped()
+    int GetIndex()
     int GetHealth()
     Vector GetAbsOrigin()
     Vector GetOrigin()
     int GetMoney()
-    bool IsFlashed()
     int GetMoveType()
     Vector GetEyePos()
     string GetName()
     QAngle GetAngles()
     int GetTeamNum()
-    bool IsLocalPlayer()
-    bool IsTeammate()
     CWeapon* GetWeapon()
-    bool IsScoped()
+    RECT GetBoundingBox()
+    RECT GetStaticBox()
+    Vector GetHitboxPos(int hitbox)
+    __int64 GetSteamID64()
+    prop GetProp()
+    void SetProp()
   }
 
   class CWeapon
   {
-    float GetSpread()
-    float GetInaccuracy()
     bool IsValidPtr()
-    Vector GetAbsOrigin()
-    Vector GetOrigin()
-    string GetName()
-    int GetZoomLevel()
     bool IsKnife()
     bool IsGrenade()
     bool IsZeus()
     bool IsReloading()
+    int GetIndex()
+    float GetSpread()
+    float GetInaccuracy()
+    Vector GetAbsOrigin()
+    Vector GetOrigin()
+    string GetName()
+    int GetZoomLevel()
     float GetNextPrimaryAttack()
     float GetNextSecondaryAttack()
     short GetIndex()
+    RECT GetBoundingBox()
+    RECT GetStaticBox()
+    prop GetProp()
+    void SetProp()
+  }
+
+  class CEntity
+  {
+    bool IsValidPtr()
+    int GetIndex()
+    RECT GetBoundingBox()
+    RECT GetStaticBox()
+    prop GetProp()
+    void SetProp()
   }
 
   class ConVar
@@ -200,27 +226,36 @@ Classes
     Vector Cross(const Vector& vOther)
     float Normalize()
   }
+
+  class RECT
+  {
+    long left
+    long top
+    long right
+    long bottom
+  }
 ```
 Example of using
 ------------------
 ```lua
---- simple esp
+-- simple esp boxes
 local function on_painttraverse()
     for i = 0, entitylist.GetHighestEntityIndex(), 1 do
         local entity = entitylist.GetPlayerByIndex(i)
-        if entity:IsValidPtr() then
-            if entity:IsPlayer() then
-                if entity:IsDormant() == false then
-                    if entity:GetHealth() > 0 then
-                        local pos_2d = utilities.WorldToScreen(entity:GetAbsOrigin())
-                        surface.DrawSetColor(255, 0, 0, 255)
-                        surface.DrawFilledRect(pos_2d.x, pos_2d.y, pos_2d.x + 10, pos_2d.y + 10)
-                    end
+        if entity:IsValidPtr() and entity:IsPlayer() and entity:IsDormant() == false and entity:GetHealth() > 0 then
+            if entity:IsLocalPlayer() == false and entity:IsTeammate() == false then
+                local rect = entity:GetBoundingBox()
+                if client.IsVisible(entity:GetEyePos()) then
+                    surface.DrawSetColor(255, 0, 0, 255)
+                else
+                    surface.DrawSetColor(0, 0, 0, 255)
                 end
+                surface.DrawOutlinedRect(rect.left, rect.top, rect.right, rect.bottom)
             end
         end
     end
 end
-client.RegisterCallback("painttraverse", on_painttraverse)
+
+client.RegisterCallback("paint_traverse", on_painttraverse)
 ```
-![alt text](https://i.imgur.com/sKLpmbC.png)
+![alt text](https://i.imgur.com/GvP6QXh.png)

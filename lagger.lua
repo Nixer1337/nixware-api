@@ -25,5 +25,5 @@ local function draw_lagger()
     end
 end
 
-client.RegisterCallback("createmovement", lagger)
-client.RegisterCallback("painttraverse", draw_lagger)
+client.RegisterCallback("create_movement", lagger)
+client.RegisterCallback("paint_traverse", draw_lagger)

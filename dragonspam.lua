@@ -1,7 +1,7 @@
 local function event_listener(event)
     if event:GetName() == "player_death" then
-        local attacker = engine.GetPlayerForUserID(event:GetInt("attacker"))
-        local dead = engine.GetPlayerForUserID(event:GetInt("userid"))
+        local attacker = engine.GetPlayerIndexByUserID(event:GetInt("attacker"))
+        local dead = engine.GetPlayerIndexByUserID(event:GetInt("userid"))
         local me = engine.GetLocalPlayer()
 
         if attacker == me and dead ~= me then
@@ -11,4 +11,4 @@ local function event_listener(event)
     end
 end
 
-client.RegisterCallback("firegameevent", event_listener)
+client.RegisterCallback("fire_game_event", event_listener)
