@@ -242,8 +242,8 @@ Example of using
 local function on_painttraverse()
     for i = 0, entitylist.GetHighestEntityIndex(), 1 do
         local entity = entitylist.GetPlayerByIndex(i)
-        if entity:IsValidPtr() and entity:IsPlayer() and entity:IsDormant() == false and entity:GetHealth() > 0 then
-            if entity:IsLocalPlayer() == false and entity:IsTeammate() == false then
+        if entity:IsValidPtr() and entity:IsPlayer() and entity:IsDormant() == false then
+            if entity:GetHealth() > 0 and entity:IsLocalPlayer() == false and entity:IsTeammate() == false then
                 local rect = entity:GetBoundingBox()
                 if client.IsVisible(entity:GetEyePos()) then
                     surface.DrawSetColor(255, 0, 0, 255)
