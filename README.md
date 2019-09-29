@@ -15,8 +15,7 @@ Tables
 --------------------------
 ```lua
   surface
-    int GetCursurPosX()
-    int GetCursurPosY()
+    int, int GetCursurPos() -- x, y
     font SetupFont(string windowsFontName, int tall, int weight, int blur, int scanlines, int flags)
     void DrawFilledRect(int x, int y, int x2, int y2)
     void DrawOutlinedRect(int x, int y, int x2, int y2)
@@ -69,6 +68,7 @@ Tables
     bool GetSendPacket() 
     void SetSendPacket(bool v) 
     void SetClantag(string tag)
+    void SetName(string name)
     void RegisterCallback(string name, function)
     void Notification(string msg)
     int RandomInt(int min, int max)
