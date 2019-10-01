@@ -3,6 +3,34 @@ Nixware - Counter Strike: Global Offensive
 
 ## API For Lua Scripts
 
+Libraries
+```lua
+		base,
+		-- require and other package functions
+		package,
+		-- coroutine functions and utilities
+		coroutine,
+		-- string library
+		string,
+		-- functionality from the OS
+		os,
+		-- all things math
+		math,
+		-- the table manipulator and observer functions
+		table,
+		-- the bit library: different based on which you're using
+		bit32,
+		-- input/output library
+		io,
+		-- LuaJIT only
+		ffi,
+		-- LuaJIT only
+		jit,
+		-- library for handling utf8
+		utf8
+
+```
+
 Handlers
 --------------------------
 ```lua
@@ -15,9 +43,10 @@ Tables
 --------------------------
 ```lua
   surface
-    int, int GetCursurPos() -- x, y
+    int, int GetCursorPos() -- x, y
     font SetupFont(string windowsFontName, int tall, int weight, int blur, int scanlines, int flags)
     void DrawFilledRect(int x, int y, int x2, int y2)
+    void DrawFilledRectFade(int x0, int y0, int x1, int y1, unsigned int alpha0, unsigned int alpha1, bool horizontal)
     void DrawOutlinedRect(int x, int y, int x2, int y2)
     void DrawSetColor(int r, int g, int b, int a)
     int CreateNewTextureID()
@@ -32,6 +61,7 @@ Tables
     void DrawTexturedRect(int x, int y, int x2, int y2)
 
   engine 
+    string GetLevelNameShort()
     int GetPlayerIndexByUserID(int userID)
     int GetLocalPlayer()
     int, int GetScreenSize() -- width, height
@@ -40,6 +70,12 @@ Tables
     bool IsConnected()
     bool IsInGame()
     void ExecuteClientCmd(string cmd)
+
+  clientstate 
+    void ForceFullUpdate()
+    int chokedcommands()
+    QAngle viewangles()
+    int oldtickcount()
 
   globalvars
     float realtime()
@@ -58,7 +94,7 @@ Tables
   client
     bool IsValveDS()
     bool IsKeyPressed(int key)
-    bool IsVisible(Vector pos)
+    bool IsVisible(Vector pos, CPlayer* player)
     int GetTimeStamp()
     int, int, int GetSystemTime() -- hours, minutes, seconds
     float GetFOV(QAngle viewAngle, QAngle aimAngle)
@@ -120,7 +156,10 @@ Classes
     RECT GetStaticBox()
     Vector GetHitboxPos(int hitbox)
     __int64 GetSteamID64()
+    int GetDormantAlpha()
     prop GetProp()
+    Vector GetAbsVelocity()
+    Vector GetVelocity()
     void SetProp()
   }
 
