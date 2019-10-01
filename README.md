@@ -37,6 +37,7 @@ Handlers
       create_movement(CUserCmd* cmd)
       paint_traverse()
       fire_game_event(IGameEvent* event)
+      esp_loop(CPlayer* player)
 ```
 
 Tables
