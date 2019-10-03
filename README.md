@@ -43,6 +43,18 @@ Handlers
 Tables
 --------------------------
 ```lua
+
+  ui
+    void Checkbox(string name, string variable, bool default_value)
+    void SliderInt(string name, string variable, int min, int max, int default_value)
+    void SliderFloat(string name, string variable, float min, float max, float default_value)
+    bool GetBool(string var)
+    int GetInt(string var)
+    float GetFloat(string var)
+    void SetBool(string var, bool v)
+    void SetInt(string var, int v)
+    void SetFloat(string var, float v)
+
   surface
     int, int GetCursorPos() -- x, y
     font SetupFont(string windowsFontName, int tall, int weight, int blur, int scanlines, int flags)
