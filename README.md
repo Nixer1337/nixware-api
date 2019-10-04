@@ -170,10 +170,24 @@ Classes
     Vector GetHitboxPos(int hitbox)
     __int64 GetSteamID64()
     int GetDormantAlpha()
-    prop GetProp()
     Vector GetAbsVelocity()
     Vector GetVelocity()
-    void SetProp()
+
+    bool GetPropBool(string prop);
+    int GetPropInt(string prop);
+    float GetPropFloat(string prop);
+    double GetPropDouble(string prop);
+    short GetPropShort(string prop);
+    Vector GetPropVector(string prop);
+    QAngle GetPropAngle(string prop);
+
+    void SetPropInt(string prop, int i);
+    void SetPropShort(string prop, short i);
+    void SetPropAngle(string prop, QAngle ang);
+    void SetPropDouble(string prop, double i);
+    void SetPropBool(string prop, bool i);
+    void SetPropFloat(string prop, float i);
+    void SetPropVector(string prop, Vector i);
   }
 
   class CWeapon
@@ -195,8 +209,22 @@ Classes
     short GetIndex()
     RECT GetBoundingBox()
     RECT GetStaticBox()
-    prop GetProp()
-    void SetProp()
+
+    bool GetPropBool(string prop);
+    int GetPropInt(string prop);
+    float GetPropFloat(string prop);
+    double GetPropDouble(string prop);
+    short GetPropShort(string prop);
+    Vector GetPropVector(string prop);
+    QAngle GetPropAngle(string prop);
+
+    void SetPropInt(string prop, int i);
+    void SetPropShort(string prop, short i);
+    void SetPropAngle(string prop, QAngle ang);
+    void SetPropDouble(string prop, double i);
+    void SetPropBool(string prop, bool i);
+    void SetPropFloat(string prop, float i);
+    void SetPropVector(string prop, Vector i);
   }
 
   class CEntity
@@ -205,8 +233,22 @@ Classes
     int GetIndex()
     RECT GetBoundingBox()
     RECT GetStaticBox()
-    prop GetProp()
-    void SetProp()
+
+    bool GetPropBool(string prop);
+    int GetPropInt(string prop);
+    float GetPropFloat(string prop);
+    double GetPropDouble(string prop);
+    short GetPropShort(string prop);
+    Vector GetPropVector(string prop);
+    QAngle GetPropAngle(string prop);
+
+    void SetPropInt(string prop, int i);
+    void SetPropShort(string prop, short i);
+    void SetPropAngle(string prop, QAngle ang);
+    void SetPropDouble(string prop, double i);
+    void SetPropBool(string prop, bool i);
+    void SetPropFloat(string prop, float i);
+    void SetPropVector(string prop, Vector i);
   }
 
   class ConVar
