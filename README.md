@@ -206,7 +206,7 @@ Classes
     int GetZoomLevel()
     float GetNextPrimaryAttack()
     float GetNextSecondaryAttack()
-    short GetIndex()
+    short GetItemDefinitionIndex()
     RECT GetBoundingBox()
     RECT GetStaticBox()
 
