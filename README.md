@@ -48,6 +48,8 @@ Tables
     void Checkbox(string name, string variable, bool default_value)
     void SliderInt(string name, string variable, int min, int max, int default_value)
     void SliderFloat(string name, string variable, float min, float max, float default_value)
+    void KeyBind(string name, string variable, float min)
+
     bool GetBool(string var)
     int GetInt(string var)
     float GetFloat(string var)
