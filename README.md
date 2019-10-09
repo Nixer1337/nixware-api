@@ -167,6 +167,8 @@ Classes
     int GetDormantAlpha()
     Vector GetAbsVelocity()
     Vector GetVelocity()
+    float GetSimulationTime()
+    float GetOldSimulationTime()
 
     bool GetPropBool(string prop);
     int GetPropInt(string prop);
