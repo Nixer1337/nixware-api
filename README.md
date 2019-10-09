@@ -48,7 +48,7 @@ Tables
     void Checkbox(string name, string variable, bool default_value)
     void SliderInt(string name, string variable, int min, int max, int default_value)
     void SliderFloat(string name, string variable, float min, float max, float default_value)
-    void KeyBind(string name, string variable, float min)
+    void KeyBind(string name, string variable)
 
     bool GetBool(string var)
     int GetInt(string var)
@@ -64,16 +64,13 @@ Tables
     void DrawFilledRectFade(int x0, int y0, int x1, int y1, unsigned int alpha0, unsigned int alpha1, bool horizontal)
     void DrawOutlinedRect(int x, int y, int x2, int y2)
     void DrawSetColor(int r, int g, int b, int a)
-    int CreateNewTextureID()
-    void SetTextureRGBA(int id, const unsigned char* rgba, int w, int h)
-    int, int GetTextSize(font, const wchar_t* text) -- width, height
+    int, int GetTextSize(font, string text) -- width, height
     void DrawLine(int x, int y, int x2, int y2)
     void DrawOutlinedCircle(int x, int y, int radius, int segments)
     void DrawSetTextFont(font)
     void DrawSetTextColor(int r, int g, int b, int a)
     void DrawSetTextPos(int x, int y)
     void DrawPrintText(string str)
-    void DrawTexturedRect(int x, int y, int x2, int y2)
 
   engine 
     string GetLevelNameShort()
@@ -89,8 +86,6 @@ Tables
   clientstate 
     void ForceFullUpdate()
     int chokedcommands()
-    QAngle viewangles()
-    int oldtickcount()
 
   globalvars
     float realtime()
@@ -103,8 +98,6 @@ Tables
     int tickcount()
     float interval_per_tick() 
     float interpolation_amount()
-    int simTicksThisFrame()
-    int network_protocol()
 
   client
     bool IsValveDS()
@@ -331,27 +324,509 @@ Classes
     long bottom
   }
 ```
-Example of using
-------------------
-```lua
--- simple esp boxes
-local function on_painttraverse()
-    for i = 0, entitylist.GetHighestEntityIndex(), 1 do
-        local entity = entitylist.GetPlayerByIndex(i)
-        if entity:IsValidPtr() and entity:IsPlayer() and entity:IsDormant() == false and entity:GetHealth() > 0 then
-            if entity:IsLocalPlayer() == false and entity:IsTeammate() == false then
-                local rect = entity:GetBoundingBox()
-                if client.IsVisible(entity:GetEyePos()) then
-                    surface.DrawSetColor(255, 0, 0, 255)
-                else
-                    surface.DrawSetColor(0, 0, 0, 255)
-                end
-                surface.DrawOutlinedRect(rect.left, rect.top, rect.right, rect.bottom)
-            end
-        end
-    end
-end
 
-client.RegisterCallback("paint_traverse", on_painttraverse)
-```
-![alt text](https://i.imgur.com/GvP6QXh.png)
+ui.Checkbox
+------------------
+  ```lua
+  -- Label, variable name, default value
+  ui.Checkbox("Label", "b_variable", false)
+  ui.GetBool("b_variable") -- returns the checkbox state
+  ```
+
+ui.SliderInt
+------------------
+  ```lua
+  -- Label, variable name, min value, max value, default value
+  ui.SliderInt("Label", "i_variable", 0, 10, 0)
+  ui.GetInt("i_variable") -- returns the slider value
+  ```
+
+ui.SliderFloat
+------------------
+  ```lua
+  -- Label, variable name, min value, max value, default value
+  ui.SliderFloat("Label", "flt_variable", 0.0, 10.0, 0.0)
+  ui.GetFloat("flt_variable") -- returns the slider value
+  ```
+
+ui.KeyBind
+------------------
+  ```lua
+  ui.KeyBind("Label", "i_key", 0.0, 10.0, 0.0) -- Label, variable name
+
+  local key = ui.GetInt("i_key") -- returns the key
+  client.IsKeyPressed(key) -- returns the pressed state
+  ```
+
+ui.GetBool
+------------------
+  ```lua
+  local var = ui.GetBool("var") -- returns the added variable state
+  ```
+
+ui.GetInt
+------------------
+  ```lua
+  local var = ui.GetInt("var") -- returns the added variable value
+  ```
+
+ui.GetFloat
+------------------
+  ```lua
+  local var = ui.GetFloat("var") -- returns the added variable value
+  ```
+
+ui.SetBool
+------------------
+  ```lua
+  ui.SetBool("var", true) -- setting the added variable state
+  ```
+
+ui.SetInt
+------------------
+  ```lua
+  ui.SetInt("var", 5) -- setting the added variable value
+  ```
+
+ui.SetFloat
+------------------
+  ```lua
+  ui.SetFloat("var", 5.0) -- setting the added variable value
+  ```
+
+surface.GetCursorPos
+------------------
+  ```lua
+  local x, y = surface.GetCursorPos() -- returns the cursor position
+  ```
+
+surface.SetupFont
+------------------
+  ```lua
+  -- fontname, tall, weight, blur, scanlines, flags
+  local font = surface.SetupFont("Tahoma", 16, 500, 0, 1, 0x200) 
+  -- surface font flags: https://developer.valvesoftware.com/wiki/EFontFlags
+  ```
+
+surface.DrawFilledRect
+------------------
+  ```lua
+   -- start_pos_x, start_pos_y, end_pos_x, end_pos_y
+  surface.DrawSetColor(255, 0, 0, 255) 
+  surface.DrawFilledRect(5, 5, 10, 10)
+  ```
+
+surface.DrawFilledRectFade
+------------------
+  ```lua
+  -- start_pos_x, start_pos_y, end_pos_x, end_pos_y, first_alpha, next_alpha, is_horisontal
+  surface.DrawSetColor(255, 0, 0, 255) 
+  surface.DrawFilledRectFade(5, 5, 10, 10, 255, 0, false) 
+  ```
+
+surface.DrawOutlinedRect
+------------------
+  ```lua
+  -- start_pos_x, start_pos_y, end_pos_x, end_pos_y
+  surface.DrawSetColor(255, 0, 0, 255) 
+  surface.DrawOutlinedRect(5, 5, 10, 10) 
+  ```
+
+surface.DrawSetColor
+------------------
+  ```lua
+  -- red, green, blue, alpha
+  surface.DrawSetColor(255, 0, 0, 255) -- setting color of the next drawing element
+  ```
+
+surface.GetTextSize
+------------------
+  ```lua
+  -- font, text
+  local w, h = surface.GetTextSize(font, text) -- returns width and height text size
+  ```
+
+surface.DrawLine
+------------------
+  ```lua
+  -- start_pos_x, start_pos_y, end_pos_x, end_pos_y
+  surface.DrawSetColor(255, 0, 0, 255)
+  surface.DrawLine(5, 5, 20, 5) -- drawing horisontal line
+  ```
+
+surface.DrawOutlinedCircle
+------------------
+  ```lua
+  -- pos_x, pos_y, radius, segments
+  surface.DrawSetColor(255, 0, 0, 255)
+  surface.DrawOutlinedCircle(20, 20, 10, 10) -- drawing the circle
+  ```
+
+surface.DrawSetTextFont
+------------------
+  ```lua
+  -- font from setupfont
+  surface.DrawSetTextFont(font) -- setting the next text font
+  ```
+
+surface.DrawSetTextColor
+------------------
+  ```lua
+  -- red, green, blue, alpha
+  surface.DrawSetTextColor(255, 0, 0, 255) -- setting the next text color
+  ```
+
+surface.DrawSetTextPos
+------------------
+  ```lua
+  -- x, y
+  surface.DrawSetTextPos(10, 10) -- setting the next text position
+  ```
+
+surface.DrawPrintText
+------------------
+  ```lua
+  surface.DrawPrintText("Testing") -- drawing the text
+  ```
+
+engine.GetLevelNameShort
+------------------
+  ```lua
+  local name = engine.GetLevelNameShort() -- returns the current map name
+  ```
+
+engine.GetPlayerIndexByUserID
+------------------
+  ```lua
+  -- userID
+  local index = engine.GetPlayerIndexByUserID(userID) -- returns the entity index
+  ```
+
+engine.GetPlayerIndexByUserID
+------------------
+  ```lua
+  -- userID
+  local index = engine.GetPlayerIndexByUserID(userID) -- returns the entity index
+  ```
+
+engine.GetLocalPlayer
+------------------
+  ```lua
+  local index = engine.GetLocalPlayer() -- returns the localplayer index
+  ```
+
+engine.GetScreenSize
+------------------
+  ```lua
+  local w, h = engine.GetScreenSize() -- returns the screen size
+  ```
+
+engine.GetViewAngles
+------------------
+  ```lua
+  local view = engine.GetViewAngles() -- returns the camera angles
+  ```
+
+engine.SetViewAngles
+------------------
+  ```lua
+  -- viewangle
+  engine.SetViewAngles(viewangle) -- setting the camera angles
+  ```
+
+engine.IsConnected
+------------------
+  ```lua
+  local connected = engine.IsConnected() -- returns the connected state
+  ```
+
+engine.IsInGame
+------------------
+  ```lua
+  local isInGame = engine.IsInGame() -- returns the IsInGame state
+  ```
+
+engine.ExecuteClientCmd
+------------------
+  ```lua
+  -- string
+  engine.ExecuteClientCmd("echo test") -- printing "test" in console
+  ```
+
+clientstate.ForceFullUpdate
+------------------
+  ```lua
+  clientstate.ForceFullUpdate() -- calling cl_fullupdate
+  ```
+
+clientstate.chokedcommands
+------------------
+  ```lua
+  local choked = clientstate.chokedcommands() -- returns the choked commands
+  ```
+
+globalvars.realtime
+------------------
+  ```lua
+  local realtime = globalvars.realtime() -- returns the client time
+  ```
+
+globalvars.framecount
+------------------
+  ```lua
+  local framecount = globalvars.framecount() -- returns the frame count
+  ```
+
+globalvars.absoluteframetime
+------------------
+  ```lua
+  local absoluteframetime = globalvars.absoluteframetime() -- returns the absolute frame time
+  ```
+
+globalvars.absoluteframestarttimestddev
+------------------
+  ```lua
+  local absoluteframestarttimestddev = globalvars.absoluteframestarttimestddev() -- returns the absolute frame start time
+  ```
+
+globalvars.curtime
+------------------
+  ```lua
+  local curtime = globalvars.curtime() -- returns the server time
+  ```
+
+globalvars.frametime
+------------------
+  ```lua
+  local frametime = globalvars.frametime() -- returns the frame time
+  ```
+
+globalvars.maxClients
+------------------
+  ```lua
+  local maxClients = globalvars.maxClients() -- returns the max clients value
+  ```
+
+globalvars.tickcount
+------------------
+  ```lua
+  local tickcount = globalvars.tickcount() -- returns the current tickcount
+  ```
+
+globalvars.interval_per_tick
+------------------
+  ```lua
+  local interval_per_tick = globalvars.interval_per_tick() -- returns the interval per tick
+  ```
+
+globalvars.interpolation_amount
+------------------
+  ```lua
+  local interpolation_amount = globalvars.interpolation_amount() -- returns the interpolation amount
+  ```
+
+client.IsValveDS
+------------------
+  ```lua
+  local isvalveds = client.IsValveDS() -- returns the is a valve server or not
+  ```
+
+client.IsKeyPressed
+------------------
+  ```lua
+  -- key code: https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
+  local isPressed = client.IsKeyPressed(key) -- returns the pressed state
+  ```
+
+client.IsVisible
+------------------
+  ```lua
+  -- pos, player
+  local isEntityVisible = client.IsVisible(pos, player) -- returns the visible state
+  ```
+
+client.GetTimeStamp
+------------------
+  ```lua
+  local timestamp = client.GetTimeStamp() -- returns the unix timestamp
+  ```
+
+client.GetSystemTime
+------------------
+  ```lua
+  local hours, minutes, seconds = client.GetSystemTime() -- returns the windows time
+  ```
+
+client.GetFOV
+------------------
+  ```lua
+  -- viewAngle, aimAngle
+  local fov = client.GetFOV(viewAngle, aimAngle) -- returns the fov from viewangle to aimAngle
+  ```
+
+client.GetLatency
+------------------
+  ```lua
+  local latency = client.GetLatency() -- returns the current latency
+  ```
+
+client.GetUsername
+------------------
+  ```lua
+  local name = client.GetUsername() -- returns your cheat username
+  ```
+
+client.GetConvar
+------------------
+  ```lua
+  -- cvar name
+  local cvar = client.GetConvar("cl_interp") -- returns the ConVar object
+  ```
+
+client.GetSendPacket
+------------------
+  ```lua
+  local send = client.GetSendPacket() -- returns the current packet stage
+  ```
+
+client.SetSendPacket
+------------------
+  ```lua
+  client.SetSendPacket(true) -- setting the sendpacket stage
+  ```
+  
+client.SetClantag
+------------------
+  ```lua
+  -- clantag
+  client.SetClantag("test") -- setting the ingame clantag
+  ```
+
+client.SetName
+------------------
+  ```lua
+  -- name
+  client.SetName("test") -- setting the ingame name
+  ```
+
+client.RegisterCallback
+------------------
+  ```lua
+  -- callback_name, function
+  function on_paint()
+      surface.DrawSetColor(255, 0, 0, 255) 
+      surface.DrawFilledRect(5, 5, 10, 10)
+  end
+  client.RegisterCallback("paint_traverse", on_paint)
+  ```
+
+client.Notification
+------------------
+  ```lua
+  -- message
+  client.Notification("Hello, world!") -- pushing the notification
+  ```
+
+client.RandomInt
+------------------
+  ```lua
+  -- min, max
+  local random = client.RandomInt(0, 10) -- returns the random number
+  ```
+
+client.RandomFloat
+------------------
+  ```lua
+  -- min, max
+  local random = client.RandomFloat(0.0, 10.0) -- returns the random number
+  ```
+
+client.LoadScript
+------------------
+  ```lua
+  -- script name
+  client.LoadScript("clantag.lua") -- loading the script
+  ```
+
+client.UnloadScript
+------------------
+  ```lua
+  -- script name
+  client.UnloadScript("clantag.lua") -- unloading the script
+  ```
+
+client.LoadConfig
+------------------
+  ```lua
+  -- cfg name
+  client.LoadConfig("default.nixware") -- loading the config
+  ```
+
+client.WorldToScreen
+------------------
+  ```lua
+  -- 3d_pos
+  local pos_2d = client.WorldToScreen(pos_3d) -- returns the screen position by world position
+  ```
+
+client.CalcAngle
+------------------
+  ```lua
+  -- src, dst
+  local angle = client.CalcAngle(eye_position, target_position) -- returns the angle by pos
+  ```
+
+client.FindIDAPattern
+------------------
+  ```lua
+  -- modulename, pattern, offset
+  local addr = client.FindIDAPattern("client_panorama.dll", "8B 35 ? ? ? ? 66 3B D0 74 07", 2) -- returns the address by IDA pattern
+  ```
+
+client.FindCodePattern
+------------------
+  ```lua
+  -- modulename, pattern, mask, offset
+  local addr = client.FindCodePattern("engine.dll", "\\x8D\\x4C\\x24\\x1C\\xE8\\x00\\x00\\x00\\x00\\x56", "xxxxx????x", 0) -- returns the address by code pattern
+  ```
+
+entitylist.GetPlayerByIndex
+------------------
+  ```lua
+  -- index
+  local player = entitylist.GetPlayerByIndex(index) -- returns the CPlayer object
+  ```
+
+entitylist.GetWeaponByIndex
+------------------
+  ```lua
+  -- index
+  local weapon = entitylist.GetWeaponByIndex(index) -- returns the CWeapon object
+  ```
+
+entitylist.GetEntityByIndex
+------------------
+  ```lua
+  -- index
+  local entity = entitylist.GetEntityByIndex(index) -- returns the CEntity object
+  ```
+  
+entitylist.GetHighestEntityIndex
+------------------
+  ```lua
+  local idx = entitylist.GetHighestEntityIndex() -- returns the highest entity index
+  ```
+  
+netchannel.SetTimeout
+------------------
+  ```lua
+  -- seconds, forceExact 
+  netchannel.SetTimeout(seconds, forceExact)
+  ```
+
+netchannel.RequestFile
+------------------
+  ```lua
+  -- filename, isReplayDemo 
+  netchannel.RequestFile(filename, isReplayDemo)
+  ```
