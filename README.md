@@ -354,8 +354,8 @@ mdl.ReplacePath
 ------------------
   ```lua
   -- model1, model2
-  -- replaces model1 to model2
   local function model_changer()
+    -- replaces model1 to model2
     mdl.ReplacePath("knife_default_ct.mdl", "models/weapons/v_minecraft_pickaxe.mdl")
     mdl.ReplacePath("knife_default_t.mdl", "models/weapons/v_minecraft_pickaxe.mdl")
   end
