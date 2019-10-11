@@ -1,337 +1,361 @@
 Nixware - Counter Strike: Global Offensive
 =========================
 
-## API For Lua Scripts
+## API For Lua Scripts (LuaJIT Supported)
 
-Libraries
-```lua
-	base,
-	-- require and other package functions
-	package,
-	-- coroutine functions and utilities
-	coroutine,
-	-- string library
-	string,
-	-- functionality from the OS
-	os,
-	-- all things math
-	math,
-	-- the table manipulator and observer functions
-	table,
-	-- the bit library: different based on which you're using
-	bit32,
-	-- input/output library
-	io,
-	-- LuaJIT only
-	ffi,
-	-- LuaJIT only
-	jit,
-	-- library for handling utf8
-	utf8
+[mdl.ReplacePath](#mdlReplacePath)
 
-```
+[ui.Checkbox](#uiCheckbox)
 
-Handlers
+[ui.SliderInt](#uiSliderInt)
+
+[ui.SliderFloat](#uiSliderFloat)
+
+[ui.KeyBind](#uikeybind)
+
+[ui.GetBool](#uiGetBool)
+
+[ui.GetInt](#uiGetInt)
+
+[ui.GetFloat](#uiGetFloat)
+
+[ui.SetBool](#uiSetBool)
+
+[ui.SetInt](#uiSetInt)
+
+[ui.SetFloat](#uiSetFloat)
+
+[surface.GetCursorPos](#surfaceGetCursorPos)
+
+[surface.SetupFont](#surfaceSetupFont)
+
+[surface.DrawFilledRect](#surfaceDrawFilledRect)
+
+[surface.DrawFilledRectFade](#surfaceDrawFilledRectFade)
+
+[surface.DrawOutlinedRect](#surfaceDrawOutlinedRect)
+
+[surface.DrawSetColor](#surfaceDrawSetColor)
+
+[surface.GetTextSize](#surfaceGetTextSize)
+
+[surface.DrawLine](#surfaceDrawLine)
+
+[surface.DrawOutlinedCircle](#surfaceDrawOutlinedCircle)
+
+[surface.DrawSetTextFont](#surfaceDrawSetTextFont)
+
+[surface.DrawSetTextColor](#surfaceDrawSetTextColor)
+
+[surface.DrawSetTextPos](#surfaceDrawPrintText)
+
+[surface.DrawPrintText](#surfaceDrawPrintText)
+
+[engine.GetLevelNameShort](#engineGetLevelNameShort)
+
+[engine.GetPlayerIndexByUserID](#engineGetPlayerIndexByUserID)
+
+[engine.GetLocalPlayer](#engineGetLocalPlayer)
+
+[engine.GetScreenSize](#engineGetScreenSize)
+
+[engine.GetViewAngles](#engineGetViewAngles)
+
+[engine.SetViewAngles](#engineSetViewAngles)
+
+[engine.IsConnected](#engineIsConnected)
+
+[engine.IsInGame](#engineIsInGame)
+
+[engine.ExecuteClientCmd](#engineExecuteClientCmd)
+
+[clientstate.ForceFullUpdate](#clientstateForceFullUpdate)
+
+[clientstate.chokedcommands](#clientstatechokedcommands)
+
+[globalvars.realtime](#globalvarsrealtime)
+
+[globalvars.framecount](#globalvarsframecount)
+
+[globalvars.absoluteframetime](#globalvarsabsoluteframetime)
+
+[globalvars.absoluteframestarttimestddev](#globalvarsabsoluteframestarttimestddev)
+
+[globalvars.curtime](#globalvarscurtime)
+
+[globalvars.frametime](#globalvarsframetime)
+
+[globalvars.maxClients](#globalvarsmaxClients)
+
+[globalvars.tickcount](#globalvarstickcount)
+
+[globalvars.interval_per_tick](#globalvarsinterval_per_tick)
+
+[globalvars.interpolation_amount](#globalvarsinterpolation_amount)
+
+[client.IsValveDS](#clientIsValveDS)
+
+[client.IsKeyPressed](#clientIsKeyPressed)
+
+[client.IsVisible](#clientIsVisible)
+
+[client.GetTimeStamp](#clientGetTimeStamp)
+
+[client.GetSystemTime](#clientGetSystemTime)
+
+[client.GetFOV](#clientGetFOV)
+
+[client.GetLatency](#clientGetLatency)
+
+[client.GetUsername](#clientGetUsername)
+
+[client.GetConvar](#clientGetConvar)
+
+[client.GetSendPacket](#clientGetSendPacket)
+
+[client.SetSendPacket](#clientSetSendPacket)
+
+[client.SetClantag](#clientSetClantag)
+
+[client.SetName](#clientSetName)
+
+[client.RegisterCallback](#clientRegisterCallback)
+
+[client.Notification](#clientNotification)
+
+[client.AddToRadioList](#clientAddToRadioList)
+
+[client.RandomInt](#clientRandomInt)
+
+[client.RandomFloat](#clientRandomFloat)
+
+[client.LoadScript](#clientLoadScript)
+
+[client.UnloadScript](#clientUnloadScript)
+
+[client.LoadConfig](#clientLoadConfig)
+
+[client.WorldToScreen](#clientWorldToScreen)
+
+[client.CalcAngle](#clientCalcAngle)
+
+[client.FindIDAPattern](#clientFindIDAPattern)
+
+[client.FindCodePattern](#clientFindCodePattern)
+
+[entitylist.GetPlayerByIndex](#entitylistGetPlayerByIndex)
+
+[entitylist.GetWeaponByIndex](#entitylistGetWeaponByIndex)
+
+[entitylist.GetEntityByIndex](#entitylistGetEntityByIndex)
+
+[entitylist.GetHighestEntityIndex](#entitylistGetHighestEntityIndex)
+
+[entitylist.GetLocalPlayer](#entitylistGetLocalPlayer)
+
+[entitylist.GetPlayers](#entitylistGetPlayers)
+
+[entitylist.GetEntitiesByClass](#entitylistGetEntitiesByClass)
+
+[entitylist.GetEntitiesByClassID](#entitylistGetEntitiesByClassID)
+
+[netchannel.SetTimeout](#netchannelSetTimeout)
+
+[netchannel.RequestFile](#netchannelRequestFile)
+
+Player class
 --------------------------
 ```lua
-      create_movement(CUserCmd* cmd)
-      paint_traverse()
-      fire_game_event(IGameEvent* event)
-      frame_stage_notify(int stage)
+Player:IsValidPtr()
+Player:IsPlayer()
+Player:IsDormant()
+Player:IsFlashed()
+Player:IsLocalPlayer()
+Player:IsTeammate()
+Player:IsScoped()
+Player:GetIndex()
+Player:GetHealth()
+Player:GetAbsOrigin()
+Player:GetOrigin()
+Player:GetMoney()
+Player:GetMoveType()
+Player:GetEyePos()
+Player:GetName()
+Player:GetAngles()
+Player:GetTeamNum()
+Player:GetWeapon()
+Player:GetBoundingBox()
+Player:GetStaticBox()
+Player:GetHitboxPos(int hitbox)
+Player:GetSteamID64()
+Player:GetDormantAlpha()
+Player:GetAbsVelocity()
+Player:GetVelocity()
+Player:GetSimulationTime()
+Player:GetOldSimulationTime()
+Player:GetPropBool(string prop)
+Player:GetPropInt(string prop)
+Player:GetPropFloat(string prop)
+Player:GetPropDouble(string prop)
+Player:GetPropShort(string prop)
+Player:GetPropVector(string prop)
+Player:GetPropAngle(string prop)
+Player:SetPropInt(string prop, int i)
+Player:SetPropShort(string prop, short i)
+Player:SetPropAngle(string prop, QAngle ang)
+Player:SetPropDouble(string prop, double i)
+Player:SetPropBool(string prop, bool i)
+Player:SetPropFloat(string prop, float i)
+Player:SetPropVector(string prop, Vector i)
 ```
 
-Tables
+Weapon class
 --------------------------
 ```lua
-
-  ui
-    void Checkbox(string name, string variable, bool default_value)
-    void SliderInt(string name, string variable, int min, int max, int default_value)
-    void SliderFloat(string name, string variable, float min, float max, float default_value)
-    void KeyBind(string name, string variable)
-
-    bool GetBool(string var)
-    int GetInt(string var)
-    float GetFloat(string var)
-    void SetBool(string var, bool v)
-    void SetInt(string var, int v)
-    void SetFloat(string var, float v)
-
-  surface
-    int, int GetCursorPos() -- x, y
-    font SetupFont(string windowsFontName, int tall, int weight, int blur, int scanlines, int flags)
-    void DrawFilledRect(int x, int y, int x2, int y2)
-    void DrawFilledRectFade(int x0, int y0, int x1, int y1, unsigned int alpha0, unsigned int alpha1, bool horizontal)
-    void DrawOutlinedRect(int x, int y, int x2, int y2)
-    void DrawSetColor(int r, int g, int b, int a)
-    int, int GetTextSize(font, string text) -- width, height
-    void DrawLine(int x, int y, int x2, int y2)
-    void DrawOutlinedCircle(int x, int y, int radius, int segments)
-    void DrawSetTextFont(font)
-    void DrawSetTextColor(int r, int g, int b, int a)
-    void DrawSetTextPos(int x, int y)
-    void DrawPrintText(string str)
-
-  engine 
-    string GetLevelNameShort()
-    int GetPlayerIndexByUserID(int userID)
-    int GetLocalPlayer()
-    int, int GetScreenSize() -- width, height
-    QAngle GetViewAngles()
-    void SetViewAngles(QAngle angle)
-    bool IsConnected()
-    bool IsInGame()
-    void ExecuteClientCmd(string cmd)
-
-  clientstate 
-    void ForceFullUpdate()
-    int chokedcommands()
-
-  globalvars
-    float realtime()
-    int framecount()
-    float absoluteframetime()
-    float absoluteframestarttimestddev() 
-    float curtime()
-    float frametime()
-    int maxClients()
-    int tickcount()
-    float interval_per_tick() 
-    float interpolation_amount()
-
-  client
-    bool IsValveDS()
-    bool IsKeyPressed(int key)
-    bool IsVisible(Vector pos, CPlayer* player)
-    int GetTimeStamp()
-    int, int, int GetSystemTime() -- hours, minutes, seconds
-    float GetFOV(QAngle viewAngle, QAngle aimAngle)
-    float GetLatency()
-    string GetUsername()
-    ConVar* GetConvar(string var) 
-    bool GetSendPacket() 
-    void SetSendPacket(bool v) 
-    void SetClantag(string tag)
-    void SetName(string name)
-    void RegisterCallback(string name, function)
-    void Notification(string msg)
-    void AddToRadioList(string name, string url)
-    int RandomInt(int min, int max)
-    float RandomFloat(float min, float max)
-    void LoadScript(string script) 
-    void UnloadScript(string script)
-    void LoadConfig(string script) 
-    Vector WorldToScreen(Vector in)
-    QAngle CalcAngle(Vector src, Vector dst)
-    DWORD FindIDAPattern(string module, string pattern, int offset)
-    DWORD FindCodePattern(string module, string pattern, string mask, int offset)
-
-  entitylist
-    CPlayer* GetPlayerByIndex(int index)
-    CWeapon* GetWeaponByIndex(int index)
-    CEntity* GetEntityByIndex(int index)
-    int GetHighestEntityIndex()
-    CPlayer* GetLocalPlayer()
-    CPlayer* GetPlayers(int type)[]
-    CEntity* GetEntitiesByClass(string classname)[]
-    CEntity* GetEntitiesByClassID(int classID)[]
-
-
-  netchannel
-    void SetTimeout(float seconds, bool forceExact = false)
-    void RequestFile(string filename, bool isReplayDemo)
-
+Weapon:IsValidPtr()
+Weapon:IsKnife()
+Weapon:IsGrenade()
+Weapon:IsZeus()
+Weapon:IsReloading()
+Weapon:GetIndex()
+Weapon:GetSpread()
+Weapon:GetInaccuracy()
+Weapon:GetAbsOrigin()
+Weapon:GetOrigin()
+Weapon:GetName()
+Weapon:GetZoomLevel()
+Weapon:GetNextPrimaryAttack()
+Weapon:GetNextSecondaryAttack()
+Weapon:GetItemDefinitionIndex()
+Weapon:GetBoundingBox()
+Weapon:GetStaticBox()
+Weapon:GetPropBool(string prop)
+Weapon:GetPropInt(string prop)
+Weapon:GetPropFloat(string prop)
+Weapon:GetPropDouble(string prop)
+Weapon:GetPropShort(string prop)
+Weapon:GetPropVector(string prop)
+Weapon:GetPropAngle(string prop)
+Weapon:SetPropInt(string prop, int i)
+Weapon:SetPropShort(string prop, short i)
+Weapon:SetPropAngle(string prop, QAngle ang)
+Weapon:SetPropDouble(string prop, double i)
+Weapon:SetPropBool(string prop, bool i)
+Weapon:SetPropFloat(string prop, float i)
+Weapon:SetPropVector(string prop, Vector i)
 ```
 
-Classes
+Entity class
 --------------------------
 ```lua
-  class CPlayer
-  {
-    bool IsValidPtr()
-    bool IsPlayer()
-    bool IsDormant()
-    bool IsFlashed()
-    bool IsLocalPlayer()
-    bool IsTeammate()
-    bool IsScoped()
-    int GetIndex()
-    int GetHealth()
-    Vector GetAbsOrigin()
-    Vector GetOrigin()
-    int GetMoney()
-    int GetMoveType()
-    Vector GetEyePos()
-    string GetName()
-    QAngle GetAngles()
-    int GetTeamNum()
-    CWeapon* GetWeapon()
-    RECT GetBoundingBox()
-    RECT GetStaticBox()
-    Vector GetHitboxPos(int hitbox)
-    __int64 GetSteamID64()
-    int GetDormantAlpha()
-    Vector GetAbsVelocity()
-    Vector GetVelocity()
-    float GetSimulationTime()
-    float GetOldSimulationTime()
-
-    bool GetPropBool(string prop);
-    int GetPropInt(string prop);
-    float GetPropFloat(string prop);
-    double GetPropDouble(string prop);
-    short GetPropShort(string prop);
-    Vector GetPropVector(string prop);
-    QAngle GetPropAngle(string prop);
-
-    void SetPropInt(string prop, int i);
-    void SetPropShort(string prop, short i);
-    void SetPropAngle(string prop, QAngle ang);
-    void SetPropDouble(string prop, double i);
-    void SetPropBool(string prop, bool i);
-    void SetPropFloat(string prop, float i);
-    void SetPropVector(string prop, Vector i);
-  }
-
-  class CWeapon
-  {
-    bool IsValidPtr()
-    bool IsKnife()
-    bool IsGrenade()
-    bool IsZeus()
-    bool IsReloading()
-    int GetIndex()
-    float GetSpread()
-    float GetInaccuracy()
-    Vector GetAbsOrigin()
-    Vector GetOrigin()
-    string GetName()
-    int GetZoomLevel()
-    float GetNextPrimaryAttack()
-    float GetNextSecondaryAttack()
-    short GetItemDefinitionIndex()
-    RECT GetBoundingBox()
-    RECT GetStaticBox()
-
-    bool GetPropBool(string prop);
-    int GetPropInt(string prop);
-    float GetPropFloat(string prop);
-    double GetPropDouble(string prop);
-    short GetPropShort(string prop);
-    Vector GetPropVector(string prop);
-    QAngle GetPropAngle(string prop);
-
-    void SetPropInt(string prop, int i);
-    void SetPropShort(string prop, short i);
-    void SetPropAngle(string prop, QAngle ang);
-    void SetPropDouble(string prop, double i);
-    void SetPropBool(string prop, bool i);
-    void SetPropFloat(string prop, float i);
-    void SetPropVector(string prop, Vector i);
-  }
-
-  class CEntity
-  {
-    bool IsValidPtr()
-    int GetIndex()
-    RECT GetBoundingBox()
-    RECT GetStaticBox()
-
-    bool GetPropBool(string prop);
-    int GetPropInt(string prop);
-    float GetPropFloat(string prop);
-    double GetPropDouble(string prop);
-    short GetPropShort(string prop);
-    Vector GetPropVector(string prop);
-    QAngle GetPropAngle(string prop);
-
-    void SetPropInt(string prop, int i);
-    void SetPropShort(string prop, short i);
-    void SetPropAngle(string prop, QAngle ang);
-    void SetPropDouble(string prop, double i);
-    void SetPropBool(string prop, bool i);
-    void SetPropFloat(string prop, float i);
-    void SetPropVector(string prop, Vector i);
-  }
-
-  class ConVar
-  {
-    bool GetBool()
-    int GetInt()
-    float GetFloat()
-    string GetString()
-
-    void SetBool(bool v)
-    void SetInt(int v)
-    void SetFloat(float v)
-    void SetString(string v)
-  }
-
-  class IGameEvent
-  {
-    string GetName()
-    bool GetBool()
-    int GetInt()
-    float GetFloat()
-    string GetString()
-  }
-
-  class CUserCmd
-  {
-    int command_number
-    int tick_count
-    Vector aimdirection
-    float forwardmove
-    float sidemove
-    float upmove
-    int buttons
-    char impulse
-    int weaponselect
-    int weaponsubtype
-    int random_seed
-    short mousedx
-    short mousedy
-    bool hasbeenpredicted
-  }
-  
-  class QAngle
-  {
-    float pitch
-    float yaw
-    float roll
-    float Length()
-    float LengthSqr()
-    bool IsZero(float tolerance = 0.01f)
-    float Normalize()
-  }
-
-  class Vector
-  {
-    float x
-    float y
-    float z
-
-    float Length()
-    float LengthSqr()
-    float Length2D()
-    float Length2DSqr()
-    bool IsZero(float tolerance = 0.01f)
-    bool IsValid()
-    void Zero()
-    float DistTo(const Vector &vOther)
-    float DistToSqr(const Vector &vOther)
-    Vector Cross(const Vector& vOther)
-    float Normalize()
-  }
-
-  class RECT
-  {
-    long left
-    long top
-    long right
-    long bottom
-  }
+Entity:IsValidPtr()
+Entity:GetIndex()
+Entity:GetBoundingBox()
+Entity:GetStaticBox()
+Entity:GetPropBool(string prop)
+Entity:GetPropInt(string prop)
+Entity:GetPropFloat(string prop)
+Entity:GetPropDouble(string prop)
+Entity:GetPropShort(string prop)
+Entity:GetPropVector(string prop)
+Entity:GetPropAngle(string prop)
+Entity:SetPropInt(string prop, int i)
+Entity:SetPropShort(string prop, short i)
+Entity:SetPropAngle(string prop, QAngle ang)
+Entity:SetPropDouble(string prop, double i)
+Entity:SetPropBool(string prop, bool i)
+Entity:SetPropFloat(string prop, float i)
+Entity:SetPropVector(string prop, Vector i)
 ```
+
+Convar class
+--------------------------
+```lua
+Convar:GetBool()
+Convar:GetInt()
+Convar:GetFloat()
+Convar:GetString()
+Convar:SetBool(bool v)
+Convar:SetInt(int v)
+Convar:SetFloat(float v)
+Convar:SetString(string v)
+```
+
+Event class
+--------------------------
+```lua
+Event:GetName()
+Event:GetBool()
+Event:GetInt()
+Event:GetFloat()
+Event:GetString()
+```
+
+UserCmd class
+--------------------------
+```lua
+UserCmd.command_number
+UserCmd.tick_count
+UserCmd.aimdirection
+UserCmd.forwardmove
+UserCmd.sidemove
+UserCmd.upmove
+UserCmd.buttons
+UserCmd.impulse
+UserCmd.weaponselect
+UserCmd.weaponsubtype
+UserCmd.random_seed
+UserCmd.mousedx
+UserCmd.mousedy
+UserCmd.hasbeenpredicted
+```
+
+QAngle class
+--------------------------
+```lua
+QAngle.pitch
+QAngle.yaw
+QAngle.roll
+QAngle:Length()
+QAngle:LengthSqr()
+QAngle:IsZero(float tolerance = 0.01f)
+QAngle:Normalize()
+```
+
+Vector class
+--------------------------
+```lua
+Vector.x
+Vector.y
+Vector.z
+Vector:Length()
+Vector:LengthSqr()
+Vector:Length2D()
+Vector:Length2DSqr()
+Vector:IsZero(float tolerance = 0.01f)
+Vector:IsValid()
+Vector:Zero()
+Vector:DistTo(const Vector &vOther)
+Vector:DistToSqr(const Vector &vOther)
+Vector:Cross(const Vector& vOther)
+Vector:Normalize()
+```
+
+RECT class
+--------------------------
+```lua
+RECT:left
+RECT:top
+RECT:right
+RECT:bottom
+```
+
+mdl.ReplacePath
+------------------
+  ```lua
+  -- model1, model2
+  mdl.ReplacePath(model1, model2) -- replaces model1 to model2
+  ```
 
 ui.Checkbox
 ------------------
@@ -809,21 +833,21 @@ entitylist.GetPlayerByIndex
 ------------------
   ```lua
   -- index
-  local player = entitylist.GetPlayerByIndex(index) -- returns the CPlayer object
+  local player = entitylist.GetPlayerByIndex(index) -- returns the Player object
   ```
 
 entitylist.GetWeaponByIndex
 ------------------
   ```lua
   -- index
-  local weapon = entitylist.GetWeaponByIndex(index) -- returns the CWeapon object
+  local weapon = entitylist.GetWeaponByIndex(index) -- returns the Weapon object
   ```
 
 entitylist.GetEntityByIndex
 ------------------
   ```lua
   -- index
-  local entity = entitylist.GetEntityByIndex(index) -- returns the CEntity object
+  local entity = entitylist.GetEntityByIndex(index) -- returns the Entity object
   ```
   
 entitylist.GetHighestEntityIndex
@@ -884,3 +908,12 @@ netchannel.RequestFile
   -- filename, isReplayDemo 
   netchannel.RequestFile(filename, isReplayDemo)
   ```
+
+Callbacks
+------------------
+```lua
+  create_movement(UserCmd)
+  fire_game_event(Event)
+  frame_stage_notify(current_stage)
+  paint_traverse()
+```
