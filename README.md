@@ -344,10 +344,10 @@ Vector:Normalize()
 RECT class
 --------------------------
 ```lua
-RECT:left
-RECT:top
-RECT:right
-RECT:bottom
+RECT.left
+RECT.top
+RECT.right
+RECT.bottom
 ```
 
 mdl.ReplacePath
