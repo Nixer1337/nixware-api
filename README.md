@@ -802,7 +802,7 @@ client.FindCodePattern
 ------------------
   ```lua
   -- modulename, pattern, mask, offset
-  local addr = client.FindCodePattern("engine.dll", "\\x8D\\x4C\\x24\\x1C\\xE8\\x00\\x00\\x00\\x00\\x56", "xxxxx????x", 0) -- returns the address by code pattern
+  local addr = client.FindCodePattern("engine.dll", "\x8D\x4C\x24\x1C\xE8\x00\x00\x00\x00\x56", "xxxxx????x", 0) -- returns the address by code pattern
   ```
 
 entitylist.GetPlayerByIndex
