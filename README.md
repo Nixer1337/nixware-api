@@ -37,7 +37,7 @@ Handlers
       create_movement(CUserCmd* cmd)
       paint_traverse()
       fire_game_event(IGameEvent* event)
-      esp_loop(CPlayer* player)
+      frame_stage_notify(int stage)
 ```
 
 Tables
@@ -115,6 +115,7 @@ Tables
     void SetName(string name)
     void RegisterCallback(string name, function)
     void Notification(string msg)
+    void AddToRadioList(string name, string url)
     int RandomInt(int min, int max)
     float RandomFloat(float min, float max)
     void LoadScript(string script) 
@@ -130,6 +131,11 @@ Tables
     CWeapon* GetWeaponByIndex(int index)
     CEntity* GetEntityByIndex(int index)
     int GetHighestEntityIndex()
+    CPlayer* GetLocalPlayer()
+    CPlayer* GetPlayers(int type)[]
+    CEntity* GetEntitiesByClass(string classname)[]
+    CEntity* GetEntitiesByClassID(int classID)[]
+
 
   netchannel
     void SetTimeout(float seconds, bool forceExact = false)
@@ -729,6 +735,13 @@ client.Notification
   client.Notification("Hello, world!") -- pushing the notification
   ```
 
+client.AddToRadioList
+------------------
+  ```lua
+  -- text, radiourl
+  client.AddToRadioList(text, radiourl) -- adding your channel to radio list
+  ```
+
 client.RandomInt
 ------------------
   ```lua
@@ -817,6 +830,45 @@ entitylist.GetHighestEntityIndex
 ------------------
   ```lua
   local idx = entitylist.GetHighestEntityIndex() -- returns the highest entity index
+  ```
+
+entitylist.GetPlayers
+------------------
+  ```lua
+  -- type
+  -- 0 - enemies only
+  -- 1 - teammates only
+  -- 2 - all players
+  local players = entitylist.GetPlayers(type) -- returns the players array
+  for i = 1, #players do
+      local player = players[i]
+  end
+  ```
+
+entitylist.GetLocalPlayer
+------------------
+  ```lua
+  local localplayer = entitylist.GetLocalPlayer() -- returns the local player object
+  ```
+
+entitylist.GetEntitiesByClass
+------------------
+  ```lua
+  -- classname
+  local entities = entitylist.GetEntitiesByClass(classname) -- returns the entities array
+  for i = 1, #entities do
+      local entity = entities[i]
+  end
+  ```
+
+entitylist.GetEntitiesByClassID
+------------------
+  ```lua
+  -- classid
+  local entities = entitylist.GetEntitiesByClass(classid) -- returns the entities array
+  for i = 1, #entities do
+      local entity = entities[i]
+  end
   ```
   
 netchannel.SetTimeout
