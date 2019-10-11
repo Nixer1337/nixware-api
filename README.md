@@ -916,10 +916,10 @@ netchannel.RequestFile
 
 Callbacks
 ------------------
-```lua
+  ```lua
   create_movement(UserCmd)
   fire_game_event(Event)
   frame_stage_notify(current_stage)
   paint_traverse()
   find_mdl()
-```
+  ```
