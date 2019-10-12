@@ -3,73 +3,73 @@ Nixware - Counter Strike: Global Offensive
 
 ## API For Lua Scripts (LuaJIT Supported)
 
-[mdl.ReplacePath](#mdlReplacePath)
+[mdl.ReplacePath](#mdlreplacepath)
 
-[ui.Checkbox](#uiCheckbox)
+[ui.Checkbox](#uicheckbox)
 
-[ui.SliderInt](#uiSliderInt)
+[ui.SliderInt](#uisliderint)
 
-[ui.SliderFloat](#uiSliderFloat)
+[ui.SliderFloat](#uisliderfloat)
 
 [ui.KeyBind](#uikeybind)
 
-[ui.GetBool](#uiGetBool)
+[ui.GetBool](#uigetbool)
 
-[ui.GetInt](#uiGetInt)
+[ui.GetInt](#uigetint)
 
-[ui.GetFloat](#uiGetFloat)
+[ui.GetFloat](#uigetfloat)
 
-[ui.SetBool](#uiSetBool)
+[ui.SetBool](#uisetbool)
 
-[ui.SetInt](#uiSetInt)
+[ui.SetInt](#uisetint)
 
-[ui.SetFloat](#uiSetFloat)
+[ui.SetFloat](#uisetfloat)
 
-[surface.GetCursorPos](#surfaceGetCursorPos)
+[surface.GetCursorPos](#surfacegetcursorpos)
 
-[surface.SetupFont](#surfaceSetupFont)
+[surface.SetupFont](#surfacesetupfont)
 
-[surface.DrawFilledRect](#surfaceDrawFilledRect)
+[surface.DrawFilledRect](#surfacedrawfilledrect)
 
-[surface.DrawFilledRectFade](#surfaceDrawFilledRectFade)
+[surface.DrawFilledRectFade](#surfacedrawfilledrectfade)
 
-[surface.DrawOutlinedRect](#surfaceDrawOutlinedRect)
+[surface.DrawOutlinedRect](#surfacedrawoutlinedrect)
 
-[surface.DrawSetColor](#surfaceDrawSetColor)
+[surface.DrawSetColor](#surfacedrawsetcolor)
 
-[surface.GetTextSize](#surfaceGetTextSize)
+[surface.GetTextSize](#surfacegettextsize)
 
-[surface.DrawLine](#surfaceDrawLine)
+[surface.DrawLine](#surfacedrawline)
 
-[surface.DrawOutlinedCircle](#surfaceDrawOutlinedCircle)
+[surface.DrawOutlinedCircle](#surfacedrawoutlinedcircle)
 
-[surface.DrawSetTextFont](#surfaceDrawSetTextFont)
+[surface.DrawSetTextFont](#surfacedrawsettextfont)
 
-[surface.DrawSetTextColor](#surfaceDrawSetTextColor)
+[surface.DrawSetTextColor](#surfacedrawsettextcolor)
 
-[surface.DrawSetTextPos](#surfaceDrawPrintText)
+[surface.DrawSetTextPos](#surfacedrawprinttext)
 
-[surface.DrawPrintText](#surfaceDrawPrintText)
+[surface.DrawPrintText](#surfacedrawprinttext)
 
-[engine.GetLevelNameShort](#engineGetLevelNameShort)
+[engine.GetLevelNameShort](#enginegetlevelnameshort)
 
-[engine.GetPlayerIndexByUserID](#engineGetPlayerIndexByUserID)
+[engine.GetPlayerIndexByUserID](#enginegetplayerindexbyuserid)
 
-[engine.GetLocalPlayer](#engineGetLocalPlayer)
+[engine.GetLocalPlayer](#enginegetlocalplayer)
 
-[engine.GetScreenSize](#engineGetScreenSize)
+[engine.GetScreenSize](#enginegetscreensize)
 
-[engine.GetViewAngles](#engineGetViewAngles)
+[engine.GetViewAngles](#enginegetviewangles)
 
-[engine.SetViewAngles](#engineSetViewAngles)
+[engine.SetViewAngles](#enginesetviewangles)
 
-[engine.IsConnected](#engineIsConnected)
+[engine.IsConnected](#engineisconnected)
 
-[engine.IsInGame](#engineIsInGame)
+[engine.IsInGame](#engineisinGame)
 
-[engine.ExecuteClientCmd](#engineExecuteClientCmd)
+[engine.ExecuteClientCmd](#engineexecuteclientcmd)
 
-[clientstate.ForceFullUpdate](#clientstateForceFullUpdate)
+[clientstate.ForceFullUpdate](#clientstateforcefullupdate)
 
 [clientstate.chokedcommands](#clientstatechokedcommands)
 
@@ -85,7 +85,7 @@ Nixware - Counter Strike: Global Offensive
 
 [globalvars.frametime](#globalvarsframetime)
 
-[globalvars.maxClients](#globalvarsmaxClients)
+[globalvars.maxClients](#globalvarsmaxclients)
 
 [globalvars.tickcount](#globalvarstickcount)
 
@@ -93,75 +93,75 @@ Nixware - Counter Strike: Global Offensive
 
 [globalvars.interpolation_amount](#globalvarsinterpolation_amount)
 
-[client.IsValveDS](#clientIsValveDS)
+[client.IsValveDS](#clientisvalveds)
 
-[client.IsKeyPressed](#clientIsKeyPressed)
+[client.IsKeyPressed](#clientiskeypressed)
 
-[client.IsVisible](#clientIsVisible)
+[client.IsVisible](#clientisvisible)
 
-[client.GetTimeStamp](#clientGetTimeStamp)
+[client.GetTimeStamp](#clientgettimestamp)
 
-[client.GetSystemTime](#clientGetSystemTime)
+[client.GetSystemTime](#clientgetsystemtime)
 
-[client.GetFOV](#clientGetFOV)
+[client.GetFOV](#clientgetfov)
 
-[client.GetLatency](#clientGetLatency)
+[client.GetLatency](#clientgetlatency)
 
-[client.GetUsername](#clientGetUsername)
+[client.GetUsername](#clientgetusername)
 
-[client.GetConvar](#clientGetConvar)
+[client.GetConvar](#clientgetconvar)
 
-[client.GetSendPacket](#clientGetSendPacket)
+[client.GetSendPacket](#clientgetsendpacket)
 
-[client.SetSendPacket](#clientSetSendPacket)
+[client.SetSendPacket](#clientsetsendpacket)
 
-[client.SetClantag](#clientSetClantag)
+[client.SetClantag](#clientsetclantag)
 
-[client.SetName](#clientSetName)
+[client.SetName](#clientsetname)
 
-[client.RegisterCallback](#clientRegisterCallback)
+[client.RegisterCallback](#clientregistercallback)
 
-[client.Notification](#clientNotification)
+[client.Notification](#clientnotification)
 
-[client.AddToRadioList](#clientAddToRadioList)
+[client.AddToRadioList](#clientaddtoradiolist)
 
-[client.RandomInt](#clientRandomInt)
+[client.RandomInt](#clientrandomint)
 
-[client.RandomFloat](#clientRandomFloat)
+[client.RandomFloat](#clientrandomfloat)
 
-[client.LoadScript](#clientLoadScript)
+[client.LoadScript](#clientloadscript)
 
-[client.UnloadScript](#clientUnloadScript)
+[client.UnloadScript](#clientunloadscript)
 
-[client.LoadConfig](#clientLoadConfig)
+[client.LoadConfig](#clientloadconfig)
 
-[client.WorldToScreen](#clientWorldToScreen)
+[client.WorldToScreen](#clientworldtoscreen)
 
-[client.CalcAngle](#clientCalcAngle)
+[client.CalcAngle](#clientCalcangle)
 
-[client.FindIDAPattern](#clientFindIDAPattern)
+[client.FindIDAPattern](#clientfindidapattern)
 
-[client.FindCodePattern](#clientFindCodePattern)
+[client.FindCodePattern](#clientfindcodepattern)
 
-[entitylist.GetPlayerByIndex](#entitylistGetPlayerByIndex)
+[entitylist.GetPlayerByIndex](#entitylistgetplayerbyindex)
 
-[entitylist.GetWeaponByIndex](#entitylistGetWeaponByIndex)
+[entitylist.GetWeaponByIndex](#entitylistgetweaponbyindex)
 
-[entitylist.GetEntityByIndex](#entitylistGetEntityByIndex)
+[entitylist.GetEntityByIndex](#entitylistgetentitybyindex)
 
-[entitylist.GetHighestEntityIndex](#entitylistGetHighestEntityIndex)
+[entitylist.GetHighestEntityIndex](#entitylistgethighestentityIndex)
 
-[entitylist.GetLocalPlayer](#entitylistGetLocalPlayer)
+[entitylist.GetLocalPlayer](#entitylistgetlocalplayer)
 
-[entitylist.GetPlayers](#entitylistGetPlayers)
+[entitylist.GetPlayers](#entitylistgetplayers)
 
-[entitylist.GetEntitiesByClass](#entitylistGetEntitiesByClass)
+[entitylist.GetEntitiesByClass](#entitylistgetentitiesbyclass)
 
-[entitylist.GetEntitiesByClassID](#entitylistGetEntitiesByClassID)
+[entitylist.GetEntitiesByClassID](#entitylistgetentitiesbyclassid)
 
-[netchannel.SetTimeout](#netchannelSetTimeout)
+[netchannel.SetTimeout](#netchannelsettimeout)
 
-[netchannel.RequestFile](#netchannelRequestFile)
+[netchannel.RequestFile](#netchannelrequestfile)
 
 Player class
 --------------------------
