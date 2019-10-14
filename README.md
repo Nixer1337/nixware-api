@@ -13,17 +13,23 @@ Nixware - Counter Strike: Global Offensive
 
 [ui.KeyBind](#uikeybind)
 
+[ui.Combo](#uicombo)
+
 [ui.GetBool](#uigetbool)
 
 [ui.GetInt](#uigetint)
 
 [ui.GetFloat](#uigetfloat)
 
+[ui.GetString](#uigetstring)
+
 [ui.SetBool](#uisetbool)
 
 [ui.SetInt](#uisetint)
 
 [ui.SetFloat](#uisetfloat)
+
+[ui.SetString](#uisetstring)
 
 [surface.GetCursorPos](#surfacegetcursorpos)
 
@@ -389,10 +395,27 @@ ui.SliderFloat
 ui.KeyBind
 ------------------
   ```lua
-  ui.KeyBind("Label", "i_key", 0.0, 10.0, 0.0) -- Label, variable name
+  -- Label, variable name
+  ui.KeyBind("Label", "i_key")
 
   local key = ui.GetInt("i_key") -- returns the key
   client.IsKeyPressed(key) -- returns the pressed state
+  ```
+
+ui.Combo
+------------------
+  ```lua
+  -- Label, variable name, strings array, default value
+  ui.Combo("Label", "i_variable", { "Item1", "Item2", "Item3" }, 0)
+  ui.GetInt("i_variable") -- returns the combo value
+  ```
+
+ui.InputText
+------------------
+  ```lua
+  -- Label, variable name, string size, default value
+  ui.InputText("Label", "str_variable", 32, "default")
+  ui.GetString("str_variable") -- returns the input value
   ```
 
 ui.GetBool
@@ -413,6 +436,12 @@ ui.GetFloat
   local var = ui.GetFloat("var") -- returns the added variable value
   ```
 
+ui.GetString
+------------------
+  ```lua
+  local var = ui.GetString("var") -- returns the added variable value
+  ```
+
 ui.SetBool
 ------------------
   ```lua
@@ -429,6 +458,12 @@ ui.SetFloat
 ------------------
   ```lua
   ui.SetFloat("var", 5.0) -- setting the added variable value
+  ```
+
+ui.SetString
+------------------
+  ```lua
+  ui.SetString("var", "hello") -- setting the added variable value
   ```
 
 surface.GetCursorPos
