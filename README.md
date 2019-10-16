@@ -117,6 +117,8 @@ Nixware - Counter Strike: Global Offensive
 
 [client.GetConvar](#clientgetconvar)
 
+[client.GetNetvar](#clientgetnetvar)
+
 [client.GetSendPacket](#clientgetsendpacket)
 
 [client.SetSendPacket](#clientsetsendpacket)
@@ -199,20 +201,20 @@ Player:GetAbsVelocity()
 Player:GetVelocity()
 Player:GetSimulationTime()
 Player:GetOldSimulationTime()
-Player:GetPropBool(string prop)
-Player:GetPropInt(string prop)
-Player:GetPropFloat(string prop)
-Player:GetPropDouble(string prop)
-Player:GetPropShort(string prop)
-Player:GetPropVector(string prop)
-Player:GetPropAngle(string prop)
-Player:SetPropInt(string prop, int i)
-Player:SetPropShort(string prop, short i)
-Player:SetPropAngle(string prop, QAngle ang)
-Player:SetPropDouble(string prop, double i)
-Player:SetPropBool(string prop, bool i)
-Player:SetPropFloat(string prop, float i)
-Player:SetPropVector(string prop, Vector i)
+Player:GetPropBool(int offset)
+Player:GetPropInt(int offset)
+Player:GetPropFloat(int offset)
+Player:GetPropDouble(int offset)
+Player:GetPropShort(int offset)
+Player:GetPropVector(int offset)
+Player:GetPropAngle(int offset)
+Player:SetPropInt(int offset, int i)
+Player:SetPropShort(int offset, short i)
+Player:SetPropAngle(int offset, QAngle ang)
+Player:SetPropDouble(int offset, double i)
+Player:SetPropBool(int offset, bool i)
+Player:SetPropFloat(int offset, float i)
+Player:SetPropVector(int offset, Vector i)
 ```
 
 Weapon class
@@ -235,20 +237,20 @@ Weapon:GetNextSecondaryAttack()
 Weapon:GetItemDefinitionIndex()
 Weapon:GetBoundingBox()
 Weapon:GetStaticBox()
-Weapon:GetPropBool(string prop)
-Weapon:GetPropInt(string prop)
-Weapon:GetPropFloat(string prop)
-Weapon:GetPropDouble(string prop)
-Weapon:GetPropShort(string prop)
-Weapon:GetPropVector(string prop)
-Weapon:GetPropAngle(string prop)
-Weapon:SetPropInt(string prop, int i)
-Weapon:SetPropShort(string prop, short i)
-Weapon:SetPropAngle(string prop, QAngle ang)
-Weapon:SetPropDouble(string prop, double i)
-Weapon:SetPropBool(string prop, bool i)
-Weapon:SetPropFloat(string prop, float i)
-Weapon:SetPropVector(string prop, Vector i)
+Weapon:GetPropBool(int offset)
+Weapon:GetPropInt(int offset)
+Weapon:GetPropFloat(int offset)
+Weapon:GetPropDouble(int offset)
+Weapon:GetPropShort(int offset)
+Weapon:GetPropVector(int offset)
+Weapon:GetPropAngle(int offset)
+Weapon:SetPropInt(int offset, int i)
+Weapon:SetPropShort(int offset, short i)
+Weapon:SetPropAngle(int offset, QAngle ang)
+Weapon:SetPropDouble(int offset, double i)
+Weapon:SetPropBool(int offset, bool i)
+Weapon:SetPropFloat(int offset, float i)
+Weapon:SetPropVector(int offset, Vector i)
 ```
 
 Entity class
@@ -258,20 +260,20 @@ Entity:IsValidPtr()
 Entity:GetIndex()
 Entity:GetBoundingBox()
 Entity:GetStaticBox()
-Entity:GetPropBool(string prop)
-Entity:GetPropInt(string prop)
-Entity:GetPropFloat(string prop)
-Entity:GetPropDouble(string prop)
-Entity:GetPropShort(string prop)
-Entity:GetPropVector(string prop)
-Entity:GetPropAngle(string prop)
-Entity:SetPropInt(string prop, int i)
-Entity:SetPropShort(string prop, short i)
-Entity:SetPropAngle(string prop, QAngle ang)
-Entity:SetPropDouble(string prop, double i)
-Entity:SetPropBool(string prop, bool i)
-Entity:SetPropFloat(string prop, float i)
-Entity:SetPropVector(string prop, Vector i)
+Entity:GetPropBool(int offset)
+Entity:GetPropInt(int offset)
+Entity:GetPropFloat(int offset)
+Entity:GetPropDouble(int offset)
+Entity:GetPropShort(int offset)
+Entity:GetPropVector(int offset)
+Entity:GetPropAngle(int offset)
+Entity:SetPropInt(int offset, int i)
+Entity:SetPropShort(int offset, short i)
+Entity:SetPropAngle(int offset, QAngle ang)
+Entity:SetPropDouble(int offset, double i)
+Entity:SetPropBool(int offset, bool i)
+Entity:SetPropFloat(int offset, float i)
+Entity:SetPropVector(int offset, Vector i)
 ```
 
 Convar class
@@ -302,18 +304,14 @@ UserCmd class
 ```lua
 UserCmd.command_number
 UserCmd.tick_count
-UserCmd.aimdirection
+UserCmd.viewangles
 UserCmd.forwardmove
 UserCmd.sidemove
 UserCmd.upmove
 UserCmd.buttons
-UserCmd.impulse
-UserCmd.weaponselect
-UserCmd.weaponsubtype
 UserCmd.random_seed
 UserCmd.mousedx
 UserCmd.mousedy
-UserCmd.hasbeenpredicted
 ```
 
 QAngle class
@@ -413,8 +411,8 @@ ui.Combo
 ui.InputText
 ------------------
   ```lua
-  -- Label, variable name, string size, default value
-  ui.InputText("Label", "str_variable", 32, "default")
+  -- Label, variable name, default value
+  ui.InputText("Label", "str_variable", "default")
   ui.GetString("str_variable") -- returns the input value
   ```
 
@@ -753,6 +751,14 @@ client.GetConvar
   ```lua
   -- cvar name
   local cvar = client.GetConvar("cl_interp") -- returns the ConVar object
+  ```
+
+client.GetNetvar
+------------------
+  ```lua
+  -- table, netvar
+  local offset = client.GetNetvar("DT_BasePlayer", "m_iHealth") -- returns the m_iHealth offset
+  player:GetPropInt(offset) -- returns the player health
   ```
 
 client.GetSendPacket
