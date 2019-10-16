@@ -960,7 +960,7 @@ Callbacks
   ```lua
   create_movement(UserCmd)
   fire_game_event(Event)
-  frame_stage_notify(current_stage)
+  frame_stage_notify(Stage)
   paint_traverse()
   find_mdl()
   ```
