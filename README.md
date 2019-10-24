@@ -215,6 +215,8 @@ Player:SetPropDouble(int offset, double i)
 Player:SetPropBool(int offset, bool i)
 Player:SetPropFloat(int offset, float i)
 Player:SetPropVector(int offset, Vector i)
+Player:GetAnimState()
+Player:GetMissedShots()
 ```
 
 Weapon class
@@ -312,6 +314,42 @@ UserCmd.buttons
 UserCmd.random_seed
 UserCmd.mousedx
 UserCmd.mousedy
+```
+
+AnimState class
+--------------------------
+```lua
+AnimState.m_flLastClientSideAnimationUpdateTime
+AnimState.m_iLastClientSideAnimationUpdateFramecount
+AnimState.m_flEyePitch
+AnimState.m_flEyeYaw
+AnimState.m_flPitch
+AnimState.m_flGoalFeetYaw
+AnimState.m_flCurrentFeetYaw
+AnimState.m_flCurrentTorsoYaw
+AnimState.m_flUnknownVelocityLean
+AnimState.m_flLeanAmount
+AnimState.m_flFeetCycle
+AnimState.m_flFeetYawRate
+AnimState.m_fDuckAmount
+AnimState.m_fLandingDuckAdditiveSomething
+AnimState.m_vOrigin
+AnimState.m_vLastOrigin
+AnimState.m_vVelocityX
+AnimState.m_vVelocityY
+AnimState.speed_2d
+AnimState.flUpVelocity
+AnimState.m_flSpeedNormalized
+AnimState.m_flFeetSpeedForwardsOrSideWays
+AnimState.m_flFeetSpeedUnknownForwardOrSideways
+AnimState.m_flTimeSinceStartedMoving
+AnimState.m_flTimeSinceStoppedMoving
+AnimState.m_bOnGround
+AnimState.m_bInHitGroundAnimation
+AnimState.m_flLastOriginZ
+AnimState.m_flHeadHeightOrOffsetFromHittingGroundAnimation
+AnimState.m_flStopToFullRunningFraction
+AnimState.m_flUnknownFraction
 ```
 
 QAngle class
@@ -961,6 +999,7 @@ Callbacks
   create_movement(UserCmd)
   fire_game_event(Event)
   frame_stage_notify(Stage)
+  player_resolver(Player)
   paint_traverse()
   find_mdl()
   ```
