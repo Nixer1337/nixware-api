@@ -15,6 +15,8 @@ Nixware - Counter Strike: Global Offensive
 
 [ui.Combo](#uicombo)
 
+[ui.InputText](#uiinputtext)
+
 [ui.GetBool](#uigetbool)
 
 [ui.GetInt](#uigetint)
