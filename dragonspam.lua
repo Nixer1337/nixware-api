@@ -6,7 +6,7 @@ local function event_listener(event)
 
         if attacker == me and dead ~= me then
             local entity = entitylist.GetPlayerByIndex(dead)
-            engine.ExecuteClientCmd("say " .. entity:GetName() .. ", ты кто ннчик? Я драгонфикс. SkeetUser.");
+            engine.ExecuteClientCmd("say " .. entity:GetName() .. ", гет тапед гет нихваре .");
         end
     end
 end
