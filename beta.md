@@ -297,8 +297,8 @@ AnimState.m_vOrigin
 AnimState.m_vLastOrigin
 AnimState.m_vVelocityX
 AnimState.m_vVelocityY
-AnimState.speed_2d
-AnimState.flUpVelocity
+AnimState.m_flSpeed2D
+AnimState.m_flUpVelocity
 AnimState.m_flSpeedNormalized
 AnimState.m_flFeetSpeedForwardsOrSideWays
 AnimState.m_flFeetSpeedUnknownForwardOrSideways
