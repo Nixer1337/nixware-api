@@ -409,32 +409,49 @@ mdl.ReplacePath
 ui.Checkbox
 ------------------
   ```lua
-  -- Label, variable name, default value
-  ui.Checkbox("Label", "b_variable", false)
+  -- Label, variable name, default value (optional), callback (optional)
+  local function cb(state)
+      print("b_variable = " .. state .. "\n")
+  end
+
+  ui.Checkbox("Label", "b_variable", false, cb)
   ui.GetBool("b_variable") -- returns the checkbox state
   ```
 
 ui.SliderInt
 ------------------
   ```lua
-  -- Label, variable name, min value, max value, default value
-  ui.SliderInt("Label", "i_variable", 0, 10, 0)
+  -- Label, variable name, min value, max value, default value (optional), callback (optional)
+  local function cb(value)
+      print("i_variable = " .. value .. "\n")
+  end
+
+  ui.SliderInt("Label", "i_variable", 0, 10, 0, cb)
   ui.GetInt("i_variable") -- returns the slider value
   ```
 
 ui.SliderFloat
 ------------------
   ```lua
-  -- Label, variable name, min value, max value, default value
-  ui.SliderFloat("Label", "flt_variable", 0.0, 10.0, 0.0)
+  -- Label, variable name, min value, max value, default value (optional), callback (optional)
+  local function cb(value)
+      print("fl_variable = " .. value .. "\n")
+  end
+
+  ui.SliderFloat("Label", "fl_variable", 0.0, 10.0, 0.0, cb)
   ui.GetFloat("flt_variable") -- returns the slider value
   ```
 
 ui.KeyBind
 ------------------
   ```lua
-  -- Label, variable name
-  ui.KeyBind("Label", "i_key")
+  -- Label, variable name, callback (optional)
+
+  local function cb(value)
+      print("i_key = " .. value .. "\n")
+  end
+
+  ui.KeyBind("Label", "i_key", cb)
 
   local key = ui.GetInt("i_key") -- returns the key
   client.IsKeyPressed(key) -- returns the pressed state
@@ -443,16 +460,26 @@ ui.KeyBind
 ui.Combo
 ------------------
   ```lua
-  -- Label, variable name, strings array, default value
-  ui.Combo("Label", "i_variable", { "Item1", "Item2", "Item3" }, 0)
+  -- Label, variable name, strings array, default value (optional), callback (optional)
+
+  local function cb(value)
+      print("i_variable = " .. value .. "\n")
+  end
+
+  ui.Combo("Label", "i_variable", { "Item1", "Item2", "Item3" }, 0, cb)
   ui.GetInt("i_variable") -- returns the combo value
   ```
 
 ui.InputText
 ------------------
   ```lua
-  -- Label, variable name, default value
-  ui.InputText("Label", "str_variable", "default")
+  -- Label, variable name, default value (optional), callback (optional)
+
+  local function cb(str)
+      print("str_variable = " .. str .. "\n")
+  end
+
+  ui.InputText("Label", "str_variable", "default", cb)
   ui.GetString("str_variable") -- returns the input value
   ```
 
@@ -612,13 +639,6 @@ engine.GetPlayerIndexByUserID
   local index = engine.GetPlayerIndexByUserID(userID) -- returns the entity index
   ```
 
-engine.GetPlayerIndexByUserID
-------------------
-  ```lua
-  -- userID
-  local index = engine.GetPlayerIndexByUserID(userID) -- returns the entity index
-  ```
-
 engine.GetLocalPlayer
 ------------------
   ```lua
@@ -733,6 +753,13 @@ globalvars.interpolation_amount
 ------------------
   ```lua
   local interpolation_amount = globalvars.interpolation_amount() -- returns the interpolation amount
+  ```
+
+client.TraceLine
+------------------
+  ```lua
+  -- skip_entindex, mask, start_x, start_y, start_z, end_x, end_y, end_z
+  local fraction, hit_entity_index = client.TraceLine(skip_entindex, mask, start_x, start_y, start_z, end_x, end_y, end_z) -- returns fraction, entindex 
   ```
 
 client.IsValveDS
