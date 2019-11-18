@@ -103,6 +103,8 @@ Nixware - Counter Strike: Global Offensive
 
 [client.IsValveDS](#clientisvalveds)
 
+[client.TraceLine](#clienttraceline)
+
 [client.IsKeyPressed](#clientiskeypressed)
 
 [client.IsVisible](#clientisvisible)
