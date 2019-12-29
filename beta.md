@@ -361,7 +361,7 @@ mdl.ReplacePath
     mdl.ReplacePath("knife_default_ct.mdl", "models/weapons/v_minecraft_pickaxe.mdl")
     mdl.ReplacePath("knife_default_t.mdl", "models/weapons/v_minecraft_pickaxe.mdl")
   end
-  client.RegisterCallback("find_mdl", model_changer)
+  client.RegisterCallback("FindMDL", model_changer)
   ```
 
 ui.Checkbox
@@ -775,7 +775,7 @@ client.RegisterCallback
       surface.DrawSetColor(255, 0, 0, 255) 
       surface.DrawFilledRect(5, 5, 10, 10)
   end
-  client.RegisterCallback("paint_traverse", on_paint)
+  client.RegisterCallback("Paint", on_paint)
   ```
 
 client.Notification
