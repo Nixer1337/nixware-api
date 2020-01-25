@@ -5,6 +5,24 @@ Nixware Reborn
 
 [mdl.ReplacePath](#mdlreplacepath)
 
+[ui.Checkbox](#uicheckbox)
+
+[ui.SliderInt](#uisliderint)
+
+[ui.SliderFloat](#uisliderfloat)
+
+[ui.GetBool](#uigetbool)
+
+[ui.GetInt](#uigetint)
+
+[ui.GetFloat](#uigetfloat)
+
+[ui.SetBool](#uisetbool)
+
+[ui.SetInt](#uisetint)
+
+[ui.SetFloat](#uisetfloat)
+
 [surface.GetCursorPos](#surfacegetcursorpos)
 
 [surface.SetupFont](#surfacesetupfont)
