@@ -273,10 +273,10 @@ Event class
 --------------------------
 ```lua
 Event:GetName()
-Event:GetBool()
-Event:GetInt()
-Event:GetFloat()
-Event:GetString()
+Event:GetBool(string keyname, bool default_value)
+Event:GetInt(string keyname, int default_value)
+Event:GetFloat(string keyname, float default_value)
+Event:GetString(string keyname, string default_value)
 ```
 
 UserCmd class
@@ -579,13 +579,6 @@ engine.GetLevelNameShort
 ------------------
   ```lua
   local name = engine.GetLevelNameShort() -- returns the current map name
-  ```
-
-engine.GetPlayerIndexByUserID
-------------------
-  ```lua
-  -- userID
-  local index = engine.GetPlayerIndexByUserID(userID) -- returns the entity index
   ```
 
 engine.GetPlayerIndexByUserID
