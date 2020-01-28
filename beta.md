@@ -435,49 +435,61 @@ ui.InputText
 ui.GetBool
 ------------------
   ```lua
-  local var = ui.GetBool("var") -- returns the added variable state
+  local var = ui.GetBool("var") -- returns the variable state
   ```
 
 ui.GetInt
 ------------------
   ```lua
-  local var = ui.GetInt("var") -- returns the added variable value
+  local var = ui.GetInt("var") -- returns the variable value
   ```
 
 ui.GetFloat
 ------------------
   ```lua
-  local var = ui.GetFloat("var") -- returns the added variable value
+  local var = ui.GetFloat("var") -- returns the variable value
+  ```
+
+ui.GetColor
+------------------
+  ```lua
+  local r, g, b, a = ui.GetColor("var") -- returns the variable color
   ```
 
 ui.GetString
 ------------------
   ```lua
-  local var = ui.GetString("var") -- returns the added variable value
+  local var = ui.GetString("var") -- returns the variable value
   ```
 
 ui.SetBool
 ------------------
   ```lua
-  ui.SetBool("var", true) -- setting the added variable state
+  ui.SetBool("var", true) -- setting the variable state
   ```
 
 ui.SetInt
 ------------------
   ```lua
-  ui.SetInt("var", 5) -- setting the added variable value
+  ui.SetInt("var", 5) -- setting the variable value
   ```
 
 ui.SetFloat
 ------------------
   ```lua
-  ui.SetFloat("var", 5.0) -- setting the added variable value
+  ui.SetFloat("var", 5.0) -- setting the variable value
   ```
 
 ui.SetString
 ------------------
   ```lua
-  ui.SetString("var", "hello") -- setting the added variable value
+  ui.SetString("var", "hello") -- setting the variable value
+  ```
+
+ui.SetColor
+------------------
+  ```lua
+  ui.SetColor("var", r, g, b, a) -- setting the variable color
   ```
 
 surface.GetCursorPos
