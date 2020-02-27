@@ -19,6 +19,10 @@ Nixware Reborn
 
 [ui.GetFloat](#uigetfloat)
 
+[ui.KeyBind](#uikeybind)
+
+[ui.GetBindState](#uigetbindstate)
+
 [ui.SetBool](#uisetbool)
 
 [ui.SetInt](#uisetint)
@@ -435,6 +439,19 @@ ui.InputText
   ui.InputText("Label", "str_variable", "default")
   ui.GetString("str_variable") -- returns the input value
   ```
+
+ui.KeyBind
+------------------
+  ```lua
+    -- Label, variable name, default key
+  ui.KeyBind("label", "lua_bind", 0)
+```
+
+ui.GetBindState
+------------------
+  ```lua
+  ui.GetBindState("lua_bind") -- returns the bind state
+```
 
 ui.GetBool
 ------------------
