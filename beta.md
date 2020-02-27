@@ -7,6 +7,8 @@ Nixware Reborn
 
 [ui.Checkbox](#uicheckbox)
 
+[ui.Combo](#uicombo)
+
 [ui.SliderInt](#uisliderint)
 
 [ui.SliderFloat](#uisliderfloat)
@@ -22,6 +24,8 @@ Nixware Reborn
 [ui.SetInt](#uisetint)
 
 [ui.SetFloat](#uisetfloat)
+
+[surface.PlaySound](#surfaceplaysound)
 
 [surface.GetCursorPos](#surfacegetcursorpos)
 
@@ -490,6 +494,12 @@ ui.SetColor
 ------------------
   ```lua
   ui.SetColor("var", r, g, b, a) -- setting the variable color
+  ```
+
+surface.PlaySound
+------------------
+  ```lua
+  surface.PlaySound("bell.wav") -- playing sound from Counter-Strike Global Offensive\csgo\sound folder
   ```
 
 surface.GetCursorPos
