@@ -133,6 +133,8 @@ Nixware Reborn
 
 [client.WorldToScreen](#clientworldtoscreen)
 
+[client.PenetrateWall](#clientpenetratewall)
+
 [client.CalcAngle](#clientCalcangle)
 
 [client.FindPattern](#clientfindpattern)
@@ -882,6 +884,14 @@ client.WorldToScreen
   ```lua
   -- 3d_pos
   local pos_2d = client.WorldToScreen(pos_3d) -- returns the screen position by world position
+  ```
+
+client.PenetrateWall
+------------------
+  ```lua
+  -- attacker, target, start, end
+  local lp = entitylist.GetLocalPlayer()
+  local damage = client.PenetrateWall(lp, target, lp:GetEyePos(), target:GetEyePos()) -- returns damage
   ```
 
 client.CalcAngle
