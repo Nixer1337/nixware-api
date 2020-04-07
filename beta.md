@@ -57,6 +57,8 @@ Nixware Reborn
 
 [surface.DrawPrintText](#surfacedrawprinttext)
 
+[surface.DrawTexturedPolygon](#surfacedrawtexturedpolygon)
+
 [engine.GetLevelNameShort](#enginegetlevelnameshort)
 
 [engine.GetPlayerIndexByUserID](#enginegetplayerindexbyuserid)
@@ -133,7 +135,7 @@ Nixware Reborn
 
 [client.WorldToScreen](#clientworldtoscreen)
 
-[client.PenetrateWall](#clientpenetratewall)
+[client.AddEventToListener](#clientaddeventtolistener)
 
 [client.CalcAngle](#clientCalcangle)
 
@@ -148,6 +150,8 @@ Nixware Reborn
 [entitylist.GetHighestEntityIndex](#entitylistgethighestentityIndex)
 
 [entitylist.GetLocalPlayer](#entitylistgetlocalplayer)
+
+[entitylist.GetEntityFromHandle](#entitylistgetentityfromhandle)
 
 [entitylist.GetPlayers](#entitylistgetplayers)
 
@@ -362,13 +366,22 @@ Vector:Length()
 Vector:LengthSqr()
 Vector:Length2D()
 Vector:Length2DSqr()
-Vector:IsZero(float tolerance = 0.01f)
 Vector:IsValid()
 Vector:Zero()
 Vector:DistTo(const Vector &vOther)
 Vector:DistToSqr(const Vector &vOther)
 Vector:Cross(const Vector& vOther)
 Vector:Normalize()
+```
+
+Vector2D class
+--------------------------
+```lua
+Vector2D.x
+Vector2D.y
+Vector2D:Length2D()
+Vector2D:Length2DSqr()
+Vector2D:IsValid()
 ```
 
 RECT class
@@ -614,6 +627,14 @@ surface.DrawPrintText
 ------------------
   ```lua
   surface.DrawPrintText("Testing") -- drawing the text
+  ```
+
+surface.DrawTexturedPolygon
+------------------
+  ```lua
+    local points = { Vector2D.new(5, 5), Vector2D.new(15, 5), Vector2D.new(10, 15) }
+    -- points num, points, red, green, blue, alpha
+    surface.DrawTexturedPolygon(3, points, 255, 0, 0, 255) -- render the red trigon https://i.imgur.com/OjcQf6i.png
   ```
 
 engine.GetLevelNameShort
@@ -886,12 +907,12 @@ client.WorldToScreen
   local pos_2d = client.WorldToScreen(pos_3d) -- returns the screen position by world position
   ```
 
-client.PenetrateWall
+client.AddEventToListener
 ------------------
   ```lua
-  -- attacker, target, start, end
-  local lp = entitylist.GetLocalPlayer()
-  local damage = client.PenetrateWall(lp, target, lp:GetEyePos(), target:GetEyePos()) -- returns damage
+  -- event name
+  client.AddEventToListener("inferno_expire") -- adds event to listener
+  -- events list: https://wiki.alliedmods.net/Counter-Strike:_Global_Offensive_Events
   ```
 
 client.CalcAngle
@@ -952,6 +973,13 @@ entitylist.GetLocalPlayer
 ------------------
   ```lua
   local localplayer = entitylist.GetLocalPlayer() -- returns the local player object
+  ```
+
+entitylist.GetEntityFromHandle
+------------------
+  ```lua
+  -- handle
+  local entity = entitylist.GetEntityFromHandle(handle) -- returns the entity object from handle
   ```
 
 entitylist.GetEntitiesByClass
