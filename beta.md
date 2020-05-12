@@ -29,6 +29,8 @@ Nixware Reborn
 
 [ui.SetFloat](#uisetfloat)
 
+[ui.IsVisible](#uiisvisible)
+
 [surface.PlaySound](#surfaceplaysound)
 
 [surface.GetCursorPos](#surfacegetcursorpos)
@@ -99,6 +101,8 @@ Nixware Reborn
 
 [client.IsKeyPressed](#clientiskeypressed)
 
+[client.IsKeyClicked](#clientiskeyclicked)
+
 [client.IsVisible](#clientisvisible)
 
 [client.GetTimeStamp](#clientgettimestamp)
@@ -122,6 +126,8 @@ Nixware Reborn
 [client.SetName](#clientsetname)
 
 [client.RegisterCallback](#clientregistercallback)
+
+[client.CreateInterface](#clientcreateinterface)
 
 [client.RandomInt](#clientrandomint)
 
@@ -516,6 +522,12 @@ ui.SetFloat
   ui.SetFloat("var", 5.0) -- setting the variable value
   ```
 
+ui.IsVisible
+------------------
+  ```lua
+  local menu_opened = ui.IsVisible() -- returns true if menu opened
+  ```
+
 ui.SetString
 ------------------
   ```lua
@@ -767,6 +779,13 @@ client.IsKeyPressed
   local isPressed = client.IsKeyPressed(key) -- returns the pressed state
   ```
 
+client.IsKeyClicked
+------------------
+  ```lua
+  -- key code: https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
+  local isPressed = client.IsKeyClicked(key) -- returns the clicked state
+  ```
+
 client.IsVisible
 ------------------
   ```lua
@@ -851,18 +870,18 @@ client.RegisterCallback
   client.RegisterCallback("Paint", on_paint)
   ```
 
+client.CreateInterface
+------------------
+  ```lua
+  -- module, version
+  client.CreateInterface("engine.dll", "VEngineClient014") -- returns the interface address
+```
+
 client.Notification
 ------------------
   ```lua
   -- message
   client.Notification("Hello, world!") -- pushing the notification
-  ```
-
-client.AddToRadioList
-------------------
-  ```lua
-  -- text, radiourl
-  client.AddToRadioList(text, radiourl) -- adding your channel to radio list
   ```
 
 client.RandomInt
