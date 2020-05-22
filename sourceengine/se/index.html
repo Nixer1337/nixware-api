@@ -1,0 +1,939 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.0">
+    
+    
+      
+        <title>se - Nixware API</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.18ac144a.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#se-table-source-engine-utilities" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Nixware API" class="md-header-nav__button md-logo" aria-label="Nixware API">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Nixware API
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              se
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Nixware API" class="md-nav__button md-logo" aria-label="Nixware API">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Nixware API
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../ui/" title="ui" class="md-nav__link">
+      ui
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../client/" title="client" class="md-nav__link">
+      client
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      types
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="types" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        types
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../types/vec2_t/" title="vec2_t" class="md-nav__link">
+      vec2_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../types/vec3_t/" title="vec3_t" class="md-nav__link">
+      vec3_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../types/angle_t/" title="angle_t" class="md-nav__link">
+      angle_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../types/rect_t/" title="rect_t" class="md-nav__link">
+      rect_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../types/color_t/" title="color_t" class="md-nav__link">
+      color_t
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      source engine
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="source engine" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        source engine
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+    
+    <label class="md-nav__link" for="nav-5-1">
+      types
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="types" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        types
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/game_event_t/" title="game_event_t" class="md-nav__link">
+      game_event_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/usercmd_t/" title="usercmd_t" class="md-nav__link">
+      usercmd_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/convar_t/" title="convar_t" class="md-nav__link">
+      convar_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/entity_t/" title="entity_t" class="md-nav__link">
+      entity_t
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        se
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="se" class="md-nav__link md-nav__link--active">
+      se
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#world_to_screenpos-vec2_t" class="md-nav__link">
+    world_to_screen(pos): vec2_t
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_clantagtag" class="md-nav__link">
+    set_clantag(tag)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_namename" class="md-nav__link">
+    set_name(name)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_convarname-convar_t" class="md-nav__link">
+    get_convar(name): convar_t
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_netvartable-netvar-number" class="md-nav__link">
+    get_netvar(table, netvar): number
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_latency-number" class="md-nav__link">
+    get_latency(): number
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#register_eventeventname" class="md-nav__link">
+    register_event(eventname)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create_interfacemodule_name-interface_version-number" class="md-nav__link">
+    create_interface(module_name, interface_version): number
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../surface/" title="surface" class="md-nav__link">
+      surface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../engine/" title="engine" class="md-nav__link">
+      engine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../trace/" title="trace" class="md-nav__link">
+      trace
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../entitylist/" title="entitylist" class="md-nav__link">
+      entitylist
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../globalvars/" title="globalvars" class="md-nav__link">
+      globalvars
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clientstate/" title="clientstate" class="md-nav__link">
+      clientstate
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../callbacks/" title="callbacks" class="md-nav__link">
+      callbacks
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#world_to_screenpos-vec2_t" class="md-nav__link">
+    world_to_screen(pos): vec2_t
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_clantagtag" class="md-nav__link">
+    set_clantag(tag)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_namename" class="md-nav__link">
+    set_name(name)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_convarname-convar_t" class="md-nav__link">
+    get_convar(name): convar_t
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_netvartable-netvar-number" class="md-nav__link">
+    get_netvar(table, netvar): number
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_latency-number" class="md-nav__link">
+    get_latency(): number
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#register_eventeventname" class="md-nav__link">
+    register_event(eventname)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create_interfacemodule_name-interface_version-number" class="md-nav__link">
+    create_interface(module_name, interface_version): number
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="se-table-source-engine-utilities">se table (source engine utilities)</h1>
+<h2 id="functions">Functions</h2>
+<h2 id="world_to_screenpos-vec2_t"><strong>world_to_screen(pos)</strong>: <a href="../../types/vec2_t">vec2_t</a></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../types/vec3_t">vec3_t</a></td>
+<td>pos</td>
+<td>World position</td>
+</tr>
+</tbody>
+</table>
+<p>Getting the 2d pos from world position</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">pos2d</span> <span class="o">=</span> <span class="n">se</span><span class="p">.</span><span class="n">world_to_screen</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="set_clantagtag"><strong>set_clantag(tag)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>tag</td>
+<td>Wanted clantag</td>
+</tr>
+</tbody>
+</table>
+<p>Setting nixware.cc clantag</p>
+<div class="codehilite"><pre><span></span><code><span class="n">se</span><span class="p">.</span><span class="n">set_clantag</span><span class="p">(</span><span class="s2">&quot;nixware.cc&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="set_namename"><strong>set_name(name)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>name</td>
+<td>Wanted name</td>
+</tr>
+</tbody>
+</table>
+<p>Setting nixware.cc name</p>
+<div class="codehilite"><pre><span></span><code><span class="n">se</span><span class="p">.</span><span class="n">set_name</span><span class="p">(</span><span class="s2">&quot;nixware.cc&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="get_convarname-convar_t"><strong>get_convar(name)</strong>: <a href="../types/convar_t">convar_t</a></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>name</td>
+<td>Console variable name</td>
+</tr>
+</tbody>
+</table>
+<p>Returns <a href="../types/convar_t">convar_t</a> object</p>
+<div class="codehilite"><pre><span></span><code><span class="n">se</span><span class="p">.</span><span class="n">get_convar</span><span class="p">(</span><span class="s2">&quot;r_jigglebones&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="get_netvartable-netvar-number"><strong>get_netvar(table, netvar)</strong>: number</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>table</td>
+<td>Table name</td>
+</tr>
+<tr>
+<td>string</td>
+<td>netvar</td>
+<td>Netvar name</td>
+</tr>
+</tbody>
+</table>
+<p>Returns m_iHealth offset</p>
+<div class="codehilite"><pre><span></span><code><span class="n">se</span><span class="p">.</span><span class="n">get_netvar</span><span class="p">(</span><span class="s2">&quot;DT_BasePlayer&quot;</span><span class="p">,</span> <span class="s2">&quot;m_iHealth&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="get_latency-number"><strong>get_latency()</strong>: number</h2>
+<p>Returns current latency</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">ping</span> <span class="o">=</span> <span class="n">se</span><span class="p">.</span><span class="n">get_latency</span><span class="p">()</span>
+</code></pre></div>
+
+
+<hr />
+<hr />
+<h2 id="register_eventeventname"><strong>register_event(eventname)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>eventname</td>
+<td>Event name</td>
+</tr>
+</tbody>
+</table>
+<p>Register the event for <a href="../../callbacks/#fire_game_eventevent-csgo">fire_game_event</a> callback</p>
+<div class="codehilite"><pre><span></span><code><span class="n">se</span><span class="p">.</span><span class="n">register_event</span><span class="p">(</span><span class="s2">&quot;player_death&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+
+<h2 id="create_interfacemodule_name-interface_version-number"><strong>create_interface(module_name, interface_version)</strong>: number</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>module_name</td>
+<td>Module name</td>
+</tr>
+<tr>
+<td>string</td>
+<td>interface_version</td>
+<td>Interface version</td>
+</tr>
+</tbody>
+</table>
+<p>Getting the IModelInfo interface</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">g_model_info</span> <span class="o">=</span> <span class="n">ffi</span><span class="p">.</span><span class="n">cast</span><span class="p">(</span><span class="s2">&quot;void*&quot;</span><span class="p">,</span> <span class="n">se</span><span class="p">.</span><span class="n">create_interface</span><span class="p">(</span><span class="s2">&quot;engine.dll&quot;</span><span class="p">,</span> <span class="s2">&quot;VModelInfoClient004&quot;</span><span class="p">))</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../types/entity_t/" title="entity_t" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                entity_t
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../surface/" title="surface" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                surface
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

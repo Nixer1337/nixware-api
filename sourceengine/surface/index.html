@@ -1,0 +1,1344 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.0">
+    
+    
+      
+        <title>surface - Nixware API</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.18ac144a.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#surface-table" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Nixware API" class="md-header-nav__button md-logo" aria-label="Nixware API">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Nixware API
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              surface
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Nixware API" class="md-nav__button md-logo" aria-label="Nixware API">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Nixware API
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../ui/" title="ui" class="md-nav__link">
+      ui
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../client/" title="client" class="md-nav__link">
+      client
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      types
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="types" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        types
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../types/vec2_t/" title="vec2_t" class="md-nav__link">
+      vec2_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../types/vec3_t/" title="vec3_t" class="md-nav__link">
+      vec3_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../types/angle_t/" title="angle_t" class="md-nav__link">
+      angle_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../types/rect_t/" title="rect_t" class="md-nav__link">
+      rect_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../types/color_t/" title="color_t" class="md-nav__link">
+      color_t
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      source engine
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="source engine" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        source engine
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+    
+    <label class="md-nav__link" for="nav-5-1">
+      types
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="types" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        types
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/game_event_t/" title="game_event_t" class="md-nav__link">
+      game_event_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/usercmd_t/" title="usercmd_t" class="md-nav__link">
+      usercmd_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/convar_t/" title="convar_t" class="md-nav__link">
+      convar_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/entity_t/" title="entity_t" class="md-nav__link">
+      entity_t
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../se/" title="se" class="md-nav__link">
+      se
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        surface
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="surface" class="md-nav__link md-nav__link--active">
+      surface
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#play_soundsoundname" class="md-nav__link">
+    play_sound(soundname)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_cursor_pos-vec2_t" class="md-nav__link">
+    get_cursor_pos(): vec2_t
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup_fontfontname-tall-weight-blur-scanlines-flags-font" class="md-nav__link">
+    setup_font(fontname, tall, weight, blur, scanlines, flags): font
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw_filled_rectstart_pos_x-start_pos_y-end_pos_x-end_pos_y" class="md-nav__link">
+    draw_filled_rect(start_pos_x, start_pos_y, end_pos_x, end_pos_y)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw_filled_rect_fadestart_pos_x-start_pos_y-end_pos_x-end_pos_y-first_alpha-next_alpha-is_horisontal" class="md-nav__link">
+    draw_filled_rect_fade(start_pos_x, start_pos_y, end_pos_x, end_pos_y, first_alpha, next_alpha, is_horisontal)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw_outlined_rectstart_pos_x-start_pos_y-end_pos_x-end_pos_y" class="md-nav__link">
+    draw_outlined_rect(start_pos_x, start_pos_y, end_pos_x, end_pos_y)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw_set_colorstart_pos_x-start_pos_y-end_pos_x-end_pos_y" class="md-nav__link">
+    draw_set_color(start_pos_x, start_pos_y, end_pos_x, end_pos_y)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_text_sizefont-text-number-number" class="md-nav__link">
+    get_text_size(font, text): number, number
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw_linestart_pos_x-start_pos_y-end_pos_x-end_pos_y" class="md-nav__link">
+    draw_line(start_pos_x, start_pos_y, end_pos_x, end_pos_y)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw_outlined_circlepos_x-pos_y-radius-segments" class="md-nav__link">
+    draw_outlined_circle(pos_x, pos_y, radius, segments)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw_set_text_fontfont" class="md-nav__link">
+    draw_set_text_font(font)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw_set_text_colorcolor" class="md-nav__link">
+    draw_set_text_color(color)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw_set_text_pospos_x-pos_y" class="md-nav__link">
+    draw_set_text_pos(pos_x, pos_y)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw_print_texttext" class="md-nav__link">
+    draw_print_text(text)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw_textured_polygonpoints_num-points-color" class="md-nav__link">
+    draw_textured_polygon(points_num, points, color)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../engine/" title="engine" class="md-nav__link">
+      engine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../trace/" title="trace" class="md-nav__link">
+      trace
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../entitylist/" title="entitylist" class="md-nav__link">
+      entitylist
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../globalvars/" title="globalvars" class="md-nav__link">
+      globalvars
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clientstate/" title="clientstate" class="md-nav__link">
+      clientstate
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../callbacks/" title="callbacks" class="md-nav__link">
+      callbacks
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#play_soundsoundname" class="md-nav__link">
+    play_sound(soundname)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_cursor_pos-vec2_t" class="md-nav__link">
+    get_cursor_pos(): vec2_t
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup_fontfontname-tall-weight-blur-scanlines-flags-font" class="md-nav__link">
+    setup_font(fontname, tall, weight, blur, scanlines, flags): font
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw_filled_rectstart_pos_x-start_pos_y-end_pos_x-end_pos_y" class="md-nav__link">
+    draw_filled_rect(start_pos_x, start_pos_y, end_pos_x, end_pos_y)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw_filled_rect_fadestart_pos_x-start_pos_y-end_pos_x-end_pos_y-first_alpha-next_alpha-is_horisontal" class="md-nav__link">
+    draw_filled_rect_fade(start_pos_x, start_pos_y, end_pos_x, end_pos_y, first_alpha, next_alpha, is_horisontal)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw_outlined_rectstart_pos_x-start_pos_y-end_pos_x-end_pos_y" class="md-nav__link">
+    draw_outlined_rect(start_pos_x, start_pos_y, end_pos_x, end_pos_y)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw_set_colorstart_pos_x-start_pos_y-end_pos_x-end_pos_y" class="md-nav__link">
+    draw_set_color(start_pos_x, start_pos_y, end_pos_x, end_pos_y)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_text_sizefont-text-number-number" class="md-nav__link">
+    get_text_size(font, text): number, number
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw_linestart_pos_x-start_pos_y-end_pos_x-end_pos_y" class="md-nav__link">
+    draw_line(start_pos_x, start_pos_y, end_pos_x, end_pos_y)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw_outlined_circlepos_x-pos_y-radius-segments" class="md-nav__link">
+    draw_outlined_circle(pos_x, pos_y, radius, segments)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw_set_text_fontfont" class="md-nav__link">
+    draw_set_text_font(font)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw_set_text_colorcolor" class="md-nav__link">
+    draw_set_text_color(color)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw_set_text_pospos_x-pos_y" class="md-nav__link">
+    draw_set_text_pos(pos_x, pos_y)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw_print_texttext" class="md-nav__link">
+    draw_print_text(text)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw_textured_polygonpoints_num-points-color" class="md-nav__link">
+    draw_textured_polygon(points_num, points, color)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="surface-table">surface table</h1>
+<h2 id="functions">Functions</h2>
+<h2 id="play_soundsoundname"><strong>play_sound(soundname)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>soundname</td>
+<td>Sound name</td>
+</tr>
+</tbody>
+</table>
+<p>Playing the sound</p>
+<div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">play_sound</span><span class="p">(</span><span class="s2">&quot;resource/warning.wav&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="get_cursor_pos-vec2_t"><strong>get_cursor_pos()</strong>: <a href="../../types/vec2_t">vec2_t</a></h2>
+<p>Returns the cursor position</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">surface</span><span class="p">.</span><span class="n">get_cursor_pos</span><span class="p">()</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="setup_fontfontname-tall-weight-blur-scanlines-flags-font"><strong>setup_font(fontname, tall, weight, blur, scanlines, flags)</strong>: font</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>fontname</td>
+<td>Windows font name</td>
+</tr>
+<tr>
+<td>number</td>
+<td>tall</td>
+<td>Font tall</td>
+</tr>
+<tr>
+<td>number</td>
+<td>weight</td>
+<td>Font weight</td>
+</tr>
+<tr>
+<td>number</td>
+<td>scanlines</td>
+<td>Font scanlines</td>
+</tr>
+<tr>
+<td>number</td>
+<td>flags</td>
+<td>Font flags</td>
+</tr>
+</tbody>
+</table>
+<p>Surface font flags: <a href="https://developer.valvesoftware.com/wiki/EFontFlags">developer.valvesoftware.com/wiki/EFontFlags</a></p>
+<p>Creating the font</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">font</span> <span class="o">=</span> <span class="n">surface</span><span class="p">.</span><span class="n">setup_font</span><span class="p">(</span><span class="s2">&quot;Tahoma&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mh">0x200</span><span class="p">)</span> 
+</code></pre></div>
+
+
+<hr />
+<h2 id="draw_filled_rectstart_pos_x-start_pos_y-end_pos_x-end_pos_y"><strong>draw_filled_rect(start_pos_x, start_pos_y, end_pos_x, end_pos_y)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>start_pos_x</td>
+<td>Start position x</td>
+</tr>
+<tr>
+<td>number</td>
+<td>start_pos_y</td>
+<td>Start position y</td>
+</tr>
+<tr>
+<td>number</td>
+<td>end_pos_x</td>
+<td>End position x</td>
+</tr>
+<tr>
+<td>number</td>
+<td>end_pos_y</td>
+<td>End position y</td>
+</tr>
+</tbody>
+</table>
+<p>Drawing the filled rect</p>
+<div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_color</span><span class="p">(</span><span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span> 
+<span class="n">surface</span><span class="p">.</span><span class="n">draw_filled_rect</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="draw_filled_rect_fadestart_pos_x-start_pos_y-end_pos_x-end_pos_y-first_alpha-next_alpha-is_horisontal"><strong>draw_filled_rect_fade(start_pos_x, start_pos_y, end_pos_x, end_pos_y, first_alpha, next_alpha, is_horisontal)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>start_pos_x</td>
+<td>Start position x</td>
+</tr>
+<tr>
+<td>number</td>
+<td>start_pos_y</td>
+<td>Start position y</td>
+</tr>
+<tr>
+<td>number</td>
+<td>end_pos_x</td>
+<td>End position x</td>
+</tr>
+<tr>
+<td>number</td>
+<td>end_pos_y</td>
+<td>End position y</td>
+</tr>
+<tr>
+<td>number</td>
+<td>first_alpha</td>
+<td>First Alpha</td>
+</tr>
+<tr>
+<td>number</td>
+<td>next_alpha</td>
+<td>Next Alpha</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>is_horisontal</td>
+<td>Is horisontal</td>
+</tr>
+</tbody>
+</table>
+<p>Drawing the faded rect</p>
+<div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_color</span><span class="p">(</span><span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span> 
+<span class="n">surface</span><span class="p">.</span><span class="n">draw_filled_rect_fade</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="draw_outlined_rectstart_pos_x-start_pos_y-end_pos_x-end_pos_y"><strong>draw_outlined_rect(start_pos_x, start_pos_y, end_pos_x, end_pos_y)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>start_pos_x</td>
+<td>Start position x</td>
+</tr>
+<tr>
+<td>number</td>
+<td>start_pos_y</td>
+<td>Start position y</td>
+</tr>
+<tr>
+<td>number</td>
+<td>end_pos_x</td>
+<td>End position x</td>
+</tr>
+<tr>
+<td>number</td>
+<td>end_pos_y</td>
+<td>End position y</td>
+</tr>
+</tbody>
+</table>
+<p>Drawing the rect</p>
+<div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_color</span><span class="p">(</span><span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span> 
+<span class="n">surface</span><span class="p">.</span><span class="n">draw_outlined_rect</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="draw_set_colorstart_pos_x-start_pos_y-end_pos_x-end_pos_y"><strong>draw_set_color(start_pos_x, start_pos_y, end_pos_x, end_pos_y)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>start_pos_x</td>
+<td>Start position x</td>
+</tr>
+<tr>
+<td>number</td>
+<td>start_pos_y</td>
+<td>Start position y</td>
+</tr>
+<tr>
+<td>number</td>
+<td>end_pos_x</td>
+<td>End position x</td>
+</tr>
+<tr>
+<td>number</td>
+<td>end_pos_y</td>
+<td>End position y</td>
+</tr>
+</tbody>
+</table>
+<p>Setting color of the next drawing element</p>
+<div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_color</span><span class="p">(</span><span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="get_text_sizefont-text-number-number"><strong>get_text_size(font, text)</strong>: number, number</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>font</td>
+<td>font</td>
+<td>Font</td>
+</tr>
+<tr>
+<td>string</td>
+<td>text</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+<p>Returns width and height text size</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">surface</span><span class="p">.</span><span class="n">get_text_size</span><span class="p">(</span><span class="n">font</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="draw_linestart_pos_x-start_pos_y-end_pos_x-end_pos_y"><strong>draw_line(start_pos_x, start_pos_y, end_pos_x, end_pos_y)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>start_pos_x</td>
+<td>Start position x</td>
+</tr>
+<tr>
+<td>number</td>
+<td>start_pos_y</td>
+<td>Start position y</td>
+</tr>
+<tr>
+<td>number</td>
+<td>end_pos_x</td>
+<td>End position x</td>
+</tr>
+<tr>
+<td>number</td>
+<td>end_pos_y</td>
+<td>End position y</td>
+</tr>
+</tbody>
+</table>
+<p>Drawing horisontal line</p>
+<div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_color</span><span class="p">(</span><span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+<span class="n">surface</span><span class="p">.</span><span class="n">draw_line</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="draw_outlined_circlepos_x-pos_y-radius-segments"><strong>draw_outlined_circle(pos_x, pos_y, radius, segments)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>pos_x</td>
+<td>Position x</td>
+</tr>
+<tr>
+<td>number</td>
+<td>pos_y</td>
+<td>Position y</td>
+</tr>
+<tr>
+<td>number</td>
+<td>radius</td>
+<td>Radius</td>
+</tr>
+<tr>
+<td>number</td>
+<td>segments</td>
+<td>Segments</td>
+</tr>
+</tbody>
+</table>
+<p>Drawing the circle</p>
+<div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_color</span><span class="p">(</span><span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+<span class="n">surface</span><span class="p">.</span><span class="n">draw_outlined_circle</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="draw_set_text_fontfont"><strong>draw_set_text_font(font)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>font</td>
+<td>font</td>
+<td>Font</td>
+</tr>
+</tbody>
+</table>
+<p>Setting the next text font</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">-- setup this font only once</span>
+<span class="kd">local</span> <span class="n">font</span> <span class="o">=</span> <span class="n">surface</span><span class="p">.</span><span class="n">setup_font</span><span class="p">(</span><span class="s2">&quot;Tahoma&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mh">0x200</span><span class="p">)</span> 
+
+<span class="n">surface</span><span class="p">.</span><span class="n">draw_set_text_font</span><span class="p">(</span><span class="n">font</span><span class="p">)</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="draw_set_text_colorcolor"><strong>draw_set_text_color(color)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../types/color_t">color_t</a></td>
+<td>color</td>
+<td>Color</td>
+</tr>
+</tbody>
+</table>
+<p>Setting the next text color</p>
+<div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_text_color</span><span class="p">(</span><span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="draw_set_text_pospos_x-pos_y"><strong>draw_set_text_pos(pos_x, pos_y)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>pos_x</td>
+<td>Position x</td>
+</tr>
+<tr>
+<td>number</td>
+<td>pos_y</td>
+<td>Position y</td>
+</tr>
+</tbody>
+</table>
+<p>Setting the next text pos</p>
+<div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_text_pos</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="draw_print_texttext"><strong>draw_print_text(text)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>text</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+<p>Print text</p>
+<div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_print_text</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="draw_textured_polygonpoints_num-points-color"><strong>draw_textured_polygon(points_num, points, color)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>points_num</td>
+<td>Num points</td>
+</tr>
+<tr>
+<td><a href="../../types/vec2_t">vec2_t</a> array</td>
+<td>points</td>
+<td>Points</td>
+</tr>
+<tr>
+<td><a href="../../types/color_t">color_t</a></td>
+<td>color</td>
+<td>Color</td>
+</tr>
+</tbody>
+</table>
+<p>Render the red trigon </p>
+<p><img alt="pic" src="https://i.imgur.com/OjcQf6i.png" /></p>
+<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">points</span> <span class="o">=</span> <span class="p">{</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span> <span class="p">}</span>
+<span class="n">surface</span><span class="p">.</span><span class="n">draw_textured_polygon</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">points</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../se/" title="se" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                se
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../engine/" title="engine" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                engine
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
