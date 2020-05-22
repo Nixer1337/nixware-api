@@ -845,8 +845,8 @@
 </tr>
 </tbody>
 </table>
-<p>Surface font flags: <a href="https://developer.valvesoftware.com/wiki/EFontFlags">developer.valvesoftware.com/wiki/EFontFlags</a></p>
 <p>Creating the font</p>
+<p>Surface font flags: <a href="https://developer.valvesoftware.com/wiki/EFontFlags">developer.valvesoftware.com/wiki/EFontFlags</a></p>
 <div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">font</span> <span class="o">=</span> <span class="n">surface</span><span class="p">.</span><span class="n">setup_font</span><span class="p">(</span><span class="s2">&quot;Tahoma&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mh">0x200</span><span class="p">)</span> 
 </code></pre></div>
 
@@ -1255,9 +1255,9 @@
 </tr>
 </tbody>
 </table>
-<p>Render the red trigon </p>
-<p><img alt="pic" src="https://i.imgur.com/OjcQf6i.png" /></p>
-<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">points</span> <span class="o">=</span> <span class="p">{</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span> <span class="p">}</span>
+<p>Render the textured polygon</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">-- https://i.imgur.com/OjcQf6i.png</span>
+<span class="kd">local</span> <span class="n">points</span> <span class="o">=</span> <span class="p">{</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span> <span class="p">}</span>
 <span class="n">surface</span><span class="p">.</span><span class="n">draw_textured_polygon</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">points</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
 </code></pre></div>
                 

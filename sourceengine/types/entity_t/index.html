@@ -833,21 +833,21 @@
                 <h2 id="functions">Functions</h2>
 <h2 id="is_dormant-bool"><strong>is_dormant()</strong>: bool</h2>
 <p>Returns true if entity is in dormant</p>
-<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">is_dormant</span> <span class="o">=</span> <span class="n">emtity</span><span class="p">:</span><span class="n">is_dormant</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">is_dormant</span> <span class="o">=</span> <span class="n">entity</span><span class="p">:</span><span class="n">is_dormant</span><span class="p">()</span>
 </code></pre></div>
 
 
 <hr />
 <h2 id="is_alive-bool"><strong>is_alive()</strong>: bool</h2>
 <p>Returns true if entity is alive</p>
-<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">is_alive</span> <span class="o">=</span> <span class="n">emtity</span><span class="p">:</span><span class="n">is_alive</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">is_alive</span> <span class="o">=</span> <span class="n">entity</span><span class="p">:</span><span class="n">is_alive</span><span class="p">()</span>
 </code></pre></div>
 
 
 <hr />
 <h2 id="get_bbox-rect_t"><strong>get_bbox()</strong>: <a href="../../../types/rect_t">rect_t</a></h2>
 <p>Returns the bounding box</p>
-<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">bbox</span> <span class="o">=</span> <span class="n">emtity</span><span class="p">:</span><span class="n">get_bbox</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">bbox</span> <span class="o">=</span> <span class="n">entity</span><span class="p">:</span><span class="n">get_bbox</span><span class="p">()</span>
 </code></pre></div>
 
 
@@ -870,14 +870,14 @@
 </tbody>
 </table>
 <p>Returns the hitbox pos</p>
-<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">headpos</span> <span class="o">=</span> <span class="n">emtity</span><span class="p">:</span><span class="n">get_player_hitbox_pos</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">headpos</span> <span class="o">=</span> <span class="n">entity</span><span class="p">:</span><span class="n">get_player_hitbox_pos</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </code></pre></div>
 
 
 <hr />
 <h2 id="get_address-number"><strong>get_address()</strong>: number</h2>
 <p>Returns the entity address</p>
-<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">addr</span> <span class="o">=</span> <span class="n">emtity</span><span class="p">:</span><span class="n">get_address</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">addr</span> <span class="o">=</span> <span class="n">entity</span><span class="p">:</span><span class="n">get_address</span><span class="p">()</span>
 </code></pre></div>
 
 
@@ -899,6 +899,7 @@
 </tr>
 </tbody>
 </table>
+<p>Returns the boolean value by offset</p>
 <hr />
 <h2 id="get_prop_intoffset-number"><strong>get_prop_int(offset)</strong>: number</h2>
 <table>
@@ -917,6 +918,7 @@
 </tr>
 </tbody>
 </table>
+<p>Returns the integer value by offset</p>
 <hr />
 <h2 id="get_prop_floatoffset-number"><strong>get_prop_float(offset)</strong>: number</h2>
 <table>
@@ -935,6 +937,7 @@
 </tr>
 </tbody>
 </table>
+<p>Returns the float value by offset</p>
 <hr />
 <h2 id="get_prop_shortoffset-number"><strong>get_prop_short(offset)</strong>: number</h2>
 <table>
@@ -953,6 +956,7 @@
 </tr>
 </tbody>
 </table>
+<p>Returns the short value by offset</p>
 <hr />
 <h2 id="get_prop_doubleoffset-number"><strong>get_prop_double(offset)</strong>: number</h2>
 <table>
@@ -971,6 +975,7 @@
 </tr>
 </tbody>
 </table>
+<p>Returns the double value by offset</p>
 <hr />
 <h2 id="get_prop_vectoroffset-vec3_t"><strong>get_prop_vector(offset)</strong>: <a href="../../../types/vec3_t">vec3_t</a></h2>
 <table>
@@ -989,6 +994,7 @@
 </tr>
 </tbody>
 </table>
+<p>Returns the vector by offset</p>
 <hr />
 <h2 id="get_prop_angleoffset-angle_t"><strong>get_prop_angle(offset)</strong>: <a href="../../../types/angle_t">angle_t</a></h2>
 <table>
@@ -1007,6 +1013,7 @@
 </tr>
 </tbody>
 </table>
+<p>Returns the angle by offset</p>
 <hr />
 <h2 id="set_prop_booloffset-value"><strong>set_prop_bool(offset, value)</strong></h2>
 <table>
@@ -1030,6 +1037,7 @@
 </tr>
 </tbody>
 </table>
+<p>Setting the boolean value by offset</p>
 <hr />
 <h2 id="set_prop_intoffset-value"><strong>set_prop_int(offset, value)</strong></h2>
 <table>
@@ -1053,6 +1061,7 @@
 </tr>
 </tbody>
 </table>
+<p>Setting the integer value by offset</p>
 <hr />
 <h2 id="set_prop_floatoffset-value"><strong>set_prop_float(offset, value)</strong></h2>
 <table>
@@ -1076,6 +1085,7 @@
 </tr>
 </tbody>
 </table>
+<p>Setting the float value by offset</p>
 <hr />
 <h2 id="set_prop_shortoffset-value"><strong>set_prop_short(offset, value)</strong></h2>
 <table>
@@ -1099,6 +1109,7 @@
 </tr>
 </tbody>
 </table>
+<p>Setting the short value by offset</p>
 <hr />
 <h2 id="set_prop_doubleoffset-value"><strong>set_prop_double(offset, value)</strong></h2>
 <table>
@@ -1122,6 +1133,7 @@
 </tr>
 </tbody>
 </table>
+<p>Setting the double value by offset</p>
 <hr />
 <h2 id="set_prop_vectoroffset-value"><strong>set_prop_vector(offset, value)</strong></h2>
 <table>
@@ -1145,6 +1157,7 @@
 </tr>
 </tbody>
 </table>
+<p>Setting the vector by offset</p>
 <hr />
 <h2 id="set_prop_angleoffset-value"><strong>set_prop_angle(offset, value)</strong></h2>
 <table>
@@ -1168,6 +1181,7 @@
 </tr>
 </tbody>
 </table>
+<p>Setting the angle by offset</p>
                 
               
               

@@ -59,7 +59,7 @@ Type | Name | Description
 string | key_name | Event key name
 string | def_value | Default return value if key not found
 
-Returns the float value from event
+Returns the string from event
 ```lua
 if event:get_name() == "player_death" then
     local weapon = event:get_string("weapon", "")

@@ -161,14 +161,14 @@ local is_menu_opened = ui.is_visible()
 ```
 ---
 
-## **set_visible(value)**: bool
+## **set_visible(value)**
 
 Type | Name | Description
 ------------ | ------------- | ------------
 bool | value | Set menu visible or not 
 
-Returns true if menu opened
+Setting menu visibility
 ```lua
-local is_menu_opened = ui.is_visible()
+-- close menu
+ui.set_visible(false)
 ```
----

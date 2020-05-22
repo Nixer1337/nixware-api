@@ -20,7 +20,7 @@ Type | Name | Description
 ------------ | ------------- | ------------
 string | tag | Wanted clantag
 
-Setting nixware.cc clantag
+Setting the clantag
 ```lua
 se.set_clantag("nixware.cc")
 ```
@@ -32,7 +32,7 @@ Type | Name | Description
 ------------ | ------------- | ------------
 string | name | Wanted name
 
-Setting nixware.cc name
+Setting the name
 ```lua
 se.set_name("nixware.cc")
 ```
@@ -56,7 +56,7 @@ Type | Name | Description
 string | table | Table name
 string | netvar | Netvar name
 
-Returns m_iHealth offset
+Returns the netvar offset
 ```lua
 se.get_netvar("DT_BasePlayer", "m_iHealth")
 ```
@@ -88,7 +88,7 @@ Type | Name | Description
 string | module_name | Module name
 string | interface_version | Interface version
 
-Getting the IModelInfo interface
+Getting the interface address
 ```lua
 local g_model_info = ffi.cast("void*", se.create_interface("engine.dll", "VModelInfoClient004"))
 ```

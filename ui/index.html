@@ -288,8 +288,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#set_visiblevalue-bool" class="md-nav__link">
-    set_visible(value): bool
+  <a href="#set_visiblevalue" class="md-nav__link">
+    set_visible(value)
   </a>
   
 </li>
@@ -724,8 +724,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#set_visiblevalue-bool" class="md-nav__link">
-    set_visible(value): bool
+  <a href="#set_visiblevalue" class="md-nav__link">
+    set_visible(value)
   </a>
   
 </li>
@@ -1092,7 +1092,7 @@ You can find actual variables list in default.cfg.</p>
 
 
 <hr />
-<h2 id="set_visiblevalue-bool"><strong>set_visible(value)</strong>: bool</h2>
+<h2 id="set_visiblevalue"><strong>set_visible(value)</strong></h2>
 <table>
 <thead>
 <tr>
@@ -1109,12 +1109,10 @@ You can find actual variables list in default.cfg.</p>
 </tr>
 </tbody>
 </table>
-<p>Returns true if menu opened</p>
-<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">is_menu_opened</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">is_visible</span><span class="p">()</span>
+<p>Setting menu visibility</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">-- close menu</span>
+<span class="n">ui</span><span class="p">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span>
 </code></pre></div>
-
-
-<hr />
                 
               
               

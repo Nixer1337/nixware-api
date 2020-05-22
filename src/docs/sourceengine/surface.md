@@ -29,9 +29,9 @@ number | weight | Font weight
 number | scanlines | Font scanlines
 number | flags | Font flags
 
-Surface font flags: [developer.valvesoftware.com/wiki/EFontFlags](https://developer.valvesoftware.com/wiki/EFontFlags)
-
 Creating the font
+
+Surface font flags: [developer.valvesoftware.com/wiki/EFontFlags](https://developer.valvesoftware.com/wiki/EFontFlags)
 ```lua
 local font = surface.setup_font("Tahoma", 16, 500, 0, 1, 0x200) 
 ```
@@ -196,10 +196,9 @@ number | points_num | Num points
 [vec2_t](../../types/vec2_t) array | points | Points
 [color_t](../../types/color_t) | color | Color
 
-Render the red trigon 
-
-![pic](https://i.imgur.com/OjcQf6i.png)
+Render the textured polygon
 ```lua
+-- https://i.imgur.com/OjcQf6i.png
 local points = { vec2_t.new(5, 5), vec2_t.new(15, 5), vec2_t.new(10, 15) }
 surface.draw_textured_polygon(3, points, color_t.new(255, 0, 0, 255))
 ```

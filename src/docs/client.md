@@ -49,7 +49,7 @@ Type | Name | Description
 ------------ | ------------- | ------------
 string | text | Notification text
 
-Pushing "Hello world!" notification
+Pushing notification
 ```lua
 client.notify("Hello world!")
 ```
@@ -99,7 +99,7 @@ Type | Name | Description
 string | module | Module
 string | pattern | Pattern
 
-Returns LineGoesThroughSmoke address
+Returns pattern address
 ```lua
 local line_goes_through_smoke_addr = client.find_pattern("client_panorama.dll", "55 8B EC 83 EC 08 8B 15 ? ? ? ? 0F 57 C0")
 ```

@@ -41,13 +41,14 @@ Type | Name | Description
 ------------ | ------------- | ------------
 number | type | Type
 
+Getting the players array
+
 0 - enemies only
 
 1 - teammates only
 
 2 - all players
 
-Getting the enemies array
 ```lua
   local players = entitylist.get_players(0)
   for i = 1, #players do
@@ -61,7 +62,7 @@ Type | Name | Description
 ------------ | ------------- | ------------
 string | classname | Class name
 
-Getting the entities
+Getting the entities by class name
 ```lua
   local entities = entitylist.get_entities_by_class("CFogController")
 ```
@@ -72,7 +73,7 @@ Type | Name | Description
 ------------ | ------------- | ------------
 number | classid | Class id
 
-Getting the entities
+Getting the entities by class id
 ```lua
-  local entities = entitylist.get_entities_by_class(78)
+  local entities = entitylist.get_entities_by_class_id(78)
 ```

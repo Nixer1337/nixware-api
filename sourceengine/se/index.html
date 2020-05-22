@@ -720,7 +720,7 @@
 </tr>
 </tbody>
 </table>
-<p>Setting nixware.cc clantag</p>
+<p>Setting the clantag</p>
 <div class="codehilite"><pre><span></span><code><span class="n">se</span><span class="p">.</span><span class="n">set_clantag</span><span class="p">(</span><span class="s2">&quot;nixware.cc&quot;</span><span class="p">)</span>
 </code></pre></div>
 
@@ -743,7 +743,7 @@
 </tr>
 </tbody>
 </table>
-<p>Setting nixware.cc name</p>
+<p>Setting the name</p>
 <div class="codehilite"><pre><span></span><code><span class="n">se</span><span class="p">.</span><span class="n">set_name</span><span class="p">(</span><span class="s2">&quot;nixware.cc&quot;</span><span class="p">)</span>
 </code></pre></div>
 
@@ -794,7 +794,7 @@
 </tr>
 </tbody>
 </table>
-<p>Returns m_iHealth offset</p>
+<p>Returns the netvar offset</p>
 <div class="codehilite"><pre><span></span><code><span class="n">se</span><span class="p">.</span><span class="n">get_netvar</span><span class="p">(</span><span class="s2">&quot;DT_BasePlayer&quot;</span><span class="p">,</span> <span class="s2">&quot;m_iHealth&quot;</span><span class="p">)</span>
 </code></pre></div>
 
@@ -852,7 +852,7 @@
 </tr>
 </tbody>
 </table>
-<p>Getting the IModelInfo interface</p>
+<p>Getting the interface address</p>
 <div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">g_model_info</span> <span class="o">=</span> <span class="n">ffi</span><span class="p">.</span><span class="n">cast</span><span class="p">(</span><span class="s2">&quot;void*&quot;</span><span class="p">,</span> <span class="n">se</span><span class="p">.</span><span class="n">create_interface</span><span class="p">(</span><span class="s2">&quot;engine.dll&quot;</span><span class="p">,</span> <span class="s2">&quot;VModelInfoClient004&quot;</span><span class="p">))</span>
 </code></pre></div>
                 

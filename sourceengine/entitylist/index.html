@@ -738,10 +738,10 @@
 </tr>
 </tbody>
 </table>
+<p>Getting the players array</p>
 <p>0 - enemies only</p>
 <p>1 - teammates only</p>
 <p>2 - all players</p>
-<p>Getting the enemies array</p>
 <div class="codehilite"><pre><span></span><code>  <span class="kd">local</span> <span class="n">players</span> <span class="o">=</span> <span class="n">entitylist</span><span class="p">.</span><span class="n">get_players</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
   <span class="kr">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="o">#</span><span class="n">players</span> <span class="kr">do</span>
       <span class="kd">local</span> <span class="n">player</span> <span class="o">=</span> <span class="n">players</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
@@ -767,7 +767,7 @@
 </tr>
 </tbody>
 </table>
-<p>Getting the entities</p>
+<p>Getting the entities by class name</p>
 <div class="codehilite"><pre><span></span><code>  <span class="kd">local</span> <span class="n">entities</span> <span class="o">=</span> <span class="n">entitylist</span><span class="p">.</span><span class="n">get_entities_by_class</span><span class="p">(</span><span class="s2">&quot;CFogController&quot;</span><span class="p">)</span>
 </code></pre></div>
 
@@ -790,8 +790,8 @@
 </tr>
 </tbody>
 </table>
-<p>Getting the entities</p>
-<div class="codehilite"><pre><span></span><code>  <span class="kd">local</span> <span class="n">entities</span> <span class="o">=</span> <span class="n">entitylist</span><span class="p">.</span><span class="n">get_entities_by_class</span><span class="p">(</span><span class="mi">78</span><span class="p">)</span>
+<p>Getting the entities by class id</p>
+<div class="codehilite"><pre><span></span><code>  <span class="kd">local</span> <span class="n">entities</span> <span class="o">=</span> <span class="n">entitylist</span><span class="p">.</span><span class="n">get_entities_by_class_id</span><span class="p">(</span><span class="mi">78</span><span class="p">)</span>
 </code></pre></div>
                 
               
