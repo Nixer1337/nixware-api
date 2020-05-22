@@ -1,3 +1,5 @@
+# entity_t
+
 ## Functions
 
 ## **is_dormant()**: bool
