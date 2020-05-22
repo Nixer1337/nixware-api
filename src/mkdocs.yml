@@ -24,6 +24,7 @@ nav:
       - clientstate: sourceengine/clientstate.md
     - callbacks: callbacks.md
 theme:
+  logo: https://nixware.cc/styles/default/xenforo/ava.png
   name: material
 markdown_extensions:
   - codehilite
