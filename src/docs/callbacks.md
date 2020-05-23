@@ -25,6 +25,8 @@ end
 client.register_callback("unload", on_unload)
 ```
 
+---
+
 ## **create_move(cmd)** - csgo
 Type | Name | Description
 ------------ | ------------- | ------------
@@ -85,6 +87,8 @@ end
 
 client.register_callback("fire_game_event", on_fire_game_event)
 ```
+
+---
 
 ## **shot_fired(info)** - csgo
 Type | Name | Description
