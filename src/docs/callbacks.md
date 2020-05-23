@@ -85,3 +85,17 @@ end
 
 client.register_callback("fire_game_event", on_fire_game_event)
 ```
+
+## **shot_fired(info)** - csgo
+Type | Name | Description
+------------ | ------------- | ------------
+[shot_info_t](../sourceengine/types/shot_info_t) | info | Shot info
+
+ShotFired callback. Calls on shot
+```lua
+local function on_shot_fired(info) 
+    client.notify("test")
+end
+
+client.register_callback("shot_fired", on_shot_fired)
+```

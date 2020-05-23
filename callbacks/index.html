@@ -366,6 +366,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sourceengine/types/shot_info_t/" title="shot_info_t - csgo" class="md-nav__link">
+      shot_info_t - csgo
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -535,6 +547,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#shot_firedinfo-csgo" class="md-nav__link">
+    shot_fired(info) - csgo
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -598,6 +617,13 @@
         <li class="md-nav__item">
   <a href="#fire_game_eventevent-csgo" class="md-nav__link">
     fire_game_event(event) - csgo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shot_firedinfo-csgo" class="md-nav__link">
+    shot_fired(info) - csgo
   </a>
   
 </li>
@@ -735,6 +761,32 @@
 <span class="kr">end</span>
 
 <span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;fire_game_event&quot;</span><span class="p">,</span> <span class="n">on_fire_game_event</span><span class="p">)</span>
+</code></pre></div>
+
+
+<h2 id="shot_firedinfo-csgo"><strong>shot_fired(info)</strong> - csgo</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../sourceengine/types/shot_info_t">shot_info_t</a></td>
+<td>info</td>
+<td>Shot info</td>
+</tr>
+</tbody>
+</table>
+<p>ShotFired callback. Calls on shot</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_shot_fired</span><span class="p">(</span><span class="n">info</span><span class="p">)</span> 
+    <span class="n">client</span><span class="p">.</span><span class="n">notify</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;shot_fired&quot;</span><span class="p">,</span> <span class="n">on_shot_fired</span><span class="p">)</span>
 </code></pre></div>
                 
               
