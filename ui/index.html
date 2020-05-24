@@ -272,6 +272,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#set_boolvar_name-val" class="md-nav__link">
+    set_bool(var_name, val)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_intvar_name-val" class="md-nav__link">
+    set_int(var_name, val)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_floatvar_name-val" class="md-nav__link">
+    get_float(var_name, val)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_colorvar_name-val" class="md-nav__link">
+    set_color(var_name, val)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#get_bind_state-bool" class="md-nav__link">
     get_bind_state(): bool
   </a>
@@ -732,6 +760,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#set_boolvar_name-val" class="md-nav__link">
+    set_bool(var_name, val)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_intvar_name-val" class="md-nav__link">
+    set_int(var_name, val)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_floatvar_name-val" class="md-nav__link">
+    get_float(var_name, val)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_colorvar_name-val" class="md-nav__link">
+    set_color(var_name, val)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#get_bind_state-bool" class="md-nav__link">
     get_bind_state(): bool
   </a>
@@ -1096,6 +1152,118 @@ You can find actual variables list in default.cfg.</p>
 </table>
 <p>Getting value from color edit</p>
 <div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">value</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_color</span><span class="p">(</span><span class="s2">&quot;misc_ui_color&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="set_boolvar_name-val"><strong>set_bool(var_name, val)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>var_name</td>
+<td>Variable name in config</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>val</td>
+<td>Value</td>
+</tr>
+</tbody>
+</table>
+<p>Setting checkbox value</p>
+<div class="codehilite"><pre><span></span><code><span class="n">ui</span><span class="p">.</span><span class="n">get_sool</span><span class="p">(</span><span class="s2">&quot;legit_enable&quot;</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="set_intvar_name-val"><strong>set_int(var_name, val)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>var_name</td>
+<td>Variable name in config</td>
+</tr>
+<tr>
+<td>number</td>
+<td>val</td>
+<td>Value</td>
+</tr>
+</tbody>
+</table>
+<p>Setting int slider value</p>
+<div class="codehilite"><pre><span></span><code><span class="n">ui</span><span class="p">.</span><span class="n">get_int</span><span class="p">(</span><span class="s2">&quot;visuals_other_nightmode&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="get_floatvar_name-val"><strong>get_float(var_name, val)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>var_name</td>
+<td>Variable name in config</td>
+</tr>
+<tr>
+<td>number</td>
+<td>val</td>
+<td>Value</td>
+</tr>
+</tbody>
+</table>
+<p>Setting float slider value</p>
+<div class="codehilite"><pre><span></span><code><span class="n">ui</span><span class="p">.</span><span class="n">set_float</span><span class="p">(</span><span class="s2">&quot;skins_aspect_ratio&quot;</span><span class="p">,</span> <span class="mf">1.333</span><span class="p">)</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="set_colorvar_name-val"><strong>set_color(var_name, val)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>var_name</td>
+<td>Variable name in config</td>
+</tr>
+<tr>
+<td><a href="../types/color_t">color_t</a></td>
+<td></td>
+<td>val</td>
+</tr>
+</tbody>
+</table>
+<p>Setting coloredit value</p>
+<div class="codehilite"><pre><span></span><code><span class="n">ui</span><span class="p">.</span><span class="n">set_color</span><span class="p">(</span><span class="s2">&quot;misc_ui_color&quot;</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
 </code></pre></div>
 
 

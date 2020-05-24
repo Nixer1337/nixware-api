@@ -145,6 +145,58 @@ local value = ui.get_color("misc_ui_color")
 ```
 ---
 
+## **set_bool(var_name, val)**
+
+Type | Name | Description
+------------ | ------------- | ------------
+string | var_name | Variable name in config
+bool | val | Value
+
+Setting checkbox value
+```lua
+ui.get_sool("legit_enable", false)
+```
+---
+
+## **set_int(var_name, val)**
+
+Type | Name | Description
+------------ | ------------- | ------------
+string | var_name | Variable name in config
+number | val | Value
+
+Setting int slider value
+```lua
+ui.get_int("visuals_other_nightmode", 0)
+```
+---
+
+## **get_float(var_name, val)**
+
+Type | Name | Description
+------------ | ------------- | ------------
+string | var_name | Variable name in config
+number | val | Value
+
+Setting float slider value
+```lua
+ui.set_float("skins_aspect_ratio", 1.333)
+```
+---
+
+## **set_color(var_name, val)**
+
+Type | Name | Description
+------------ | ------------- | ------------
+string | var_name | Variable name in config|
+[color_t](../types/color_t) | | val | Value
+
+Setting coloredit value
+```lua
+ui.set_color("misc_ui_color", color_t.new(0, 255, 0, 255))
+```
+---
+
 ## **get_bind_state()**: bool
 
 Returns the bind state
