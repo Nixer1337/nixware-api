@@ -85,29 +85,26 @@ surface.draw_outlined_rect(5, 5, 10, 10)
 ```
 ---
 
-## **draw_set_color(start_pos_x, start_pos_y, end_pos_x, end_pos_y)**
+## **draw_set_color(color)**
 Type | Name | Description
 ------------ | ------------- | ------------
-number | start_pos_x | Start position x
-number | start_pos_y | Start position y
-number | end_pos_x | End position x
-number | end_pos_y | End position y
+[color_t](../../types/color_t) | color | Color
 
 Setting color of the next drawing element
 ```lua
-surface.draw_set_color(color_t.new(255, 0, 0, 255))
+surface.draw_set_color(color)
 ```
 ---
 
-## **get_text_size(font, text)**: number, number
+## **get_text_size(font, text)**: [vec2_t](../../types/vec2_t)
 Type | Name | Description
 ------------ | ------------- | ------------
 font | font | Font
 string | text | Text
 
-Returns width and height text size
+Returns the text size
 ```lua
-local w, h = surface.get_text_size(font, "string")
+local size = surface.get_text_size(font, "string")
 ```
 ---
 

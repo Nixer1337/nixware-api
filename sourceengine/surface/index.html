@@ -499,15 +499,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#draw_set_colorstart_pos_x-start_pos_y-end_pos_x-end_pos_y" class="md-nav__link">
-    draw_set_color(start_pos_x, start_pos_y, end_pos_x, end_pos_y)
+  <a href="#draw_set_colorcolor" class="md-nav__link">
+    draw_set_color(color)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#get_text_sizefont-text-number-number" class="md-nav__link">
-    get_text_size(font, text): number, number
+  <a href="#get_text_sizefont-text-vec2_t" class="md-nav__link">
+    get_text_size(font, text): vec2_t
   </a>
   
 </li>
@@ -720,15 +720,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#draw_set_colorstart_pos_x-start_pos_y-end_pos_x-end_pos_y" class="md-nav__link">
-    draw_set_color(start_pos_x, start_pos_y, end_pos_x, end_pos_y)
+  <a href="#draw_set_colorcolor" class="md-nav__link">
+    draw_set_color(color)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#get_text_sizefont-text-number-number" class="md-nav__link">
-    get_text_size(font, text): number, number
+  <a href="#get_text_sizefont-text-vec2_t" class="md-nav__link">
+    get_text_size(font, text): vec2_t
   </a>
   
 </li>
@@ -1006,7 +1006,7 @@
 
 
 <hr />
-<h2 id="draw_set_colorstart_pos_x-start_pos_y-end_pos_x-end_pos_y"><strong>draw_set_color(start_pos_x, start_pos_y, end_pos_x, end_pos_y)</strong></h2>
+<h2 id="draw_set_colorcolor"><strong>draw_set_color(color)</strong></h2>
 <table>
 <thead>
 <tr>
@@ -1017,34 +1017,19 @@
 </thead>
 <tbody>
 <tr>
-<td>number</td>
-<td>start_pos_x</td>
-<td>Start position x</td>
-</tr>
-<tr>
-<td>number</td>
-<td>start_pos_y</td>
-<td>Start position y</td>
-</tr>
-<tr>
-<td>number</td>
-<td>end_pos_x</td>
-<td>End position x</td>
-</tr>
-<tr>
-<td>number</td>
-<td>end_pos_y</td>
-<td>End position y</td>
+<td><a href="../../types/color_t">color_t</a></td>
+<td>color</td>
+<td>Color</td>
 </tr>
 </tbody>
 </table>
 <p>Setting color of the next drawing element</p>
-<div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_color</span><span class="p">(</span><span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+<div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
 </code></pre></div>
 
 
 <hr />
-<h2 id="get_text_sizefont-text-number-number"><strong>get_text_size(font, text)</strong>: number, number</h2>
+<h2 id="get_text_sizefont-text-vec2_t"><strong>get_text_size(font, text)</strong>: <a href="../../types/vec2_t">vec2_t</a></h2>
 <table>
 <thead>
 <tr>
@@ -1066,8 +1051,8 @@
 </tr>
 </tbody>
 </table>
-<p>Returns width and height text size</p>
-<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">surface</span><span class="p">.</span><span class="n">get_text_size</span><span class="p">(</span><span class="n">font</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">)</span>
+<p>Returns the text size</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">size</span> <span class="o">=</span> <span class="n">surface</span><span class="p">.</span><span class="n">get_text_size</span><span class="p">(</span><span class="n">font</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">)</span>
 </code></pre></div>
 
 
