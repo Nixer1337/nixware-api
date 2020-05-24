@@ -154,7 +154,7 @@ bool | val | Value
 
 Setting checkbox value
 ```lua
-ui.get_sool("legit_enable", false)
+ui.set_bool("legit_enable", false)
 ```
 ---
 
@@ -167,7 +167,7 @@ number | val | Value
 
 Setting int slider value
 ```lua
-ui.get_int("visuals_other_nightmode", 0)
+ui.set_int("visuals_other_nightmode", 0)
 ```
 ---
 
