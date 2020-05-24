@@ -189,7 +189,7 @@ ui.set_float("skins_aspect_ratio", 1.333)
 Type | Name | Description
 ------------ | ------------- | ------------
 string | var_name | Variable name in config|
-[color_t](../types/color_t) | | val | Value
+[color_t](../types/color_t) | val | Value
 
 Setting coloredit value
 ```lua
