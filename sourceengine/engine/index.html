@@ -374,6 +374,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../types/player_info_t/" title="player_info_t" class="md-nav__link">
+      player_info_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../types/shot_info_t/" title="shot_info_t - csgo" class="md-nav__link">
       shot_info_t - csgo
     </a>
@@ -480,6 +492,13 @@
         <li class="md-nav__item">
   <a href="#get_local_player-number" class="md-nav__link">
     get_local_player(): number
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_player_info-player_info_t" class="md-nav__link">
+    get_player_info(): player_info_t
   </a>
   
 </li>
@@ -652,6 +671,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#get_player_info-player_info_t" class="md-nav__link">
+    get_player_info(): player_info_t
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#get_level_name_short-string" class="md-nav__link">
     get_level_name_short(): string
   </a>
@@ -728,6 +754,13 @@
 <h2 id="get_local_player-number"><strong>get_local_player()</strong>: number</h2>
 <p>Returns the local player index</p>
 <div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">lp_index</span> <span class="o">=</span> <span class="n">engine</span><span class="p">.</span><span class="n">get_local_player</span><span class="p">()</span>
+</code></pre></div>
+
+
+<hr />
+<h2 id="get_player_info-player_info_t"><strong>get_player_info()</strong>: <a href="../types/player_info_t">player_info_t</a></h2>
+<p>Returns the <a href="../types/player_info_t">player_info_t</a> object</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">local_info</span> <span class="o">=</span> <span class="n">engine</span><span class="p">.</span><span class="n">get_player_info</span><span class="p">(</span><span class="n">engine</span><span class="p">.</span><span class="n">get_local_player</span><span class="p">())</span>
 </code></pre></div>
 
 

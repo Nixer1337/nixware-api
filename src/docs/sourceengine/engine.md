@@ -34,6 +34,14 @@ local lp_index = engine.get_local_player()
 ```
 ---
 
+## **get_player_info()**: [player_info_t](../types/player_info_t)
+
+Returns the [player_info_t](../types/player_info_t) object
+```lua
+local local_info = engine.get_player_info(engine.get_local_player())
+```
+---
+
 ## **get_level_name_short()**: string
 
 Returns current level name (example: de_mirage)
