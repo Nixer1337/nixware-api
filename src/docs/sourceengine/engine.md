@@ -67,15 +67,15 @@ local ent_idx = engine.get_player_for_user_id(userid)
 ## **set_view_angles(viewangles)**
 Type | Name | Description
 ------------ | ------------- | ------------
-[vec3_t](../../types/vec3_t) | viewangles | Viewangles
+[angle_t](../../types/angle_t) | viewangles | Viewangles
 
 Setting the viewangles
 ```lua
-engine.set_view_angles(vec3_t.new(0, 0, 0))
+engine.set_view_angles(angle_t.new(0, 0, 0))
 ```
 ---
 
-## **get_view_angles()**: [vec3_t](../../types/vec3_t)
+## **get_view_angles()**: [angle_t](../../types/angle_t)
 
 Getting the viewangles
 ```lua
