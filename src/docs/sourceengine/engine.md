@@ -34,7 +34,10 @@ local lp_index = engine.get_local_player()
 ```
 ---
 
-## **get_player_info()**: [player_info_t](../types/player_info_t)
+## **get_player_info(index)**: [player_info_t](../types/player_info_t)
+Type | Name | Description
+------------ | ------------- | ------------
+number | index | Entity index
 
 Returns the [player_info_t](../types/player_info_t) object
 ```lua

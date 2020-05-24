@@ -497,8 +497,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#get_player_info-player_info_t" class="md-nav__link">
-    get_player_info(): player_info_t
+  <a href="#get_player_infoindex-player_info_t" class="md-nav__link">
+    get_player_info(index): player_info_t
   </a>
   
 </li>
@@ -671,8 +671,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#get_player_info-player_info_t" class="md-nav__link">
-    get_player_info(): player_info_t
+  <a href="#get_player_infoindex-player_info_t" class="md-nav__link">
+    get_player_info(index): player_info_t
   </a>
   
 </li>
@@ -758,7 +758,23 @@
 
 
 <hr />
-<h2 id="get_player_info-player_info_t"><strong>get_player_info()</strong>: <a href="../types/player_info_t">player_info_t</a></h2>
+<h2 id="get_player_infoindex-player_info_t"><strong>get_player_info(index)</strong>: <a href="../types/player_info_t">player_info_t</a></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>index</td>
+<td>Entity index</td>
+</tr>
+</tbody>
+</table>
 <p>Returns the <a href="../types/player_info_t">player_info_t</a> object</p>
 <div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">local_info</span> <span class="o">=</span> <span class="n">engine</span><span class="p">.</span><span class="n">get_player_info</span><span class="p">(</span><span class="n">engine</span><span class="p">.</span><span class="n">get_local_player</span><span class="p">())</span>
 </code></pre></div>
