@@ -14,4 +14,3 @@ Tracing
 ```lua
 local fraction, hit_entity_index = trace.line(engine.get_local_player(), mask, start, end)
 ```
----
