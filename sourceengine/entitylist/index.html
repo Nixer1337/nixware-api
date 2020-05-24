@@ -689,14 +689,14 @@
                 <h1 id="entitylist-table">entitylist table</h1>
 <h2 id="functions">Functions</h2>
 <h2 id="get_highest_entity_index-number"><strong>get_highest_entity_index()</strong>: number</h2>
-<p>Getting highest entity index</p>
+<p>Returns the highest entity index</p>
 <div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">entitylist</span><span class="p">.</span><span class="n">get_highest_entity_index</span><span class="p">()</span>
 </code></pre></div>
 
 
 <hr />
 <h2 id="get_local_player-entity_t"><strong>get_local_player()</strong>: <a href="../types/entity_t">entity_t</a></h2>
-<p>Getting local player object</p>
+<p>Returns the local player object</p>
 <div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">localplayer</span> <span class="o">=</span> <span class="n">entitylist</span><span class="p">.</span><span class="n">get_local_player</span><span class="p">()</span>
 </code></pre></div>
 
@@ -719,7 +719,7 @@
 </tr>
 </tbody>
 </table>
-<p>Getting local player by index</p>
+<p>Returns the <a href="../types/entity_t">entity_t</a> object by index</p>
 <div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">lp</span> <span class="o">=</span> <span class="n">entitylist</span><span class="p">.</span><span class="n">get_entity_by_index</span><span class="p">(</span><span class="n">entitylist</span><span class="p">.</span><span class="n">get_local_player</span><span class="p">())</span>
 </code></pre></div>
 
@@ -742,6 +742,7 @@
 </tr>
 </tbody>
 </table>
+<p>Returns the <a href="../types/entity_t">entity_t</a> object by handle</p>
 <hr />
 <h2 id="get_playerstype-entity_t-array"><strong>get_players(type)</strong>: <a href="../types/entity_t">entity_t</a> array</h2>
 <table>
@@ -760,7 +761,7 @@
 </tr>
 </tbody>
 </table>
-<p>Getting the players array</p>
+<p>Returns the players array</p>
 <p>0 - enemies only</p>
 <p>1 - teammates only</p>
 <p>2 - all players</p>
@@ -789,7 +790,7 @@
 </tr>
 </tbody>
 </table>
-<p>Getting the entities by class name</p>
+<p>Returns the entities array by class name</p>
 <div class="codehilite"><pre><span></span><code>  <span class="kd">local</span> <span class="n">entities</span> <span class="o">=</span> <span class="n">entitylist</span><span class="p">.</span><span class="n">get_entities_by_class</span><span class="p">(</span><span class="s2">&quot;CFogController&quot;</span><span class="p">)</span>
 </code></pre></div>
 
@@ -812,7 +813,7 @@
 </tr>
 </tbody>
 </table>
-<p>Getting the entities by class id</p>
+<p>Returns the entities array by class id</p>
 <div class="codehilite"><pre><span></span><code>  <span class="kd">local</span> <span class="n">entities</span> <span class="o">=</span> <span class="n">entitylist</span><span class="p">.</span><span class="n">get_entities_by_class_id</span><span class="p">(</span><span class="mi">78</span><span class="p">)</span>
 </code></pre></div>
                 

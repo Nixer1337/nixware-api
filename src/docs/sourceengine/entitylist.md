@@ -4,7 +4,7 @@
 
 ## **get_highest_entity_index()**: number
 
-Getting highest entity index
+Returns the highest entity index
 ```lua
 local idx = entitylist.get_highest_entity_index()
 ```
@@ -12,7 +12,7 @@ local idx = entitylist.get_highest_entity_index()
 
 ## **get_local_player()**: [entity_t](../types/entity_t)
 
-Getting local player object
+Returns the local player object
 ```lua
 local localplayer = entitylist.get_local_player()
 ```
@@ -23,7 +23,7 @@ Type | Name | Description
 ------------ | ------------- | ------------
 number | index | Entity index
 
-Getting local player by index
+Returns the [entity_t](../types/entity_t) object by index
 ```lua
 local lp = entitylist.get_entity_by_index(entitylist.get_local_player())
 ```
@@ -34,6 +34,8 @@ Type | Name | Description
 ------------ | ------------- | ------------
 number | handle | Entity handle
 
+Returns the [entity_t](../types/entity_t) object by handle
+
 ---
 
 ## **get_players(type)**: [entity_t](../types/entity_t) array
@@ -41,7 +43,7 @@ Type | Name | Description
 ------------ | ------------- | ------------
 number | type | Type
 
-Getting the players array
+Returns the players array
 
 0 - enemies only
 
@@ -62,7 +64,7 @@ Type | Name | Description
 ------------ | ------------- | ------------
 string | classname | Class name
 
-Getting the entities by class name
+Returns the entities array by class name
 ```lua
   local entities = entitylist.get_entities_by_class("CFogController")
 ```
@@ -73,7 +75,7 @@ Type | Name | Description
 ------------ | ------------- | ------------
 number | classid | Class id
 
-Getting the entities by class id
+Returns the entities array by class id
 ```lua
   local entities = entitylist.get_entities_by_class_id(78)
 ```
