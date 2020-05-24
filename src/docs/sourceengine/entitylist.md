@@ -10,11 +10,11 @@ local idx = entitylist.get_highest_entity_index()
 ```
 ---
 
-## **get_local_player()**: number
+## **get_local_player()**: [entity_t](../types/entity_t)
 
-Getting local player index
+Getting local player object
 ```lua
-local idx = entitylist.get_local_player()
+local localplayer = entitylist.get_local_player()
 ```
 ---
 
