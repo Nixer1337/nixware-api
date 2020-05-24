@@ -171,7 +171,7 @@ ui.get_int("visuals_other_nightmode", 0)
 ```
 ---
 
-## **get_float(var_name, val)**
+## **set_float(var_name, val)**
 
 Type | Name | Description
 ------------ | ------------- | ------------
