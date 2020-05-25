@@ -514,8 +514,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#get_entity_by_handlehandle-entity_t" class="md-nav__link">
-    get_entity_by_handle(handle): entity_t
+  <a href="#get_entity_from_handlehandle-entity_t" class="md-nav__link">
+    get_entity_from_handle(handle): entity_t
   </a>
   
 </li>
@@ -643,8 +643,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#get_entity_by_handlehandle-entity_t" class="md-nav__link">
-    get_entity_by_handle(handle): entity_t
+  <a href="#get_entity_from_handlehandle-entity_t" class="md-nav__link">
+    get_entity_from_handle(handle): entity_t
   </a>
   
 </li>
@@ -725,7 +725,7 @@
 
 
 <hr />
-<h2 id="get_entity_by_handlehandle-entity_t"><strong>get_entity_by_handle(handle)</strong>: <a href="../types/entity_t">entity_t</a></h2>
+<h2 id="get_entity_from_handlehandle-entity_t"><strong>get_entity_from_handle(handle)</strong>: <a href="../types/entity_t">entity_t</a></h2>
 <table>
 <thead>
 <tr>
@@ -743,6 +743,14 @@
 </tbody>
 </table>
 <p>Returns the <a href="../types/entity_t">entity_t</a> object by handle</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">m_hActiveWeapon</span> <span class="o">=</span> <span class="n">se</span><span class="p">.</span><span class="n">get_netvar</span><span class="p">(</span><span class="s2">&quot;DT_BaseCombatCharacter&quot;</span><span class="p">,</span> <span class="s2">&quot;m_hActiveWeapon&quot;</span><span class="p">)</span>
+
+<span class="c1">-- getting local weapon</span>
+<span class="kd">local</span> <span class="n">active_weapon_handle</span> <span class="o">=</span> <span class="n">local_player</span><span class="p">:</span><span class="n">get_prop_int</span><span class="p">(</span><span class="n">m_hActiveWeapon</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">active_weapon</span> <span class="o">=</span> <span class="n">entitylist</span><span class="p">.</span><span class="n">get_entity_from_handle</span><span class="p">(</span><span class="n">active_weapon_handle</span><span class="p">)</span>
+</code></pre></div>
+
+
 <hr />
 <h2 id="get_playerstype-entity_t-array"><strong>get_players(type)</strong>: <a href="../types/entity_t">entity_t</a> array</h2>
 <table>

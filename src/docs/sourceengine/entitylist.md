@@ -29,13 +29,20 @@ local lp = entitylist.get_entity_by_index(entitylist.get_local_player())
 ```
 ---
 
-## **get_entity_by_handle(handle)**: [entity_t](../types/entity_t)
+## **get_entity_from_handle(handle)**: [entity_t](../types/entity_t)
 Type | Name | Description
 ------------ | ------------- | ------------
 number | handle | Entity handle
 
 Returns the [entity_t](../types/entity_t) object by handle
 
+```lua
+local m_hActiveWeapon = se.get_netvar("DT_BaseCombatCharacter", "m_hActiveWeapon")
+
+-- getting local weapon
+local active_weapon_handle = local_player:get_prop_int(m_hActiveWeapon)
+local active_weapon = entitylist.get_entity_from_handle(active_weapon_handle)
+```
 ---
 
 ## **get_players(type)**: [entity_t](../types/entity_t) array
