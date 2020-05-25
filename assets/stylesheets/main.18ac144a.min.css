@@ -293,4 +293,15 @@ hr {
     color: #66d9ef!important;
 }
 
+.codehilitetable .linenos, .highlighttable .linenos {
+    padding: .525rem 1.1764705882em;
+    padding-right: 0;
+    font-size: .85em;
+    background-color: hsl(0, 1%, 15%);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 /*# sourceMappingURL=main.18ac144a.min.css.map*/
