@@ -259,4 +259,38 @@ hr {
     padding: .1rem;
 }
 
+/* ///////////////////////////////////////////////////////// */
+
+.codehilite .kr, .highlight .kr {
+    color: #66d9efa6!important;
+}
+
+.codehilite .nf, .highlight .nf {
+    color: #a6e22e!important;
+}
+
+.codehilite .mi, .highlight .mi {
+    color: #ae81ff!important;
+}
+
+.codehilite .s2, .highlight .s2 {
+    color: #e6db74!important;
+}
+
+.codehilite .c1, .highlight .c1 {
+    color: #75715e!important;
+}
+
+.codehilite .kd, .highlight .kd {
+    color: #66d9ef!important;
+}
+
+.codehilite .o, .highlight .o {
+    color: #f92672!important;
+}
+
+.codehilite .kc, .highlight .kc {
+    color: #66d9ef!important;
+}
+
 /*# sourceMappingURL=main.18ac144a.min.css.map*/
