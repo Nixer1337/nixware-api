@@ -818,16 +818,16 @@
 </tbody>
 </table>
 <p>Playing the sound</p>
-<div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">play_sound</span><span class="p">(</span><span class="s2">&quot;resource/warning.wav&quot;</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">play_sound</span><span class="p">(</span><span class="s2">&quot;resource/warning.wav&quot;</span><span class="p">)</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="get_cursor_pos-vec2_t"><strong>get_cursor_pos()</strong>: <a href="../../types/vec2_t">vec2_t</a></h2>
 <p>Returns the cursor position</p>
-<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">surface</span><span class="p">.</span><span class="n">get_cursor_pos</span><span class="p">()</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">surface</span><span class="p">.</span><span class="n">get_cursor_pos</span><span class="p">()</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="setup_fontfontname-tall-weight-blur-scanlines-flags-font"><strong>setup_font(fontname, tall, weight, blur, scanlines, flags)</strong>: font</h2>
@@ -869,9 +869,9 @@
 </table>
 <p>Creating the font</p>
 <p>Surface font flags: <a href="https://developer.valvesoftware.com/wiki/EFontFlags">developer.valvesoftware.com/wiki/EFontFlags</a></p>
-<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">font</span> <span class="o">=</span> <span class="n">surface</span><span class="p">.</span><span class="n">setup_font</span><span class="p">(</span><span class="s2">&quot;Tahoma&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mh">0x200</span><span class="p">)</span> 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">font</span> <span class="o">=</span> <span class="n">surface</span><span class="p">.</span><span class="n">setup_font</span><span class="p">(</span><span class="s2">&quot;Tahoma&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mh">0x200</span><span class="p">)</span> 
 </code></pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="draw_filled_rectstart_pos_x-start_pos_y-end_pos_x-end_pos_y"><strong>draw_filled_rect(start_pos_x, start_pos_y, end_pos_x, end_pos_y)</strong></h2>
@@ -907,10 +907,11 @@
 </tbody>
 </table>
 <p>Drawing the filled rect</p>
-<div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_color</span><span class="p">(</span><span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span> 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_color</span><span class="p">(</span><span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span> 
 <span class="n">surface</span><span class="p">.</span><span class="n">draw_filled_rect</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="draw_filled_rect_fadestart_pos_x-start_pos_y-end_pos_x-end_pos_y-first_alpha-next_alpha-is_horisontal"><strong>draw_filled_rect_fade(start_pos_x, start_pos_y, end_pos_x, end_pos_y, first_alpha, next_alpha, is_horisontal)</strong></h2>
@@ -961,10 +962,11 @@
 </tbody>
 </table>
 <p>Drawing the faded rect</p>
-<div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_color</span><span class="p">(</span><span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span> 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_color</span><span class="p">(</span><span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span> 
 <span class="n">surface</span><span class="p">.</span><span class="n">draw_filled_rect_fade</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="draw_outlined_rectstart_pos_x-start_pos_y-end_pos_x-end_pos_y"><strong>draw_outlined_rect(start_pos_x, start_pos_y, end_pos_x, end_pos_y)</strong></h2>
@@ -1000,10 +1002,11 @@
 </tbody>
 </table>
 <p>Drawing the rect</p>
-<div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_color</span><span class="p">(</span><span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span> 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_color</span><span class="p">(</span><span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span> 
 <span class="n">surface</span><span class="p">.</span><span class="n">draw_outlined_rect</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="draw_set_colorcolor"><strong>draw_set_color(color)</strong></h2>
@@ -1024,9 +1027,9 @@
 </tbody>
 </table>
 <p>Setting color of the next drawing element</p>
-<div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="get_text_sizefont-text-vec2_t"><strong>get_text_size(font, text)</strong>: <a href="../../types/vec2_t">vec2_t</a></h2>
@@ -1052,9 +1055,9 @@
 </tbody>
 </table>
 <p>Returns the text size</p>
-<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">size</span> <span class="o">=</span> <span class="n">surface</span><span class="p">.</span><span class="n">get_text_size</span><span class="p">(</span><span class="n">font</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">size</span> <span class="o">=</span> <span class="n">surface</span><span class="p">.</span><span class="n">get_text_size</span><span class="p">(</span><span class="n">font</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">)</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="draw_linestart_pos_x-start_pos_y-end_pos_x-end_pos_y"><strong>draw_line(start_pos_x, start_pos_y, end_pos_x, end_pos_y)</strong></h2>
@@ -1090,10 +1093,11 @@
 </tbody>
 </table>
 <p>Drawing horisontal line</p>
-<div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_color</span><span class="p">(</span><span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_color</span><span class="p">(</span><span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
 <span class="n">surface</span><span class="p">.</span><span class="n">draw_line</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="draw_outlined_circlepos_x-pos_y-radius-segments"><strong>draw_outlined_circle(pos_x, pos_y, radius, segments)</strong></h2>
@@ -1129,10 +1133,11 @@
 </tbody>
 </table>
 <p>Drawing the circle</p>
-<div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_color</span><span class="p">(</span><span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_color</span><span class="p">(</span><span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
 <span class="n">surface</span><span class="p">.</span><span class="n">draw_outlined_circle</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="draw_set_text_fontfont"><strong>draw_set_text_font(font)</strong></h2>
@@ -1153,12 +1158,15 @@
 </tbody>
 </table>
 <p>Setting the next text font</p>
-<div class="codehilite"><pre><span></span><code><span class="c1">-- setup this font only once</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1">-- setup this font only once</span>
 <span class="kd">local</span> <span class="n">font</span> <span class="o">=</span> <span class="n">surface</span><span class="p">.</span><span class="n">setup_font</span><span class="p">(</span><span class="s2">&quot;Tahoma&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mh">0x200</span><span class="p">)</span> 
 
 <span class="n">surface</span><span class="p">.</span><span class="n">draw_set_text_font</span><span class="p">(</span><span class="n">font</span><span class="p">)</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="draw_set_text_colorcolor"><strong>draw_set_text_color(color)</strong></h2>
@@ -1179,9 +1187,9 @@
 </tbody>
 </table>
 <p>Setting the next text color</p>
-<div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_text_color</span><span class="p">(</span><span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_text_color</span><span class="p">(</span><span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="draw_set_text_pospos_x-pos_y"><strong>draw_set_text_pos(pos_x, pos_y)</strong></h2>
@@ -1207,9 +1215,9 @@
 </tbody>
 </table>
 <p>Setting the next text pos</p>
-<div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_text_pos</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_set_text_pos</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="draw_print_texttext"><strong>draw_print_text(text)</strong></h2>
@@ -1230,9 +1238,9 @@
 </tbody>
 </table>
 <p>Print text</p>
-<div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_print_text</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">surface</span><span class="p">.</span><span class="n">draw_print_text</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="draw_textured_polygonpoints_num-points-color"><strong>draw_textured_polygon(points_num, points, color)</strong></h2>
@@ -1263,10 +1271,13 @@
 </tbody>
 </table>
 <p>Render the textured polygon</p>
-<div class="codehilite"><pre><span></span><code><span class="c1">-- https://i.imgur.com/OjcQf6i.png</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1">-- https://i.imgur.com/OjcQf6i.png</span>
 <span class="kd">local</span> <span class="n">points</span> <span class="o">=</span> <span class="p">{</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span> <span class="p">}</span>
 <span class="n">surface</span><span class="p">.</span><span class="n">draw_textured_polygon</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">points</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
 </code></pre></div>
+</td></tr></table>
                 
               
               

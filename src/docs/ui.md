@@ -1,6 +1,6 @@
 # ui table
 
-!!! note
+!!! info
     Elements added from script automaticly saves in config.
     You can find actual variables list in default.cfg.
 

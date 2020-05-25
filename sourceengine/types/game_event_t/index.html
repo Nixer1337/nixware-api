@@ -720,9 +720,9 @@
 <h2 id="functions">Functions</h2>
 <h2 id="get_name-string"><strong>get_name():</strong> string</h2>
 <p>Returns the event name</p>
-<div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">event_name</span> <span class="o">=</span> <span class="n">event</span><span class="p">:</span><span class="n">get_name</span><span class="p">()</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">event_name</span> <span class="o">=</span> <span class="n">event</span><span class="p">:</span><span class="n">get_name</span><span class="p">()</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="get_boolkey_name-def_value-bool"><strong>get_bool(key_name, def_value):</strong> bool</h2>
@@ -748,11 +748,13 @@
 </tbody>
 </table>
 <p>Returns the boolean value from event</p>
-<div class="codehilite"><pre><span></span><code><span class="kr">if</span> <span class="n">event</span><span class="p">:</span><span class="n">get_name</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;player_chat&quot;</span> <span class="kr">then</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kr">if</span> <span class="n">event</span><span class="p">:</span><span class="n">get_name</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;player_chat&quot;</span> <span class="kr">then</span>
     <span class="kd">local</span> <span class="n">teamonly</span> <span class="o">=</span> <span class="n">event</span><span class="p">:</span><span class="n">get_bool</span><span class="p">(</span><span class="s2">&quot;teamonly&quot;</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
 <span class="kr">end</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="get_intkey_name-def_value-number"><strong>get_int(key_name, def_value):</strong> number</h2>
@@ -778,11 +780,13 @@
 </tbody>
 </table>
 <p>Returns the int value from event</p>
-<div class="codehilite"><pre><span></span><code><span class="kr">if</span> <span class="n">event</span><span class="p">:</span><span class="n">get_name</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;player_death&quot;</span> <span class="kr">then</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kr">if</span> <span class="n">event</span><span class="p">:</span><span class="n">get_name</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;player_death&quot;</span> <span class="kr">then</span>
     <span class="kd">local</span> <span class="n">attacker</span> <span class="o">=</span> <span class="n">event</span><span class="p">:</span><span class="n">get_int</span><span class="p">(</span><span class="s2">&quot;attacker&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="kr">end</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="get_floatkey_name-def_value-number"><strong>get_float(key_name, def_value):</strong> number</h2>
@@ -808,11 +812,13 @@
 </tbody>
 </table>
 <p>Returns the float value from event</p>
-<div class="codehilite"><pre><span></span><code><span class="kr">if</span> <span class="n">event</span><span class="p">:</span><span class="n">get_name</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;bullet_impact&quot;</span> <span class="kr">then</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kr">if</span> <span class="n">event</span><span class="p">:</span><span class="n">get_name</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;bullet_impact&quot;</span> <span class="kr">then</span>
     <span class="kd">local</span> <span class="n">impact_x</span> <span class="o">=</span> <span class="n">event</span><span class="p">:</span><span class="n">get_float</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="kr">end</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="get_stringkey_name-def_value-string"><strong>get_string(key_name, def_value):</strong> string</h2>
@@ -838,11 +844,13 @@
 </tbody>
 </table>
 <p>Returns the string from event</p>
-<div class="codehilite"><pre><span></span><code><span class="kr">if</span> <span class="n">event</span><span class="p">:</span><span class="n">get_name</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;player_death&quot;</span> <span class="kr">then</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kr">if</span> <span class="n">event</span><span class="p">:</span><span class="n">get_name</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;player_death&quot;</span> <span class="kr">then</span>
     <span class="kd">local</span> <span class="n">weapon</span> <span class="o">=</span> <span class="n">event</span><span class="p">:</span><span class="n">get_string</span><span class="p">(</span><span class="s2">&quot;weapon&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
 <span class="kr">end</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="set_boolkey_name-value"><strong>set_bool(key_name, value)</strong></h2>
@@ -868,11 +876,13 @@
 </tbody>
 </table>
 <p>Changes the key value</p>
-<div class="codehilite"><pre><span></span><code><span class="kr">if</span> <span class="n">event</span><span class="p">:</span><span class="n">get_name</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;player_chat&quot;</span> <span class="kr">then</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kr">if</span> <span class="n">event</span><span class="p">:</span><span class="n">get_name</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;player_chat&quot;</span> <span class="kr">then</span>
     <span class="n">event</span><span class="p">:</span><span class="n">set_bool</span><span class="p">(</span><span class="s2">&quot;teamonly&quot;</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
 <span class="kr">end</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="set_intkey_name-value"><strong>set_int(key_name, value)</strong></h2>
@@ -898,11 +908,13 @@
 </tbody>
 </table>
 <p>Changes the key value</p>
-<div class="codehilite"><pre><span></span><code><span class="kr">if</span> <span class="n">event</span><span class="p">:</span><span class="n">get_name</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;player_death&quot;</span> <span class="kr">then</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kr">if</span> <span class="n">event</span><span class="p">:</span><span class="n">get_name</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;player_death&quot;</span> <span class="kr">then</span>
     <span class="n">event</span><span class="p">:</span><span class="n">set_int</span><span class="p">(</span><span class="s2">&quot;attacker&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="kr">end</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="set_floatkey_name-value"><strong>set_float(key_name, value)</strong></h2>
@@ -928,11 +940,13 @@
 </tbody>
 </table>
 <p>Changes the key value</p>
-<div class="codehilite"><pre><span></span><code><span class="kr">if</span> <span class="n">event</span><span class="p">:</span><span class="n">get_name</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;bullet_impact&quot;</span> <span class="kr">then</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kr">if</span> <span class="n">event</span><span class="p">:</span><span class="n">get_name</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;bullet_impact&quot;</span> <span class="kr">then</span>
     <span class="n">event</span><span class="p">:</span><span class="n">set_float</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="kr">end</span>
 </code></pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="set_stringkey_name-value"><strong>set_string(key_name, value)</strong></h2>
@@ -958,10 +972,13 @@
 </tbody>
 </table>
 <p>Changes the key value</p>
-<div class="codehilite"><pre><span></span><code><span class="kr">if</span> <span class="n">event</span><span class="p">:</span><span class="n">get_name</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;player_death&quot;</span> <span class="kr">then</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kr">if</span> <span class="n">event</span><span class="p">:</span><span class="n">get_name</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;player_death&quot;</span> <span class="kr">then</span>
     <span class="n">event</span><span class="p">:</span><span class="n">set_string</span><span class="p">(</span><span class="s2">&quot;weapon&quot;</span><span class="p">,</span> <span class="s2">&quot;knife_karambit&quot;</span><span class="p">)</span>
 <span class="kr">end</span>
 </code></pre></div>
+</td></tr></table>
                 
               
               

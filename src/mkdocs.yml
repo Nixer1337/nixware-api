@@ -29,5 +29,6 @@ theme:
   logo: https://nixware.cc/styles/default/xenforo/ava.png
   name: material
 markdown_extensions:
-  - codehilite
+  - codehilite:
+      linenums: true
   - admonition
