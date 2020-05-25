@@ -34,10 +34,10 @@ Type | Name
 ------------ | -------------
 number | value
 
-Set the int value
+Setting the int value
 ```lua
 local convar = se.get_convar("r_jigglebones")
-local value = convar:set_int(0)
+convar:set_int(0)
 ```
 ---
 
@@ -46,10 +46,10 @@ Type | Name
 ------------ | -------------
 number | value
 
-Set the float value
+Setting the float value
 ```lua
 local convar = se.get_convar("r_aspectratio")
-local value = convar:set_float(1.333)
+convar:set_float(1.333)
 ```
 ---
 
@@ -58,7 +58,7 @@ Type | Name
 ------------ | -------------
 string | value
 
-Set the string
+Setting the string
 ```lua
 local convar = se.get_convar("sv_skyname")
 convar:set_string("sky_dust")
