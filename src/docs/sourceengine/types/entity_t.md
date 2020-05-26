@@ -41,6 +41,15 @@ local headpos = entity:get_player_hitbox_pos(0)
 
 ---
 
+## **get_index()**: number
+
+Returns the entity index
+```lua
+local index = entity:get_index()
+```
+
+---
+
 ## **get_address()**: number
 
 Returns the entity address
