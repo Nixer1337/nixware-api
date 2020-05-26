@@ -3,7 +3,7 @@
 Type | Name | Description
 ------------ | ------------- | -------------
 bool | manual | Is manual shot
-[entity_t](../entity_t) | target | Target player
+[entity_t](../entity_t/) | target | Target player
 number | backtrack | How many ticks have been backtracked
 number | hitchance | Shot hitchance
 number | hitbox | Target hitbox
