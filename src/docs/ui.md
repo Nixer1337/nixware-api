@@ -133,7 +133,7 @@ local value = ui.get_float("skins_aspect_ratio")
 ```
 ---
 
-## **get_color(var_name)**: [color_t](../types/color_t)
+## **get_color(var_name)**: [color_t](../types/color_t/)
 
 Type | Name | Description
 ------------ | ------------- | ------------
@@ -189,7 +189,7 @@ ui.set_float("skins_aspect_ratio", 1.333)
 Type | Name | Description
 ------------ | ------------- | ------------
 string | var_name | Variable name in config|
-[color_t](../types/color_t) | val | Value
+[color_t](../types/color_t/) | val | Value
 
 Setting coloredit value
 ```lua

@@ -2,7 +2,7 @@
 
 ## Functions
 
-## **get_screen_size()**: [vec2_t](../../types/vec2_t)
+## **get_screen_size()**: [vec2_t](../../types/vec2_t/)
 
 Getting the screen size
 ```lua
@@ -34,12 +34,12 @@ local lp_index = engine.get_local_player()
 ```
 ---
 
-## **get_player_info(index)**: [player_info_t](../types/player_info_t)
+## **get_player_info(index)**: [player_info_t](../types/player_info_t/)
 Type | Name | Description
 ------------ | ------------- | ------------
 number | index | Entity index
 
-Returns the [player_info_t](../types/player_info_t) object
+Returns the [player_info_t](../types/player_info_t/) object
 ```lua
 local local_info = engine.get_player_info(engine.get_local_player())
 ```
@@ -67,7 +67,7 @@ local ent_idx = engine.get_player_for_user_id(userid)
 ## **set_view_angles(viewangles)**
 Type | Name | Description
 ------------ | ------------- | ------------
-[angle_t](../../types/angle_t) | viewangles | Viewangles
+[angle_t](../../types/angle_t/) | viewangles | Viewangles
 
 Setting the viewangles
 ```lua
@@ -75,7 +75,7 @@ engine.set_view_angles(angle_t.new(0, 0, 0))
 ```
 ---
 
-## **get_view_angles()**: [angle_t](../../types/angle_t)
+## **get_view_angles()**: [angle_t](../../types/angle_t/)
 
 Getting the viewangles
 ```lua

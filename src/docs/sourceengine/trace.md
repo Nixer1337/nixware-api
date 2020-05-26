@@ -7,8 +7,8 @@ Type | Name | Description
 ------------ | ------------- | ------------
 number | skip_entindex | Skip entity index
 number | mask | Trace mask
-[vec3_t](../../types/vec3_t) | start | Start trace position
-[vec3_t](../../types/vec3_t) | end | End trace position
+[vec3_t](../../types/vec3_t/) | start | Start trace position
+[vec3_t](../../types/vec3_t/) | end | End trace position
 
 Tracing
 ```lua

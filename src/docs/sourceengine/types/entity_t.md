@@ -20,7 +20,7 @@ local is_alive = entity:is_alive()
 
 ---
 
-## **get_bbox()**: [rect_t](../../../types/rect_t)
+## **get_bbox()**: [rect_t](../../../types/rect_t/)
 
 Returns the bounding box
 ```lua
@@ -29,7 +29,7 @@ local bbox = entity:get_bbox()
 
 ---
 
-## **get_player_hitbox_pos(hitbox_num)**: [vec3_t](../../../types/vec3_t)
+## **get_player_hitbox_pos(hitbox_num)**: [vec3_t](../../../types/vec3_t/)
 Type | Name | Description
 ------------ | ------------- | ------------
 number | hitbox_num | Hitbox number
@@ -95,7 +95,7 @@ Returns the double value by offset
 
 ---
 
-## **get_prop_vector(offset)**: [vec3_t](../../../types/vec3_t)
+## **get_prop_vector(offset)**: [vec3_t](../../../types/vec3_t/)
 Type | Name | Description
 ------------ | ------------- | ------------
 number | offset | Prop offset
@@ -104,7 +104,7 @@ Returns the vector by offset
 
 ---
 
-## **get_prop_angle(offset)**: [angle_t](../../../types/angle_t)
+## **get_prop_angle(offset)**: [angle_t](../../../types/angle_t/)
 Type | Name | Description
 ------------ | ------------- | ------------
 number | offset | Prop offset
@@ -167,7 +167,7 @@ Setting the double value by offset
 Type | Name | Description
 ------------ | ------------- | ------------
 number | offset | Prop offset
-[vec3_t](../../../types/vec3_t) | value | Value
+[vec3_t](../../../types/vec3_t/) | value | Value
 
 Setting the vector by offset
 
@@ -177,6 +177,6 @@ Setting the vector by offset
 Type | Name | Description
 ------------ | ------------- | ------------
 number | offset | Prop offset
-[angle_t](../../../types/angle_t) | value | Value
+[angle_t](../../../types/angle_t/) | value | Value
 
 Setting the angle by offset

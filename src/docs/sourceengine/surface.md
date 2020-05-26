@@ -13,7 +13,7 @@ surface.play_sound("resource/warning.wav")
 ```
 ---
 
-## **get_cursor_pos()**: [vec2_t](../../types/vec2_t)
+## **get_cursor_pos()**: [vec2_t](../../types/vec2_t/)
 Returns the cursor position
 ```lua
 local x, y = surface.get_cursor_pos()
@@ -88,7 +88,7 @@ surface.draw_outlined_rect(5, 5, 10, 10)
 ## **draw_set_color(color)**
 Type | Name | Description
 ------------ | ------------- | ------------
-[color_t](../../types/color_t) | color | Color
+[color_t](../../types/color_t/) | color | Color
 
 Setting color of the next drawing element
 ```lua
@@ -96,7 +96,7 @@ surface.draw_set_color(color)
 ```
 ---
 
-## **get_text_size(font, text)**: [vec2_t](../../types/vec2_t)
+## **get_text_size(font, text)**: [vec2_t](../../types/vec2_t/)
 Type | Name | Description
 ------------ | ------------- | ------------
 font | font | Font
@@ -155,7 +155,7 @@ surface.draw_set_text_font(font)
 ## **draw_set_text_color(color)**
 Type | Name | Description
 ------------ | ------------- | ------------
-[color_t](../../types/color_t) | color | Color
+[color_t](../../types/color_t/) | color | Color
 
 Setting the next text color
 ```lua
@@ -190,8 +190,8 @@ surface.draw_print_text(text)
 Type | Name | Description
 ------------ | ------------- | ------------
 number | points_num | Num points
-[vec2_t](../../types/vec2_t) array | points | Points
-[color_t](../../types/color_t) | color | Color
+[vec2_t](../../types/vec2_t/) array | points | Points
+[color_t](../../types/color_t/) | color | Color
 
 Render the textured polygon
 ```lua

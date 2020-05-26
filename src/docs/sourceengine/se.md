@@ -2,11 +2,11 @@
 
 ## Functions
 
-## **world_to_screen(pos)**: [vec2_t](../../types/vec2_t)
+## **world_to_screen(pos)**: [vec2_t](../../types/vec2_t/)
 
 Type | Name | Description
 ------------ | ------------- | ------------
-[vec3_t](../../types/vec3_t) | pos | World position
+[vec3_t](../../types/vec3_t/) | pos | World position
 
 Getting the 2d pos from world position
 ```lua
@@ -38,13 +38,13 @@ se.set_name("nixware.cc")
 ```
 ---
 
-## **get_convar(name)**: [convar_t](../types/convar_t)
+## **get_convar(name)**: [convar_t](../types/convar_t/)
 
 Type | Name | Description
 ------------ | ------------- | ------------
 string | name | Console variable name
 
-Returns [convar_t](../types/convar_t) object
+Returns [convar_t](../types/convar_t/) object
 ```lua
 se.get_convar("r_jigglebones")
 ```

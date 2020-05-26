@@ -30,7 +30,7 @@ client.register_callback("unload", on_unload)
 ## **create_move(cmd)** - csgo
 Type | Name | Description
 ------------ | ------------- | ------------
-[usercmd_t](../sourceengine/types/usercmd_t) | cmd | Current command
+[usercmd_t](../sourceengine/types/usercmd_t/) | cmd | Current command
 
 CreateMove callback. Can used for command or send packet modification
 ```lua
@@ -73,7 +73,7 @@ client.register_callback("frame_stage_notify", on_frame_stage_notify)
 ## **fire_game_event(event)** - csgo
 Type | Name | Description
 ------------ | ------------- | ------------
-[game_event_t](../sourceengine/types/game_event_t) | event | Event
+[game_event_t](../sourceengine/types/game_event_t/) | event | Event
 
 FireGameEvent callback. Calls on event
 ```lua
@@ -93,7 +93,7 @@ client.register_callback("fire_game_event", on_fire_game_event)
 ## **shot_fired(info)** - csgo
 Type | Name | Description
 ------------ | ------------- | ------------
-[shot_info_t](../sourceengine/types/shot_info_t) | info | Shot info
+[shot_info_t](../sourceengine/types/shot_info_t/) | info | Shot info
 
 ShotFired callback. Calls on shot
 ```lua
