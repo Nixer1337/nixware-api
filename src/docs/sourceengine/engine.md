@@ -88,7 +88,7 @@ Type | Name | Description
 ------------ | ------------- | ------------
 string | cmd | Console command
 
-Clearing the console
+Executes command in console
 ```lua
 engine.execute_client_cmd("clear")
 ```
