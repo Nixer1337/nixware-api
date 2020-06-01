@@ -16,7 +16,7 @@ surface.play_sound("resource/warning.wav")
 ## **get_cursor_pos()**: [vec2_t](../../types/vec2_t/)
 Returns the cursor position
 ```lua
-local x, y = surface.get_cursor_pos()
+local cursor_pos = surface.get_cursor_pos()
 ```
 ---
 
