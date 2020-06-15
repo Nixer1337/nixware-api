@@ -26,6 +26,7 @@ Type | Name | Description
 string | fontname | Windows font name
 number | tall | Font tall
 number | weight | Font weight
+number | blur | Font blur
 number | scanlines | Font scanlines
 number | flags | Font flags
 
