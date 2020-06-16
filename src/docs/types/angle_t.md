@@ -8,12 +8,12 @@ number | roll
 
 ## Functions
 
-## **new(x, y, z)**: angle_t
+## **new(pitch, yaw, roll)**: angle_t
 Type | Name
 ------------ | -------------
-number | x
-number | y
-number | z
+number | pitch
+number | yaw
+number | roll
 
 Constructor
 ```lua

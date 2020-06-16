@@ -796,6 +796,19 @@
 </tr>
 </tbody>
 </table>
+<p>Register the callback</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_create_move</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="n">cmd</span><span class="p">.</span><span class="n">command_number</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;create_move&quot;</span><span class="p">,</span> <span class="n">on_create_move</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
 <hr />
 <h2 id="get_username-string"><strong>get_username()</strong>: string</h2>
 <p>Returns your cheat username</p>

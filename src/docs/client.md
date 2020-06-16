@@ -34,6 +34,14 @@ Type | Name | Description
 string | eventname | Callback name
 function | fn | Lua function()
 
+Register the callback
+```lua
+local function on_create_move(cmd) 
+    print(cmd.command_number)
+end
+
+client.register_callback("create_move", on_create_move)
+```
 ---
 
 ## **get_username()**: string

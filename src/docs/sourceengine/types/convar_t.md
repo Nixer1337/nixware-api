@@ -6,7 +6,7 @@
 
 Returns the int value
 ```lua
-local convar = se.get_convar("r_jigglebones")
+local convar = se.get_convar("r_jiggle_bones")
 local value = convar:get_int()
 ```
 ---
