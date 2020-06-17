@@ -20,6 +20,12 @@ FFI tutorial - [luajit.org/ext_ffi_tutorial.html](https://luajit.org/ext_ffi_tut
 
 ---
 
+# VSCode snippets
+
+Install from marketplace: [marketplace.visualstudio.com/items?itemName=Nixer1337.nixware-lua-api-snippets](https://marketplace.visualstudio.com/items?itemName=Nixer1337.nixware-lua-api-snippets)
+
+---
+
 # Compiling Lua scripts
 
 Using: `luajit.exe -b script.lua compiled.lua`.
