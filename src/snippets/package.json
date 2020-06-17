@@ -3,10 +3,16 @@
     "displayName": "Nixware Lua API Snippets",
     "description": "Code snippets for the Nixware Lua API.",
     "publisher": "Nixer1337",
+    "icon": "icon.png",
+    "homepage": "https://api.nixware.cc",
     "version": "1.0.0",
     "engines": {
         "vscode": "^1.46.0"
     },
+    "keywords": [
+        "lua",
+        "nixware"
+      ],
     "categories": [
         "Snippets"
     ],
@@ -14,7 +20,7 @@
         "snippets": [
             {
                 "language": "lua",
-                "path": "./snippets/snippets.code-snippets"
+                "path": "./nixware-lua-api.snippets"
             }
         ]
     }
