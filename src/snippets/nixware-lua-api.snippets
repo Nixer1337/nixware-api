@@ -1027,5 +1027,68 @@
 		  "shot_info.aim_point"
 		],
 		"description": "Aimpoint position"
-	  }
+	  },
+	  "Creates new font": {
+		"prefix": "renderer.setup_font",
+		"body": [
+			"renderer.setup_font(${1:filename}, ${2:size}, ${3:flags})"
+		],
+		"description": "Creates new font"
+	  },
+	  "Drawing the text": {
+	    "prefix": "renderer.text",
+	    "body": [
+			"renderer.text(${1:text}, ${2:font}, ${3:pos}, ${4:size}, ${5:color})"
+			],
+			"description": "Drawing the text"
+	  },
+	"Getting the text size": {
+		"prefix": "renderer.get_text_size",
+		"body": [
+			"renderer.get_text_size(${1:font}, ${2:size}, ${3:text})"
+		],
+		"description": "Getting the text size"
+	},
+	"Drawing the line": {
+		"prefix": "renderer.line",
+		"body": [
+			"renderer.line(${1:from}, ${2:to}, ${3:color})"
+		],
+		"description": "Drawing the line"
+	},
+	"Drawing the rect": {
+		"prefix": "renderer.rect",
+		"body": [
+			"renderer.rect(${1:from}, ${2:to}, ${3:color})"
+		],
+		"description": "Drawing the rect"
+	},
+	"Drawing the filled rect": {
+		"prefix": "renderer.rect_filled",
+		"body": [
+			"renderer.rect_filled(${1:from}, ${2:to}, ${3:color})"
+		],
+		"description": "Drawing the filled rect"
+	},
+	"Drawing the faded rect": {
+		"prefix": "renderer.rect_filled_fade",
+		"body": [
+			"renderer.rect_filled_fade(${1:from}, ${2:to}, ${3:col_upr_left}, ${4:col_upr_right}, ${5:col_bot_right}, ${6:col_bot_left})"
+		],
+		"description": "Drawing the faded rect"
+	},
+	"Drawing the circle": {
+		"prefix": "renderer.circle",
+		"body": [
+			"renderer.circle(${1:pos}, ${2:radius}, ${3:segments}, ${4:filled}, ${5:color})"
+		],
+		"description": "Drawing the circle"
+	},
+	"Drawing the textured polygon": {
+		"prefix": "renderer.filled_polygon",
+		"body": [
+			"renderer.filled_polygon(${1:points}, ${2:color})"
+		],
+		"description": "Drawing the textured polygon"
+	}
 }
