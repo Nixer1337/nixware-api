@@ -3,6 +3,7 @@ nav:
     - Home: index.md
     - ui: ui.md
     - client: client.md
+    - renderer: renderer.md
     - types:
       - vec2_t: types/vec2_t.md
       - vec3_t: types/vec3_t.md

@@ -1,15 +1,17 @@
 # callbacks
 
-## **paint()**
+## **paint_d3d()**
 
 Callback for drawing
 ```lua
+local font = renderer.setup_font("C:/windows/fonts/tahomabd.ttf", 50)
+
 local function on_paint()
-    surface.draw_set_color(color_t.new(255, 0, 0, 255))
-    surface.draw_line(5, 5, 20, 5)
+    renderer.text("hello world!", font, vec2_t.new(20, 20), 50, color_t.new(255, 255, 255, 255))
+    renderer.rect_filled(vec2_t.new(30, 30), vec2_t.new(40, 40), color_t.new(255, 0, 0, 255))
 end
 
-client.register_callback("paint", on_paint)
+client.register_callback("paint_d3d", on_paint)
 ```
 
 ---
@@ -86,6 +88,20 @@ local function on_fire_game_event(event)
 end
 
 client.register_callback("fire_game_event", on_fire_game_event)
+```
+
+---
+
+## **paint()** - csgo
+
+Callback for engine drawing (will be removed soon)
+```lua
+local function on_paint()
+    surface.draw_set_color(color_t.new(255, 0, 0, 255))
+    surface.draw_line(5, 5, 20, 5)
+end
+
+client.register_callback("paint", on_paint)
 ```
 
 ---

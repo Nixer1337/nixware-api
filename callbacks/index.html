@@ -183,18 +183,30 @@
       
 
 
+  <li class="md-nav__item">
+    <a href="../renderer/" title="renderer" class="md-nav__link">
+      renderer
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-5">
       types
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="types" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-5">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -275,16 +287,16 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-6">
       source engine
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="source engine" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-6">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -300,16 +312,16 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1">
     
-    <label class="md-nav__link" for="nav-5-1">
+    <label class="md-nav__link" for="nav-6-1">
       types
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="types" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-1">
+      <label class="md-nav__title" for="nav-6-1">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -525,8 +537,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#paint" class="md-nav__link">
-    paint()
+  <a href="#paint_d3d" class="md-nav__link">
+    paint_d3d()
   </a>
   
 </li>
@@ -555,6 +567,13 @@
         <li class="md-nav__item">
   <a href="#fire_game_eventevent-csgo" class="md-nav__link">
     fire_game_event(event) - csgo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paint-csgo" class="md-nav__link">
+    paint() - csgo
   </a>
   
 </li>
@@ -599,8 +618,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#paint" class="md-nav__link">
-    paint()
+  <a href="#paint_d3d" class="md-nav__link">
+    paint_d3d()
   </a>
   
 </li>
@@ -634,6 +653,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#paint-csgo" class="md-nav__link">
+    paint() - csgo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#shot_firedinfo-csgo" class="md-nav__link">
     shot_fired(info) - csgo
   </a>
@@ -657,19 +683,23 @@
                 
                 
                 <h1 id="callbacks">callbacks</h1>
-<h2 id="paint"><strong>paint()</strong></h2>
+<h2 id="paint_d3d"><strong>paint_d3d()</strong></h2>
 <p>Callback for drawing</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
-    <span class="n">surface</span><span class="p">.</span><span class="n">draw_set_color</span><span class="p">(</span><span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
-    <span class="n">surface</span><span class="p">.</span><span class="n">draw_line</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">font</span> <span class="o">=</span> <span class="n">renderer</span><span class="p">.</span><span class="n">setup_font</span><span class="p">(</span><span class="s2">&quot;C:/windows/fonts/tahomabd.ttf&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+
+<span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
+    <span class="n">renderer</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;hello world!&quot;</span><span class="p">,</span> <span class="n">font</span><span class="p">,</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="mi">50</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+    <span class="n">renderer</span><span class="p">.</span><span class="n">rect_filled</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">40</span><span class="p">),</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
 <span class="kr">end</span>
 
-<span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;paint&quot;</span><span class="p">,</span> <span class="n">on_paint</span><span class="p">)</span>
+<span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;paint_d3d&quot;</span><span class="p">,</span> <span class="n">on_paint</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 
@@ -812,6 +842,23 @@
 <span class="kr">end</span>
 
 <span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;fire_game_event&quot;</span><span class="p">,</span> <span class="n">on_fire_game_event</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="paint-csgo"><strong>paint()</strong> - csgo</h2>
+<p>Callback for engine drawing (will be removed soon)</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
+    <span class="n">surface</span><span class="p">.</span><span class="n">draw_set_color</span><span class="p">(</span><span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+    <span class="n">surface</span><span class="p">.</span><span class="n">draw_line</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;paint&quot;</span><span class="p">,</span> <span class="n">on_paint</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 

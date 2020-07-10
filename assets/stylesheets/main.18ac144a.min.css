@@ -136,7 +136,7 @@ input:hover, input:active, input:focus {
 } */
 
 .md-nav__link[data-md-state=blur] {
-    color: rgb(78, 77, 77);
+    color: #868080;
 }
 
 .md-typeset code, .md-typeset code:active, .md-typeset code:hover {
