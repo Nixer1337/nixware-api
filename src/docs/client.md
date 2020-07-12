@@ -109,5 +109,5 @@ string | pattern | Pattern
 
 Returns pattern address
 ```lua
-local line_goes_through_smoke_addr = client.find_pattern("client_panorama.dll", "55 8B EC 83 EC 08 8B 15 ? ? ? ? 0F 57 C0")
+local line_goes_through_smoke_addr = client.find_pattern("client.dll", "55 8B EC 83 EC 08 8B 15 ? ? ? ? 0F 57 C0")
 ```
