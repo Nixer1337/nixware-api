@@ -31,6 +31,18 @@ local tahoma_bold = renderer.setup_font("C:/windows/fonts/tahomabd.ttf", 50, 0)
 ```
 ---
 
+## **setup_texture(filename)**: texture
+
+Type | Name | Description
+------------ | ------------- | ------------
+string | filename | Texture file path
+
+Creates new texture
+```lua
+local my_texture = renderer.setup_texture("C:/nixware/example.png")
+```
+---
+
 ## **text(text, font, pos, size, color)**
 
 Type | Name | Description
@@ -46,6 +58,27 @@ local tahoma_bold = renderer.setup_font("C:/windows/fonts/tahomabd.ttf", 50, 0)
 
 local function on_paint()
     renderer.text("hello world!", tahoma_bold, vec2_t.new(10, 10), 50, color_t.new(255, 255, 255, 255))
+end
+
+client.register_callback("paint_d3d", on_paint)
+```
+---
+
+## **texture(tex, from, to, color)**
+
+Type | Name | Description
+------------ | ------------- | ------------
+texture | tex | Texture
+[vec2_t](../types/vec2_t/) | from | Start position
+[vec2_t](../types/vec2_t/) | to | End position
+[color_t](../types/color_t/) | color | Texture color ( default value: color_t.new(255, 255, 255, 255) )
+
+Drawing the texture
+```lua
+local my_texture = renderer.setup_texture("C:/nixware/example.png")
+
+local function on_paint()
+    renderer.texture(my_texture, vec2_t.new(0, 0), vec2_t.new(500, 500), color_t.new(255, 255, 255, 255))
 end
 
 client.register_callback("paint_d3d", on_paint)

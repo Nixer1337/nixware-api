@@ -1035,6 +1035,20 @@
 		],
 		"description": "Creates new font"
 	  },
+	 "Creates new texture": {
+		"prefix": "renderer.setup_texture",
+		"body": [
+			"renderer.setup_texture(${1:filename})"
+		],
+		"description": "Creates new texture"
+	  },
+	"Drawing the texture": {
+	    "prefix": "renderer.texture",
+	    "body": [
+			"renderer.texture(${1:tex}, ${2:from}, ${3:to}, ${4:color})"
+			],
+			"description": "Drawing the texture"
+	  },
 	  "Drawing the text": {
 	    "prefix": "renderer.text",
 	    "body": [

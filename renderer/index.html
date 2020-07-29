@@ -233,8 +233,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#setup_texturefilename-texture" class="md-nav__link">
+    setup_texture(filename): texture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#texttext-font-pos-size-color" class="md-nav__link">
     text(text, font, pos, size, color)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#texturetex-from-to-color" class="md-nav__link">
+    texture(tex, from, to, color)
   </a>
   
 </li>
@@ -653,8 +667,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#setup_texturefilename-texture" class="md-nav__link">
+    setup_texture(filename): texture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#texttext-font-pos-size-color" class="md-nav__link">
     text(text, font, pos, size, color)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#texturetex-from-to-color" class="md-nav__link">
+    texture(tex, from, to, color)
   </a>
   
 </li>
@@ -787,6 +815,29 @@
 </td></tr></table>
 
 <hr />
+<h2 id="setup_texturefilename-texture"><strong>setup_texture(filename)</strong>: texture</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>filename</td>
+<td>Texture file path</td>
+</tr>
+</tbody>
+</table>
+<p>Creates new texture</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">my_texture</span> <span class="o">=</span> <span class="n">renderer</span><span class="p">.</span><span class="n">setup_texture</span><span class="p">(</span><span class="s2">&quot;C:/nixware/example.png&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+<hr />
 <h2 id="texttext-font-pos-size-color"><strong>text(text, font, pos, size, color)</strong></h2>
 <table>
 <thead>
@@ -830,6 +881,56 @@
 
 <span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
     <span class="n">renderer</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;hello world!&quot;</span><span class="p">,</span> <span class="n">tahoma_bold</span><span class="p">,</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="mi">50</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+<span class="kr">end</span>
+
+<span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;paint_d3d&quot;</span><span class="p">,</span> <span class="n">on_paint</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="texturetex-from-to-color"><strong>texture(tex, from, to, color)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>texture</td>
+<td>tex</td>
+<td>Texture</td>
+</tr>
+<tr>
+<td><a href="../types/vec2_t/">vec2_t</a></td>
+<td>from</td>
+<td>Start position</td>
+</tr>
+<tr>
+<td><a href="../types/vec2_t/">vec2_t</a></td>
+<td>to</td>
+<td>End position</td>
+</tr>
+<tr>
+<td><a href="../types/color_t/">color_t</a></td>
+<td>color</td>
+<td>Texture color ( default value: color_t.new(255, 255, 255, 255) )</td>
+</tr>
+</tbody>
+</table>
+<p>Drawing the texture</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">my_texture</span> <span class="o">=</span> <span class="n">renderer</span><span class="p">.</span><span class="n">setup_texture</span><span class="p">(</span><span class="s2">&quot;C:/nixware/example.png&quot;</span><span class="p">)</span>
+
+<span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
+    <span class="n">renderer</span><span class="p">.</span><span class="n">texture</span><span class="p">(</span><span class="n">my_texture</span><span class="p">,</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">),</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
 <span class="kr">end</span>
 
 <span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;paint_d3d&quot;</span><span class="p">,</span> <span class="n">on_paint</span><span class="p">)</span>
