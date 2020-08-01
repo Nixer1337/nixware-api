@@ -4,7 +4,7 @@
 
 ## **get_choked_commands()**: number
 
-Getting the choked commands
+Returns the number of choked commands
 ```lua
 local choked = clientstate.get_choked_commands()
 ```

@@ -111,33 +111,33 @@
 		],
 		"description": "Creates color edit in menu"
 	  },
-	  "Getting value from checkbox": {
+	  "Returns the value from checkbox": {
 		"prefix": "ui.get_bool",
 		"body": [
 		  "ui.get_bool(${1:var_name})"
 		],
-		"description": "Getting value from checkbox"
+		"description": "Returns the value from checkbox"
 	  },
-	  "Getting value from int slider": {
+	  "Returns the value from int slider": {
 		"prefix": "ui.get_int",
 		"body": [
 		  "ui.get_int(${1:var_name})"
 		],
-		"description": "Getting value from int slider"
+		"description": "Returns the value from int slider"
 	  },
-	  "Getting value from float slider": {
+	  "Returns the value from float slider": {
 		"prefix": "ui.get_float",
 		"body": [
 		  "ui.get_float(${1:var_name})"
 		],
-		"description": "Getting value from float slider"
+		"description": "Returns the value from float slider"
 	  },
-	  "Getting value from color edit": {
+	  "Returns the value from color edit": {
 		"prefix": "ui.get_color",
 		"body": [
 		  "ui.get_color(${1:var_name})"
 		],
-		"description": "Getting value from color edit"
+		"description": "Returns the value from color edit"
 	  },
 	  "Setting checkbox value": {
 		"prefix": "ui.set_bool",
@@ -188,12 +188,12 @@
 		],
 		"description": "Setting menu visibility"
 	  },
-	  "Getting the choked commands": {
+	  "Returns the number of choked commands": {
 		"prefix": "clientstate.get_choked_commands",
 		"body": [
 		  "clientstate.get_choked_commands()"
 		],
-		"description": "Getting the choked commands"
+		"description": "Returns the number of choked commands"
 	  },
 	  "Forcing cl_fullupdate": {
 		"prefix": "clientstate.force_full_update",
@@ -202,12 +202,12 @@
 		],
 		"description": "Forcing cl_fullupdate"
 	  },
-	  "Getting the screen size": {
+	  "Returns the screen size": {
 		"prefix": "engine.get_screen_size",
 		"body": [
 		  "engine.get_screen_size()"
 		],
-		"description": "Getting the screen size"
+		"description": "Returns the screen size"
 	  },
 	  "Returns true if connected to server": {
 		"prefix": "engine.is_connected",
@@ -258,12 +258,12 @@
 		],
 		"description": "Setting the viewangles"
 	  },
-	  "Getting the viewangles": {
+	  "Returns the camera angles": {
 		"prefix": "engine.get_view_angles",
 		"body": [
 		  "engine.get_view_angles()"
 		],
-		"description": "Getting the viewangles"
+		"description": "Returns the camera angles"
 	  },
 	  "Executes command in console": {
 		"prefix": "engine.execute_client_cmd",
@@ -377,12 +377,12 @@
 		],
 		"description": "Returns the interval per tick"
 	  },
-	  "Getting the 2d pos from world position": {
+	  "Calculates on screen position from world position": {
 		"prefix": "se.world_to_screen",
 		"body": [
 		  "se.world_to_screen(${1:pos})"
 		],
-		"description": "Getting the 2d pos from world position"
+		"description": "Calculates on screen position from world position"
 	  },
 	  "Setting the clantag": {
 		"prefix": "se.set_clantag",
@@ -426,12 +426,12 @@
 		],
 		"description": "Register the event for [fire_game_event](../../callbacks/#fire_game_eventevent-csgo) callback"
 	  },
-	  "Getting the interface address": {
+	  "Returns the interface address": {
 		"prefix": "se.create_interface",
 		"body": [
 		  "se.create_interface(${1:module_name}, ${2:interface_version})"
 		],
-		"description": "Getting the interface address"
+		"description": "Returns the interface address"
 	  },
 	  "Playing the sound": {
 		"prefix": "surface.play_sound",
@@ -1056,12 +1056,12 @@
 			],
 			"description": "Drawing the text"
 	  },
-	"Getting the text size": {
+	"Returns the text size": {
 		"prefix": "renderer.get_text_size",
 		"body": [
 			"renderer.get_text_size(${1:font}, ${2:size}, ${3:text})"
 		],
-		"description": "Getting the text size"
+		"description": "Returns the text size"
 	},
 	"Drawing the line": {
 		"prefix": "renderer.line",

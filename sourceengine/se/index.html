@@ -731,7 +731,7 @@
 </tr>
 </tbody>
 </table>
-<p>Getting the 2d pos from world position</p>
+<p>Calculates on screen position from world pos</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">pos2d</span> <span class="o">=</span> <span class="n">se</span><span class="p">.</span><span class="n">world_to_screen</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
@@ -886,8 +886,8 @@
 </tr>
 </tbody>
 </table>
-<p>Getting the interface address</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">g_model_info</span> <span class="o">=</span> <span class="n">ffi</span><span class="p">.</span><span class="n">cast</span><span class="p">(</span><span class="s2">&quot;void*&quot;</span><span class="p">,</span> <span class="n">se</span><span class="p">.</span><span class="n">create_interface</span><span class="p">(</span><span class="s2">&quot;engine.dll&quot;</span><span class="p">,</span> <span class="s2">&quot;VModelInfoClient004&quot;</span><span class="p">))</span>
+<p>Returns the interface address</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">g_model_info</span> <span class="o">=</span> <span class="n">se</span><span class="p">.</span><span class="n">create_interface</span><span class="p">(</span><span class="s2">&quot;engine.dll&quot;</span><span class="p">,</span> <span class="s2">&quot;VModelInfoClient004&quot;</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
                 

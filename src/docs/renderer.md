@@ -94,7 +94,7 @@ number | font | Font
 number | size | Font size
 string | text | Text
 
-Getting the text size
+Returns the text size
 ```lua
 local tahoma_bold = renderer.setup_font("C:/windows/fonts/tahomabd.ttf", 50, 0)
 

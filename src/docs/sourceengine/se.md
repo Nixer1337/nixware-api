@@ -8,7 +8,7 @@ Type | Name | Description
 ------------ | ------------- | ------------
 [vec3_t](../../types/vec3_t/) | pos | World position
 
-Getting the 2d pos from world position
+Calculates on screen position from world pos
 ```lua
 local pos2d = se.world_to_screen(pos)
 ```
@@ -88,7 +88,7 @@ Type | Name | Description
 string | module_name | Module name
 string | interface_version | Interface version
 
-Getting the interface address
+Returns the interface address
 ```lua
-local g_model_info = ffi.cast("void*", se.create_interface("engine.dll", "VModelInfoClient004"))
+local g_model_info = se.create_interface("engine.dll", "VModelInfoClient004")
 ```

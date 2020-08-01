@@ -103,7 +103,7 @@ Type | Name | Description
 ------------ | ------------- | ------------
 string | var_name | Variable name in config
 
-Getting value from checkbox
+Returns the value from checkbox
 ```lua
 local value = ui.get_bool("legit_enable")
 ```
@@ -115,7 +115,7 @@ Type | Name | Description
 ------------ | ------------- | ------------
 string | var_name | Variable name in config
 
-Getting value from int slider
+Returns the value from int slider
 ```lua
 local value = ui.get_int("visuals_other_nightmode")
 ```
@@ -127,7 +127,7 @@ Type | Name | Description
 ------------ | ------------- | ------------
 string | var_name | Variable name in config
 
-Getting value from float slider
+Returns the value from float slider
 ```lua
 local value = ui.get_float("skins_aspect_ratio")
 ```
@@ -139,7 +139,7 @@ Type | Name | Description
 ------------ | ------------- | ------------
 string | var_name | Variable name in config
 
-Getting value from color edit
+Returns the value from color edit
 ```lua
 local value = ui.get_color("misc_ui_color")
 ```

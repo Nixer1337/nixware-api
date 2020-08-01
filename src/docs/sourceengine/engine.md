@@ -4,7 +4,7 @@
 
 ## **get_screen_size()**: [vec2_t](../../types/vec2_t/)
 
-Getting the screen size
+Returns the screen size
 ```lua
 local screen_size = engine.get_screen_size()
 ```
@@ -77,7 +77,7 @@ engine.set_view_angles(angle_t.new(0, 0, 0))
 
 ## **get_view_angles()**: [angle_t](../../types/angle_t/)
 
-Getting the viewangles
+Returns the camera angles
 ```lua
 local view_ang = engine.get_view_angles()
 ```
