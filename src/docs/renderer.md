@@ -49,6 +49,7 @@ Type | Name | Description
 ------------ | ------------- | ------------
 string | text | Text
 font | font | Font
+[vec2_t](../types/vec2_t/) | pos | Text position
 number | size | Font size in pixels
 [color_t](../types/color_t/) | color | Text color
 
