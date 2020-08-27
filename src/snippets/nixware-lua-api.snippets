@@ -433,111 +433,6 @@
 		],
 		"description": "Returns the interface address"
 	  },
-	  "Playing the sound": {
-		"prefix": "surface.play_sound",
-		"body": [
-		  "surface.play_sound(${1:soundname})"
-		],
-		"description": "Playing the sound"
-	  },
-	  "Returns the cursor position": {
-		"prefix": "surface.get_cursor_pos",
-		"body": [
-		  "surface.get_cursor_pos()"
-		],
-		"description": "Returns the cursor position"
-	  },
-	  "Creating the font": {
-		"prefix": "surface.setup_font",
-		"body": [
-		  "surface.setup_font(${1:fontname}, ${2:tall}, ${3:weight}, ${4:blur}, ${5:scanlines}, ${6:flags})"
-		],
-		"description": "Creating the font"
-	  },
-	  "Drawing the filled rect": {
-		"prefix": "surface.draw_filled_rect",
-		"body": [
-		  "surface.draw_filled_rect(${1:start_pos_x}, ${2:start_pos_y}, ${3:end_pos_x}, ${4:end_pos_y})"
-		],
-		"description": "Drawing the filled rect"
-	  },
-	  "Drawing the faded rect": {
-		"prefix": "surface.draw_filled_rect_fade",
-		"body": [
-		  "surface.draw_filled_rect_fade(${1:start_pos_x}, ${2:start_pos_y}, ${3:end_pos_x}, ${4:end_pos_y}, ${5:first_alpha}, ${6:next_alpha}, ${7:is_horisontal})"
-		],
-		"description": "Drawing the faded rect"
-	  },
-	  "Drawing the rect": {
-		"prefix": "surface.draw_outlined_rect",
-		"body": [
-		  "surface.draw_outlined_rect(${1:start_pos_x}, ${2:start_pos_y}, ${3:end_pos_x}, ${4:end_pos_y})"
-		],
-		"description": "Drawing the rect"
-	  },
-	  "Setting color of the next drawing element": {
-		"prefix": "surface.draw_set_color",
-		"body": [
-		  "surface.draw_set_color(${1:color})"
-		],
-		"description": "Setting color of the next drawing element"
-	  },
-	  "Returns the text size": {
-		"prefix": "surface.get_text_size",
-		"body": [
-		  "surface.get_text_size(${1:font}, ${2:text})"
-		],
-		"description": "Returns the text size"
-	  },
-	  "Drawing horisontal line": {
-		"prefix": "surface.draw_line",
-		"body": [
-		  "surface.draw_line(${1:start_pos_x}, ${2:start_pos_y}, ${3:end_pos_x}, ${4:end_pos_y})"
-		],
-		"description": "Drawing horisontal line"
-	  },
-	  "Drawing the circle": {
-		"prefix": "surface.draw_outlined_circle",
-		"body": [
-		  "surface.draw_outlined_circle(${1:pos_x}, ${2:pos_y}, ${3:radius}, ${4:segments})"
-		],
-		"description": "Drawing the circle"
-	  },
-	  "Setting the next text font": {
-		"prefix": "surface.draw_set_text_font",
-		"body": [
-		  "surface.draw_set_text_font(${1:font})"
-		],
-		"description": "Setting the next text font"
-	  },
-	  "Setting the next text color": {
-		"prefix": "surface.draw_set_text_color",
-		"body": [
-		  "surface.draw_set_text_color(${1:color})"
-		],
-		"description": "Setting the next text color"
-	  },
-	  "Setting the next text pos": {
-		"prefix": "surface.draw_set_text_pos",
-		"body": [
-		  "surface.draw_set_text_pos(${1:pos_x}, ${2:pos_y})"
-		],
-		"description": "Setting the next text pos"
-	  },
-	  "Print text": {
-		"prefix": "surface.draw_print_text",
-		"body": [
-		  "surface.draw_print_text(${1:text})"
-		],
-		"description": "Print text"
-	  },
-	  "Render the textured polygon": {
-		"prefix": "surface.draw_textured_polygon",
-		"body": [
-		  "surface.draw_textured_polygon(${1:points_num}, ${2:points}, ${3:color})"
-		],
-		"description": "Render the textured polygon"
-	  },
 	  "Tracing": {
 		"prefix": "trace.line",
 		"body": [
@@ -1027,6 +922,13 @@
 		  "shot_info.aim_point"
 		],
 		"description": "Aimpoint position"
+	  },
+	"Returns the cursor position": {
+		"prefix": "renderer.get_cursor_pos",
+		"body": [
+		  "renderer.get_cursor_pos()"
+		],
+		"description": "Returns the cursor position"
 	  },
 	  "Creates new font": {
 		"prefix": "renderer.setup_font",

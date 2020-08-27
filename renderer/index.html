@@ -261,6 +261,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#get_cursor_pos-vec2_t" class="md-nav__link">
+    get_cursor_pos(): vec2_t
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#linefrom-to-color" class="md-nav__link">
     line(from, to, color)
   </a>
@@ -544,18 +551,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../sourceengine/surface/" title="surface" class="md-nav__link">
-      surface
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../sourceengine/engine/" title="engine" class="md-nav__link">
       engine
     </a>
@@ -690,6 +685,13 @@
         <li class="md-nav__item">
   <a href="#get_text_sizefont-size-text-vec2_t" class="md-nav__link">
     get_text_size(font, size, text): vec2_t
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_cursor_pos-vec2_t" class="md-nav__link">
+    get_cursor_pos(): vec2_t
   </a>
   
 </li>
@@ -981,6 +983,21 @@
 
 <span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
     <span class="kd">local</span> <span class="n">hello_world_size</span> <span class="o">=</span> <span class="n">renderer</span><span class="p">.</span><span class="n">get_text_size</span><span class="p">(</span><span class="n">tahoma_bold</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="s2">&quot;hello world!&quot;</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;paint_d3d&quot;</span><span class="p">,</span> <span class="n">on_paint</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="get_cursor_pos-vec2_t"><strong>get_cursor_pos()</strong>: <a href="../types/vec2_t/">vec2_t</a></h2>
+<p>Returns the cursor position</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
+    <span class="kd">local</span> <span class="n">mouse_pos</span> <span class="o">=</span> <span class="n">renderer</span><span class="p">.</span><span class="n">get_cursor_pos</span><span class="p">()</span>
 <span class="kr">end</span>
 
 <span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;paint_d3d&quot;</span><span class="p">,</span> <span class="n">on_paint</span><span class="p">)</span>

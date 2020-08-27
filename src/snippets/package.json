@@ -5,7 +5,7 @@
     "publisher": "Nixer1337",
     "icon": "icon.png",
     "homepage": "https://api.nixware.cc",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "engines": {
         "vscode": "^1.46.0"
     },

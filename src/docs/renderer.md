@@ -106,6 +106,18 @@ client.register_callback("paint_d3d", on_paint)
 ```
 ---
 
+## **get_cursor_pos()**: [vec2_t](../types/vec2_t/)
+
+Returns the cursor position
+```lua
+local function on_paint()
+    local mouse_pos = renderer.get_cursor_pos()
+end
+
+client.register_callback("paint_d3d", on_paint)
+```
+---
+
 ## **line(from, to, color)**
 
 Type | Name | Description
