@@ -61,7 +61,7 @@ local function on_paint()
     renderer.text("hello world!", tahoma_bold, vec2_t.new(10, 10), 50, color_t.new(255, 255, 255, 255))
 end
 
-client.register_callback("paint_d3d", on_paint)
+client.register_callback("paint", on_paint)
 ```
 ---
 
@@ -82,7 +82,7 @@ local function on_paint()
     renderer.texture(my_texture, vec2_t.new(0, 0), vec2_t.new(500, 500), color_t.new(255, 255, 255, 255))
 end
 
-client.register_callback("paint_d3d", on_paint)
+client.register_callback("paint", on_paint)
 ```
 ---
 
@@ -102,7 +102,7 @@ local function on_paint()
     local hello_world_size = renderer.get_text_size(tahoma_bold, 50, "hello world!")
 end
 
-client.register_callback("paint_d3d", on_paint)
+client.register_callback("paint", on_paint)
 ```
 ---
 
@@ -114,7 +114,7 @@ local function on_paint()
     local mouse_pos = renderer.get_cursor_pos()
 end
 
-client.register_callback("paint_d3d", on_paint)
+client.register_callback("paint", on_paint)
 ```
 ---
 
@@ -132,7 +132,7 @@ local function on_paint()
     renderer.line(vec2_t.new(5, 5), vec2_t.new(20, 20), color_t.new(255, 0, 0, 255))
 end
 
-client.register_callback("paint_d3d", on_paint)
+client.register_callback("paint", on_paint)
 ```
 ---
 
@@ -150,7 +150,7 @@ local function on_paint()
     renderer.rect(vec2_t.new(5, 5), vec2_t.new(20, 20), color_t.new(255, 0, 0, 255))
 end
 
-client.register_callback("paint_d3d", on_paint)
+client.register_callback("paint", on_paint)
 ```
 ---
 
@@ -168,7 +168,7 @@ local function on_paint()
     renderer.rect_filled(vec2_t.new(5, 5), vec2_t.new(20, 20), color_t.new(255, 0, 0, 255))
 end
 
-client.register_callback("paint_d3d", on_paint)
+client.register_callback("paint", on_paint)
 ```
 ---
 
@@ -189,7 +189,7 @@ local function on_paint()
     renderer.rect_filled_fade(vec2_t.new(5, 5), vec2_t.new(20, 20), color_t.new(255, 0, 0, 255), color_t.new(255, 0, 0, 255), color_t.new(0, 0, 0, 255), color_t.new(0, 0, 0, 255))
 end
 
-client.register_callback("paint_d3d", on_paint)
+client.register_callback("paint", on_paint)
 ```
 ---
 
@@ -209,7 +209,7 @@ local function on_paint()
     renderer.circle(vec2_t.new(100, 100), 50, 50, false, color_t.new(255, 0, 0, 255))
 end
 
-client.register_callback("paint_d3d", on_paint)
+client.register_callback("paint", on_paint)
 ```
 ---
 
@@ -228,5 +228,5 @@ local function on_paint()
     renderer.filled_polygon(points, color_t.new(255, 255, 255, 255))
 end
 
-client.register_callback("paint_d3d", on_paint)
+client.register_callback("paint", on_paint)
 ```
