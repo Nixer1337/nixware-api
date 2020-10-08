@@ -18,6 +18,7 @@ nav:
         - entity_t: sourceengine/types/entity_t.md
         - player_info_t: sourceengine/types/player_info_t.md
         - shot_info_t - csgo: sourceengine/types/shot_info_t.md
+      - ragebot - csgo: sourceengine/ragebot.md
       - se: sourceengine/se.md
       - engine: sourceengine/engine.md
       - trace: sourceengine/trace.md
