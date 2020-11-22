@@ -398,6 +398,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../types/trace_t/" title="trace_t" class="md-nav__link">
+      trace_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../types/shot_info_t/" title="shot_info_t - csgo" class="md-nav__link">
       shot_info_t - csgo
     </a>
@@ -493,8 +505,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lineskip_entindex-mask-start-end-number-number" class="md-nav__link">
-    line(skip_entindex, mask, start, end): number, number
+  <a href="#lineskip_entindex-mask-start-end-trace_t" class="md-nav__link">
+    line(skip_entindex, mask, start, end): trace_t
   </a>
   
 </li>
@@ -592,8 +604,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lineskip_entindex-mask-start-end-number-number" class="md-nav__link">
-    line(skip_entindex, mask, start, end): number, number
+  <a href="#lineskip_entindex-mask-start-end-trace_t" class="md-nav__link">
+    line(skip_entindex, mask, start, end): trace_t
   </a>
   
 </li>
@@ -616,7 +628,7 @@
                 
                 <h1 id="trace-table">trace table</h1>
 <h2 id="functions">Functions</h2>
-<h2 id="lineskip_entindex-mask-start-end-number-number"><strong>line(skip_entindex, mask, start, end)</strong>: number, number</h2>
+<h2 id="lineskip_entindex-mask-start-end-trace_t"><strong>line(skip_entindex, mask, start, end)</strong>: <a href="../types/trace_t/">trace_t</a></h2>
 <table>
 <thead>
 <tr>
@@ -648,8 +660,8 @@
 </tr>
 </tbody>
 </table>
-<p>Tracing</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">fraction</span><span class="p">,</span> <span class="n">hit_entity_index</span> <span class="o">=</span> <span class="n">trace</span><span class="p">.</span><span class="n">line</span><span class="p">(</span><span class="n">engine</span><span class="p">.</span><span class="n">get_local_player</span><span class="p">(),</span> <span class="n">mask</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="kr">end</span><span class="p">)</span>
+<p>Returns the trace object</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">trace</span> <span class="o">=</span> <span class="n">trace</span><span class="p">.</span><span class="n">line</span><span class="p">(</span><span class="n">engine</span><span class="p">.</span><span class="n">get_local_player</span><span class="p">(),</span> <span class="n">mask</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="kr">end</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
                 

@@ -17,6 +17,7 @@ nav:
         - convar_t: sourceengine/types/convar_t.md
         - entity_t: sourceengine/types/entity_t.md
         - player_info_t: sourceengine/types/player_info_t.md
+        - trace_t: sourceengine/types/trace_t.md
         - shot_info_t - csgo: sourceengine/types/shot_info_t.md
       - ragebot - csgo: sourceengine/ragebot.md
       - se: sourceengine/se.md
