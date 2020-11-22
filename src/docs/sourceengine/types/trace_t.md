@@ -12,3 +12,5 @@ number | disp_flags
 bool | allsolid
 bool | startsolid
 number | hit_entity_index
+number | hitgroup
+number | hitbox
