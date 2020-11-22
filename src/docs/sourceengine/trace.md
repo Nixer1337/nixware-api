@@ -12,5 +12,5 @@ number | mask | Trace mask
 
 Returns the trace object
 ```lua
-local trace = trace.line(engine.get_local_player(), mask, start, end)
+local result = trace.line(engine.get_local_player(), mask, start, end)
 ```
