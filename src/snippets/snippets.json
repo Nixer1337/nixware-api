@@ -1000,6 +1000,13 @@
 		],
 		"description": "Creates combo box in menu"
 	},
+	"Creates text input in menu": {
+		"prefix": "ui.add_text_input",
+		"body": [
+			"ui.add_text_input(${1:label}, ${2:var_name}, ${4:def_value})"
+		],
+		"description": "Creates text input in menu"
+	},
 	"Returns multi combo box object from menu": {
 		"prefix": "ui.get_multi_combo_box",
 		"body": [

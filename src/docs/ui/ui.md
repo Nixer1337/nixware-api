@@ -79,7 +79,7 @@ string | var_name | Variable key
 
 Returns combo box object from menu
 ```lua
-local ragebot_active_exploit = ui.get_combo_box("ragebot_active_exploit")
+local rage_active_exploit = ui.get_combo_box("rage_active_exploit")
 ```
 ---
 
@@ -175,7 +175,7 @@ string | var_name | Variable key
 
 Returns keybind object from menu
 ```lua
-local ragebot_enable_bind = ui.get_key_bind("ragebot_enable_bind")
+local rage_enable_bind = ui.get_key_bind("rage_enable_bind")
 ```
 ---
 
