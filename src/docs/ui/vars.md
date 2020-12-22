@@ -17,7 +17,7 @@ check_box | legit_deagle_aim_autopistol
 check_box | legit_deagle_aim_rcs_enable
 slider_int | legit_deagle_aim_rcs_pitch
 slider_int | legit_deagle_aim_rcs_yaw
-slider_int | legit_deagle_aim_hitbox
+multi_combo_box | legit_deagle_aim_hitboxes
 slider_int | legit_deagle_aim_backtrack
 slider_int | legit_deagle_aim_shot_delay
 slider_int | legit_deagle_aim_kill_delay
@@ -31,7 +31,7 @@ check_box | legit_duals_aim_autopistol
 check_box | legit_duals_aim_rcs_enable
 slider_int | legit_duals_aim_rcs_pitch
 slider_int | legit_duals_aim_rcs_yaw
-slider_int | legit_duals_aim_hitbox
+multi_combo_box | legit_duals_aim_hitboxes
 slider_int | legit_duals_aim_backtrack
 slider_int | legit_duals_aim_shot_delay
 slider_int | legit_duals_aim_kill_delay
@@ -45,7 +45,7 @@ check_box | legit_five7_aim_autopistol
 check_box | legit_five7_aim_rcs_enable
 slider_int | legit_five7_aim_rcs_pitch
 slider_int | legit_five7_aim_rcs_yaw
-slider_int | legit_five7_aim_hitbox
+multi_combo_box | legit_five7_aim_hitboxes
 slider_int | legit_five7_aim_backtrack
 slider_int | legit_five7_aim_shot_delay
 slider_int | legit_five7_aim_kill_delay
@@ -59,7 +59,7 @@ check_box | legit_glock_aim_autopistol
 check_box | legit_glock_aim_rcs_enable
 slider_int | legit_glock_aim_rcs_pitch
 slider_int | legit_glock_aim_rcs_yaw
-slider_int | legit_glock_aim_hitbox
+multi_combo_box | legit_glock_aim_hitboxes
 slider_int | legit_glock_aim_backtrack
 slider_int | legit_glock_aim_shot_delay
 slider_int | legit_glock_aim_kill_delay
@@ -73,7 +73,7 @@ check_box | legit_p2000_aim_autopistol
 check_box | legit_p2000_aim_rcs_enable
 slider_int | legit_p2000_aim_rcs_pitch
 slider_int | legit_p2000_aim_rcs_yaw
-slider_int | legit_p2000_aim_hitbox
+multi_combo_box | legit_p2000_aim_hitboxes
 slider_int | legit_p2000_aim_backtrack
 slider_int | legit_p2000_aim_shot_delay
 slider_int | legit_p2000_aim_kill_delay
@@ -87,7 +87,7 @@ check_box | legit_p250_aim_autopistol
 check_box | legit_p250_aim_rcs_enable
 slider_int | legit_p250_aim_rcs_pitch
 slider_int | legit_p250_aim_rcs_yaw
-slider_int | legit_p250_aim_hitbox
+multi_combo_box | legit_p250_aim_hitboxes
 slider_int | legit_p250_aim_backtrack
 slider_int | legit_p250_aim_shot_delay
 slider_int | legit_p250_aim_kill_delay
@@ -101,7 +101,7 @@ check_box | legit_usps_aim_autopistol
 check_box | legit_usps_aim_rcs_enable
 slider_int | legit_usps_aim_rcs_pitch
 slider_int | legit_usps_aim_rcs_yaw
-slider_int | legit_usps_aim_hitbox
+multi_combo_box | legit_usps_aim_hitboxes
 slider_int | legit_usps_aim_backtrack
 slider_int | legit_usps_aim_shot_delay
 slider_int | legit_usps_aim_kill_delay
@@ -115,7 +115,7 @@ check_box | legit_cz75_aim_autopistol
 check_box | legit_cz75_aim_rcs_enable
 slider_int | legit_cz75_aim_rcs_pitch
 slider_int | legit_cz75_aim_rcs_yaw
-slider_int | legit_cz75_aim_hitbox
+multi_combo_box | legit_cz75_aim_hitboxes
 slider_int | legit_cz75_aim_backtrack
 slider_int | legit_cz75_aim_shot_delay
 slider_int | legit_cz75_aim_kill_delay
@@ -129,7 +129,7 @@ check_box | legit_revolver_aim_autopistol
 check_box | legit_revolver_aim_rcs_enable
 slider_int | legit_revolver_aim_rcs_pitch
 slider_int | legit_revolver_aim_rcs_yaw
-slider_int | legit_revolver_aim_hitbox
+multi_combo_box | legit_revolver_aim_hitboxes
 slider_int | legit_revolver_aim_backtrack
 slider_int | legit_revolver_aim_shot_delay
 slider_int | legit_revolver_aim_kill_delay
@@ -143,7 +143,7 @@ check_box | legit_tec9_aim_autopistol
 check_box | legit_tec9_aim_rcs_enable
 slider_int | legit_tec9_aim_rcs_pitch
 slider_int | legit_tec9_aim_rcs_yaw
-slider_int | legit_tec9_aim_hitbox
+multi_combo_box | legit_tec9_aim_hitboxes
 slider_int | legit_tec9_aim_backtrack
 slider_int | legit_tec9_aim_shot_delay
 slider_int | legit_tec9_aim_kill_delay
@@ -158,7 +158,7 @@ slider_float | legit_ak47_aim_smooth2
 check_box | legit_ak47_aim_rcs_enable
 slider_int | legit_ak47_aim_rcs_pitch
 slider_int | legit_ak47_aim_rcs_yaw
-slider_int | legit_ak47_aim_hitbox
+multi_combo_box | legit_ak47_aim_hitboxes
 slider_int | legit_ak47_aim_backtrack
 slider_int | legit_ak47_aim_shot_delay
 slider_int | legit_ak47_aim_kill_delay
@@ -173,7 +173,7 @@ slider_float | legit_aug_aim_smooth2
 check_box | legit_aug_aim_rcs_enable
 slider_int | legit_aug_aim_rcs_pitch
 slider_int | legit_aug_aim_rcs_yaw
-slider_int | legit_aug_aim_hitbox
+multi_combo_box | legit_aug_aim_hitboxes
 slider_int | legit_aug_aim_backtrack
 slider_int | legit_aug_aim_shot_delay
 slider_int | legit_aug_aim_kill_delay
@@ -188,7 +188,7 @@ slider_float | legit_famas_aim_smooth2
 check_box | legit_famas_aim_rcs_enable
 slider_int | legit_famas_aim_rcs_pitch
 slider_int | legit_famas_aim_rcs_yaw
-slider_int | legit_famas_aim_hitbox
+multi_combo_box | legit_famas_aim_hitboxes
 slider_int | legit_famas_aim_backtrack
 slider_int | legit_famas_aim_shot_delay
 slider_int | legit_famas_aim_kill_delay
@@ -203,7 +203,7 @@ slider_float | legit_galil_aim_smooth2
 check_box | legit_galil_aim_rcs_enable
 slider_int | legit_galil_aim_rcs_pitch
 slider_int | legit_galil_aim_rcs_yaw
-slider_int | legit_galil_aim_hitbox
+multi_combo_box | legit_galil_aim_hitboxes
 slider_int | legit_galil_aim_backtrack
 slider_int | legit_galil_aim_shot_delay
 slider_int | legit_galil_aim_kill_delay
@@ -218,7 +218,7 @@ slider_float | legit_m249_aim_smooth2
 check_box | legit_m249_aim_rcs_enable
 slider_int | legit_m249_aim_rcs_pitch
 slider_int | legit_m249_aim_rcs_yaw
-slider_int | legit_m249_aim_hitbox
+multi_combo_box | legit_m249_aim_hitboxes
 slider_int | legit_m249_aim_backtrack
 slider_int | legit_m249_aim_shot_delay
 slider_int | legit_m249_aim_kill_delay
@@ -233,7 +233,7 @@ slider_float | legit_m4a4_aim_smooth2
 check_box | legit_m4a4_aim_rcs_enable
 slider_int | legit_m4a4_aim_rcs_pitch
 slider_int | legit_m4a4_aim_rcs_yaw
-slider_int | legit_m4a4_aim_hitbox
+multi_combo_box | legit_m4a4_aim_hitboxes
 slider_int | legit_m4a4_aim_backtrack
 slider_int | legit_m4a4_aim_shot_delay
 slider_int | legit_m4a4_aim_kill_delay
@@ -248,7 +248,7 @@ slider_float | legit_m4a1s_aim_smooth2
 check_box | legit_m4a1s_aim_rcs_enable
 slider_int | legit_m4a1s_aim_rcs_pitch
 slider_int | legit_m4a1s_aim_rcs_yaw
-slider_int | legit_m4a1s_aim_hitbox
+multi_combo_box | legit_m4a1s_aim_hitboxes
 slider_int | legit_m4a1s_aim_backtrack
 slider_int | legit_m4a1s_aim_shot_delay
 slider_int | legit_m4a1s_aim_kill_delay
@@ -263,7 +263,7 @@ slider_float | legit_mac10_aim_smooth2
 check_box | legit_mac10_aim_rcs_enable
 slider_int | legit_mac10_aim_rcs_pitch
 slider_int | legit_mac10_aim_rcs_yaw
-slider_int | legit_mac10_aim_hitbox
+multi_combo_box | legit_mac10_aim_hitboxes
 slider_int | legit_mac10_aim_backtrack
 slider_int | legit_mac10_aim_shot_delay
 slider_int | legit_mac10_aim_kill_delay
@@ -278,7 +278,7 @@ slider_float | legit_p90_aim_smooth2
 check_box | legit_p90_aim_rcs_enable
 slider_int | legit_p90_aim_rcs_pitch
 slider_int | legit_p90_aim_rcs_yaw
-slider_int | legit_p90_aim_hitbox
+multi_combo_box | legit_p90_aim_hitboxes
 slider_int | legit_p90_aim_backtrack
 slider_int | legit_p90_aim_shot_delay
 slider_int | legit_p90_aim_kill_delay
@@ -293,7 +293,7 @@ slider_float | legit_mp5_aim_smooth2
 check_box | legit_mp5_aim_rcs_enable
 slider_int | legit_mp5_aim_rcs_pitch
 slider_int | legit_mp5_aim_rcs_yaw
-slider_int | legit_mp5_aim_hitbox
+multi_combo_box | legit_mp5_aim_hitboxes
 slider_int | legit_mp5_aim_backtrack
 slider_int | legit_mp5_aim_shot_delay
 slider_int | legit_mp5_aim_kill_delay
@@ -308,7 +308,7 @@ slider_float | legit_ump45_aim_smooth2
 check_box | legit_ump45_aim_rcs_enable
 slider_int | legit_ump45_aim_rcs_pitch
 slider_int | legit_ump45_aim_rcs_yaw
-slider_int | legit_ump45_aim_hitbox
+multi_combo_box | legit_ump45_aim_hitboxes
 slider_int | legit_ump45_aim_backtrack
 slider_int | legit_ump45_aim_shot_delay
 slider_int | legit_ump45_aim_kill_delay
@@ -323,7 +323,7 @@ slider_float | legit_xm1014_aim_smooth2
 check_box | legit_xm1014_aim_rcs_enable
 slider_int | legit_xm1014_aim_rcs_pitch
 slider_int | legit_xm1014_aim_rcs_yaw
-slider_int | legit_xm1014_aim_hitbox
+multi_combo_box | legit_xm1014_aim_hitboxes
 slider_int | legit_xm1014_aim_backtrack
 slider_int | legit_xm1014_aim_shot_delay
 slider_int | legit_xm1014_aim_kill_delay
@@ -338,7 +338,7 @@ slider_float | legit_bizon_aim_smooth2
 check_box | legit_bizon_aim_rcs_enable
 slider_int | legit_bizon_aim_rcs_pitch
 slider_int | legit_bizon_aim_rcs_yaw
-slider_int | legit_bizon_aim_hitbox
+multi_combo_box | legit_bizon_aim_hitboxes
 slider_int | legit_bizon_aim_backtrack
 slider_int | legit_bizon_aim_shot_delay
 slider_int | legit_bizon_aim_kill_delay
@@ -353,7 +353,7 @@ slider_float | legit_mag7_aim_smooth2
 check_box | legit_mag7_aim_rcs_enable
 slider_int | legit_mag7_aim_rcs_pitch
 slider_int | legit_mag7_aim_rcs_yaw
-slider_int | legit_mag7_aim_hitbox
+multi_combo_box | legit_mag7_aim_hitboxes
 slider_int | legit_mag7_aim_backtrack
 slider_int | legit_mag7_aim_shot_delay
 slider_int | legit_mag7_aim_kill_delay
@@ -368,7 +368,7 @@ slider_float | legit_negev_aim_smooth2
 check_box | legit_negev_aim_rcs_enable
 slider_int | legit_negev_aim_rcs_pitch
 slider_int | legit_negev_aim_rcs_yaw
-slider_int | legit_negev_aim_hitbox
+multi_combo_box | legit_negev_aim_hitboxes
 slider_int | legit_negev_aim_backtrack
 slider_int | legit_negev_aim_shot_delay
 slider_int | legit_negev_aim_kill_delay
@@ -383,7 +383,7 @@ slider_float | legit_sawedoff_aim_smooth2
 check_box | legit_sawedoff_aim_rcs_enable
 slider_int | legit_sawedoff_aim_rcs_pitch
 slider_int | legit_sawedoff_aim_rcs_yaw
-slider_int | legit_sawedoff_aim_hitbox
+multi_combo_box | legit_sawedoff_aim_hitboxes
 slider_int | legit_sawedoff_aim_backtrack
 slider_int | legit_sawedoff_aim_shot_delay
 slider_int | legit_sawedoff_aim_kill_delay
@@ -398,7 +398,7 @@ slider_float | legit_mp7_aim_smooth2
 check_box | legit_mp7_aim_rcs_enable
 slider_int | legit_mp7_aim_rcs_pitch
 slider_int | legit_mp7_aim_rcs_yaw
-slider_int | legit_mp7_aim_hitbox
+multi_combo_box | legit_mp7_aim_hitboxes
 slider_int | legit_mp7_aim_backtrack
 slider_int | legit_mp7_aim_shot_delay
 slider_int | legit_mp7_aim_kill_delay
@@ -413,7 +413,7 @@ slider_float | legit_mp9_aim_smooth2
 check_box | legit_mp9_aim_rcs_enable
 slider_int | legit_mp9_aim_rcs_pitch
 slider_int | legit_mp9_aim_rcs_yaw
-slider_int | legit_mp9_aim_hitbox
+multi_combo_box | legit_mp9_aim_hitboxes
 slider_int | legit_mp9_aim_backtrack
 slider_int | legit_mp9_aim_shot_delay
 slider_int | legit_mp9_aim_kill_delay
@@ -428,7 +428,7 @@ slider_float | legit_nova_aim_smooth2
 check_box | legit_nova_aim_rcs_enable
 slider_int | legit_nova_aim_rcs_pitch
 slider_int | legit_nova_aim_rcs_yaw
-slider_int | legit_nova_aim_hitbox
+multi_combo_box | legit_nova_aim_hitboxes
 slider_int | legit_nova_aim_backtrack
 slider_int | legit_nova_aim_shot_delay
 slider_int | legit_nova_aim_kill_delay
@@ -443,7 +443,7 @@ slider_float | legit_sg553_aim_smooth2
 check_box | legit_sg553_aim_rcs_enable
 slider_int | legit_sg553_aim_rcs_pitch
 slider_int | legit_sg553_aim_rcs_yaw
-slider_int | legit_sg553_aim_hitbox
+multi_combo_box | legit_sg553_aim_hitboxes
 slider_int | legit_sg553_aim_backtrack
 slider_int | legit_sg553_aim_shot_delay
 slider_int | legit_sg553_aim_kill_delay
@@ -458,7 +458,7 @@ slider_float | legit_scar20_aim_smooth2
 check_box | legit_scar20_aim_rcs_enable
 slider_int | legit_scar20_aim_rcs_pitch
 slider_int | legit_scar20_aim_rcs_yaw
-slider_int | legit_scar20_aim_hitbox
+multi_combo_box | legit_scar20_aim_hitboxes
 slider_int | legit_scar20_aim_backtrack
 slider_int | legit_scar20_aim_shot_delay
 slider_int | legit_scar20_aim_kill_delay
@@ -473,7 +473,7 @@ slider_float | legit_g3sg1_aim_smooth2
 check_box | legit_g3sg1_aim_rcs_enable
 slider_int | legit_g3sg1_aim_rcs_pitch
 slider_int | legit_g3sg1_aim_rcs_yaw
-slider_int | legit_g3sg1_aim_hitbox
+multi_combo_box | legit_g3sg1_aim_hitboxes
 slider_int | legit_g3sg1_aim_backtrack
 slider_int | legit_g3sg1_aim_shot_delay
 slider_int | legit_g3sg1_aim_kill_delay
@@ -486,7 +486,7 @@ slider_float | legit_awp_aim_smooth
 check_box | legit_awp_aim_rcs_enable
 slider_int | legit_awp_aim_rcs_pitch
 slider_int | legit_awp_aim_rcs_yaw
-slider_int | legit_awp_aim_hitbox
+multi_combo_box | legit_awp_aim_hitboxes
 slider_int | legit_awp_aim_backtrack
 slider_int | legit_awp_aim_shot_delay
 slider_int | legit_awp_aim_kill_delay
@@ -499,7 +499,7 @@ slider_float | legit_scout_aim_smooth
 check_box | legit_scout_aim_rcs_enable
 slider_int | legit_scout_aim_rcs_pitch
 slider_int | legit_scout_aim_rcs_yaw
-slider_int | legit_scout_aim_hitbox
+multi_combo_box | legit_scout_aim_hitboxes
 slider_int | legit_scout_aim_backtrack
 slider_int | legit_scout_aim_shot_delay
 slider_int | legit_scout_aim_kill_delay
