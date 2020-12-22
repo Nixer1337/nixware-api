@@ -1069,5 +1069,138 @@
 			"ui.set_visible(${1:value})"
 		],
 		"description": "Setting menu visibility"
+	},
+	"Returns value from ui checkbox": {
+		"prefix": "checkbox:get_value()",
+		"body": [
+			"checkbox:get_value()"
+		],
+		"description": "Returns value from ui checkbox"
+	},
+	"Setting checkbox value": {
+		"prefix": "checkbox:set_value",
+		"body": [
+			"checkbox:set_value(${1:val})"
+		],
+		"description": "Setting checkbox value"
+	},
+	"Returns value from color edit": {
+		"prefix": "color_edit:get_value()",
+		"body": [
+			"color_edit:get_value()"
+		],
+		"description": "Returns value from color edit"
+	},
+	"Setting color edit value": {
+		"prefix": "color_edit:set_value",
+		"body": [
+			"color_edit:set_value(${1:val})"
+		],
+		"description": "Setting color edit value"
+	},
+	"Returns value from combo box": {
+		"prefix": "combo_box:get_value()",
+		"body": [
+			"combo_box:get_value()"
+		],
+		"description": "Returns value from combo box"
+	},
+	"Setting combo box value": {
+		"prefix": "combo_box:set_value",
+		"body": [
+			"combo_box:set_value(${1:val})"
+		],
+		"description": "Setting combo box value"
+	},
+	"Returns value from multi combo box": {
+		"prefix": "multi_combo_box:get_value()",
+		"body": [
+			"multi_combo_box:get_value(${1:index})"
+		],
+		"description": "Returns value from multi combo box"
+	},
+	"Setting multi combo box value": {
+		"prefix": "multi_combo_box:set_value",
+		"body": [
+			"multi_combo_box:set_value(${1:val})"
+		],
+		"description": "Setting multi combo box value"
+	},
+	"Returns the key code from keybind": {
+		"prefix": "key_bind:get_key",
+		"body": [
+			"key_bind:get_key()"
+		],
+		"description": "Returns the key code from keybind"
+    },
+    "Returns keybind type": {
+		"prefix": "key_bind:get_type",
+		"body": [
+			"key_bind:get_type()"
+		],
+		"description": "Returns keybind type"
+    },
+    "Setting the key for keybind": {
+		"prefix": "key_bind:set_key",
+		"body": [
+			"key_bind:set_key(${1:key})"
+		],
+		"description": "Setting the key for keybind"
+    },
+    "Setting the type for keybind": {
+		"prefix": "key_bind:set_type",
+		"body": [
+			"key_bind:set_type(${1:type})"
+		],
+		"description": "Setting the type for keybind"
+    },
+    "Returns keybind state": {
+		"prefix": "key_bind:is_active",
+		"body": [
+			"key_bind:is_active()"
+		],
+		"description": "Returns keybind state"
+    },
+    "Returns value from slider float": {
+		"prefix": "slider_float:get_value()",
+		"body": [
+			"slider_float:get_value()"
+		],
+		"description": "Returns value from slider float"
+	},
+	"Setting slider float value": {
+		"prefix": "slider_float:set_value",
+		"body": [
+			"slider_float:set_value(${1:val})"
+		],
+		"description": "Setting slider float value"
+    },
+    "Returns value from slider int": {
+		"prefix": "slider_int:get_value()",
+		"body": [
+			"slider_int:get_value()"
+		],
+		"description": "Returns value from slider int"
+	},
+	"Setting slider int value": {
+		"prefix": "slider_int:set_value",
+		"body": [
+			"slider_int:set_value(${1:val})"
+		],
+		"description": "Setting slider int value"
+    },
+    "Returns value from text input": {
+		"prefix": "text_input:get_value()",
+		"body": [
+			"text_input:get_value()"
+		],
+		"description": "Returns value from text input"
+	},
+	"Setting text input value": {
+		"prefix": "text_input:set_value",
+		"body": [
+			"text_input:set_value(${1:val})"
+		],
+		"description": "Setting text input value"
 	}
 }
