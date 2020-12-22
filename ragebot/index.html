@@ -15,7 +15,7 @@
     
     
       
-        <title>client - Nixware Lua API</title>
+        <title>ragebot - Nixware Lua API</title>
       
     
     
@@ -48,7 +48,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#client-table" class="md-skip">
+        <a href="#ragebot-table" class="md-skip">
           Skip to content
         </a>
       
@@ -75,7 +75,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              client
+              ragebot
             
           </span>
         </div>
@@ -338,6 +338,30 @@
       
       
 
+
+  <li class="md-nav__item">
+    <a href="../client/" title="client" class="md-nav__link">
+      client
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../renderer/" title="renderer" class="md-nav__link">
+      renderer
+    </a>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
@@ -349,14 +373,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        client
+        ragebot
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="client" class="md-nav__link md-nav__link--active">
-      client
+    <a href="./" title="ragebot" class="md-nav__link md-nav__link--active">
+      ragebot
     </a>
     
       
@@ -382,71 +406,64 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#load_scriptscriptname" class="md-nav__link">
-    load_script(scriptname)
+  <a href="#ignore_playerindex" class="md-nav__link">
+    ignore_player(index)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#unload_scriptscriptname" class="md-nav__link">
-    unload_script(scriptname)
+  <a href="#override_wall_penetrationindex-penetrate" class="md-nav__link">
+    override_wall_penetration(index, penetrate)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#register_callbackeventname-fn" class="md-nav__link">
-    register_callback(eventname, fn)
+  <a href="#override_desync_correctionindex-correct" class="md-nav__link">
+    override_desync_correction(index, correct)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#get_username-string" class="md-nav__link">
-    get_username(): string
+  <a href="#override_hitscanindex-hitbox-scan" class="md-nav__link">
+    override_hitscan(index, hitbox, scan)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#notifytext" class="md-nav__link">
-    notify(text)
+  <a href="#override_min_damageindex-damage" class="md-nav__link">
+    override_min_damage(index, damage)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#get_time_stamp-number" class="md-nav__link">
-    get_time_stamp(): number
+  <a href="#override_safe_pointindex-mode" class="md-nav__link">
+    override_safe_point(index, mode)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#get_system_time-number-number-number" class="md-nav__link">
-    get_system_time(): number, number, number
+  <a href="#override_max_missesindex-misses" class="md-nav__link">
+    override_max_misses(index, misses)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#is_key_pressedkey-bool" class="md-nav__link">
-    is_key_pressed(key): bool
+  <a href="#override_head_scaleindex-scale" class="md-nav__link">
+    override_head_scale(index, scale)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#is_key_clickedkey-bool" class="md-nav__link">
-    is_key_clicked(key): bool
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#find_patternmodule-pattern-number" class="md-nav__link">
-    find_pattern(module, pattern): number
+  <a href="#override_body_scaleindex-scale" class="md-nav__link">
+    override_body_scale(index, scale)
   </a>
   
 </li>
@@ -455,30 +472,6 @@
   
 </nav>
     
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../renderer/" title="renderer" class="md-nav__link">
-      renderer
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../ragebot/" title="ragebot" class="md-nav__link">
-      ragebot
-    </a>
   </li>
 
     
@@ -833,71 +826,64 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#load_scriptscriptname" class="md-nav__link">
-    load_script(scriptname)
+  <a href="#ignore_playerindex" class="md-nav__link">
+    ignore_player(index)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#unload_scriptscriptname" class="md-nav__link">
-    unload_script(scriptname)
+  <a href="#override_wall_penetrationindex-penetrate" class="md-nav__link">
+    override_wall_penetration(index, penetrate)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#register_callbackeventname-fn" class="md-nav__link">
-    register_callback(eventname, fn)
+  <a href="#override_desync_correctionindex-correct" class="md-nav__link">
+    override_desync_correction(index, correct)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#get_username-string" class="md-nav__link">
-    get_username(): string
+  <a href="#override_hitscanindex-hitbox-scan" class="md-nav__link">
+    override_hitscan(index, hitbox, scan)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#notifytext" class="md-nav__link">
-    notify(text)
+  <a href="#override_min_damageindex-damage" class="md-nav__link">
+    override_min_damage(index, damage)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#get_time_stamp-number" class="md-nav__link">
-    get_time_stamp(): number
+  <a href="#override_safe_pointindex-mode" class="md-nav__link">
+    override_safe_point(index, mode)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#get_system_time-number-number-number" class="md-nav__link">
-    get_system_time(): number, number, number
+  <a href="#override_max_missesindex-misses" class="md-nav__link">
+    override_max_misses(index, misses)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#is_key_pressedkey-bool" class="md-nav__link">
-    is_key_pressed(key): bool
+  <a href="#override_head_scaleindex-scale" class="md-nav__link">
+    override_head_scale(index, scale)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#is_key_clickedkey-bool" class="md-nav__link">
-    is_key_clicked(key): bool
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#find_patternmodule-pattern-number" class="md-nav__link">
-    find_pattern(module, pattern): number
+  <a href="#override_body_scaleindex-scale" class="md-nav__link">
+    override_body_scale(index, scale)
   </a>
   
 </li>
@@ -918,9 +904,13 @@
                   
                 
                 
-                <h1 id="client-table">client table</h1>
+                <h1 id="ragebot-table">ragebot table</h1>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>All functions from this table should be called from "create_move" callback.</p>
+</div>
 <h2 id="functions">Functions</h2>
-<h2 id="load_scriptscriptname"><strong>load_script(scriptname)</strong></h2>
+<h2 id="ignore_playerindex"><strong>ignore_player(index)</strong></h2>
 <table>
 <thead>
 <tr>
@@ -931,122 +921,21 @@
 </thead>
 <tbody>
 <tr>
-<td>string</td>
-<td>scriptname</td>
-<td>Script name</td>
+<td>number</td>
+<td>index</td>
+<td>Entity index</td>
 </tr>
 </tbody>
 </table>
-<p>Load the script</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">load_script</span><span class="p">(</span><span class="s2">&quot;example.lua&quot;</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-
-<hr />
-<h2 id="unload_scriptscriptname"><strong>unload_script(scriptname)</strong></h2>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>string</td>
-<td>scriptname</td>
-<td>Script name</td>
-</tr>
-</tbody>
-</table>
-<p>Unload the script</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">unload_script</span><span class="p">(</span><span class="s2">&quot;example.lua&quot;</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-
-<hr />
-<h2 id="register_callbackeventname-fn"><strong>register_callback(eventname, fn)</strong></h2>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>string</td>
-<td>eventname</td>
-<td>Callback name</td>
-</tr>
-<tr>
-<td>function</td>
-<td>fn</td>
-<td>Lua function()</td>
-</tr>
-</tbody>
-</table>
-<p>Register the callback</p>
+<p>Disable ragebot on this player</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_create_move</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span> 
-    <span class="nb">print</span><span class="p">(</span><span class="n">cmd</span><span class="p">.</span><span class="n">command_number</span><span class="p">)</span>
-<span class="kr">end</span>
-
-<span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;create_move&quot;</span><span class="p">,</span> <span class="n">on_create_move</span><span class="p">)</span>
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
+<span class="n">ragebot</span><span class="p">.</span><span class="n">ignore_player</span><span class="p">(</span><span class="n">entity_index</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 
 <hr />
-<h2 id="get_username-string"><strong>get_username()</strong>: string</h2>
-<p>Returns your cheat username</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">username</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="n">get_username</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
-
-<hr />
-<h2 id="notifytext"><strong>notify(text)</strong></h2>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>string</td>
-<td>text</td>
-<td>Notification text</td>
-</tr>
-</tbody>
-</table>
-<p>Pushing notification</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">notify</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-
-<hr />
-<h2 id="get_time_stamp-number"><strong>get_time_stamp()</strong>: number</h2>
-<p>Returns the unix timestamp</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">timestamp</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="n">get_time_stamp</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
-
-<hr />
-<h2 id="get_system_time-number-number-number"><strong>get_system_time()</strong>: number, number, number</h2>
-<p>Returns the windows time</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span><span class="p">,</span> <span class="n">seconds</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="n">get_system_time</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
-
-<hr />
-<h2 id="is_key_pressedkey-bool"><strong>is_key_pressed(key)</strong>: bool</h2>
+<h2 id="override_wall_penetrationindex-penetrate"><strong>override_wall_penetration(index, penetrate)</strong></h2>
 <table>
 <thead>
 <tr>
@@ -1058,18 +947,25 @@
 <tbody>
 <tr>
 <td>number</td>
-<td>key</td>
-<td>Virtual key code</td>
+<td>index</td>
+<td>Entity index</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>penetrate</td>
+<td>Enables wall penetration on player</td>
 </tr>
 </tbody>
 </table>
-<p>Returns true if key pressed</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">pressed</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="n">is_key_pressed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<p>Overrides wall penetration on player</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
+<span class="n">ragebot</span><span class="p">.</span><span class="n">override_wall_penetration</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span> <span class="c1">-- disable autowall on this player</span>
 </code></pre></div>
 </td></tr></table>
 
 <hr />
-<h2 id="is_key_clickedkey-bool"><strong>is_key_clicked(key)</strong>: bool</h2>
+<h2 id="override_desync_correctionindex-correct"><strong>override_desync_correction(index, correct)</strong></h2>
 <table>
 <thead>
 <tr>
@@ -1081,18 +977,25 @@
 <tbody>
 <tr>
 <td>number</td>
-<td>key</td>
-<td>Virtual key code</td>
+<td>index</td>
+<td>Entity index</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>correct</td>
+<td>Enables resolver on player</td>
 </tr>
 </tbody>
 </table>
-<p>Returns true if key clicked</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">clicked</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="n">is_key_clicked</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<p>Overrides desync correction on player</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
+<span class="n">ragebot</span><span class="p">.</span><span class="n">override_desync_correction</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span> <span class="c1">-- disable resolver on this player</span>
 </code></pre></div>
 </td></tr></table>
 
 <hr />
-<h2 id="find_patternmodule-pattern-number"><strong>find_pattern(module, pattern)</strong>: number</h2>
+<h2 id="override_hitscanindex-hitbox-scan"><strong>override_hitscan(index, hitbox, scan)</strong></h2>
 <table>
 <thead>
 <tr>
@@ -1103,21 +1006,209 @@
 </thead>
 <tbody>
 <tr>
-<td>string</td>
-<td>module</td>
-<td>Module</td>
+<td>number</td>
+<td>index</td>
+<td>Entity index</td>
 </tr>
 <tr>
-<td>string</td>
-<td>pattern</td>
-<td>Pattern</td>
+<td>number</td>
+<td>hitbox</td>
+<td>Hitbox</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>scan</td>
+<td>Enables scan this hitbox</td>
 </tr>
 </tbody>
 </table>
-<p>Returns pattern address</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">line_goes_through_smoke_addr</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="n">find_pattern</span><span class="p">(</span><span class="s2">&quot;client.dll&quot;</span><span class="p">,</span> <span class="s2">&quot;55 8B EC 83 EC 08 8B 15 ? ? ? ? 0F 57 C0&quot;</span><span class="p">)</span>
+<p>Overrides hitscan on player</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">SCAN_HEAD</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="kd">local</span> <span class="n">SCAN_CHEST</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="kd">local</span> <span class="n">SCAN_PELVIS</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="kd">local</span> <span class="n">SCAN_STOMACH</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="kd">local</span> <span class="n">SCAN_LEGS</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="kd">local</span> <span class="n">SCAN_FOOT</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="c1">-- force head</span>
+<span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
+<span class="n">ragebot</span><span class="p">.</span><span class="n">override_hitscan</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="n">SCAN_HEAD</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+<span class="n">ragebot</span><span class="p">.</span><span class="n">override_hitscan</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="n">SCAN_CHEST</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
+<span class="n">ragebot</span><span class="p">.</span><span class="n">override_hitscan</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="n">SCAN_PELVIS</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
+<span class="n">ragebot</span><span class="p">.</span><span class="n">override_hitscan</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="n">SCAN_STOMACH</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
+<span class="n">ragebot</span><span class="p">.</span><span class="n">override_hitscan</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="n">SCAN_LEGS</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
+<span class="n">ragebot</span><span class="p">.</span><span class="n">override_hitscan</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="n">SCAN_FOOT</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
+
+<hr />
+<h2 id="override_min_damageindex-damage"><strong>override_min_damage(index, damage)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>index</td>
+<td>Entity index</td>
+</tr>
+<tr>
+<td>number</td>
+<td>damage</td>
+<td>Min damage</td>
+</tr>
+</tbody>
+</table>
+<p>Overrides min damage on player</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
+<span class="n">ragebot</span><span class="p">.</span><span class="n">override_min_damage</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="override_safe_pointindex-mode"><strong>override_safe_point(index, mode)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>index</td>
+<td>Entity index</td>
+</tr>
+<tr>
+<td>number</td>
+<td>mode</td>
+<td>Safepoint mode</td>
+</tr>
+</tbody>
+</table>
+<p>Overrides safepoint mode on player</p>
+<p>0 - default</p>
+<p>1 - prefer</p>
+<p>2 - force</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
+<span class="n">ragebot</span><span class="p">.</span><span class="n">override_safe_point</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="c1">-- force safepoints</span>
+</code></pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="override_max_missesindex-misses"><strong>override_max_misses(index, misses)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>index</td>
+<td>Entity index</td>
+</tr>
+<tr>
+<td>number</td>
+<td>misses</td>
+<td>Max misses</td>
+</tr>
+</tbody>
+</table>
+<p>Overrides max misses on player</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
+<span class="n">ragebot</span><span class="p">.</span><span class="n">override_max_misses</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="override_head_scaleindex-scale"><strong>override_head_scale(index, scale)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>index</td>
+<td>Entity index</td>
+</tr>
+<tr>
+<td>number</td>
+<td>scale</td>
+<td>Head pointscale</td>
+</tr>
+</tbody>
+</table>
+<p>Overrides head point scale on player</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
+<span class="n">ragebot</span><span class="p">.</span><span class="n">override_head_scale</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="override_body_scaleindex-scale"><strong>override_body_scale(index, scale)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>index</td>
+<td>Entity index</td>
+</tr>
+<tr>
+<td>number</td>
+<td>scale</td>
+<td>Bofy pointscale</td>
+</tr>
+</tbody>
+</table>
+<p>Overrides body point scale on player</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
+<span class="n">ragebot</span><span class="p">.</span><span class="n">override_body_scale</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+<hr />
                 
               
               
@@ -1136,7 +1227,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../ui/types/text_input_t/" title="text_input_t" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../renderer/" title="renderer" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1145,19 +1236,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                text_input_t
+                renderer
               </div>
             </div>
           </a>
         
         
-          <a href="../renderer/" title="renderer" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../types/vec2_t/" title="vec2_t" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                renderer
+                vec2_t
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

@@ -1,0 +1,4785 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.0">
+    
+    
+      
+        <title>vars - Nixware Lua API</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.18ac144a.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cheat-variables" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Nixware Lua API" class="md-header-nav__button md-logo" aria-label="Nixware Lua API">
+      
+  <img src="https://nixware.cc/styles/default/xenforo/ava.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Nixware Lua API
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              vars
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Nixware Lua API" class="md-nav__button md-logo" aria-label="Nixware Lua API">
+      
+  <img src="https://nixware.cc/styles/default/xenforo/ava.png" alt="logo">
+
+    </a>
+    Nixware Lua API
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      ui
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="ui" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        ui
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ui/" title="ui" class="md-nav__link">
+      ui
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        vars
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="vars" class="md-nav__link md-nav__link--active">
+      vars
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#legitbot" class="md-nav__link">
+    Legitbot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ragebot" class="md-nav__link">
+    Ragebot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antihit" class="md-nav__link">
+    Antihit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visuals" class="md-nav__link">
+    Visuals
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skins" class="md-nav__link">
+    Skins
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miscellaneous" class="md-nav__link">
+    Miscellaneous
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      types
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="types" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        types
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/check_box_t/" title="check_box_t" class="md-nav__link">
+      check_box_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/color_edit_t/" title="color_edit_t" class="md-nav__link">
+      color_edit_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/combo_box_t/" title="combo_box_t" class="md-nav__link">
+      combo_box_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/multi_combo_box_t/" title="multi_combo_box_t" class="md-nav__link">
+      multi_combo_box_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/key_bind_t/" title="key_bind_t" class="md-nav__link">
+      key_bind_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/slider_float_t/" title="slider_float_t" class="md-nav__link">
+      slider_float_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/slider_int_t/" title="slider_int_t" class="md-nav__link">
+      slider_int_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/text_input_t/" title="text_input_t" class="md-nav__link">
+      text_input_t
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../client/" title="client" class="md-nav__link">
+      client
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../renderer/" title="renderer" class="md-nav__link">
+      renderer
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../ragebot/" title="ragebot" class="md-nav__link">
+      ragebot
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      types
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="types" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        types
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../types/vec2_t/" title="vec2_t" class="md-nav__link">
+      vec2_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../types/vec3_t/" title="vec3_t" class="md-nav__link">
+      vec3_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../types/angle_t/" title="angle_t" class="md-nav__link">
+      angle_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../types/rect_t/" title="rect_t" class="md-nav__link">
+      rect_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../types/color_t/" title="color_t" class="md-nav__link">
+      color_t
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      source engine
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="source engine" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        source engine
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1">
+    
+    <label class="md-nav__link" for="nav-7-1">
+      types
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="types" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        types
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sourceengine/types/game_event_t/" title="game_event_t" class="md-nav__link">
+      game_event_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sourceengine/types/usercmd_t/" title="usercmd_t" class="md-nav__link">
+      usercmd_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sourceengine/types/convar_t/" title="convar_t" class="md-nav__link">
+      convar_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sourceengine/types/entity_t/" title="entity_t" class="md-nav__link">
+      entity_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sourceengine/types/player_info_t/" title="player_info_t" class="md-nav__link">
+      player_info_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sourceengine/types/trace_t/" title="trace_t" class="md-nav__link">
+      trace_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sourceengine/types/shot_info_t/" title="shot_info_t" class="md-nav__link">
+      shot_info_t
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sourceengine/se/" title="se" class="md-nav__link">
+      se
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sourceengine/engine/" title="engine" class="md-nav__link">
+      engine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sourceengine/trace/" title="trace" class="md-nav__link">
+      trace
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sourceengine/entitylist/" title="entitylist" class="md-nav__link">
+      entitylist
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sourceengine/globalvars/" title="globalvars" class="md-nav__link">
+      globalvars
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sourceengine/clientstate/" title="clientstate" class="md-nav__link">
+      clientstate
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../callbacks/" title="callbacks" class="md-nav__link">
+      callbacks
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#legitbot" class="md-nav__link">
+    Legitbot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ragebot" class="md-nav__link">
+    Ragebot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antihit" class="md-nav__link">
+    Antihit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visuals" class="md-nav__link">
+    Visuals
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skins" class="md-nav__link">
+    Skins
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miscellaneous" class="md-nav__link">
+    Miscellaneous
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="cheat-variables">cheat variables</h1>
+<h2 id="legitbot">Legitbot</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>check_box</td>
+<td>legit_enable</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_team_attack</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_smokecheck</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_flashcheck</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_scopecheck</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_jumpcheck</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_backtracking</td>
+</tr>
+<tr>
+<td>key_bind</td>
+<td>legit_autofire_bind</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_deagle_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_deagle_aim_smooth</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_deagle_aim_autopistol</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_deagle_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_deagle_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_deagle_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_deagle_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_deagle_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_deagle_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_deagle_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_deagle_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_deagle_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_deagle_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_deagle_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_duals_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_duals_aim_smooth</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_duals_aim_autopistol</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_duals_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_duals_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_duals_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_duals_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_duals_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_duals_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_duals_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_duals_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_duals_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_duals_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_duals_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_five7_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_five7_aim_smooth</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_five7_aim_autopistol</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_five7_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_five7_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_five7_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_five7_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_five7_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_five7_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_five7_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_five7_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_five7_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_five7_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_five7_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_glock_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_glock_aim_smooth</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_glock_aim_autopistol</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_glock_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_glock_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_glock_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_glock_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_glock_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_glock_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_glock_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_glock_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_glock_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_glock_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_glock_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_p2000_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_p2000_aim_smooth</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_p2000_aim_autopistol</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_p2000_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_p2000_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_p2000_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_p2000_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_p2000_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_p2000_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_p2000_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_p2000_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_p2000_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_p2000_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_p2000_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_p250_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_p250_aim_smooth</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_p250_aim_autopistol</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_p250_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_p250_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_p250_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_p250_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_p250_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_p250_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_p250_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_p250_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_p250_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_p250_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_p250_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_usps_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_usps_aim_smooth</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_usps_aim_autopistol</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_usps_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_usps_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_usps_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_usps_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_usps_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_usps_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_usps_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_usps_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_usps_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_usps_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_usps_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_cz75_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_cz75_aim_smooth</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_cz75_aim_autopistol</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_cz75_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_cz75_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_cz75_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_cz75_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_cz75_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_cz75_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_cz75_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_cz75_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_cz75_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_cz75_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_cz75_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_revolver_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_revolver_aim_smooth</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_revolver_aim_autopistol</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_revolver_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_revolver_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_revolver_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_revolver_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_revolver_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_revolver_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_revolver_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_revolver_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_revolver_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_revolver_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_revolver_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_tec9_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_tec9_aim_smooth</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_tec9_aim_autopistol</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_tec9_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_tec9_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_tec9_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_tec9_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_tec9_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_tec9_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_tec9_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_tec9_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_tec9_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_tec9_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_tec9_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_ak47_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_ak47_aim_smooth</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_ak47_aim_fov2</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_ak47_aim_smooth2</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_ak47_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_ak47_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_ak47_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_ak47_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_ak47_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_ak47_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_ak47_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_ak47_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_ak47_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_ak47_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_ak47_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_aug_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_aug_aim_smooth</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_aug_aim_fov2</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_aug_aim_smooth2</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_aug_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_aug_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_aug_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_aug_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_aug_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_aug_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_aug_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_aug_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_aug_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_aug_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_aug_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_famas_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_famas_aim_smooth</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_famas_aim_fov2</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_famas_aim_smooth2</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_famas_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_famas_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_famas_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_famas_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_famas_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_famas_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_famas_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_famas_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_famas_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_famas_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_famas_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_galil_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_galil_aim_smooth</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_galil_aim_fov2</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_galil_aim_smooth2</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_galil_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_galil_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_galil_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_galil_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_galil_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_galil_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_galil_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_galil_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_galil_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_galil_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_galil_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_m249_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_m249_aim_smooth</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_m249_aim_fov2</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_m249_aim_smooth2</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_m249_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_m249_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_m249_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_m249_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_m249_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_m249_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_m249_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_m249_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_m249_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_m249_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_m249_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_m4a4_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_m4a4_aim_smooth</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_m4a4_aim_fov2</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_m4a4_aim_smooth2</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_m4a4_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_m4a4_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_m4a4_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_m4a4_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_m4a4_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_m4a4_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_m4a4_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_m4a4_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_m4a4_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_m4a4_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_m4a4_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_m4a1s_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_m4a1s_aim_smooth</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_m4a1s_aim_fov2</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_m4a1s_aim_smooth2</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_m4a1s_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_m4a1s_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_m4a1s_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_m4a1s_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_m4a1s_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_m4a1s_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_m4a1s_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_m4a1s_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_m4a1s_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_m4a1s_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_m4a1s_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_mac10_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_mac10_aim_smooth</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_mac10_aim_fov2</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_mac10_aim_smooth2</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_mac10_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mac10_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mac10_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mac10_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mac10_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mac10_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mac10_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mac10_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_mac10_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_mac10_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_mac10_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_p90_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_p90_aim_smooth</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_p90_aim_fov2</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_p90_aim_smooth2</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_p90_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_p90_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_p90_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_p90_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_p90_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_p90_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_p90_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_p90_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_p90_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_p90_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_p90_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_mp5_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_mp5_aim_smooth</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_mp5_aim_fov2</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_mp5_aim_smooth2</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_mp5_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mp5_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mp5_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mp5_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mp5_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mp5_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mp5_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mp5_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_mp5_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_mp5_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_mp5_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_ump45_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_ump45_aim_smooth</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_ump45_aim_fov2</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_ump45_aim_smooth2</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_ump45_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_ump45_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_ump45_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_ump45_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_ump45_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_ump45_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_ump45_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_ump45_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_ump45_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_ump45_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_ump45_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_xm1014_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_xm1014_aim_smooth</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_xm1014_aim_fov2</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_xm1014_aim_smooth2</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_xm1014_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_xm1014_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_xm1014_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_xm1014_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_xm1014_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_xm1014_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_xm1014_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_xm1014_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_xm1014_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_xm1014_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_xm1014_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_bizon_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_bizon_aim_smooth</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_bizon_aim_fov2</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_bizon_aim_smooth2</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_bizon_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_bizon_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_bizon_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_bizon_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_bizon_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_bizon_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_bizon_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_bizon_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_bizon_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_bizon_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_bizon_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_mag7_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_mag7_aim_smooth</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_mag7_aim_fov2</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_mag7_aim_smooth2</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_mag7_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mag7_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mag7_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mag7_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mag7_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mag7_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mag7_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mag7_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_mag7_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_mag7_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_mag7_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_negev_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_negev_aim_smooth</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_negev_aim_fov2</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_negev_aim_smooth2</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_negev_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_negev_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_negev_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_negev_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_negev_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_negev_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_negev_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_negev_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_negev_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_negev_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_negev_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_sawedoff_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_sawedoff_aim_smooth</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_sawedoff_aim_fov2</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_sawedoff_aim_smooth2</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_sawedoff_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_sawedoff_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_sawedoff_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_sawedoff_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_sawedoff_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_sawedoff_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_sawedoff_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_sawedoff_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_sawedoff_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_sawedoff_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_sawedoff_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_mp7_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_mp7_aim_smooth</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_mp7_aim_fov2</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_mp7_aim_smooth2</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_mp7_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mp7_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mp7_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mp7_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mp7_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mp7_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mp7_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mp7_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_mp7_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_mp7_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_mp7_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_mp9_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_mp9_aim_smooth</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_mp9_aim_fov2</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_mp9_aim_smooth2</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_mp9_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mp9_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mp9_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mp9_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mp9_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mp9_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mp9_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_mp9_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_mp9_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_mp9_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_mp9_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_nova_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_nova_aim_smooth</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_nova_aim_fov2</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_nova_aim_smooth2</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_nova_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_nova_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_nova_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_nova_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_nova_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_nova_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_nova_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_nova_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_nova_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_nova_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_nova_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_sg553_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_sg553_aim_smooth</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_sg553_aim_fov2</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_sg553_aim_smooth2</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_sg553_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_sg553_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_sg553_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_sg553_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_sg553_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_sg553_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_sg553_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_sg553_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_sg553_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_sg553_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_sg553_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_scar20_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_scar20_aim_smooth</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_scar20_aim_fov2</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_scar20_aim_smooth2</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_scar20_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_scar20_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_scar20_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_scar20_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_scar20_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_scar20_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_scar20_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_scar20_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_scar20_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_scar20_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_scar20_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_g3sg1_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_g3sg1_aim_smooth</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_g3sg1_aim_fov2</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_g3sg1_aim_smooth2</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_g3sg1_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_g3sg1_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_g3sg1_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_g3sg1_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_g3sg1_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_g3sg1_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_g3sg1_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_g3sg1_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_g3sg1_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_g3sg1_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_g3sg1_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_awp_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_awp_aim_smooth</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_awp_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_awp_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_awp_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_awp_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_awp_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_awp_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_awp_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_awp_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_awp_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_awp_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_awp_aim_silent</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_scout_aim_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>legit_scout_aim_smooth</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_scout_aim_rcs_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_scout_aim_rcs_pitch</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_scout_aim_rcs_yaw</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_scout_aim_hitbox</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_scout_aim_backtrack</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_scout_aim_shot_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_scout_aim_kill_delay</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>legit_scout_aim_hitchance</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_scout_aim_autofire</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_scout_aim_recoil_based_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>legit_scout_aim_silent</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ragebot">Ragebot</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>check_box</td>
+<td>rage_enable</td>
+</tr>
+<tr>
+<td>key_bind</td>
+<td>rage_enable_bind</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>rage_wall_penetration</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>rage_desync_correction</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>rage_silent_aim</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>rage_fov</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>rage_active_exploit</td>
+</tr>
+<tr>
+<td>key_bind</td>
+<td>rage_active_exploit_bind</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>rage_pistols_autostop</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_pistols_min_damage</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_pistols_hitchance</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>rage_pistols_safepoints</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_pistols_max_misses</td>
+</tr>
+<tr>
+<td>multi_combo_box</td>
+<td>rage_pistols_hitscan</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_pistols_head_pointscale</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_pistols_body_pointscale</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>rage_deagle_autostop</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_deagle_min_damage</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_deagle_hitchance</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>rage_deagle_safepoints</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_deagle_max_misses</td>
+</tr>
+<tr>
+<td>multi_combo_box</td>
+<td>rage_deagle_hitscan</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_deagle_head_pointscale</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_deagle_body_pointscale</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>rage_revolver_autostop</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_revolver_min_damage</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_revolver_hitchance</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>rage_revolver_safepoints</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_revolver_max_misses</td>
+</tr>
+<tr>
+<td>multi_combo_box</td>
+<td>rage_revolver_hitscan</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_revolver_head_pointscale</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_revolver_body_pointscale</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>rage_smg_autostop</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_smg_min_damage</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_smg_hitchance</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>rage_smg_safepoints</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_smg_max_misses</td>
+</tr>
+<tr>
+<td>multi_combo_box</td>
+<td>rage_smg_hitscan</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_smg_head_pointscale</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_smg_body_pointscale</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>rage_rifle_autoscope</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>rage_rifle_autostop</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_rifle_min_damage</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_rifle_hitchance</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>rage_rifle_safepoints</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_rifle_max_misses</td>
+</tr>
+<tr>
+<td>multi_combo_box</td>
+<td>rage_rifle_hitscan</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_rifle_head_pointscale</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_rifle_body_pointscale</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>rage_shotguns_autostop</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_shotguns_min_damage</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_shotguns_hitchance</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>rage_shotguns_safepoints</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_shotguns_max_misses</td>
+</tr>
+<tr>
+<td>multi_combo_box</td>
+<td>rage_shotguns_hitscan</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_shotguns_head_pointscale</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_shotguns_body_pointscale</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>rage_scout_autoscope</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>rage_scout_autostop</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_scout_min_damage</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_scout_hitchance</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>rage_scout_safepoints</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_scout_max_misses</td>
+</tr>
+<tr>
+<td>multi_combo_box</td>
+<td>rage_scout_hitscan</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_scout_head_pointscale</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_scout_body_pointscale</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>rage_auto_autoscope</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>rage_auto_autostop</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_auto_min_damage</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_auto_hitchance</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>rage_auto_safepoints</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_auto_max_misses</td>
+</tr>
+<tr>
+<td>multi_combo_box</td>
+<td>rage_auto_hitscan</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_auto_head_pointscale</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_auto_body_pointscale</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>rage_awp_autoscope</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>rage_awp_autostop</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_awp_min_damage</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_awp_hitchance</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>rage_awp_safepoints</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_awp_max_misses</td>
+</tr>
+<tr>
+<td>multi_combo_box</td>
+<td>rage_awp_hitscan</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_awp_head_pointscale</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_awp_body_pointscale</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_taser_min_damage</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_taser_hitchance</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>rage_taser_safepoints</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_taser_max_misses</td>
+</tr>
+<tr>
+<td>multi_combo_box</td>
+<td>rage_taser_hitscan</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_taser_head_pointscale</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>rage_taser_body_pointscale</td>
+</tr>
+</tbody>
+</table>
+<h2 id="antihit">Antihit</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>check_box</td>
+<td>antihit_fakelag_enable</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>antihit_fakelag_limit</td>
+</tr>
+<tr>
+<td>multi_combo_box</td>
+<td>antihit_fakelag_disablers</td>
+</tr>
+<tr>
+<td>multi_combo_box</td>
+<td>antihit_fakelag_triggers</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>antihit_fakelag_trigger_limit</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>antihit_antiaim_enable</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>antihit_antiaim_pitch</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>antihit_antiaim_yaw</td>
+</tr>
+<tr>
+<td>key_bind</td>
+<td>antihit_antiaim_flip_bind</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>antihit_antiaim_at_targets</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>antihit_extra_fakeduck</td>
+</tr>
+<tr>
+<td>key_bind</td>
+<td>antihit_extra_fakeduck_bind</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>antihit_extra_slowwalk</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>antihit_extra_slowwalk_speed</td>
+</tr>
+<tr>
+<td>key_bind</td>
+<td>antihit_extra_slowwalk_bind</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>antihit_extra_leg_movement</td>
+</tr>
+</tbody>
+</table>
+<h2 id="visuals">Visuals</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>check_box</td>
+<td>visuals_other_obs_bypass</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_other_spectators</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_other_aimbot_fov</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_other_watermark</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_other_force_crosshair</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_other_thirdperson</td>
+</tr>
+<tr>
+<td>key_bind</td>
+<td>visuals_other_thirdperson_bind</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_other_force_thirdperson</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_other_grenade_prediction</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_other_pen_crosshair</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_other_hitmarker</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>visuals_other_hitsound</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>visuals_other_killsound</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>visuals_other_nightmode</td>
+</tr>
+<tr>
+<td>multi_combo_box</td>
+<td>visuals_other_removals</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_other_aimbot_fov_color</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_other_grenade_prediction_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_models_enemy_enable</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_models_enemy_color_</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_models_enemy_behind_wall</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_models_enemy_behind_wall_color</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>visuals_models_enemy_material</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_models_enemy_material_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_models_enemy_ragdoll_chams</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_models_team_enable</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_models_team_color_</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_models_team_behind_wall</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_models_team_behind_wall_color</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>visuals_models_team_material</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_models_team_material_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_models_team_ragdoll_chams</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_models_local_enable</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_models_local_color_</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_models_local_behind_wall</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_models_local_behind_wall_color</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>visuals_models_local_material</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_models_local_material_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_models_local_ragdoll_chams</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_models_hands_enable</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_models_hands_color_</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>visuals_models_hands_material</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_models_hands_material_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_models_weapon_enable</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_models_weapon_color_</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>visuals_models_weapon_material</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_models_weapon_material_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_models_sleeve_enable</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_models_sleeve_color_</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>visuals_models_sleeve_material</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_models_sleeve_material_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_models_desync_enable</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_models_desync_color_</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>visuals_models_desync_material</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_models_desync_material_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_models_fakelag_enable</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_models_fakelag_color_</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>visuals_models_fakelag_material</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_models_fakelag_material_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_enemy_enable</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_enemy_box</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_enemy_box_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_enemy_name</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_enemy_name_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_enemy_weapon</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_enemy_weapon_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_enemy_weapon_icon</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_enemy_weapon_icon_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_enemy_ammo</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_enemy_ammo_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_enemy_skeleton</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_enemy_skeleton_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_enemy_history_skeleton</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_enemy_history_skeleton_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_enemy_multipoints</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_enemy_multipoints_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_enemy_sound</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_enemy_sound_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_enemy_glow</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_enemy_glow_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_enemy_arrows</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>visuals_esp_enemy_arrows_size</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>visuals_esp_enemy_arrows_dist</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_enemy_arrows_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_enemy_health</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_enemy_health_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_enemy_armor</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_enemy_armor_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_enemy_tracers</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_enemy_tracers_color</td>
+</tr>
+<tr>
+<td>multi_combo_box</td>
+<td>visuals_esp_enemy_flags</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_enemy_far_esp</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>visuals_esp_enemy_dormant</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_team_enable</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_team_box</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_team_box_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_team_name</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_team_name_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_team_weapon</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_team_weapon_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_team_weapon_icon</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_team_weapon_icon_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_team_ammo</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_team_ammo_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_team_skeleton</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_team_skeleton_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_team_multipoints</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_team_multipoints_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_team_sound</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_team_sound_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_team_glow</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_team_glow_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_team_arrows</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>visuals_esp_team_arrows_size</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>visuals_esp_team_arrows_dist</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_team_arrows_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_team_health</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_team_health_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_team_armor</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_team_armor_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_team_tracers</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_team_tracers_color</td>
+</tr>
+<tr>
+<td>multi_combo_box</td>
+<td>visuals_esp_team_flags</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_local_enable</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_local_box</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_local_box_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_local_name</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_local_name_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_local_weapon</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_local_weapon_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_local_weapon_icon</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_local_weapon_icon_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_local_ammo</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_local_ammo_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_local_skeleton</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_local_skeleton_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_local_multipoints</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_local_multipoints_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_local_sound</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_local_sound_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_local_glow</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_local_glow_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_local_health</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_local_health_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_local_armor</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_local_armor_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_local_tracers</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_local_tracers_color</td>
+</tr>
+<tr>
+<td>multi_combo_box</td>
+<td>visuals_esp_local_flags</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_weapons_enable</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_weapons_box</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_weapons_box_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_weapons_name</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_weapons_name_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_weapons_weapon_icon</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_weapons_weapon_icon_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_weapons_ammo</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_weapons_ammo_color</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>visuals_esp_weapons_glow</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>visuals_esp_weapons_glow_color</td>
+</tr>
+</tbody>
+</table>
+<h2 id="skins">Skins</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>check_box</td>
+<td>knife_skin_enabled</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>glove_skin_enabled</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>weapon_skin_enabled</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>knife_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>knife_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>knife_skin_seed</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>knife_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>knife_skin_model_id</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>glove_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>glove_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>glove_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>glove_skin_model_id</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_deagle_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_deagle_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_deagle_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_deagle_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_duals_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_duals_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_duals_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_duals_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_five7_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_five7_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_five7_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_five7_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_glock_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_glock_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_glock_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_glock_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_p2000_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_p2000_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_p2000_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_p2000_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_p250_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_p250_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_p250_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_p250_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_usps_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_usps_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_usps_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_usps_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_cz75_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_cz75_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_cz75_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_cz75_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_revolver_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_revolver_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_revolver_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_revolver_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_tec9_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_tec9_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_tec9_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_tec9_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_ak47_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_ak47_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_ak47_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_ak47_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_aug_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_aug_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_aug_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_aug_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_famas_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_famas_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_famas_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_famas_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_galil_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_galil_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_galil_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_galil_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_m249_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_m249_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_m249_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_m249_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_m4a4_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_m4a4_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_m4a4_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_m4a4_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_m4a1s_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_m4a1s_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_m4a1s_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_m4a1s_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_mac10_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_mac10_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_mac10_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_mac10_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_p90_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_p90_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_p90_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_p90_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_mp5_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_mp5_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_mp5_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_mp5_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_ump45_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_ump45_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_ump45_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_ump45_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_xm1014_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_xm1014_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_xm1014_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_xm1014_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_bizon_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_bizon_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_bizon_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_bizon_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_mag7_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_mag7_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_mag7_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_mag7_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_negev_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_negev_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_negev_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_negev_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_sawedoff_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_sawedoff_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_sawedoff_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_sawedoff_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_mp7_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_mp7_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_mp7_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_mp7_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_mp9_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_mp9_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_mp9_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_mp9_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_nova_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_nova_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_nova_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_nova_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_sg553_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_sg553_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_sg553_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_sg553_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_scar20_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_scar20_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_scar20_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_scar20_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_g3sg1_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_g3sg1_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_g3sg1_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_g3sg1_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_awp_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_awp_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_awp_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_awp_skin_seed</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>skins_scout_skin_index</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_scout_skin_wear</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_scout_skin_stat_trak</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>skins_scout_skin_seed</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>skins_viewmodel_enable</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_viewmodel_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_viewmodel_x</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_viewmodel_y</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_viewmodel_z</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_viewmodel_roll</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_override_fov</td>
+</tr>
+<tr>
+<td>slider_float</td>
+<td>skins_aspect_ratio</td>
+</tr>
+</tbody>
+</table>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>check_box</td>
+<td>misc_unlock_hidden_cvars</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>misc_unlock_cheat_cvars</td>
+</tr>
+<tr>
+<td>slider_int</td>
+<td>misc_ping_spike_amount</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>misc_ow_revealer</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>misc_occulusion</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>misc_ranks</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>misc_autoaccept</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>misc_inventory</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>misc_money</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>misc_bunnyhop</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>misc_autostrafer</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>misc_jump_bug</td>
+</tr>
+<tr>
+<td>key_bind</td>
+<td>misc_jump_bug_bind</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>misc_edge_jump</td>
+</tr>
+<tr>
+<td>key_bind</td>
+<td>misc_edge_jump_bind</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>misc_fastduck</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>misc_clantag</td>
+</tr>
+<tr>
+<td>color_edit</td>
+<td>misc_ui_color</td>
+</tr>
+<tr>
+<td>combo_box</td>
+<td>misc_ui_scale</td>
+</tr>
+<tr>
+<td>check_box</td>
+<td>misc_ui_hints</td>
+</tr>
+</tbody>
+</table>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../ui/" title="ui" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                ui
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../types/check_box_t/" title="check_box_t" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                check_box_t
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
