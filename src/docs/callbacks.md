@@ -29,7 +29,7 @@ client.register_callback("unload", on_unload)
 
 ---
 
-## **create_move(cmd)** - csgo
+## **create_move(cmd)**
 Type | Name | Description
 ------------ | ------------- | ------------
 [usercmd_t](../sourceengine/types/usercmd_t/) | cmd | Current command
@@ -53,7 +53,7 @@ client.register_callback("create_move", on_create_move)
 ```
 ---
 
-## **frame_stage_notify(stage)** - csgo
+## **frame_stage_notify(stage)**
 Type | Name | Description
 ------------ | ------------- | ------------
 number | stage | Current stage
@@ -72,7 +72,7 @@ client.register_callback("frame_stage_notify", on_frame_stage_notify)
 ```
 ---
 
-## **fire_game_event(event)** - csgo
+## **fire_game_event(event)**
 Type | Name | Description
 ------------ | ------------- | ------------
 [game_event_t](../sourceengine/types/game_event_t/) | event | Event
@@ -92,7 +92,7 @@ client.register_callback("fire_game_event", on_fire_game_event)
 
 ---
 
-## **shot_fired(info)** - csgo
+## **shot_fired(info)**
 Type | Name | Description
 ------------ | ------------- | ------------
 [shot_info_t](../sourceengine/types/shot_info_t/) | info | Shot info

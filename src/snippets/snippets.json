@@ -2,962 +2,843 @@
 	"Load the script": {
 		"prefix": "client.load_script",
 		"body": [
-		  "client.load_script(${1:scriptname})"
+			"client.load_script(${1:scriptname})"
 		],
 		"description": "Load the script"
-	  },
-	  "Unload the script": {
+	},
+	"Unload the script": {
 		"prefix": "client.unload_script",
 		"body": [
-		  "client.unload_script(${1:scriptname})"
+			"client.unload_script(${1:scriptname})"
 		],
 		"description": "Unload the script"
-	  },
-	  "Register the callback": {
+	},
+	"Register the callback": {
 		"prefix": "client.register_callback",
 		"body": [
-		  "client.register_callback(${1:eventname}, ${2:fn})"
+			"client.register_callback(${1:eventname}, ${2:fn})"
 		],
 		"description": "Register the callback"
-	  },
-	  "Returns your cheat username": {
+	},
+	"Returns your cheat username": {
 		"prefix": "client.get_username",
 		"body": [
-		  "client.get_username()"
+			"client.get_username()"
 		],
 		"description": "Returns your cheat username"
-	  },
-	  "Pushing notification": {
+	},
+	"Pushing notification": {
 		"prefix": "client.notify",
 		"body": [
-		  "client.notify(${1:text})"
+			"client.notify(${1:text})"
 		],
 		"description": "Pushing notification"
-	  },
-	  "Returns the unix timestamp": {
+	},
+	"Returns the unix timestamp": {
 		"prefix": "client.get_time_stamp",
 		"body": [
-		  "client.get_time_stamp()"
+			"client.get_time_stamp()"
 		],
 		"description": "Returns the unix timestamp"
-	  },
-	  "Returns the windows time": {
+	},
+	"Returns the windows time": {
 		"prefix": "client.get_system_time",
 		"body": [
-		  "client.get_system_time()"
+			"client.get_system_time()"
 		],
 		"description": "Returns the windows time"
-	  },
-	  "Returns true if key pressed": {
+	},
+	"Returns true if key pressed": {
 		"prefix": "client.is_key_pressed",
 		"body": [
-		  "client.is_key_pressed(${1:key})"
+			"client.is_key_pressed(${1:key})"
 		],
 		"description": "Returns true if key pressed"
-	  },
-	  "Returns true if key clicked": {
+	},
+	"Returns true if key clicked": {
 		"prefix": "client.is_key_clicked",
 		"body": [
-		  "client.is_key_clicked(${1:key})"
+			"client.is_key_clicked(${1:key})"
 		],
 		"description": "Returns true if key clicked"
-	  },
-	  "Returns pattern address": {
+	},
+	"Returns pattern address": {
 		"prefix": "client.find_pattern",
 		"body": [
-		  "client.find_pattern(${1:module}, ${2:pattern})"
+			"client.find_pattern(${1:module}, ${2:pattern})"
 		],
 		"description": "Returns pattern address"
-	  },
-	  "Creates checkbox in menu": {
-		"prefix": "ui.add_checkbox",
-		"body": [
-		  "ui.add_checkbox(${1:label}, ${2:var_name}, ${3:def_value})"
-		],
-		"description": "Creates checkbox in menu"
-	  },
-	  "Creates int slider in menu": {
-		"prefix": "ui.add_slider_int",
-		"body": [
-		  "ui.add_slider_int(${1:label}, ${2:var_name}, ${3:min}, ${4:max}, ${5:def_value})"
-		],
-		"description": "Creates int slider in menu"
-	  },
-	  "Creates combo box in menu": {
-		"prefix": "ui.add_combo",
-		"body": [
-		  "ui.add_combo(${1:label}, ${2:var_name}, ${3:items}, ${4:def_value})"
-		],
-		"description": "Creates combo box in menu"
-	  },
-	  "Creates float slider in menu": {
-		"prefix": "ui.add_slider_float",
-		"body": [
-		  "ui.add_slider_float(${1:label}, ${2:var_name}, ${3:min}, ${4:max}, ${5:def_value})"
-		],
-		"description": "Creates float slider in menu"
-	  },
-	  "Creates key bind in menu": {
-		"prefix": "ui.add_keybind",
-		"body": [
-		  "ui.add_keybind(${1:label}, ${2:var_name}, ${3:def_key}, ${4:def_mode})"
-		],
-		"description": "Creates key bind in menu"
-	  },
-	  "Creates color edit in menu": {
-		"prefix": "ui.add_color_edit",
-		"body": [
-		  "ui.add_color_edit(${1:label}, ${2:var_name}, ${3:show_alpha}, ${4:def_color})"
-		],
-		"description": "Creates color edit in menu"
-	  },
-	  "Returns the value from checkbox": {
-		"prefix": "ui.get_bool",
-		"body": [
-		  "ui.get_bool(${1:var_name})"
-		],
-		"description": "Returns the value from checkbox"
-	  },
-	  "Returns the value from int slider": {
-		"prefix": "ui.get_int",
-		"body": [
-		  "ui.get_int(${1:var_name})"
-		],
-		"description": "Returns the value from int slider"
-	  },
-	  "Returns the value from float slider": {
-		"prefix": "ui.get_float",
-		"body": [
-		  "ui.get_float(${1:var_name})"
-		],
-		"description": "Returns the value from float slider"
-	  },
-	  "Returns the value from color edit": {
-		"prefix": "ui.get_color",
-		"body": [
-		  "ui.get_color(${1:var_name})"
-		],
-		"description": "Returns the value from color edit"
-	  },
-	  "Setting checkbox value": {
-		"prefix": "ui.set_bool",
-		"body": [
-		  "ui.set_bool(${1:var_name}, ${2:val})"
-		],
-		"description": "Setting checkbox value"
-	  },
-	  "Setting int slider value": {
-		"prefix": "ui.set_int",
-		"body": [
-		  "ui.set_int(${1:var_name}, ${2:val})"
-		],
-		"description": "Setting int slider value"
-	  },
-	  "Setting float slider value": {
-		"prefix": "ui.set_float",
-		"body": [
-		  "ui.set_float(${1:var_name}, ${2:val})"
-		],
-		"description": "Setting float slider value"
-	  },
-	  "Setting coloredit value": {
-		"prefix": "ui.set_color",
-		"body": [
-		  "ui.set_color(${1:var_name}, ${2:val})"
-		],
-		"description": "Setting coloredit value"
-	  },
-	  "Returns the bind state": {
-		"prefix": "ui.get_bind_state",
-		"body": [
-		  "ui.get_bind_state()"
-		],
-		"description": "Returns the bind state"
-	  },
-	  "Returns true if menu opened": {
-		"prefix": "ui.is_visible",
-		"body": [
-		  "ui.is_visible()"
-		],
-		"description": "Returns true if menu opened"
-	  },
-	  "Setting menu visibility": {
-		"prefix": "ui.set_visible",
-		"body": [
-		  "ui.set_visible(${1:value})"
-		],
-		"description": "Setting menu visibility"
-	  },
-	  "Returns the number of choked commands": {
+	},
+	"Returns the number of choked commands": {
 		"prefix": "clientstate.get_choked_commands",
 		"body": [
-		  "clientstate.get_choked_commands()"
+			"clientstate.get_choked_commands()"
 		],
 		"description": "Returns the number of choked commands"
-	  },
-	  "Forcing cl_fullupdate": {
+	},
+	"Forcing cl_fullupdate": {
 		"prefix": "clientstate.force_full_update",
 		"body": [
-		  "clientstate.force_full_update()"
+			"clientstate.force_full_update()"
 		],
 		"description": "Forcing cl_fullupdate"
-	  },
-	  "Returns the screen size": {
+	},
+	"Returns the screen size": {
 		"prefix": "engine.get_screen_size",
 		"body": [
-		  "engine.get_screen_size()"
+			"engine.get_screen_size()"
 		],
 		"description": "Returns the screen size"
-	  },
-	  "Returns true if connected to server": {
+	},
+	"Returns true if connected to server": {
 		"prefix": "engine.is_connected",
 		"body": [
-		  "engine.is_connected()"
+			"engine.is_connected()"
 		],
 		"description": "Returns true if connected to server"
-	  },
-	  "Returns true if in game": {
+	},
+	"Returns true if in game": {
 		"prefix": "engine.is_in_game",
 		"body": [
-		  "engine.is_in_game()"
+			"engine.is_in_game()"
 		],
 		"description": "Returns true if in game"
-	  },
-	  "Returns the local player index": {
+	},
+	"Returns the local player index": {
 		"prefix": "engine.get_local_player",
 		"body": [
-		  "engine.get_local_player()"
+			"engine.get_local_player()"
 		],
 		"description": "Returns the local player index"
-	  },
-	  "Returns the [player_info_t](../types/player_info_t/) object": {
+	},
+	"Returns the [player_info_t](../types/player_info_t/) object": {
 		"prefix": "engine.get_player_info",
 		"body": [
-		  "engine.get_player_info(${1:index})"
+			"engine.get_player_info(${1:index})"
 		],
 		"description": "Returns the [player_info_t](../types/player_info_t/) object"
-	  },
-	  "Returns current level name (example: de_mirage)": {
+	},
+	"Returns current level name (example: de_mirage)": {
 		"prefix": "engine.get_level_name_short",
 		"body": [
-		  "engine.get_level_name_short()"
+			"engine.get_level_name_short()"
 		],
 		"description": "Returns current level name (example: de_mirage)"
-	  },
-	  "Returns the player index from user id": {
+	},
+	"Returns the player index from user id": {
 		"prefix": "engine.get_player_for_user_id",
 		"body": [
-		  "engine.get_player_for_user_id(${1:userid})"
+			"engine.get_player_for_user_id(${1:userid})"
 		],
 		"description": "Returns the player index from user id"
-	  },
-	  "Setting the viewangles": {
+	},
+	"Setting the viewangles": {
 		"prefix": "engine.set_view_angles",
 		"body": [
-		  "engine.set_view_angles(${1:viewangles})"
+			"engine.set_view_angles(${1:viewangles})"
 		],
 		"description": "Setting the viewangles"
-	  },
-	  "Returns the camera angles": {
+	},
+	"Returns the camera angles": {
 		"prefix": "engine.get_view_angles",
 		"body": [
-		  "engine.get_view_angles()"
+			"engine.get_view_angles()"
 		],
 		"description": "Returns the camera angles"
-	  },
-	  "Executes command in console": {
+	},
+	"Executes command in console": {
 		"prefix": "engine.execute_client_cmd",
 		"body": [
-		  "engine.execute_client_cmd(${1:cmd})"
+			"engine.execute_client_cmd(${1:cmd})"
 		],
 		"description": "Executes command in console"
-	  },
-	  "Returns the highest entity index": {
+	},
+	"Returns the highest entity index": {
 		"prefix": "entitylist.get_highest_entity_index",
 		"body": [
-		  "entitylist.get_highest_entity_index()"
+			"entitylist.get_highest_entity_index()"
 		],
 		"description": "Returns the highest entity index"
-	  },
-	  "Returns the local player object": {
+	},
+	"Returns the local player object": {
 		"prefix": "entitylist.get_local_player",
 		"body": [
-		  "entitylist.get_local_player()"
+			"entitylist.get_local_player()"
 		],
 		"description": "Returns the local player object"
-	  },
-	  "Returns the [entity_t](../types/entity_t/) object by index": {
+	},
+	"Returns the [entity_t](../types/entity_t/) object by index": {
 		"prefix": "entitylist.get_entity_by_index",
 		"body": [
-		  "entitylist.get_entity_by_index(${1:index})"
+			"entitylist.get_entity_by_index(${1:index})"
 		],
 		"description": "Returns the [entity_t](../types/entity_t/) object by index"
-	  },
-	  "Returns the [entity_t](../types/entity_t/) object by handle": {
+	},
+	"Returns the [entity_t](../types/entity_t/) object by handle": {
 		"prefix": "entitylist.get_entity_from_handle",
 		"body": [
-		  "entitylist.get_entity_from_handle(${1:handle})"
+			"entitylist.get_entity_from_handle(${1:handle})"
 		],
 		"description": "Returns the [entity_t](../types/entity_t/) object by handle"
-	  },
-	  "Returns the players array": {
+	},
+	"Returns the players array": {
 		"prefix": "entitylist.get_players",
 		"body": [
-		  "entitylist.get_players(${1:type})"
+			"entitylist.get_players(${1:type})"
 		],
 		"description": "Returns the players array"
-	  },
-	  "Returns the entities array by class name": {
+	},
+	"Returns the entities array by class name": {
 		"prefix": "entitylist.get_entities_by_class",
 		"body": [
-		  "entitylist.get_entities_by_class(${1:classname})"
+			"entitylist.get_entities_by_class(${1:classname})"
 		],
 		"description": "Returns the entities array by class name"
-	  },
-	  "Returns the entities array by class id": {
+	},
+	"Returns the entities array by class id": {
 		"prefix": "entitylist.get_entities_by_class_id",
 		"body": [
-		  "entitylist.get_entities_by_class_id(${1:classid})"
+			"entitylist.get_entities_by_class_id(${1:classid})"
 		],
 		"description": "Returns the entities array by class id"
-	  },
-	  "Returns the client time": {
+	},
+	"Returns the client time": {
 		"prefix": "globalvars.get_real_time",
 		"body": [
-		  "globalvars.get_real_time()"
+			"globalvars.get_real_time()"
 		],
 		"description": "Returns the client time"
-	  },
-	  "Returns the frame count": {
+	},
+	"Returns the frame count": {
 		"prefix": "globalvars.get_frame_count",
 		"body": [
-		  "globalvars.get_frame_count()"
+			"globalvars.get_frame_count()"
 		],
 		"description": "Returns the frame count"
-	  },
-	  "Returns the absolute frame time": {
+	},
+	"Returns the absolute frame time": {
 		"prefix": "globalvars.get_absolute_frametime",
 		"body": [
-		  "globalvars.get_absolute_frametime()"
+			"globalvars.get_absolute_frametime()"
 		],
 		"description": "Returns the absolute frame time"
-	  },
-	  "Returns the server time": {
+	},
+	"Returns the server time": {
 		"prefix": "globalvars.get_current_time",
 		"body": [
-		  "globalvars.get_current_time()"
+			"globalvars.get_current_time()"
 		],
 		"description": "Returns the server time"
-	  },
-	  "Returns the frame time": {
+	},
+	"Returns the frame time": {
 		"prefix": "globalvars.get_frame_time",
 		"body": [
-		  "globalvars.get_frame_time()"
+			"globalvars.get_frame_time()"
 		],
 		"description": "Returns the frame time"
-	  },
-	  "Returns the max clients value": {
+	},
+	"Returns the max clients value": {
 		"prefix": "globalvars.get_max_clients",
 		"body": [
-		  "globalvars.get_max_clients()"
+			"globalvars.get_max_clients()"
 		],
 		"description": "Returns the max clients value"
-	  },
-	  "Returns the current tickcount": {
+	},
+	"Returns the current tickcount": {
 		"prefix": "globalvars.get_tick_count",
 		"body": [
-		  "globalvars.get_tick_count()"
+			"globalvars.get_tick_count()"
 		],
 		"description": "Returns the current tickcount"
-	  },
-	  "Returns the interval per tick": {
+	},
+	"Returns the interval per tick": {
 		"prefix": "globalvars.get_interval_per_tick",
 		"body": [
-		  "globalvars.get_interval_per_tick()"
+			"globalvars.get_interval_per_tick()"
 		],
 		"description": "Returns the interval per tick"
-	  },
-	  "Calculates on screen position from world position": {
+	},
+	"Calculates on screen position from world position": {
 		"prefix": "se.world_to_screen",
 		"body": [
-		  "se.world_to_screen(${1:pos})"
+			"se.world_to_screen(${1:pos})"
 		],
 		"description": "Calculates on screen position from world position"
-	  },
-	  "Setting the clantag": {
+	},
+	"Setting the clantag": {
 		"prefix": "se.set_clantag",
 		"body": [
-		  "se.set_clantag(${1:tag})"
+			"se.set_clantag(${1:tag})"
 		],
 		"description": "Setting the clantag"
-	  },
-	  "Setting the name": {
+	},
+	"Setting the name": {
 		"prefix": "se.set_name",
 		"body": [
-		  "se.set_name(${1:name})"
+			"se.set_name(${1:name})"
 		],
 		"description": "Setting the name"
-	  },
-	  "Returns [convar_t](../types/convar_t/) object": {
+	},
+	"Returns [convar_t](../types/convar_t/) object": {
 		"prefix": "se.get_convar",
 		"body": [
-		  "se.get_convar(${1:name})"
+			"se.get_convar(${1:name})"
 		],
 		"description": "Returns [convar_t](../types/convar_t/) object"
-	  },
-	  "Returns the netvar offset": {
+	},
+	"Returns the netvar offset": {
 		"prefix": "se.get_netvar",
 		"body": [
-		  "se.get_netvar(${1:table}, ${2:netvar})"
+			"se.get_netvar(${1:table}, ${2:netvar})"
 		],
 		"description": "Returns the netvar offset"
-	  },
-	  "Returns current latency": {
+	},
+	"Returns current latency": {
 		"prefix": "se.get_latency",
 		"body": [
-		  "se.get_latency()"
+			"se.get_latency()"
 		],
 		"description": "Returns current latency"
-	  },
-	  "Register the event for [fire_game_event](../../callbacks/#fire_game_eventevent-csgo) callback": {
+	},
+	"Register the event for [fire_game_event](../../callbacks/#fire_game_eventevent-csgo) callback": {
 		"prefix": "se.register_event",
 		"body": [
-		  "se.register_event(${1:eventname})"
+			"se.register_event(${1:eventname})"
 		],
 		"description": "Register the event for [fire_game_event](../../callbacks/#fire_game_eventevent-csgo) callback"
-	  },
-	  "Returns the interface address": {
+	},
+	"Returns the interface address": {
 		"prefix": "se.create_interface",
 		"body": [
-		  "se.create_interface(${1:module_name}, ${2:interface_version})"
+			"se.create_interface(${1:module_name}, ${2:interface_version})"
 		],
 		"description": "Returns the interface address"
-	  },
-	  "Tracing": {
+	},
+	"Tracing": {
 		"prefix": "trace.line",
 		"body": [
-		  "trace.line(${1:skip_entindex}, ${2:mask}, ${3:start}, ${4:end})"
+			"trace.line(${1:skip_entindex}, ${2:mask}, ${3:start}, ${4:end})"
 		],
 		"description": "Tracing"
-	  },	
-	  "vec2_t constructor": {
+	},
+	"vec2_t constructor": {
 		"prefix": "vec2_t.new",
 		"body": [
-		  "vec2_t.new(${1:x}, ${2:y})"
+			"vec2_t.new(${1:x}, ${2:y})"
 		],
 		"description": "vec2_t constructor"
-	  },  
-	  "Returns the length of vec2_t": {
+	},
+	"Returns the length of vec2_t": {
 		"prefix": "vec2:length",
 		"body": [
-		  "vec2:length()"
+			"vec2:length()"
 		],
 		"description": "Returns the length of vec2_t"
-	  },  
-	  "vec3_t constructor": {
+	},
+	"vec3_t constructor": {
 		"prefix": "vec3_t.new",
 		"body": [
-		  "vec3_t.new(${1:x}, ${2:y}, ${3:z})"
+			"vec3_t.new(${1:x}, ${2:y}, ${3:z})"
 		],
 		"description": "vec3_t constructor"
-	  }, 
-	  "Returns the length of vec3_t": {
+	},
+	"Returns the length of vec3_t": {
 		"prefix": "vec3:length",
 		"body": [
-		  "vec3:length()"
+			"vec3:length()"
 		],
 		"description": "Returns the length of vec3_t"
-	  },  
-	  "angle_t constructor": {
+	},
+	"angle_t constructor": {
 		"prefix": "angle_t.new",
 		"body": [
-		  "angle_t.new(${1:pitch}, ${2:yaw}, ${3:roll})"
+			"angle_t.new(${1:pitch}, ${2:yaw}, ${3:roll})"
 		],
 		"description": "angle_t constructor"
-	  }, 
-	  "rect_t constructor": {
+	},
+	"rect_t constructor": {
 		"prefix": "rect_t.new",
 		"body": [
-		  "rect_t.new(${1:left}, ${2:top}, ${3:right}, ${4:bottom})"
+			"rect_t.new(${1:left}, ${2:top}, ${3:right}, ${4:bottom})"
 		],
 		"description": "rect_t constructor"
-	  }, 
-	  "color_t constructor": {
+	},
+	"color_t constructor": {
 		"prefix": "color_t.new",
 		"body": [
-		  "color_t.new(${1:red}, ${2:green}, ${3:blue}, ${4:alpha})"
+			"color_t.new(${1:red}, ${2:green}, ${3:blue}, ${4:alpha})"
 		],
 		"description": "color_t constructor"
-	  }, 
-	  "Returns the event name": {
+	},
+	"Returns the event name": {
 		"prefix": "event:get_name",
 		"body": [
-		  "event:get_name()"
+			"event:get_name()"
 		],
 		"description": "Returns the event name"
-	  },
-	  "Returns the boolean value from event": {
+	},
+	"Returns the boolean value from event": {
 		"prefix": "event:get_bool",
 		"body": [
-		  "event:get_name(${1:key_name}, ${2:def_value})"
+			"event:get_name(${1:key_name}, ${2:def_value})"
 		],
 		"description": "Returns the boolean value from event"
-	  },
-	  "Returns the int value from event": {
+	},
+	"Returns the int value from event": {
 		"prefix": "event:get_int",
 		"body": [
-		  "event:get_int(${1:key_name}, ${2:def_value})"
+			"event:get_int(${1:key_name}, ${2:def_value})"
 		],
 		"description": "Returns the int value from event"
-	  },
-	  "Returns the float value from event": {
+	},
+	"Returns the float value from event": {
 		"prefix": "event:get_float",
 		"body": [
-		  "event:get_float(${1:key_name}, ${2:def_value})"
+			"event:get_float(${1:key_name}, ${2:def_value})"
 		],
 		"description": "Returns the float value from event"
-	  },
-	  "Returns the string from event": {
+	},
+	"Returns the string from event": {
 		"prefix": "event:get_string",
 		"body": [
-		  "event:get_string(${1:key_name}, ${2:def_value})"
+			"event:get_string(${1:key_name}, ${2:def_value})"
 		],
 		"description": "Returns the string from event"
-	  },
-	  "Changes the bool key value": {
+	},
+	"Changes the bool key value": {
 		"prefix": "event:set_bool",
 		"body": [
-		  "event:set_bool(${1:key_name}, ${2:value})"
+			"event:set_bool(${1:key_name}, ${2:value})"
 		],
 		"description": "Changes the bool key value"
-	  },
-	  "Changes the int key value": {
+	},
+	"Changes the int key value": {
 		"prefix": "event:set_int",
 		"body": [
-		  "event:set_int(${1:key_name}, ${2:value})"
+			"event:set_int(${1:key_name}, ${2:value})"
 		],
 		"description": "Changes the int key value"
-	  },
-	  "Changes the float key value": {
+	},
+	"Changes the float key value": {
 		"prefix": "event:set_float",
 		"body": [
-		  "event:set_float(${1:key_name}, ${2:value})"
+			"event:set_float(${1:key_name}, ${2:value})"
 		],
 		"description": "Changes the float key value"
-	  },
-	  "Changes the string key value": {
+	},
+	"Changes the string key value": {
 		"prefix": "event:set_string",
 		"body": [
-		  "event:set_string(${1:key_name}, ${2:value})"
+			"event:set_string(${1:key_name}, ${2:value})"
 		],
 		"description": "Changes the string key value"
-	  },
-	  "usercmd_t send_packet": {
+	},
+	"usercmd_t send_packet": {
 		"prefix": "cmd.send_packet",
 		"body": [
-		  "cmd.send_packet"
+			"cmd.send_packet"
 		],
 		"description": "usercmd_t send_packet"
-	  },
-	  "usercmd_t command_number": {
+	},
+	"usercmd_t command_number": {
 		"prefix": "cmd.command_number",
 		"body": [
-		  "cmd.command_number"
+			"cmd.command_number"
 		],
 		"description": "usercmd_t command_number"
-	  },
-	  "usercmd_t tick_count": {
+	},
+	"usercmd_t tick_count": {
 		"prefix": "cmd.tick_count",
 		"body": [
-		  "cmd.tick_count"
+			"cmd.tick_count"
 		],
 		"description": "usercmd_t tick_count"
-	  },
-	  "usercmd_t viewangles": {
+	},
+	"usercmd_t viewangles": {
 		"prefix": "cmd.viewangles",
 		"body": [
-		  "cmd.viewangles"
+			"cmd.viewangles"
 		],
 		"description": "usercmd_t viewangles"
-	  },
-	  "usercmd_t forwardmove": {
+	},
+	"usercmd_t forwardmove": {
 		"prefix": "cmd.forwardmove",
 		"body": [
-		  "cmd.forwardmove"
+			"cmd.forwardmove"
 		],
 		"description": "usercmd_t forwardmove"
-	  },
-	  "usercmd_t sidemove": {
+	},
+	"usercmd_t sidemove": {
 		"prefix": "cmd.sidemove",
 		"body": [
-		  "cmd.sidemove"
+			"cmd.sidemove"
 		],
 		"description": "usercmd_t sidemove"
-	  },
-	  "usercmd_t upmove": {
+	},
+	"usercmd_t upmove": {
 		"prefix": "cmd.upmove",
 		"body": [
-		  "cmd.upmove"
+			"cmd.upmove"
 		],
 		"description": "usercmd_t upmove"
-	  },
-	  "usercmd_t buttons": {
+	},
+	"usercmd_t buttons": {
 		"prefix": "cmd.buttons",
 		"body": [
-		  "cmd.buttons"
+			"cmd.buttons"
 		],
 		"description": "usercmd_t buttons"
-	  },
-	  "usercmd_t random_seed": {
+	},
+	"usercmd_t random_seed": {
 		"prefix": "cmd.random_seed",
 		"body": [
-		  "cmd.random_seed"
+			"cmd.random_seed"
 		],
 		"description": "usercmd_t random_seed"
-	  },
-	  "usercmd_t mousedx": {
+	},
+	"usercmd_t mousedx": {
 		"prefix": "cmd.mousedx",
 		"body": [
-		  "cmd.mousedx"
+			"cmd.mousedx"
 		],
 		"description": "usercmd_t mousedx"
-	  },
-	  "usercmd_t mousedy": {
+	},
+	"usercmd_t mousedy": {
 		"prefix": "cmd.mousedy",
 		"body": [
-		  "cmd.mousedy"
+			"cmd.mousedy"
 		],
 		"description": "usercmd_t mousedy"
-	  },
-	  "Returns the int value": {
+	},
+	"Returns the int value": {
 		"prefix": "convar:get_int",
 		"body": [
-		  "convar:get_int()"
+			"convar:get_int()"
 		],
 		"description": "Returns the int value"
-	  },
-	  "Returns the float value": {
+	},
+	"Returns the float value": {
 		"prefix": "convar:get_float",
 		"body": [
-		  "convar:get_float()"
+			"convar:get_float()"
 		],
 		"description": "Returns the float value"
-	  },
-	  "Returns the string": {
+	},
+	"Returns the string": {
 		"prefix": "convar:get_string",
 		"body": [
-		  "convar:get_string()"
+			"convar:get_string()"
 		],
 		"description": "Returns the string"
-	  },
-	  "Setting the int value": {
+	},
+	"Setting the int value": {
 		"prefix": "convar:set_int",
 		"body": [
-		  "convar:set_int(${1:value})"
+			"convar:set_int(${1:value})"
 		],
 		"description": "Setting the int value"
-	  },
-	  "Setting the float value": {
+	},
+	"Setting the float value": {
 		"prefix": "convar:set_float",
 		"body": [
-		  "convar:set_float(${1:value})"
+			"convar:set_float(${1:value})"
 		],
 		"description": "Setting the float value"
-	  },
-	  "Setting the string": {
+	},
+	"Setting the string": {
 		"prefix": "convar:set_string",
 		"body": [
-		  "convar:set_string(${1:value})"
+			"convar:set_string(${1:value})"
 		],
 		"description": "Setting the string"
-	  },
-	  "Returns true if entity is in dormant": {
+	},
+	"Returns true if entity is in dormant": {
 		"prefix": "entity:is_dormant",
 		"body": [
-		  "entity:is_dormant()"
+			"entity:is_dormant()"
 		],
 		"description": "Returns true if entity is in dormant"
-	  },
-	  "Returns true if entity is alive": {
+	},
+	"Returns true if entity is alive": {
 		"prefix": "entity:is_alive",
 		"body": [
-		  "entity:is_alive()"
+			"entity:is_alive()"
 		],
 		"description": "Returns true if entity is alive"
-	  },
-	  "Returns the bounding box": {
+	},
+	"Returns the bounding box": {
 		"prefix": "entity:get_bbox",
 		"body": [
-		  "entity:get_bbox()"
+			"entity:get_bbox()"
 		],
 		"description": "Returns the bounding box"
-	  },
-	  "Returns the hitbox pos": {
+	},
+	"Returns the hitbox pos": {
 		"prefix": "entity:get_player_hitbox_pos",
 		"body": [
-		  "entity:get_player_hitbox_pos(${1:hitbox_num})"
+			"entity:get_player_hitbox_pos(${1:hitbox_num})"
 		],
 		"description": "Returns the hitbox pos"
-	  },
-	  "Returns the entity index": {
+	},
+	"Returns the entity index": {
 		"prefix": "entity:get_index",
 		"body": [
-		  "entity:get_index()"
+			"entity:get_index()"
 		],
 		"description": "Returns the entity index"
-	  },
-	  "Returns the entity address": {
+	},
+	"Returns the entity address": {
 		"prefix": "entity:get_address",
 		"body": [
-		  "entity:get_address()"
+			"entity:get_address()"
 		],
 		"description": "Returns the entity address"
-	  },
-	  "Returns the boolean value by offset": {
+	},
+	"Returns the boolean value by offset": {
 		"prefix": "entity:get_prop_bool",
 		"body": [
-		  "entity:get_prop_bool(${1:offset})"
+			"entity:get_prop_bool(${1:offset})"
 		],
 		"description": "Returns the boolean value by offset"
-	  },
-	  "Returns the integer value by offset": {
+	},
+	"Returns the integer value by offset": {
 		"prefix": "entity:get_prop_int",
 		"body": [
-		  "entity:get_prop_int(${1:offset})"
+			"entity:get_prop_int(${1:offset})"
 		],
 		"description": "Returns the integer value by offset"
-	  },
-	  "Returns the float value by offset": {
+	},
+	"Returns the float value by offset": {
 		"prefix": "entity:get_prop_float",
 		"body": [
-		  "entity:get_prop_float(${1:offset})"
+			"entity:get_prop_float(${1:offset})"
 		],
 		"description": "Returns the float value by offset"
-	  },
-	  "Returns the short value by offset": {
+	},
+	"Returns the short value by offset": {
 		"prefix": "entity:get_prop_short",
 		"body": [
-		  "entity:get_prop_short(${1:offset})"
+			"entity:get_prop_short(${1:offset})"
 		],
 		"description": "Returns the short value by offset"
-	  },
-	  "Returns the double value by offset": {
+	},
+	"Returns the double value by offset": {
 		"prefix": "entity:get_prop_double",
 		"body": [
-		  "entity:get_prop_double(${1:offset})"
+			"entity:get_prop_double(${1:offset})"
 		],
 		"description": "Returns the double value by offset"
-	  },
-	  "Returns the vector by offset": {
+	},
+	"Returns the vector by offset": {
 		"prefix": "entity:get_prop_vector",
 		"body": [
-		  "entity:get_prop_vector(${1:offset})"
+			"entity:get_prop_vector(${1:offset})"
 		],
 		"description": "Returns the vector by offset"
-	  },
-	  "Returns the angle by offset": {
+	},
+	"Returns the angle by offset": {
 		"prefix": "entity:get_prop_angle",
 		"body": [
-		  "entity:get_prop_angle(${1:offset})"
+			"entity:get_prop_angle(${1:offset})"
 		],
 		"description": "Returns the angle by offset"
-	  },
-	  "Setting the boolean value by offset": {
+	},
+	"Setting the boolean value by offset": {
 		"prefix": "entity:set_prop_bool",
 		"body": [
-		  "entity:set_prop_bool(${1:offset}, ${2:value})"
+			"entity:set_prop_bool(${1:offset}, ${2:value})"
 		],
 		"description": "Setting the boolean value by offset"
-	  },
-	  "Setting the integer value by offset": {
+	},
+	"Setting the integer value by offset": {
 		"prefix": "entity:set_prop_int",
 		"body": [
-		  "entity:set_prop_int(${1:offset}, ${2:value})"
+			"entity:set_prop_int(${1:offset}, ${2:value})"
 		],
 		"description": "Setting the integer value by offset"
-	  },
-	  "Setting the float value by offset": {
+	},
+	"Setting the float value by offset": {
 		"prefix": "entity:set_prop_float",
 		"body": [
-		  "entity:set_prop_float(${1:offset}, ${2:value})"
+			"entity:set_prop_float(${1:offset}, ${2:value})"
 		],
 		"description": "Setting the float value by offset"
-	  },
-	  "Setting the short value by offset": {
+	},
+	"Setting the short value by offset": {
 		"prefix": "entity:set_prop_short",
 		"body": [
-		  "entity:set_prop_short(${1:offset}, ${2:value})"
+			"entity:set_prop_short(${1:offset}, ${2:value})"
 		],
 		"description": "Setting the short value by offset"
-	  },
-	  "Setting the double value by offset": {
+	},
+	"Setting the double value by offset": {
 		"prefix": "entity:set_prop_double",
 		"body": [
-		  "entity:set_prop_double(${1:offset}, ${2:value})"
+			"entity:set_prop_double(${1:offset}, ${2:value})"
 		],
 		"description": "Setting the double value by offset"
-	  },
-	  "Setting the vector by offset": {
+	},
+	"Setting the vector by offset": {
 		"prefix": "entity:set_prop_vector",
 		"body": [
-		  "entity:set_prop_vector(${1:offset}, ${2:value})"
+			"entity:set_prop_vector(${1:offset}, ${2:value})"
 		],
 		"description": "Setting the vector by offset"
-	  },
-	  "Setting the angle by offset": {
+	},
+	"Setting the angle by offset": {
 		"prefix": "entity:set_prop_angle",
 		"body": [
-		  "entity:set_prop_angle(${1:offset}, ${2:value})"
+			"entity:set_prop_angle(${1:offset}, ${2:value})"
 		],
 		"description": "Setting the angle by offset"
-	  },
-	  "player_info_t steam_id64": {
+	},
+	"player_info_t steam_id64": {
 		"prefix": "player_info.steam_id64",
 		"body": [
-		  "player_info.steam_id64"
+			"player_info.steam_id64"
 		],
 		"description": "player_info_t steam_id64"
-	  },
-	  "player_info_t name": {
+	},
+	"player_info_t name": {
 		"prefix": "player_info.name",
 		"body": [
-		  "player_info.name"
+			"player_info.name"
 		],
 		"description": "player_info_t name"
-	  },
-	  "player_info_t user_id": {
+	},
+	"player_info_t user_id": {
 		"prefix": "player_info.user_id",
 		"body": [
-		  "player_info.user_id"
+			"player_info.user_id"
 		],
 		"description": "player_info_t user_id"
-	  },
-	  "player_info_t is_bot": {
+	},
+	"player_info_t is_bot": {
 		"prefix": "player_info.is_bot",
 		"body": [
-		  "player_info.is_bot"
+			"player_info.is_bot"
 		],
 		"description": "player_info_t is_bot"
-	  },
-	  "Is manual shot": {
+	},
+	"Is manual shot": {
 		"prefix": "shot_info.manual",
 		"body": [
-		  "shot_info.manual"
+			"shot_info.manual"
 		],
 		"description": "Is manual shot"
-	  },
-	  "Target player": {
+	},
+	"Target player": {
 		"prefix": "shot_info.target",
 		"body": [
-		  "shot_info.target"
+			"shot_info.target"
 		],
 		"description": "Target player"
-	  },
-	  "How many ticks have been backtracked": {
+	},
+	"How many ticks have been backtracked": {
 		"prefix": "shot_info.backtrack",
 		"body": [
-		  "shot_info.backtrack"
+			"shot_info.backtrack"
 		],
 		"description": "How many ticks have been backtracked"
-	  },
-	  "Shot hitchance": {
+	},
+	"Shot hitchance": {
 		"prefix": "shot_info.hitchance",
 		"body": [
-		  "shot_info.hitchance"
+			"shot_info.hitchance"
 		],
 		"description": "Shot hitchance"
-	  },
-	  "Target hitbox": {
+	},
+	"Target hitbox": {
 		"prefix": "shot_info.hitbox",
 		"body": [
-		  "shot_info.hitbox"
+			"shot_info.hitbox"
 		],
 		"description": "Target hitbox"
-	  },
-	  "Server hitgroup (on hit)": {
+	},
+	"Server hitgroup (on hit)": {
 		"prefix": "shot_info.server_hitgroup",
 		"body": [
-		  "shot_info.server_hitgroup"
+			"shot_info.server_hitgroup"
 		],
 		"description": "Server hitgroup (on hit)"
-	  },
-	  "Result of current shot (hit/spread/desync/unk)": {
+	},
+	"Result of current shot (hit/spread/desync/unk)": {
 		"prefix": "shot_info.result",
 		"body": [
-		  "shot_info.result"
+			"shot_info.result"
 		],
 		"description": "Result of current shot (hit/spread/desync/unk)"
-	  },
-	  "Expected damage": {
+	},
+	"Expected damage": {
 		"prefix": "shot_info.client_damage",
 		"body": [
-		  "shot_info.client_damage"
+			"shot_info.client_damage"
 		],
 		"description": "Expected damage"
-	  },
-	  "Actual damage (on hit)": {
+	},
+	"Actual damage (on hit)": {
 		"prefix": "shot_info.server_damage",
 		"body": [
-		  "shot_info.server_damage"
+			"shot_info.server_damage"
 		],
 		"description": "Actual damage (on hit)"
-	  },
-	  "Shot tick": {
+	},
+	"Shot tick": {
 		"prefix": "shot_info.tick",
 		"body": [
-		  "shot_info.tick"
+			"shot_info.tick"
 		],
 		"description": "Shot tick"
-	  },
-	  "Did shoot into safe point": {
+	},
+	"Did shoot into safe point": {
 		"prefix": "shot_info.safe_point",
 		"body": [
-		  "shot_info.safe_point"
+			"shot_info.safe_point"
 		],
 		"description": "Did shoot into safe point"
-	  },
-	  "Aimpoint position": {
+	},
+	"Aimpoint position": {
 		"prefix": "shot_info.aim_point",
 		"body": [
-		  "shot_info.aim_point"
+			"shot_info.aim_point"
 		],
 		"description": "Aimpoint position"
-	  },
+	},
 	"Returns the cursor position": {
 		"prefix": "renderer.get_cursor_pos",
 		"body": [
-		  "renderer.get_cursor_pos()"
+			"renderer.get_cursor_pos()"
 		],
 		"description": "Returns the cursor position"
-	  },
-	  "Creates new font": {
+	},
+	"Creates new font": {
 		"prefix": "renderer.setup_font",
 		"body": [
 			"renderer.setup_font(${1:filename}, ${2:size}, ${3:flags})"
 		],
 		"description": "Creates new font"
-	  },
-	 "Creates new texture": {
+	},
+	"Creates new texture": {
 		"prefix": "renderer.setup_texture",
 		"body": [
 			"renderer.setup_texture(${1:filename})"
 		],
 		"description": "Creates new texture"
-	  },
+	},
 	"Drawing the texture": {
-	    "prefix": "renderer.texture",
-	    "body": [
+		"prefix": "renderer.texture",
+		"body": [
 			"renderer.texture(${1:tex}, ${2:from}, ${3:to}, ${4:color})"
-			],
-			"description": "Drawing the texture"
-	  },
-	  "Drawing the text": {
-	    "prefix": "renderer.text",
-	    "body": [
+		],
+		"description": "Drawing the texture"
+	},
+	"Drawing the text": {
+		"prefix": "renderer.text",
+		"body": [
 			"renderer.text(${1:text}, ${2:font}, ${3:pos}, ${4:size}, ${5:color})"
-			],
-			"description": "Drawing the text"
-	  },
+		],
+		"description": "Drawing the text"
+	},
 	"Returns the text size": {
 		"prefix": "renderer.get_text_size",
 		"body": [
@@ -1069,5 +950,117 @@
 			"ragebot.override_body_scale(${1:index}, ${2:scale})"
 		],
 		"description": "Overrides body point scale on player"
+	},
+	"Creates checkbox in menu": {
+		"prefix": "ui.add_check_box",
+		"body": [
+			"ui.add_check_box(${1:label}, ${2:var_name}, ${3:def_value})"
+		],
+		"description": "Creates checkbox in menu"
+	},
+	"Returns checkbox object from menu": {
+		"prefix": "ui.get_check_box",
+		"body": [
+			"ui.get_check_box(${1:var_name})"
+		],
+		"description": "Returns checkbox object from menu"
+	},
+	"Creates int slider in menu": {
+		"prefix": "ui.add_slider_int",
+		"body": [
+			"ui.add_slider_int(${1:label}, ${2:var_name}, ${3:min}, ${4:max}, ${5:def_value})"
+		],
+		"description": "Creates int slider in menu"
+	},
+	"Returns slider int object from menu": {
+		"prefix": "ui.get_slider_int",
+		"body": [
+			"ui.get_slider_int(${1:var_name})"
+		],
+		"description": "Returns slider int object from menu"
+	},
+	"Creates combo box in menu": {
+		"prefix": "ui.add_combo_box",
+		"body": [
+			"ui.add_combo_box(${1:label}, ${2:var_name}, ${3:items}, ${4:def_value})"
+		],
+		"description": "Creates combo box in menu"
+	},
+	"Returns combo box object from menu": {
+		"prefix": "ui.get_combo_box",
+		"body": [
+			"ui.get_combo_box(${1:var_name})"
+		],
+		"description": "Returns combo box object from menu"
+	},
+	"Creates combo box in menu": {
+		"prefix": "ui.add_multi_combo_box",
+		"body": [
+			"ui.add_multi_combo_box(${1:label}, ${2:var_name}, ${3:items}, ${4:def_values})"
+		],
+		"description": "Creates combo box in menu"
+	},
+	"Returns multi combo box object from menu": {
+		"prefix": "ui.get_multi_combo_box",
+		"body": [
+			"ui.get_multi_combo_box(${1:var_name})"
+		],
+		"description": "Returns multi combo box object from menu"
+	},
+	"Creates float slider in menu": {
+		"prefix": "ui.add_slider_float",
+		"body": [
+			"ui.add_slider_float(${1:label}, ${2:var_name}, ${3:min}, ${4:max}, ${5:def_value})"
+		],
+		"description": "Creates float slider in menu"
+	},
+	"Returns slider float object from menu": {
+		"prefix": "ui.get_slider_float",
+		"body": [
+			"ui.get_slider_float(${1:var_name})"
+		],
+		"description": "Returns slider float object from menu"
+	},
+	"Creates key bind in menu": {
+		"prefix": "ui.add_key_bind",
+		"body": [
+			"ui.add_key_bind(${1:label}, ${2:var_name}, ${3:def_key}, ${4:def_mode})"
+		],
+		"description": "Creates key bind in menu"
+	},
+	"Returns keybind object from menu": {
+		"prefix": "ui.get_key_bind",
+		"body": [
+			"ui.get_key_bind(${1:var_name})"
+		],
+		"description": "Returns keybind object from menu"
+	},
+	"Creates color edit in menu": {
+		"prefix": "ui.add_color_edit",
+		"body": [
+			"ui.add_color_edit(${1:label}, ${2:var_name}, ${3:show_alpha}, ${4:def_color})"
+		],
+		"description": "Creates color edit in menu"
+	},
+	"Returns color edit object from menu": {
+		"prefix": "ui.get_color_edit",
+		"body": [
+			"ui.get_color_edit(${1:var_name})"
+		],
+		"description": "Returns color edit object from menu"
+	},
+	"Returns true if menu opened": {
+		"prefix": "ui.is_visible",
+		"body": [
+			"ui.is_visible()"
+		],
+		"description": "Returns true if menu opened"
+	},
+	"Setting menu visibility": {
+		"prefix": "ui.set_visible",
+		"body": [
+			"ui.set_visible(${1:value})"
+		],
+		"description": "Setting menu visibility"
 	}
 }

@@ -1,4 +1,4 @@
-# shot_info_t - csgo
+# shot_info_t
 
 Type | Name | Description
 ------------ | ------------- | -------------

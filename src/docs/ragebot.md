@@ -1,4 +1,4 @@
-# ragebot table - csgo
+# ragebot table
 
 !!! info
     All functions from this table should be called from "create_move" callback.

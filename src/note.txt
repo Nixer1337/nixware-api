@@ -1,0 +1,109 @@
+"Disable ragebot on this player": {
+  "prefix": "ragebot.ignore_player",
+  "body": [
+    "ragebot.ignore_player(${1:index})"
+  ],
+  "description": "Disable ragebot on this player"
+},
+"Overrides wall penetration on player": {
+  "prefix": "ragebot.override_wall_penetration",
+  "body": [
+    "ragebot.override_wall_penetration(${1:index}, ${2:penetrate})"
+  ],
+  "description": "Overrides wall penetration on player"
+},
+"Overrides desync correction on player": {
+  "prefix": "ragebot.override_desync_correction",
+  "body": [
+    "ragebot.override_desync_correction(${1:index}, ${2:correct})"
+  ],
+  "description": "Overrides desync correction on player"
+},
+"Overrides hitscan on player": {
+  "prefix": "ragebot.override_hitscan",
+  "body": [
+    "ragebot.override_hitscan(${1:index}, ${2:hitbox}, ${3:scan})"
+  ],
+  "description": "Overrides hitscan on player"
+},
+"Overrides min damage on player": {
+  "prefix": "ragebot.override_min_damage",
+  "body": [
+    "ragebot.override_min_damage(${1:index}, ${2:damage})"
+  ],
+  "description": "Overrides min damage on player"
+},
+"Overrides safepoint mode on player": {
+  "prefix": "ragebot.override_safe_point",
+  "body": [
+    "ragebot.override_safe_point(${1:index}, ${2:mode})"
+  ],
+  "description": "Overrides safepoint mode on player"
+},
+"Overrides max misses on player": {
+  "prefix": "ragebot.override_max_misses",
+  "body": [
+    "ragebot.override_max_misses(${1:index}, ${2:misses})"
+  ],
+  "description": "Overrides max misses on player"
+},
+"Overrides head point scale on player": {
+  "prefix": "ragebot.override_head_scale",
+  "body": [
+    "ragebot.override_head_scale(${1:index}, ${2:scale})"
+  ],
+  "description": "Overrides head point scale on player"
+},
+"Overrides body point scale on player": {
+  "prefix": "ragebot.override_body_scale",
+  "body": [
+    "ragebot.override_body_scale(${1:index}, ${2:scale})"
+  ],
+  "description": "Overrides body point scale on player"
+},
+r_float(${1:var_name})"
+  ],
+  "description": "Returns slider float object from menu"
+},
+"Creates key bind in menu": {
+  "prefix": "ui.add_key_bind",
+  "body": [
+    "ui.add_key_bind(${1:label}, ${2:var_name}, ${3:def_key}, ${4:def_mode})"
+  ],
+  "description": "Creates key bind in menu"
+},
+"Returns keybind object from menu": {
+  "prefix": "ui.get_key_bind",
+  "body": [
+    "ui.get_key_bind(${1:var_name})"
+  ],
+  "description": "Returns keybind object from menu"
+},
+"Creates color edit in menu": {
+  "prefix": "ui.add_color_edit",
+  "body": [
+    "ui.add_color_edit(${1:label}, ${2:var_name}, ${3:show_alpha}, ${4:def_color})"
+  ],
+  "description": "Creates color edit in menu"
+},
+"Returns color edit object from menu": {
+  "prefix": "ui.get_color_edit",
+  "body": [
+    "ui.get_color_edit(${1:var_name})"
+  ],
+  "description": "Returns color edit object from menu"
+},
+"Returns true if menu opened": {
+  "prefix": "ui.is_visible",
+  "body": [
+    "ui.is_visible()"
+  ],
+  "description": "Returns true if menu opened"
+},
+"Setting menu visibility": {
+  "prefix": "ui.set_visible",
+  "body": [
+    "ui.set_visible(${1:value})"
+  ],
+  "description": "Setting menu visibility"
+},
