@@ -945,6 +945,8 @@ slider_float | skins_viewmodel_z
 slider_float | skins_viewmodel_roll
 slider_float | skins_override_fov
 slider_float | skins_aspect_ratio
+combo_box | skins_agent_ct
+combo_box | skins_agent_t
 
 ## Miscellaneous
 Type | Key
