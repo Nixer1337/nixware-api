@@ -857,8 +857,8 @@
 <h2 id="get_key-number"><strong>get_key()</strong>: number</h2>
 <p>Returns the key code from keybind</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">ragebot_enable_bind</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_key_bind</span><span class="p">(</span><span class="s2">&quot;ragebot_enable_bind&quot;</span><span class="p">)</span>
-<span class="kd">local</span> <span class="n">ragebot_enable_bind_key</span> <span class="o">=</span> <span class="n">ragebot_enable_bind</span><span class="p">:</span><span class="n">get_key</span><span class="p">()</span>
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">rage_enable_bind</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_key_bind</span><span class="p">(</span><span class="s2">&quot;rage_enable_bind&quot;</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">rage_enable_bind_key</span> <span class="o">=</span> <span class="n">rage_enable_bind</span><span class="p">:</span><span class="n">get_key</span><span class="p">()</span>
 </code></pre></div>
 </td></tr></table>
 
@@ -866,8 +866,8 @@
 <h2 id="get_type-number"><strong>get_type()</strong>: number</h2>
 <p>Returns keybind type</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">ragebot_enable_bind</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_key_bind</span><span class="p">(</span><span class="s2">&quot;ragebot_enable_bind&quot;</span><span class="p">)</span>
-<span class="kd">local</span> <span class="n">ragebot_enable_bind_type</span> <span class="o">=</span> <span class="n">ragebot_enable_bind</span><span class="p">:</span><span class="n">get_type</span><span class="p">()</span>
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">rage_enable_bind</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_key_bind</span><span class="p">(</span><span class="s2">&quot;rage_enable_bind&quot;</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">rage_enable_bind_type</span> <span class="o">=</span> <span class="n">rage_enable_bind</span><span class="p">:</span><span class="n">get_type</span><span class="p">()</span>
 </code></pre></div>
 </td></tr></table>
 
@@ -893,8 +893,8 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1">-- https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes</span>
-<span class="kd">local</span> <span class="n">ragebot_enable_bind</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_key_bind</span><span class="p">(</span><span class="s2">&quot;ragebot_enable_bind&quot;</span><span class="p">)</span>
-<span class="n">ragebot_enable_bind</span><span class="p">:</span><span class="n">set_key</span><span class="p">(</span><span class="mh">0x01</span><span class="p">)</span> <span class="c1">-- Left mouse button</span>
+<span class="kd">local</span> <span class="n">rage_enable_bind</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_key_bind</span><span class="p">(</span><span class="s2">&quot;rage_enable_bind&quot;</span><span class="p">)</span>
+<span class="n">rage_enable_bind</span><span class="p">:</span><span class="n">set_key</span><span class="p">(</span><span class="mh">0x01</span><span class="p">)</span> <span class="c1">-- Left mouse button</span>
 </code></pre></div>
 </td></tr></table>
 
@@ -918,8 +918,8 @@
 </table>
 <p>Setting the type for keybind</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">ragebot_enable_bind</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_key_bind</span><span class="p">(</span><span class="s2">&quot;ragebot_enable_bind&quot;</span><span class="p">)</span>
-<span class="n">ragebot_enable_bind</span><span class="p">:</span><span class="n">set_type</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1">-- always on</span>
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">rage_enable_bind</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_key_bind</span><span class="p">(</span><span class="s2">&quot;rage_enable_bind&quot;</span><span class="p">)</span>
+<span class="n">rage_enable_bind</span><span class="p">:</span><span class="n">set_type</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1">-- always on</span>
 </code></pre></div>
 </td></tr></table>
 
@@ -927,8 +927,8 @@
 <h2 id="is_active-bool"><strong>is_active()</strong>: bool</h2>
 <p>Returns keybind state</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">ragebot_enable_bind</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_key_bind</span><span class="p">(</span><span class="s2">&quot;ragebot_enable_bind&quot;</span><span class="p">)</span>
-<span class="kd">local</span> <span class="n">bind_active</span> <span class="o">=</span> <span class="n">ragebot_enable_bind</span><span class="p">:</span><span class="n">is_active</span><span class="p">()</span>
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">rage_enable_bind</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_key_bind</span><span class="p">(</span><span class="s2">&quot;rage_enable_bind&quot;</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">bind_active</span> <span class="o">=</span> <span class="n">rage_enable_bind</span><span class="p">:</span><span class="n">is_active</span><span class="p">()</span>
 </code></pre></div>
 </td></tr></table>
                 

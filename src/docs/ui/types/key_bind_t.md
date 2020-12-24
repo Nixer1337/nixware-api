@@ -6,8 +6,8 @@
 
 Returns the key code from keybind
 ```lua
-local ragebot_enable_bind = ui.get_key_bind("ragebot_enable_bind")
-local ragebot_enable_bind_key = ragebot_enable_bind:get_key()
+local rage_enable_bind = ui.get_key_bind("rage_enable_bind")
+local rage_enable_bind_key = rage_enable_bind:get_key()
 ```
 ---
 
@@ -15,8 +15,8 @@ local ragebot_enable_bind_key = ragebot_enable_bind:get_key()
 
 Returns keybind type
 ```lua
-local ragebot_enable_bind = ui.get_key_bind("ragebot_enable_bind")
-local ragebot_enable_bind_type = ragebot_enable_bind:get_type()
+local rage_enable_bind = ui.get_key_bind("rage_enable_bind")
+local rage_enable_bind_type = rage_enable_bind:get_type()
 ```
 ---
 
@@ -28,8 +28,8 @@ number | key | Key code
 Setting the key for keybind
 ```lua
 -- https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
-local ragebot_enable_bind = ui.get_key_bind("ragebot_enable_bind")
-ragebot_enable_bind:set_key(0x01) -- Left mouse button
+local rage_enable_bind = ui.get_key_bind("rage_enable_bind")
+rage_enable_bind:set_key(0x01) -- Left mouse button
 ```
 ---
 
@@ -40,8 +40,8 @@ number | type | Bind type
 
 Setting the type for keybind
 ```lua
-local ragebot_enable_bind = ui.get_key_bind("ragebot_enable_bind")
-ragebot_enable_bind:set_type(0) -- always on
+local rage_enable_bind = ui.get_key_bind("rage_enable_bind")
+rage_enable_bind:set_type(0) -- always on
 ```
 ---
 
@@ -49,6 +49,6 @@ ragebot_enable_bind:set_type(0) -- always on
 
 Returns keybind state
 ```lua
-local ragebot_enable_bind = ui.get_key_bind("ragebot_enable_bind")
-local bind_active = ragebot_enable_bind:is_active()
+local rage_enable_bind = ui.get_key_bind("rage_enable_bind")
+local bind_active = rage_enable_bind:is_active()
 ```
