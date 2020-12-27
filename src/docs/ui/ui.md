@@ -90,7 +90,7 @@ Type | Name | Description
 string | label | Multicombobox label
 string | var_name | Variable key
 string array | items | Items
-number | def_value | Default values
+bool array | def_values | Default values
 
 Creates combo box in menu
 ```lua
@@ -186,7 +186,7 @@ Type | Name | Description
 string | label | Coloredit label
 string | var_name | Variable key
 bool | show_alpha | Enables the alpha modifer
-color | def_color | Default color
+[color_t](../../types/color_t) | def_color | Default color
 
 Creates color edit in menu
 ```lua
