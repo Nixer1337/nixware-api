@@ -12,7 +12,7 @@ Returns two screen coordinates [vec2_t](../../types/vec2_t/), or nil if the worl
 ```lua
 local pos2d = se.world_to_screen(pos)
 if pos2d ~= nil then
-    renderer.text("pos: " pos2d.x .. ", " .. pos2d.y, font, pos2d, 0, color_t.new(255, 255, 255, 255))
+    renderer.text("pos: " .. pos2d.x .. ", " .. pos2d.y, font, pos2d, 0, color_t.new(255, 255, 255, 255))
 end
 ```
 ---
