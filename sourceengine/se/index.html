@@ -911,8 +911,14 @@
 </tr>
 </tbody>
 </table>
-<p>Calculates on screen position from world pos</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">pos2d</span> <span class="o">=</span> <span class="n">se</span><span class="p">.</span><span class="n">world_to_screen</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+<p>Returns two screen coordinates <a href="../../types/vec2_t/">vec2_t</a>, or nil if the world position is not visible on your screen.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">pos2d</span> <span class="o">=</span> <span class="n">se</span><span class="p">.</span><span class="n">world_to_screen</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+<span class="kr">if</span> <span class="n">pos2d</span> <span class="o">~=</span> <span class="kc">nil</span> <span class="kr">then</span>
+    <span class="n">renderer</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;pos: &quot;</span> <span class="n">pos2d</span><span class="p">.</span><span class="n">x</span> <span class="o">..</span> <span class="s2">&quot;, &quot;</span> <span class="o">..</span> <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span><span class="p">,</span> <span class="n">font</span><span class="p">,</span> <span class="n">pos2d</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+<span class="kr">end</span>
 </code></pre></div>
 </td></tr></table>
 

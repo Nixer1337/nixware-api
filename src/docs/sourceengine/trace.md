@@ -51,7 +51,9 @@ function on_paint()
     trace_end.z = trace_start.z + trace_end.z * 8192.0
 
     local trace_out = trace.line(engine.get_local_player(), 0x46004003, trace_start, trace_end)
+    
     local pos2d = se.world_to_screen(trace_out.endpos)
+    if pos2d == nil then return end
 
     renderer.text("normal_x:" .. trace_out.normal.x, verdana, pos2d, 0, color_t.new(255, 255, 255, 255))
     pos2d.y = pos2d.y + 15
