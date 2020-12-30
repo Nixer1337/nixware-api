@@ -22,9 +22,12 @@ local is_alive = entity:is_alive()
 
 ## **get_bbox()**: [rect_t](../../../types/rect_t/)
 
-Returns the bounding box
+Returns the bounding box, or nil if the world position is not visible on your screen.
 ```lua
 local bbox = entity:get_bbox()
+if bbox ~= nil then
+    renderer.rect(vec2_t.new(bbox.left, bbox.top), vec2_t.new(bbox.right, bbox.bottom), color_t.new(255, 255, 255, 255))
+end
 ```
 
 ---

@@ -1079,8 +1079,14 @@
 
 <hr />
 <h2 id="get_bbox-rect_t"><strong>get_bbox()</strong>: <a href="../../../types/rect_t/">rect_t</a></h2>
-<p>Returns the bounding box</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">bbox</span> <span class="o">=</span> <span class="n">entity</span><span class="p">:</span><span class="n">get_bbox</span><span class="p">()</span>
+<p>Returns the bounding box, or nil if the world position is not visible on your screen.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">bbox</span> <span class="o">=</span> <span class="n">entity</span><span class="p">:</span><span class="n">get_bbox</span><span class="p">()</span>
+<span class="kr">if</span> <span class="n">bbox</span> <span class="o">~=</span> <span class="kc">nil</span> <span class="kr">then</span>
+    <span class="n">renderer</span><span class="p">.</span><span class="n">rect</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="n">bbox</span><span class="p">.</span><span class="n">left</span><span class="p">,</span> <span class="n">bbox</span><span class="p">.</span><span class="n">top</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="n">bbox</span><span class="p">.</span><span class="n">right</span><span class="p">,</span> <span class="n">bbox</span><span class="p">.</span><span class="n">bottom</span><span class="p">),</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+<span class="kr">end</span>
 </code></pre></div>
 </td></tr></table>
 
