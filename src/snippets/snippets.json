@@ -13,6 +13,13 @@
 		],
 		"description": "Unload the script"
 	},
+	"Returns current script name": {
+		"prefix": "client.get_script_name",
+		"body": [
+			"client.get_script_name()"
+		],
+		"description": "Returns current script name"
+	},
 	"Register the callback": {
 		"prefix": "client.register_callback",
 		"body": [

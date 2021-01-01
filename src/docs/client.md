@@ -28,6 +28,15 @@ client.unload_script("example.lua")
 
 ---
 
+## **get_script_name()**
+
+Returns current script name
+```lua
+local current_script_name = client.get_script_name()
+```
+
+---
+
 ## **register_callback(eventname, fn)**
 Type | Name | Description
 ------------ | ------------- | ------------
