@@ -28,7 +28,7 @@ client.unload_script("example.lua")
 
 ---
 
-## **get_script_name()**
+## **get_script_name()**: string
 
 Returns current script name
 ```lua
