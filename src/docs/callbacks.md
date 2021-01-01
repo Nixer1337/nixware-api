@@ -38,7 +38,7 @@ CreateMove callback. Can used for command or send packet modification
 ```lua
 local MAX_CHOKE = 14
 
-local function on_create_move(cmd) 
+client.register_callback("create_move", function(cmd) 
     -- pitch down
     cmd.viewangles.pitch = 90
 
@@ -47,9 +47,7 @@ local function on_create_move(cmd)
 
     -- fakelag
     cmd.send_packet = clientstate.get_choked_commands() >= MAX_CHOKE
-end
-
-client.register_callback("create_move", on_create_move)
+end)
 ```
 ---
 
@@ -62,13 +60,11 @@ FrameStageNotify callback. Calls every game stage [developer.valvesoftware.com/w
 ```lua
 local FRAME_RENDER_START = 5
 
-local function on_frame_stage_notify(stage) 
+client.register_callback("frame_stage_notify", function(stage) 
     if stage ~= FRAME_RENDER_START then return end
 
     -- run code on frame render start
-end
-
-client.register_callback("frame_stage_notify", on_frame_stage_notify)
+end)
 ```
 ---
 
@@ -81,27 +77,45 @@ FireGameEvent callback. Calls on event
 ```lua
 se.register_event("round_start")
 
-local function on_fire_game_event(event) 
+client.register_callback("fire_game_event", function(event) 
     if event:get_name() ~= "round_start" then return end
 
     client.notify("Round started!")
-end
-
-client.register_callback("fire_game_event", on_fire_game_event)
+end)
 ```
 
 ---
 
-## **shot_fired(info)**
+## **shot_fired(shot_info)**
 Type | Name | Description
 ------------ | ------------- | ------------
-[shot_info_t](../sourceengine/types/shot_info_t/) | info | Shot info
+[shot_info_t](../sourceengine/types/shot_info_t/) | shot_info | Shot info
 
 ShotFired callback. Calls on shot
 ```lua
-local function on_shot_fired(info) 
-    client.notify("test")
-end
-
-client.register_callback("shot_fired", on_shot_fired)
+client.register_callback("shot_fired", function(shot_info) 
+    if shot_info.result ~= "hit" and not shot_info.manual then
+        client.notify("missed shot due to " .. shot_info.result)
+    end
+end)
 ```
+
+---
+
+## **override_view(view_setup)**
+Type | Name | Description
+------------ | ------------- | ------------
+[view_setup_t](../sourceengine/types/view_setup_t/) | view_setup | Viewsetup object
+
+OverrideView callback. Lets you override the camera position and angles
+```lua
+client.register_callback("override_view", function(view_setup)
+    view_setup.fov = 110 -- forcing view fov
+end)
+```
+
+---
+
+## **net_update_end()**
+
+Fired after an entity update packet is received from the server. ( FRAME_NET_UPDATE_END )

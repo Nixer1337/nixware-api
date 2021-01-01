@@ -258,12 +258,12 @@
 		],
 		"description": "Returns the interval per tick"
 	},
-	"Calculates on screen position from world position": {
+	"Returns two screen coordinates vec2_t, or nil if the world position is not visible on your screen.": {
 		"prefix": "se.world_to_screen",
 		"body": [
 			"se.world_to_screen(${1:pos})"
 		],
-		"description": "Calculates on screen position from world position"
+		"description": "Returns two screen coordinates vec2_t, or nil if the world position is not visible on your screen."
 	},
 	"Setting the clantag": {
 		"prefix": "se.set_clantag",
@@ -433,6 +433,34 @@
 		],
 		"description": "Changes the string key value"
 	},
+	"view_setup_t Camera position": {
+		"prefix": "view_setup.camera_pos",
+		"body": [
+			"view_setup.camera_pos"
+		],
+		"description": "Camera position"
+	},
+	"view_setup_t Pitch view angle": {
+		"prefix": "view_setup.pitch",
+		"body": [
+			"view_setup.pitch"
+		],
+		"description": "Pitch view angle"
+	},
+	"view_setup_t Yaw view angle": {
+		"prefix": "view_setup.yaw",
+		"body": [
+			"view_setup.yaw"
+		],
+		"description": "Yaw view angle"
+	},
+	"view_setup_t Field of view": {
+		"prefix": "view_setup.fov",
+		"body": [
+			"view_setup.fov"
+		],
+		"description": "Field of view"
+	},
 	"usercmd_t send_packet": {
 		"prefix": "cmd.send_packet",
 		"body": [
@@ -566,12 +594,12 @@
 		],
 		"description": "Returns true if entity is alive"
 	},
-	"Returns the bounding box": {
+	"Returns the bounding box, or nil if the world position is not visible on your screen.": {
 		"prefix": "entity:get_bbox",
 		"body": [
 			"entity:get_bbox()"
 		],
-		"description": "Returns the bounding box"
+		"description": "Returns the bounding box, or nil if the world position is not visible on your screen."
 	},
 	"Returns the hitbox pos": {
 		"prefix": "entity:get_player_hitbox_pos",

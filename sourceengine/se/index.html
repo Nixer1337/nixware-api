@@ -596,6 +596,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/view_setup_t/" title="view_setup_t" class="md-nav__link">
+      view_setup_t
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -986,8 +998,8 @@
 </tr>
 </tbody>
 </table>
-<p>Returns <a href="../types/convar_t/">convar_t</a> object</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">se</span><span class="p">.</span><span class="n">get_convar</span><span class="p">(</span><span class="s2">&quot;r_jigglebones&quot;</span><span class="p">)</span>
+<p>Finds convar by name. Returns nil if failed</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">sv_skyname</span> <span class="o">=</span> <span class="n">se</span><span class="p">.</span><span class="n">get_convar</span><span class="p">(</span><span class="s2">&quot;sv_skyname&quot;</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 
@@ -1014,7 +1026,7 @@
 </tr>
 </tbody>
 </table>
-<p>Returns the netvar offset</p>
+<p>Returns the netvar offset, or nil if failed</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">se</span><span class="p">.</span><span class="n">get_netvar</span><span class="p">(</span><span class="s2">&quot;DT_BasePlayer&quot;</span><span class="p">,</span> <span class="s2">&quot;m_iHealth&quot;</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
@@ -1026,7 +1038,6 @@
 </code></pre></div>
 </td></tr></table>
 
-<hr />
 <hr />
 <h2 id="register_eventeventname"><strong>register_event(eventname)</strong></h2>
 <table>
@@ -1050,6 +1061,7 @@
 </code></pre></div>
 </td></tr></table>
 
+<hr />
 <h2 id="create_interfacemodule_name-interface_version-number"><strong>create_interface(module_name, interface_version)</strong>: number</h2>
 <table>
 <thead>
@@ -1094,7 +1106,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../types/shot_info_t/" title="shot_info_t" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../types/view_setup_t/" title="view_setup_t" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1103,7 +1115,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                shot_info_t
+                view_setup_t
               </div>
             </div>
           </a>

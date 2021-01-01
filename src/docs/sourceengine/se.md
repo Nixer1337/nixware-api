@@ -47,9 +47,9 @@ Type | Name | Description
 ------------ | ------------- | ------------
 string | name | Console variable name
 
-Returns [convar_t](../types/convar_t/) object
+Finds convar by name. Returns nil if failed
 ```lua
-se.get_convar("r_jigglebones")
+local sv_skyname = se.get_convar("sv_skyname")
 ```
 ---
 
@@ -59,7 +59,7 @@ Type | Name | Description
 string | table | Table name
 string | netvar | Netvar name
 
-Returns the netvar offset
+Returns the netvar offset, or nil if failed
 ```lua
 se.get_netvar("DT_BasePlayer", "m_iHealth")
 ```
@@ -73,8 +73,6 @@ local ping = se.get_latency()
 ```
 ---
 
----
-
 ## **register_event(eventname)**
 Type | Name | Description
 ------------ | ------------- | ------------
@@ -84,6 +82,8 @@ Register the event for [fire_game_event](../../callbacks/#fire_game_eventevent-c
 ```lua
 se.register_event("player_death")
 ```
+
+---
 
 ## **create_interface(module_name, interface_version)**: number
 Type | Name | Description
