@@ -28,3 +28,17 @@ Returns the length of vector
 local vector = vec3_t.new(100, 100, 100)
 local vector_length = vector:length()
 ```
+---
+
+## **dist_to(other)**: number
+Type | Name
+------------ | -------------
+vec3_t | other
+
+Returns the distance between 2 vectors
+```lua
+local vector = vec3_t.new(-100, -100, -100)
+local vector2 = vec3_t.new(100, 100, 100)
+
+local distance = vector:dist_to(vector2)
+```

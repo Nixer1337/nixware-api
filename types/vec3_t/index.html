@@ -470,6 +470,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#dist_toother-number" class="md-nav__link">
+    dist_to(other): number
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -804,6 +811,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#dist_toother-number" class="md-nav__link">
+    dist_to(other): number
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -878,6 +892,33 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">vector</span> <span class="o">=</span> <span class="n">vec3_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 <span class="kd">local</span> <span class="n">vector_length</span> <span class="o">=</span> <span class="n">vector</span><span class="p">:</span><span class="n">length</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="dist_toother-number"><strong>dist_to(other)</strong>: number</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vec3_t</td>
+<td>other</td>
+</tr>
+</tbody>
+</table>
+<p>Returns the distance between 2 vectors</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">vector</span> <span class="o">=</span> <span class="n">vec3_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">vector2</span> <span class="o">=</span> <span class="n">vec3_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="kd">local</span> <span class="n">distance</span> <span class="o">=</span> <span class="n">vector</span><span class="p">:</span><span class="n">dist_to</span><span class="p">(</span><span class="n">vector2</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
                 

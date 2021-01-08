@@ -356,6 +356,13 @@
 		],
 		"description": "Returns the length of vec3_t"
 	},
+	"Returns the distance between 2 vectors": {
+		"prefix": "vec3:dist_to",
+		"body": [
+			"vec3:dist_to(${1:other})"
+		],
+		"description": "Returns the distance between 2 vectors"
+	},
 	"angle_t constructor": {
 		"prefix": "angle_t.new",
 		"body": [
