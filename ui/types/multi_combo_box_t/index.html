@@ -329,6 +329,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#set_visibleval" class="md-nav__link">
+    set_visible(val)
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -806,6 +813,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#set_visibleval" class="md-nav__link">
+    set_visible(val)
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -871,10 +885,35 @@
 </tr>
 </tbody>
 </table>
-<p>Setting combobox multi combo box value</p>
+<p>Setting multi combo box value</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">visuals_other_removals</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_multi_combo_box</span><span class="p">(</span><span class="s2">&quot;visuals_other_removals&quot;</span><span class="p">)</span>
 <span class="n">ragebot_active_exploit</span><span class="p">:</span><span class="n">set_value</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="set_visibleval"><strong>set_visible(val)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bool</td>
+<td>val</td>
+<td>Visiblity</td>
+</tr>
+</tbody>
+</table>
+<p>Setting multi combo box visiblity, works only for script variables</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">my_multi_combo</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">add_multi_combo_box</span><span class="p">(</span><span class="s2">&quot;multi combo&quot;</span><span class="p">,</span> <span class="s2">&quot;lua_multi_combo&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;item1&quot;</span><span class="p">,</span> <span class="s2">&quot;item2&quot;</span><span class="p">,</span> <span class="s2">&quot;item3&quot;</span> <span class="p">},</span> <span class="p">{</span> <span class="kc">false</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="kc">false</span> <span class="p">})</span>
+<span class="n">my_multi_combo</span><span class="p">:</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
                 

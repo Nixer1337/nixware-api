@@ -52,3 +52,15 @@ Returns keybind state
 local rage_enable_bind = ui.get_key_bind("rage_enable_bind")
 local bind_active = rage_enable_bind:is_active()
 ```
+---
+
+## **set_visible(val)**
+Type | Name | Description
+------------ | ------------- | ------------
+bool | val | Visiblity
+
+Setting keybind visiblity, works only for script variables
+```lua
+local my_keybind = ui.add_key_bind("lua key bind", "lua_keybind", 0, 0)
+my_keybind:set_visible(false)
+```

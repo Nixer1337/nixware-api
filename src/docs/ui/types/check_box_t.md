@@ -21,3 +21,16 @@ Setting checkbox value
 local legit_enable = ui.get_check_box("legit_enable")
 legit_enable:set_value(false)
 ```
+
+---
+
+## **set_visible(val)**
+Type | Name | Description
+------------ | ------------- | ------------
+bool | val | Visiblity
+
+Setting checkbox visiblity, works only for script variables
+```lua
+local test_var = ui.add_check_box("test", "test_var", false)
+test_var:set_visible(false)
+```

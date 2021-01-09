@@ -21,3 +21,15 @@ Setting slider float value
 local skins_aspect_ratio = ui.get_slider_float("skins_aspect_ratio")
 skins_aspect_ratio:set_value(1.333)
 ```
+---
+
+## **set_visible(val)**
+Type | Name | Description
+------------ | ------------- | ------------
+bool | val | Visiblity
+
+Setting slider float visiblity, works only for script variables
+```lua
+local slider = ui.add_slider_float("lua float slider", "lua_float", 0.0, 1.0, 0.3)
+slider:set_visible(false)
+```

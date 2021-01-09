@@ -1126,6 +1126,13 @@
 		],
 		"description": "Setting checkbox value"
 	},
+	"Setting checkbox visiblity, works only for script variables": {
+		"prefix": "checkbox:set_visible",
+		"body": [
+			"checkbox:set_visible(${1:val})"
+		],
+		"description": "Setting checkbox visiblity, works only for script variables"
+	},
 	"Returns value from color edit": {
 		"prefix": "color_edit:get_value()",
 		"body": [
@@ -1139,6 +1146,13 @@
 			"color_edit:set_value(${1:val})"
 		],
 		"description": "Setting color edit value"
+	},
+	"Setting color edit visiblity, works only for script variables": {
+		"prefix": "color_edit:set_visible",
+		"body": [
+			"color_edit:set_visible(${1:val})"
+		],
+		"description": "Setting color edit visiblity, works only for script variables"
 	},
 	"Returns value from combo box": {
 		"prefix": "combo_box:get_value()",
@@ -1154,6 +1168,13 @@
 		],
 		"description": "Setting combo box value"
 	},
+	"Setting combobox visiblity, works only for script variables": {
+		"prefix": "combo_box:set_visible",
+		"body": [
+			"combo_box:set_visible(${1:val})"
+		],
+		"description": "Setting combobox visiblity, works only for script variables"
+	},
 	"Returns value from multi combo box": {
 		"prefix": "multi_combo_box:get_value()",
 		"body": [
@@ -1167,6 +1188,13 @@
 			"multi_combo_box:set_value(${1:val})"
 		],
 		"description": "Setting multi combo box value"
+	},
+	"Setting multi combo box visiblity, works only for script variables": {
+		"prefix": "multi_combo_box:set_visible",
+		"body": [
+			"multi_combo_box:set_visible(${1:val})"
+		],
+		"description": "Setting multi combo box visiblity, works only for script variables"
 	},
 	"Returns the key code from keybind": {
 		"prefix": "key_bind:get_key",
@@ -1202,7 +1230,14 @@
 			"key_bind:is_active()"
 		],
 		"description": "Returns keybind state"
-    },
+	},
+	"Setting keybind visiblity, works only for script variables": {
+		"prefix": "key_bind:set_visible",
+		"body": [
+			"key_bind:set_visible(${1:val})"
+		],
+		"description": "Setting keybind visiblity, works only for script variables"
+	},
     "Returns value from slider float": {
 		"prefix": "slider_float:get_value()",
 		"body": [
@@ -1216,7 +1251,14 @@
 			"slider_float:set_value(${1:val})"
 		],
 		"description": "Setting slider float value"
-    },
+	},
+	"Setting slider float visiblity, works only for script variables": {
+		"prefix": "slider_float:set_visible",
+		"body": [
+			"slider_float:set_visible(${1:val})"
+		],
+		"description": "Setting slider float visiblity, works only for script variables"
+	},
     "Returns value from slider int": {
 		"prefix": "slider_int:get_value()",
 		"body": [
@@ -1230,7 +1272,14 @@
 			"slider_int:set_value(${1:val})"
 		],
 		"description": "Setting slider int value"
-    },
+	},
+	"Setting slider int visiblity, works only for script variables": {
+		"prefix": "slider_int:set_visible",
+		"body": [
+			"slider_int:set_visible(${1:val})"
+		],
+		"description": "Setting slider int visiblity, works only for script variables"
+	},
     "Returns value from text input": {
 		"prefix": "text_input:get_value()",
 		"body": [
@@ -1244,5 +1293,12 @@
 			"text_input:set_value(${1:val})"
 		],
 		"description": "Setting text input value"
+	},
+	"Setting text input visiblity, works only for script variables": {
+		"prefix": "text_input:set_visible",
+		"body": [
+			"text_input:set_visible(${1:val})"
+		],
+		"description": "Setting text input visiblity, works only for script variables"
 	}
 }

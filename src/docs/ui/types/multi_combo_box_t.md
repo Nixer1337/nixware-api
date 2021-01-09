@@ -20,8 +20,20 @@ Type | Name | Description
 number | index | Element index
 number | val | Value
 
-Setting combobox multi combo box value
+Setting multi combo box value
 ```lua
 local visuals_other_removals = ui.get_multi_combo_box("visuals_other_removals")
 ragebot_active_exploit:set_value(0, true)
+```
+---
+
+## **set_visible(val)**
+Type | Name | Description
+------------ | ------------- | ------------
+bool | val | Visiblity
+
+Setting multi combo box visiblity, works only for script variables
+```lua
+local my_multi_combo = ui.add_multi_combo_box("multi combo", "lua_multi_combo", { "item1", "item2", "item3" }, { false, false, false })
+my_multi_combo:set_visible(false)
 ```

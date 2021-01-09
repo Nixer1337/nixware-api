@@ -21,3 +21,15 @@ Setting color edit value
 local misc_ui_color = ui.get_color_edit("misc_ui_color")
 misc_ui_color:set_value(color_t.new(0, 255, 0, 255))
 ```
+---
+
+## **set_visible(val)**
+Type | Name | Description
+------------ | ------------- | ------------
+bool | val | Visiblity
+
+Setting color edit visiblity, works only for script variables
+```lua
+local my_coloredit = ui.add_color_edit("lua coloredit", "lua_color", true, color_t.new(255, 255, 255, 255))
+my_coloredit:set_visible(false)
+```

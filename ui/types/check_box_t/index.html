@@ -293,6 +293,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#set_visibleval" class="md-nav__link">
+    set_visible(val)
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -806,6 +813,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#set_visibleval" class="md-nav__link">
+    set_visible(val)
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -854,6 +868,31 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">legit_enable</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_check_box</span><span class="p">(</span><span class="s2">&quot;legit_enable&quot;</span><span class="p">)</span>
 <span class="n">legit_enable</span><span class="p">:</span><span class="n">set_value</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="set_visibleval"><strong>set_visible(val)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bool</td>
+<td>val</td>
+<td>Visiblity</td>
+</tr>
+</tbody>
+</table>
+<p>Setting checkbox visiblity, works only for script variables</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">test_var</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">add_check_box</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="s2">&quot;test_var&quot;</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
+<span class="n">test_var</span><span class="p">:</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
                 

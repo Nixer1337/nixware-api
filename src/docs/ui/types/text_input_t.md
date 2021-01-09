@@ -21,3 +21,15 @@ Setting text input value
 local some_string_var = ui.add_text_input("some label", "some_key", "default")
 some_string_var:set_value("text")
 ```
+---
+
+## **set_visible(val)**
+Type | Name | Description
+------------ | ------------- | ------------
+bool | val | Visiblity
+
+Setting text input visiblity, works only for script variables
+```lua
+local text_input = ui.add_text_input("some text", "lua_text", "default")
+text_input:set_visible(false)
+```
