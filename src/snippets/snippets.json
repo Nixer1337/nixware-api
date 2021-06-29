@@ -1133,6 +1133,13 @@
 		],
 		"description": "Setting checkbox visiblity, works only for script variables"
 	},
+	"Setting checkbox label, works only for script variables": {
+		"prefix": "checkbox:set_label",
+		"body": [
+			"checkbox:set_label(${1:label})"
+		],
+		"description": "Setting checkbox label, works only for script variables"
+	},
 	"Returns value from color edit": {
 		"prefix": "color_edit:get_value()",
 		"body": [
@@ -1153,6 +1160,13 @@
 			"color_edit:set_visible(${1:val})"
 		],
 		"description": "Setting color edit visiblity, works only for script variables"
+	},
+	"Setting color edit label, works only for script variables": {
+		"prefix": "color_edit:set_label",
+		"body": [
+			"color_edit:set_label(${1:label})"
+		],
+		"description": "Setting color edit label, works only for script variables"
 	},
 	"Returns value from combo box": {
 		"prefix": "combo_box:get_value()",
@@ -1175,6 +1189,20 @@
 		],
 		"description": "Setting combobox visiblity, works only for script variables"
 	},
+	"Setting combobox label, works only for script variables": {
+		"prefix": "combo_box:set_label",
+		"body": [
+			"combo_box:set_label(${1:label})"
+		],
+		"description": "Setting combobox label, works only for script variables"
+	},
+	"Setting combobox items, works only for script variables": {
+		"prefix": "combo_box:set_items",
+		"body": [
+			"combo_box:set_items(${1:items})"
+		],
+		"description": "Setting combobox items, works only for script variables"
+	},
 	"Returns value from multi combo box": {
 		"prefix": "multi_combo_box:get_value()",
 		"body": [
@@ -1195,6 +1223,20 @@
 			"multi_combo_box:set_visible(${1:val})"
 		],
 		"description": "Setting multi combo box visiblity, works only for script variables"
+	},
+	"Setting multi combo box label, works only for script variables": {
+		"prefix": "multi_combo_box:set_label",
+		"body": [
+			"multi_combo_box:set_label(${1:label})"
+		],
+		"description": "Setting multi combo box label, works only for script variables"
+	},
+	"Setting multi combo box items, works only for script variables": {
+		"prefix": "multi_combo_box:set_items",
+		"body": [
+			"multi_combo_box:set_items(${1:items})"
+		],
+		"description": "Setting multi combo box items, works only for script variables"
 	},
 	"Returns the key code from keybind": {
 		"prefix": "key_bind:get_key",
@@ -1238,6 +1280,13 @@
 		],
 		"description": "Setting keybind visiblity, works only for script variables"
 	},
+	"Setting keybind label, works only for script variables": {
+		"prefix": "key_bind:set_label",
+		"body": [
+			"key_bind:set_label(${1:label})"
+		],
+		"description": "Setting keybind label, works only for script variables"
+	},
     "Returns value from slider float": {
 		"prefix": "slider_float:get_value()",
 		"body": [
@@ -1258,6 +1307,13 @@
 			"slider_float:set_visible(${1:val})"
 		],
 		"description": "Setting slider float visiblity, works only for script variables"
+	},
+	"Setting slider float label, works only for script variables": {
+		"prefix": "slider_float:set_label",
+		"body": [
+			"slider_float:set_label(${1:label})"
+		],
+		"description": "Setting slider float label, works only for script variables"
 	},
     "Returns value from slider int": {
 		"prefix": "slider_int:get_value()",
@@ -1280,6 +1336,13 @@
 		],
 		"description": "Setting slider int visiblity, works only for script variables"
 	},
+	"Setting slider int label, works only for script variables": {
+		"prefix": "slider_int:set_label",
+		"body": [
+			"slider_int:set_label(${1:val})"
+		],
+		"description": "Setting slider int label, works only for script variables"
+	},
     "Returns value from text input": {
 		"prefix": "text_input:get_value()",
 		"body": [
@@ -1300,5 +1363,12 @@
 			"text_input:set_visible(${1:val})"
 		],
 		"description": "Setting text input visiblity, works only for script variables"
+	},
+	"Setting text input label, works only for script variables": {
+		"prefix": "text_input:set_label",
+		"body": [
+			"text_input:set_label(${1:label})"
+		],
+		"description": "Setting text input label, works only for script variables"
 	}
 }

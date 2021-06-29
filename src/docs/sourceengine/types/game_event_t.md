@@ -18,9 +18,9 @@ bool | def_value | Default return value if key not found
 
 Returns the boolean value from event
 ```lua
-if event:get_name() == "player_chat" then
+client.register_callback("player_chat", function(event)
     local teamonly = event:get_bool("teamonly", false)
-end
+end)
 ```
 
 ---
@@ -33,9 +33,9 @@ bool | def_value | Default return value if key not found
 
 Returns the int value from event
 ```lua
-if event:get_name() == "player_death" then
+client.register_callback("player_death", function(event)
     local attacker = event:get_int("attacker", 0)
-end
+end)
 ```
 
 ---
@@ -48,9 +48,9 @@ bool | def_value | Default return value if key not found
 
 Returns the float value from event
 ```lua
-if event:get_name() == "bullet_impact" then
+client.register_callback("bullet_impact", function(event)
     local impact_x = event:get_float("x", 0)
-end
+end)
 ```
 
 ---
@@ -63,9 +63,9 @@ string | def_value | Default return value if key not found
 
 Returns the string from event
 ```lua
-if event:get_name() == "player_death" then
+client.register_callback("bullet_impact", function(event)
     local weapon = event:get_string("weapon", "")
-end
+end)
 ```
 
 ---
@@ -78,9 +78,9 @@ bool | value | New value
 
 Changes the key value
 ```lua
-if event:get_name() == "player_chat" then
+client.register_callback("player_chat", function(event)
     event:set_bool("teamonly", false)
-end
+end)
 ```
 
 ---
@@ -93,9 +93,9 @@ number | value | New value
 
 Changes the key value
 ```lua
-if event:get_name() == "player_death" then
+client.register_callback("player_death", function(event)
     event:set_int("attacker", 0)
-end
+end)
 ```
 
 ---
@@ -108,9 +108,9 @@ number | value | New value
 
 Changes the key value
 ```lua
-if event:get_name() == "bullet_impact" then
+client.register_callback("bullet_impact", function(event)
     event:set_float("x", 0)
-end
+end)
 ```
 
 ---
@@ -123,7 +123,7 @@ string | value | New value
 
 Changes the key value
 ```lua
-if event:get_name() == "player_death" then
+client.register_callback("player_death", function(event)
     event:set_string("weapon", "knife_karambit")
-end
+end)
 ```

@@ -34,3 +34,16 @@ Setting checkbox visiblity, works only for script variables
 local test_var = ui.add_check_box("test", "test_var", false)
 test_var:set_visible(false)
 ```
+
+---
+
+## **set_label(label)**
+Type | Name | Description
+------------ | ------------- | ------------
+string | label | New label
+
+Setting checkbox label, works only for script variables
+```lua
+local test_var = ui.add_check_box("test", "test_var", false)
+test_var:set_label("123123")
+```

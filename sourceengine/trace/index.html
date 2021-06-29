@@ -691,6 +691,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#hullmask-start-end-mins-maxs-trace_type-should_hit_entity_callback-trace_t" class="md-nav__link">
+    hull(mask, start, end, mins, maxs, trace_type, should_hit_entity_callback): trace_t
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -790,6 +797,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#hullmask-start-end-mins-maxs-trace_type-should_hit_entity_callback-trace_t" class="md-nav__link">
+    hull(mask, start, end, mins, maxs, trace_type, should_hit_entity_callback): trace_t
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -840,7 +854,7 @@
 </tr>
 </tbody>
 </table>
-<p>Returns the trace object</p>
+<p>Returns trace object</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -950,6 +964,214 @@
     <span class="n">trace_end</span><span class="p">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">trace_start</span><span class="p">.</span><span class="n">z</span> <span class="o">+</span> <span class="n">trace_end</span><span class="p">.</span><span class="n">z</span> <span class="o">*</span> <span class="mf">8192.0</span>
 
     <span class="kd">local</span> <span class="n">trace_out</span> <span class="o">=</span> <span class="n">trace</span><span class="p">.</span><span class="n">line</span><span class="p">(</span><span class="n">engine</span><span class="p">.</span><span class="n">get_local_player</span><span class="p">(),</span> <span class="mh">0x46004003</span><span class="p">,</span> <span class="n">trace_start</span><span class="p">,</span> <span class="n">trace_end</span><span class="p">)</span>
+
+    <span class="kd">local</span> <span class="n">pos2d</span> <span class="o">=</span> <span class="n">se</span><span class="p">.</span><span class="n">world_to_screen</span><span class="p">(</span><span class="n">trace_out</span><span class="p">.</span><span class="n">endpos</span><span class="p">)</span>
+    <span class="kr">if</span> <span class="n">pos2d</span> <span class="o">==</span> <span class="kc">nil</span> <span class="kr">then</span> <span class="kr">return</span> <span class="kr">end</span>
+
+    <span class="n">renderer</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;normal_x:&quot;</span> <span class="o">..</span> <span class="n">trace_out</span><span class="p">.</span><span class="n">normal</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">verdana</span><span class="p">,</span> <span class="n">pos2d</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+    <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">15</span>
+    <span class="n">renderer</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;normal_y:&quot;</span> <span class="o">..</span> <span class="n">trace_out</span><span class="p">.</span><span class="n">normal</span><span class="p">.</span><span class="n">y</span><span class="p">,</span> <span class="n">verdana</span><span class="p">,</span> <span class="n">pos2d</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+    <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">15</span>
+    <span class="n">renderer</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;normal_z:&quot;</span> <span class="o">..</span> <span class="n">trace_out</span><span class="p">.</span><span class="n">normal</span><span class="p">.</span><span class="n">z</span><span class="p">,</span> <span class="n">verdana</span><span class="p">,</span> <span class="n">pos2d</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+    <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">15</span>
+    <span class="n">renderer</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;dist:&quot;</span> <span class="o">..</span> <span class="n">trace_out</span><span class="p">.</span><span class="n">dist</span><span class="p">,</span> <span class="n">verdana</span><span class="p">,</span> <span class="n">pos2d</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+    <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">15</span>
+    <span class="n">renderer</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;fraction:&quot;</span> <span class="o">..</span> <span class="n">trace_out</span><span class="p">.</span><span class="n">fraction</span><span class="p">,</span> <span class="n">verdana</span><span class="p">,</span> <span class="n">pos2d</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+    <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">15</span>
+    <span class="n">renderer</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;contents:&quot;</span> <span class="o">..</span> <span class="n">trace_out</span><span class="p">.</span><span class="n">contents</span><span class="p">,</span> <span class="n">verdana</span><span class="p">,</span> <span class="n">pos2d</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+    <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">15</span>
+    <span class="n">renderer</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;disp_flags:&quot;</span> <span class="o">..</span> <span class="n">trace_out</span><span class="p">.</span><span class="n">disp_flags</span><span class="p">,</span> <span class="n">verdana</span><span class="p">,</span> <span class="n">pos2d</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+    <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">15</span>
+    <span class="n">renderer</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;allsolid:&quot;</span> <span class="o">..</span> <span class="nb">tostring</span><span class="p">(</span><span class="n">trace_out</span><span class="p">.</span><span class="n">allsolid</span><span class="p">),</span> <span class="n">verdana</span><span class="p">,</span> <span class="n">pos2d</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+    <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">15</span>
+    <span class="n">renderer</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;startsolid:&quot;</span> <span class="o">..</span> <span class="nb">tostring</span><span class="p">(</span><span class="n">trace_out</span><span class="p">.</span><span class="n">startsolid</span><span class="p">),</span> <span class="n">verdana</span><span class="p">,</span> <span class="n">pos2d</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+    <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">15</span>
+    <span class="n">renderer</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;hit_entity_index:&quot;</span> <span class="o">..</span> <span class="n">trace_out</span><span class="p">.</span><span class="n">hit_entity_index</span><span class="p">,</span> <span class="n">verdana</span><span class="p">,</span> <span class="n">pos2d</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+    <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">15</span>
+    <span class="n">renderer</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;hitgroup:&quot;</span> <span class="o">..</span> <span class="n">trace_out</span><span class="p">.</span><span class="n">hitgroup</span><span class="p">,</span> <span class="n">verdana</span><span class="p">,</span> <span class="n">pos2d</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+    <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">15</span>
+    <span class="n">renderer</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;hitbox:&quot;</span> <span class="o">..</span> <span class="n">trace_out</span><span class="p">.</span><span class="n">hitbox</span><span class="p">,</span> <span class="n">verdana</span><span class="p">,</span> <span class="n">pos2d</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+    <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">15</span>
+<span class="kr">end</span>
+
+
+<span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;paint&quot;</span><span class="p">,</span> <span class="n">on_paint</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+<h2 id="hullmask-start-end-mins-maxs-trace_type-should_hit_entity_callback-trace_t"><strong>hull(mask, start, end, mins, maxs, trace_type, should_hit_entity_callback)</strong>: <a href="../types/trace_t/">trace_t</a></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>mask</td>
+<td>Trace mask</td>
+</tr>
+<tr>
+<td><a href="../../types/vec3_t/">vec3_t</a></td>
+<td>start</td>
+<td>Start trace position</td>
+</tr>
+<tr>
+<td><a href="../../types/vec3_t/">vec3_t</a></td>
+<td>end</td>
+<td>End trace position</td>
+</tr>
+<tr>
+<td><a href="../../types/vec3_t/">vec3_t</a></td>
+<td>mins</td>
+<td>Trace mins</td>
+</tr>
+<tr>
+<td><a href="../../types/vec3_t/">vec3_t</a></td>
+<td>maxs</td>
+<td>Trace maxs</td>
+</tr>
+<tr>
+<td>number</td>
+<td>trace_type</td>
+<td>Trace filter type</td>
+</tr>
+<tr>
+<td>function</td>
+<td>should_hit_entity_callback</td>
+<td>Trace filter callback</td>
+</tr>
+</tbody>
+</table>
+<p>Returns trace object</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kr">function</span> <span class="nf">deg_to_rad</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="kr">return</span> <span class="n">val</span> <span class="o">*</span> <span class="p">(</span><span class="mf">3.141593</span> <span class="o">/</span> <span class="mf">180.0</span><span class="p">)</span> <span class="kr">end</span>
+<span class="kr">function</span> <span class="nf">angle_vectors</span><span class="p">(</span><span class="n">angles</span><span class="p">)</span> 
+    <span class="kd">local</span> <span class="n">cp</span><span class="p">,</span> <span class="n">sp</span> <span class="o">=</span> <span class="nb">math.cos</span><span class="p">(</span><span class="n">deg_to_rad</span><span class="p">(</span><span class="n">angles</span><span class="p">.</span><span class="n">pitch</span><span class="p">)),</span> <span class="nb">math.sin</span><span class="p">(</span><span class="n">deg_to_rad</span><span class="p">(</span><span class="n">angles</span><span class="p">.</span><span class="n">pitch</span><span class="p">))</span>
+    <span class="kd">local</span> <span class="n">cy</span><span class="p">,</span> <span class="n">sy</span> <span class="o">=</span> <span class="nb">math.cos</span><span class="p">(</span><span class="n">deg_to_rad</span><span class="p">(</span><span class="n">angles</span><span class="p">.</span><span class="n">yaw</span><span class="p">)),</span> <span class="nb">math.sin</span><span class="p">(</span><span class="n">deg_to_rad</span><span class="p">(</span><span class="n">angles</span><span class="p">.</span><span class="n">yaw</span><span class="p">))</span>
+    <span class="kd">local</span> <span class="n">cr</span><span class="p">,</span> <span class="n">sr</span> <span class="o">=</span> <span class="nb">math.cos</span><span class="p">(</span><span class="n">deg_to_rad</span><span class="p">(</span><span class="n">angles</span><span class="p">.</span><span class="n">roll</span><span class="p">)),</span> <span class="nb">math.sin</span><span class="p">(</span><span class="n">deg_to_rad</span><span class="p">(</span><span class="n">angles</span><span class="p">.</span><span class="n">roll</span><span class="p">))</span>
+
+    <span class="kd">local</span> <span class="n">forward</span> <span class="o">=</span> <span class="n">vec3_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">forward</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">cp</span> <span class="o">*</span> <span class="n">cy</span>
+    <span class="n">forward</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">cp</span> <span class="o">*</span> <span class="n">sy</span>
+    <span class="n">forward</span><span class="p">.</span><span class="n">z</span> <span class="o">=</span> <span class="o">-</span><span class="n">sp</span>
+
+    <span class="kr">return</span> <span class="n">forward</span>
+<span class="kr">end</span>
+
+<span class="kd">local</span> <span class="n">verdana</span> <span class="o">=</span> <span class="n">renderer</span><span class="p">.</span><span class="n">setup_font</span><span class="p">(</span><span class="s2">&quot;C:/windows/fonts/verdana.ttf&quot;</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">m_vecViewOffset</span> <span class="o">=</span> <span class="n">se</span><span class="p">.</span><span class="n">get_netvar</span><span class="p">(</span><span class="s2">&quot;DT_BasePlayer&quot;</span><span class="p">,</span> <span class="s2">&quot;m_vecViewOffset[0]&quot;</span><span class="p">)</span>
+
+<span class="kd">local</span> <span class="n">player_vtable</span> <span class="o">=</span> <span class="n">ffi</span><span class="p">.</span><span class="n">cast</span><span class="p">(</span><span class="s2">&quot;int*&quot;</span><span class="p">,</span> <span class="n">client</span><span class="p">.</span><span class="n">find_pattern</span><span class="p">(</span><span class="s2">&quot;client.dll&quot;</span><span class="p">,</span> <span class="s2">&quot;55 8B EC 83 E4 F8 83 EC 18 56 57 8B F9 89 7C 24 0C&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="mh">0x47</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="kd">local</span> <span class="n">get_abs_origin</span> <span class="o">=</span> <span class="n">ffi</span><span class="p">.</span><span class="n">cast</span><span class="p">(</span><span class="s2">&quot;float*(__thiscall*)(int)&quot;</span><span class="p">,</span> <span class="n">ffi</span><span class="p">.</span><span class="n">cast</span><span class="p">(</span><span class="s2">&quot;int*&quot;</span><span class="p">,</span> <span class="n">player_vtable</span> <span class="o">+</span> <span class="mh">0x28</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="kr">function</span> <span class="nf">should_hit_ent_fn</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="n">contents_mask</span><span class="p">)</span>
+  <span class="kr">if</span> <span class="n">entity_index</span> <span class="o">==</span> <span class="n">engine</span><span class="p">.</span><span class="n">get_local_player</span><span class="p">()</span> <span class="kr">then</span> <span class="kr">return</span> <span class="kc">false</span> <span class="kr">end</span>
+
+  <span class="c1">-- client.notify(&quot;should_hit_ent&quot;)</span>
+
+  <span class="kr">return</span> <span class="kc">true</span>
+<span class="kr">end</span>
+
+<span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
+    <span class="kd">local</span> <span class="n">local_player</span> <span class="o">=</span> <span class="n">entitylist</span><span class="p">.</span><span class="n">get_local_player</span><span class="p">()</span>
+    <span class="kr">if</span> <span class="n">local_player</span> <span class="o">==</span> <span class="kc">nil</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">local_player</span><span class="p">:</span><span class="n">is_alive</span><span class="p">()</span> <span class="kr">then</span> 
+        <span class="kr">return</span> 
+    <span class="kr">end</span>
+
+    <span class="kd">local</span> <span class="n">viewangles</span> <span class="o">=</span> <span class="n">engine</span><span class="p">.</span><span class="n">get_view_angles</span><span class="p">()</span>
+    <span class="kd">local</span> <span class="n">trace_end</span> <span class="o">=</span> <span class="n">angle_vectors</span><span class="p">(</span><span class="n">viewangles</span><span class="p">)</span>
+
+    <span class="kd">local</span> <span class="n">abs_origin</span> <span class="o">=</span> <span class="n">get_abs_origin</span><span class="p">(</span><span class="n">local_player</span><span class="p">:</span><span class="n">get_address</span><span class="p">())</span>
+    <span class="kd">local</span> <span class="n">view_offset</span> <span class="o">=</span> <span class="n">local_player</span><span class="p">:</span><span class="n">get_prop_vector</span><span class="p">(</span><span class="n">m_vecViewOffset</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">trace_start</span> <span class="o">=</span> <span class="n">vec3_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="n">abs_origin</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">view_offset</span><span class="p">.</span><span class="n">x</span><span class="p">,</span> <span class="n">abs_origin</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">view_offset</span><span class="p">.</span><span class="n">y</span><span class="p">,</span> <span class="n">abs_origin</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">view_offset</span><span class="p">.</span><span class="n">z</span><span class="p">)</span>
+
+    <span class="n">trace_end</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">trace_start</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">trace_end</span><span class="p">.</span><span class="n">x</span> <span class="o">*</span> <span class="mf">8192.0</span>
+    <span class="n">trace_end</span><span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">trace_start</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">trace_end</span><span class="p">.</span><span class="n">y</span> <span class="o">*</span> <span class="mf">8192.0</span>
+    <span class="n">trace_end</span><span class="p">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">trace_start</span><span class="p">.</span><span class="n">z</span> <span class="o">+</span> <span class="n">trace_end</span><span class="p">.</span><span class="n">z</span> <span class="o">*</span> <span class="mf">8192.0</span>
+
+    <span class="kd">local</span> <span class="n">trace_out</span> <span class="o">=</span> <span class="n">trace</span><span class="p">.</span><span class="n">hull</span><span class="p">(</span><span class="mh">0x46004003</span><span class="p">,</span> <span class="n">trace_start</span><span class="p">,</span> <span class="n">trace_end</span><span class="p">,</span> <span class="n">vec3_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">),</span> <span class="n">vec3_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="n">should_hit_ent_fn</span><span class="p">)</span>
 
     <span class="kd">local</span> <span class="n">pos2d</span> <span class="o">=</span> <span class="n">se</span><span class="p">.</span><span class="n">world_to_screen</span><span class="p">(</span><span class="n">trace_out</span><span class="p">.</span><span class="n">endpos</span><span class="p">)</span>
     <span class="kr">if</span> <span class="n">pos2d</span> <span class="o">==</span> <span class="kc">nil</span> <span class="kr">then</span> <span class="kr">return</span> <span class="kr">end</span>

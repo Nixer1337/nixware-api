@@ -33,3 +33,15 @@ Setting slider float visiblity, works only for script variables
 local slider = ui.add_slider_float("lua float slider", "lua_float", 0.0, 1.0, 0.3)
 slider:set_visible(false)
 ```
+---
+
+## **set_label(label)**
+Type | Name | Description
+------------ | ------------- | ------------
+string | label | New label
+
+Setting slider float label, works only for script variables
+```lua
+local slider = ui.add_slider_float("lua float slider", "lua_float", 0.0, 1.0, 0.3)
+slider:set_label("123123")
+```

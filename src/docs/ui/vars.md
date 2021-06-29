@@ -1,3 +1,4 @@
+
 # cheat variables
 
 ## Legitbot
@@ -614,13 +615,17 @@ slider_int | antihit_fakelag_trigger_limit
 check_box | antihit_antiaim_enable
 combo_box | antihit_antiaim_pitch
 combo_box | antihit_antiaim_yaw
+slider_int | antihit_antiaim_desync_length
 key_bind | antihit_antiaim_flip_bind
 check_box | antihit_antiaim_at_targets
+check_box | antihit_extra_jittermove
 check_box | antihit_extra_fakeduck
 key_bind | antihit_extra_fakeduck_bind
 check_box | antihit_extra_slowwalk
 slider_int | antihit_extra_slowwalk_speed
 key_bind | antihit_extra_slowwalk_bind
+check_box | antihit_extra_autopeek
+key_bind | antihit_extra_autopeek_bind
 combo_box | antihit_extra_leg_movement
 
 ## Visuals
@@ -639,7 +644,9 @@ check_box | visuals_other_pen_crosshair
 check_box | visuals_other_hitmarker
 combo_box | visuals_other_hitsound
 combo_box | visuals_other_killsound
-slider_int | visuals_other_nightmode
+check_box | visuals_other_nightmode
+color_edit | visuals_other_nightmode_color
+combo_box | visuals_no_scope
 multi_combo_box | visuals_other_removals
 color_edit | visuals_other_aimbot_fov_color
 color_edit | visuals_other_grenade_prediction_color
@@ -649,6 +656,7 @@ check_box | visuals_models_enemy_behind_wall
 color_edit | visuals_models_enemy_behind_wall_color
 combo_box | visuals_models_enemy_material
 color_edit | visuals_models_enemy_material_color
+slider_int | visuals_models_enemy_chams_brightness
 check_box | visuals_models_enemy_ragdoll_chams
 check_box | visuals_models_team_enable
 color_edit | visuals_models_team_color_
@@ -656,6 +664,7 @@ check_box | visuals_models_team_behind_wall
 color_edit | visuals_models_team_behind_wall_color
 combo_box | visuals_models_team_material
 color_edit | visuals_models_team_material_color
+slider_int | visuals_models_team_chams_brightness
 check_box | visuals_models_team_ragdoll_chams
 check_box | visuals_models_local_enable
 color_edit | visuals_models_local_color_
@@ -663,27 +672,33 @@ check_box | visuals_models_local_behind_wall
 color_edit | visuals_models_local_behind_wall_color
 combo_box | visuals_models_local_material
 color_edit | visuals_models_local_material_color
+slider_int | visuals_models_local_chams_brightness
 check_box | visuals_models_local_ragdoll_chams
 check_box | visuals_models_hands_enable
 color_edit | visuals_models_hands_color_
 combo_box | visuals_models_hands_material
 color_edit | visuals_models_hands_material_color
+slider_int | visuals_models_hands_chams_brightness
 check_box | visuals_models_weapon_enable
 color_edit | visuals_models_weapon_color_
 combo_box | visuals_models_weapon_material
 color_edit | visuals_models_weapon_material_color
+slider_int | visuals_models_weapon_chams_brightness
 check_box | visuals_models_sleeve_enable
 color_edit | visuals_models_sleeve_color_
 combo_box | visuals_models_sleeve_material
 color_edit | visuals_models_sleeve_material_color
+slider_int | visuals_models_sleeve_chams_brightness
 check_box | visuals_models_desync_enable
 color_edit | visuals_models_desync_color_
 combo_box | visuals_models_desync_material
 color_edit | visuals_models_desync_material_color
+slider_int | visuals_models_desync_chams_brightness
 check_box | visuals_models_fakelag_enable
 color_edit | visuals_models_fakelag_color_
 combo_box | visuals_models_fakelag_material
 color_edit | visuals_models_fakelag_material_color
+slider_int | visuals_models_fakelag_chams_brightness
 check_box | visuals_esp_enemy_enable
 check_box | visuals_esp_enemy_box
 color_edit | visuals_esp_enemy_box_color
@@ -715,6 +730,8 @@ check_box | visuals_esp_enemy_armor
 color_edit | visuals_esp_enemy_armor_color
 check_box | visuals_esp_enemy_tracers
 color_edit | visuals_esp_enemy_tracers_color
+check_box | visuals_esp_enemy_hit_skelet
+color_edit | visuals_esp_enemy_hit_skelet_color
 multi_combo_box | visuals_esp_enemy_flags
 check_box | visuals_esp_enemy_far_esp
 slider_float | visuals_esp_enemy_dormant
@@ -745,8 +762,8 @@ check_box | visuals_esp_team_health
 color_edit | visuals_esp_team_health_color
 check_box | visuals_esp_team_armor
 color_edit | visuals_esp_team_armor_color
-check_box | visuals_esp_team_tracers
-color_edit | visuals_esp_team_tracers_color
+check_box | visuals_esp_team_hit_skelet
+color_edit | visuals_esp_team_hit_skelet_color
 multi_combo_box | visuals_esp_team_flags
 check_box | visuals_esp_local_enable
 check_box | visuals_esp_local_box
@@ -771,8 +788,8 @@ check_box | visuals_esp_local_health
 color_edit | visuals_esp_local_health_color
 check_box | visuals_esp_local_armor
 color_edit | visuals_esp_local_armor_color
-check_box | visuals_esp_local_tracers
-color_edit | visuals_esp_local_tracers_color
+check_box | visuals_esp_local_hit_skelet
+color_edit | visuals_esp_local_hit_skelet_color
 multi_combo_box | visuals_esp_local_flags
 check_box | visuals_esp_weapons_enable
 check_box | visuals_esp_weapons_box
@@ -785,6 +802,7 @@ check_box | visuals_esp_weapons_ammo
 color_edit | visuals_esp_weapons_ammo_color
 check_box | visuals_esp_weapons_glow
 color_edit | visuals_esp_weapons_glow_color
+check_box | visuals_disable_model_occulusion
 
 ## Skins
 Type | Key
@@ -953,21 +971,20 @@ Type | Key
 ------------ | -------------
 check_box | misc_unlock_hidden_cvars
 check_box | misc_unlock_cheat_cvars
+check_box | misc_remove_serverside_ads
 slider_int | misc_ping_spike_amount
 check_box | misc_ow_revealer
-check_box | misc_occulusion
 check_box | misc_ranks
 check_box | misc_autoaccept
 check_box | misc_inventory
 check_box | misc_money
 check_box | misc_bunnyhop
 check_box | misc_autostrafer
+check_box | misc_fast_stop
 check_box | misc_jump_bug
 key_bind | misc_jump_bug_bind
 check_box | misc_edge_jump
 key_bind | misc_edge_jump_bind
 check_box | misc_fastduck
 check_box | misc_clantag
-color_edit | misc_ui_color
-combo_box | misc_ui_scale
-check_box | misc_ui_hints
+check_box | misc_antidll_bypass

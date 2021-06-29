@@ -369,6 +369,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#set_labellabel" class="md-nav__link">
+    set_label(label)
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -862,6 +869,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#set_labellabel" class="md-nav__link">
+    set_label(label)
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -980,6 +994,31 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">my_keybind</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">add_key_bind</span><span class="p">(</span><span class="s2">&quot;lua key bind&quot;</span><span class="p">,</span> <span class="s2">&quot;lua_keybind&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">my_keybind</span><span class="p">:</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="set_labellabel"><strong>set_label(label)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>label</td>
+<td>New label</td>
+</tr>
+</tbody>
+</table>
+<p>Setting keybind label, works only for script variables</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">my_keybind</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">add_key_bind</span><span class="p">(</span><span class="s2">&quot;lua key bind&quot;</span><span class="p">,</span> <span class="s2">&quot;lua_keybind&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">my_keybind</span><span class="p">:</span><span class="n">set_label</span><span class="p">(</span><span class="s2">&quot;123123&quot;</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
                 

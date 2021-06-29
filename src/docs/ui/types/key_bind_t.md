@@ -64,3 +64,15 @@ Setting keybind visiblity, works only for script variables
 local my_keybind = ui.add_key_bind("lua key bind", "lua_keybind", 0, 0)
 my_keybind:set_visible(false)
 ```
+---
+
+## **set_label(label)**
+Type | Name | Description
+------------ | ------------- | ------------
+string | label | New label
+
+Setting keybind label, works only for script variables
+```lua
+local my_keybind = ui.add_key_bind("lua key bind", "lua_keybind", 0, 0)
+my_keybind:set_label("123123")
+```

@@ -33,3 +33,28 @@ Setting combobox visiblity, works only for script variables
 local my_combo = ui.add_combo_box("lua combo", "lua_integer", { "item1", "item2", "item3" }, 0)
 my_combo:set_visible(false)
 ```
+---
+
+## **set_label(label)**
+Type | Name | Description
+------------ | ------------- | ------------
+string | label | New label
+
+Setting combobox label, works only for script variables
+```lua
+local my_combo = ui.add_combo_box("lua combo", "lua_integer", { "item1", "item2", "item3" }, 0)
+my_combo:set_label("123123")
+```
+
+---
+
+## **set_items(items)**
+Type | Name | Description
+------------ | ------------- | ------------
+string array | items | New items
+
+Setting combobox items, works only for script variables
+```lua
+local my_combo = ui.add_combo_box("lua combo", "lua_integer", { "item1", "item2", "item3" }, 0)
+my_combo:set_items( { "1", "2", "3", "4" })
+```

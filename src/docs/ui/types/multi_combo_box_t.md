@@ -37,3 +37,27 @@ Setting multi combo box visiblity, works only for script variables
 local my_multi_combo = ui.add_multi_combo_box("multi combo", "lua_multi_combo", { "item1", "item2", "item3" }, { false, false, false })
 my_multi_combo:set_visible(false)
 ```
+---
+
+## **set_label(label)**
+Type | Name | Description
+------------ | ------------- | ------------
+string | label | New label
+
+Setting multi combo box label, works only for script variables
+```lua
+local my_multi_combo = ui.add_multi_combo_box("multi combo", "lua_multi_combo", { "item1", "item2", "item3" }, { false, false, false })
+my_multi_combo:set_label("123123")
+```
+---
+
+## **set_items(items)**
+Type | Name | Description
+------------ | ------------- | ------------
+string array | items | New items
+
+Setting combobox items, works only for script variables
+```lua
+local my_multi_combo = ui.add_multi_combo_box("multi combo", "lua_multi_combo", { "item1", "item2", "item3" }, { false, false, false })
+my_multi_combo:set_items( { "1", "2", "3", "4" })
+```

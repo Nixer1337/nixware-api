@@ -33,3 +33,15 @@ Setting slider int visiblity, works only for script variables
 local my_slider_int = ui.add_slider_int("lua int slider", "lua_integer", 0, 100, 50)
 my_slider_int:set_visible(false)
 ```
+---
+
+## **set_label(label)**
+Type | Name | Description
+------------ | ------------- | ------------
+string | label | New label
+
+Setting slider int label, works only for script variables
+```lua
+local my_slider_int = ui.add_slider_int("lua int slider", "lua_integer", 0, 100, 50)
+my_slider_int:set_label("123123")
+```

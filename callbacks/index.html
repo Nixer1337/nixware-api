@@ -1025,15 +1025,7 @@
 <p>FireGameEvent callback. Calls on event</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">se</span><span class="p">.</span><span class="n">register_event</span><span class="p">(</span><span class="s2">&quot;round_start&quot;</span><span class="p">)</span>
-
-<span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;fire_game_event&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">event</span><span class="p">)</span> 
-    <span class="kr">if</span> <span class="n">event</span><span class="p">:</span><span class="n">get_name</span><span class="p">()</span> <span class="o">~=</span> <span class="s2">&quot;round_start&quot;</span> <span class="kr">then</span> <span class="kr">return</span> <span class="kr">end</span>
-
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;round_start&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
     <span class="n">client</span><span class="p">.</span><span class="n">notify</span><span class="p">(</span><span class="s2">&quot;Round started!&quot;</span><span class="p">)</span>
 <span class="kr">end</span><span class="p">)</span>
 </code></pre></div>

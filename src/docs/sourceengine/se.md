@@ -71,17 +71,6 @@ Returns current latency
 ```lua
 local ping = se.get_latency()
 ```
----
-
-## **register_event(eventname)**
-Type | Name | Description
------------- | ------------- | ------------
-string | eventname | Event name
-
-Register the event for [fire_game_event](../../callbacks/#fire_game_eventevent-csgo) callback
-```lua
-se.register_event("player_death")
-```
 
 ---
 

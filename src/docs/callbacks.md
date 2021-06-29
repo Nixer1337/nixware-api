@@ -75,11 +75,7 @@ Type | Name | Description
 
 FireGameEvent callback. Calls on event
 ```lua
-se.register_event("round_start")
-
-client.register_callback("fire_game_event", function(event) 
-    if event:get_name() ~= "round_start" then return end
-
+client.register_callback("round_start", function(event)
     client.notify("Round started!")
 end)
 ```

@@ -12,10 +12,10 @@ number | a
 ## **new(red, green, blue, alpha)**: color_t
 Type | Name
 ------------ | -------------
-number | r
-number | g
-number | b
-number | a
+number | red
+number | green
+number | blue
+number | alpha
 
 Constructor
 ```lua

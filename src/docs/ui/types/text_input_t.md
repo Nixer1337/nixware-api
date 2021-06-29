@@ -33,3 +33,15 @@ Setting text input visiblity, works only for script variables
 local text_input = ui.add_text_input("some text", "lua_text", "default")
 text_input:set_visible(false)
 ```
+---
+
+## **set_label(label)**
+Type | Name | Description
+------------ | ------------- | ------------
+string | label | New label
+
+Setting text input label, works only for script variables
+```lua
+local text_input = ui.add_text_input("some text", "lua_text", "default")
+text_input:set_label("123123")
+```

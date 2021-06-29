@@ -33,3 +33,16 @@ Setting color edit visiblity, works only for script variables
 local my_coloredit = ui.add_color_edit("lua coloredit", "lua_color", true, color_t.new(255, 255, 255, 255))
 my_coloredit:set_visible(false)
 ```
+
+---
+
+## **set_label(label)**
+Type | Name | Description
+------------ | ------------- | ------------
+string | label | New label
+
+Setting color edit label, works only for script variables
+```lua
+local my_coloredit = ui.add_color_edit("lua coloredit", "lua_color", true, color_t.new(255, 255, 255, 255))
+my_coloredit:set_label("123123")
+```
