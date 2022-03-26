@@ -1,44 +1,42 @@
 {
+	"Load the config":{
+		"prefix": "client.load_config",
+		"body": "client.load_config(${1:cfgname})",
+		"description": "Load the config"
+	},
+	"Save the config":{
+		"prefix": "client.save_config",
+		"body": "client.save_config(${1:cfgname})",
+		"description": "Save the config"
+	},
 	"Load the script": {
 		"prefix": "client.load_script",
-		"body": [
-			"client.load_script(${1:scriptname})"
-		],
+		"body": "client.load_script(${1:scriptname})",
 		"description": "Load the script"
 	},
 	"Unload the script": {
 		"prefix": "client.unload_script",
-		"body": [
-			"client.unload_script(${1:scriptname})"
-		],
+		"body": "client.unload_script(${1:scriptname})",
 		"description": "Unload the script"
 	},
 	"Returns current script name": {
 		"prefix": "client.get_script_name",
-		"body": [
-			"client.get_script_name()"
-		],
+		"body": "client.get_script_name()",
 		"description": "Returns current script name"
 	},
 	"Register the callback": {
 		"prefix": "client.register_callback",
-		"body": [
-			"client.register_callback(${1:eventname}, ${2:fn})"
-		],
+		"body": "client.register_callback(${1:event}, ${2:func})",
 		"description": "Register the callback"
 	},
 	"Returns your cheat username": {
 		"prefix": "client.get_username",
-		"body": [
-			"client.get_username()"
-		],
-		"description": "Returns your cheat username"
+		"body": "client.get_username()",
+		"description": "Returns your nixware username"
 	},
 	"Pushing notification": {
 		"prefix": "client.notify",
-		"body": [
-			"client.notify(${1:text})"
-		],
+		"body": "client.notify(${1:text})",
 		"description": "Pushing notification"
 	},
 	"Returns the unix timestamp": {
@@ -321,12 +319,77 @@
 		],
 		"description": "Returns the interface address"
 	},
-	"Tracing": {
+	"Returns trace object": {
 		"prefix": "trace.line",
 		"body": [
 			"trace.line(${1:skip_entindex}, ${2:mask}, ${3:start}, ${4:end})"
 		],
 		"description": "Tracing"
+	},
+	"Returns trace object ":{
+		"prefix": "trace.hull",
+		"body": "trace.hull(${1:mask}, ${2:start}, ${3:end}, ${4:mins}, ${5:maxs}, ${6:trace_type}, ${7:should_hit_entity_callback})",
+		"description": "Returns trace object"
+	},
+	"trace_t startpos":{
+		"prefix": "trace_t.startpos",
+		"body": "trace_t.startpos",
+		"description": "trace_t.startpos"
+	},
+	"trace_t.endpos":{
+		"prefix": "trace_t.endpos",
+		"body": "trace_t.endpos",
+		"description": "trace_t.endpos"
+	},
+	"trace_t.normal":{
+		"prefix": "trace_t.normal",
+		"body": "trace_t.normal",
+		"description": "trace_t.normal"
+	},
+	"trace_t.dist":{
+		"prefix": "trace_t.dist",
+		"body": "trace_t.dist",
+		"description": "trace_t.dist"
+	},
+	"trace_t.fraction":{
+		"prefix": "trace_t.fraction",
+		"body": "trace_t.fraction",
+		"description": "trace_t.fraction"
+	},
+	"trace_t.contents":{
+		"prefix": "trace_t.contents",
+		"body": "trace_t.contents",
+		"description": "trace_t.contents"
+	},
+	"trace_t.disp_flags":{
+		"prefix": "trace_t.disp_flags",
+		"body": "trace_t.disp_flags",
+		"description": "trace_t.disp_flags"
+	},
+	"trace_t.allsolid":{
+		"prefix": "trace_t.allsolid",
+		"body": "trace_t.allsolid",
+		"description": "trace_t.allsolid"
+	},
+	"trace_t.startsolid":{
+		"prefix": "trace_t.startsolid",
+		"body": "trace_t.startsolid",
+		"description": "trace_t.startsolid"
+	},
+	"trace_t.hit_entity_index":{
+		"prefix": "trace_t.hit_entity_index",
+		"body": "trace_t.hit_entity_index",
+		"description": "trace_t.hit_entity_index"
+	},
+	"trace_t.hitgroup":{
+		"prefix": "trace_t.hitgroup",
+		"body": "trace_t.hitgroup",
+		"description": "trace_t.hitgroup"
+	},
+	"trace_t.hitbox":{
+		"prefix": "trace_t.hitbox",
+		"body": "trace_t.hitbox",
+		"description": "trace_t.hitbox"
 	},
 	"vec2_t constructor": {
 		"prefix": "vec2_t.new",
@@ -1035,19 +1098,12 @@
 		],
 		"description": "Returns combo box object from menu"
 	},
-	"Creates combo box in menu": {
+	"Creates multi combo box in menu": {
 		"prefix": "ui.add_multi_combo_box",
 		"body": [
 			"ui.add_multi_combo_box(${1:label}, ${2:var_name}, ${3:items}, ${4:def_values})"
 		],
 		"description": "Creates combo box in menu"
-	},
-	"Creates text input in menu": {
-		"prefix": "ui.add_text_input",
-		"body": [
-			"ui.add_text_input(${1:label}, ${2:var_name}, ${4:def_value})"
-		],
-		"description": "Creates text input in menu"
 	},
 	"Returns multi combo box object from menu": {
 		"prefix": "ui.get_multi_combo_box",
@@ -1055,6 +1111,13 @@
 			"ui.get_multi_combo_box(${1:var_name})"
 		],
 		"description": "Returns multi combo box object from menu"
+	},
+	"Creates text input in menu": {
+		"prefix": "ui.add_text_input",
+		"body": [
+			"ui.add_text_input(${1:label}, ${2:var_name}, ${4:def_value})"
+		],
+		"description": "Creates text input in menu"
 	},
 	"Creates float slider in menu": {
 		"prefix": "ui.add_slider_float",
@@ -1365,7 +1428,7 @@
 		"description": "Setting text input visiblity, works only for script variables"
 	},
 	"Setting text input label, works only for script variables": {
-		"prefix": "text_input:set_label",
+		"prefix": "text_input:set_label()",
 		"body": [
 			"text_input:set_label(${1:label})"
 		],
