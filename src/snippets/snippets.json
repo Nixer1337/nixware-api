@@ -1,8 +1,7 @@
 {
 	"Load the config":{
 		"prefix": "client.load_config",
-		"body": "client.load_config(${1:cfgname})",
-		"description": "Load the config"
+		"body": "client.load_config(${1:cfgname})"
 	},
 	"Save the config":{
 		"prefix": "client.save_config",
@@ -116,12 +115,12 @@
 		],
 		"description": "Returns the local player index"
 	},
-	"Returns the [player_info_t](../types/player_info_t/) object": {
+	"Returns the [player_info_t] object": {
 		"prefix": "engine.get_player_info",
 		"body": [
 			"engine.get_player_info(${1:index})"
 		],
-		"description": "Returns the [player_info_t](../types/player_info_t/) object"
+		"description": "Returns the [player_info_t] object"
 	},
 	"Returns current level name (example: de_mirage)": {
 		"prefix": "engine.get_level_name_short",
@@ -140,7 +139,7 @@
 	"Setting the viewangles": {
 		"prefix": "engine.set_view_angles",
 		"body": [
-			"engine.set_view_angles(${1:viewangles})"
+			"engine.set_view_angles(${1:new_viewangles})"
 		],
 		"description": "Setting the viewangles"
 	},
@@ -154,7 +153,7 @@
 	"Executes command in console": {
 		"prefix": "engine.execute_client_cmd",
 		"body": [
-			"engine.execute_client_cmd(${1:cmd})"
+			"engine.execute_client_cmd(${1:command})"
 		],
 		"description": "Executes command in console"
 	},
@@ -172,26 +171,26 @@
 		],
 		"description": "Returns the local player object"
 	},
-	"Returns the [entity_t](../types/entity_t/) object by index": {
+	"Returns the [entity_t] object by index": {
 		"prefix": "entitylist.get_entity_by_index",
 		"body": [
 			"entitylist.get_entity_by_index(${1:index})"
 		],
-		"description": "Returns the [entity_t](../types/entity_t/) object by index"
+		"description": "Returns the [entity_t] object by index"
 	},
-	"Returns the [entity_t](../types/entity_t/) object by handle": {
+	"Returns the [entity_t] object by handle": {
 		"prefix": "entitylist.get_entity_from_handle",
 		"body": [
 			"entitylist.get_entity_from_handle(${1:handle})"
 		],
-		"description": "Returns the [entity_t](../types/entity_t/) object by handle"
+		"description": "Returns the [entity_t] object by handle"
 	},
 	"Returns the players array": {
 		"prefix": "entitylist.get_players",
 		"body": [
 			"entitylist.get_players(${1:type})"
 		],
-		"description": "Returns the players array"
+		"description": "Returns the players array\n0 - Enemies\n1 - Teammates\n2 - All\n"
 	},
 	"Returns the entities array by class name": {
 		"prefix": "entitylist.get_entities_by_class",
@@ -284,12 +283,12 @@
 		],
 		"description": "Setting the name"
 	},
-	"Returns [convar_t](../types/convar_t/) object": {
+	"Returns [convar_t] object": {
 		"prefix": "se.get_convar",
 		"body": [
 			"se.get_convar(${1:name})"
 		],
-		"description": "Returns [convar_t](../types/convar_t/) object"
+		"description": "Returns [convar_t] object"
 	},
 	"Returns the netvar offset": {
 		"prefix": "se.get_netvar",
@@ -305,12 +304,12 @@
 		],
 		"description": "Returns current latency"
 	},
-	"Register the event for [fire_game_event](../../callbacks/#fire_game_eventevent-csgo) callback": {
+	"Register the event for [fire_game_event] callback": {
 		"prefix": "se.register_event",
 		"body": [
 			"se.register_event(${1:eventname})"
 		],
-		"description": "Register the event for [fire_game_event](../../callbacks/#fire_game_eventevent-csgo) callback"
+		"description": "Register the event for [fire_game_event] callback"
 	},
 	"Returns the interface address": {
 		"prefix": "se.create_interface",
@@ -322,74 +321,14 @@
 	"Returns trace object": {
 		"prefix": "trace.line",
 		"body": [
-			"trace.line(${1:skip_entindex}, ${2:mask}, ${3:start}, ${4:end})"
+			"trace.line(${1:skip_entindex}, ${2:mask}, ${3:start_pos}, ${4:end_pos})"
 		],
-		"description": "Tracing"
+		"description": "Returns trace object"
 	},
 	"Returns trace object ":{
 		"prefix": "trace.hull",
-		"body": "trace.hull(${1:mask}, ${2:start}, ${3:end}, ${4:mins}, ${5:maxs}, ${6:trace_type}, ${7:should_hit_entity_callback})",
+		"body": "trace.hull(${1:mask}, ${2:start_pos}, ${3:end_pos}, ${4:mins}, ${5:maxs}, ${6:trace_type}, ${7:should_hit_entity_callback})",
 		"description": "Returns trace object"
-	},
-	"trace_t startpos":{
-		"prefix": "trace_t.startpos",
-		"body": "trace_t.startpos",
-		"description": "trace_t.startpos"
-	},
-	"trace_t.endpos":{
-		"prefix": "trace_t.endpos",
-		"body": "trace_t.endpos",
-		"description": "trace_t.endpos"
-	},
-	"trace_t.normal":{
-		"prefix": "trace_t.normal",
-		"body": "trace_t.normal",
-		"description": "trace_t.normal"
-	},
-	"trace_t.dist":{
-		"prefix": "trace_t.dist",
-		"body": "trace_t.dist",
-		"description": "trace_t.dist"
-	},
-	"trace_t.fraction":{
-		"prefix": "trace_t.fraction",
-		"body": "trace_t.fraction",
-		"description": "trace_t.fraction"
-	},
-	"trace_t.contents":{
-		"prefix": "trace_t.contents",
-		"body": "trace_t.contents",
-		"description": "trace_t.contents"
-	},
-	"trace_t.disp_flags":{
-		"prefix": "trace_t.disp_flags",
-		"body": "trace_t.disp_flags",
-		"description": "trace_t.disp_flags"
-	},
-	"trace_t.allsolid":{
-		"prefix": "trace_t.allsolid",
-		"body": "trace_t.allsolid",
-		"description": "trace_t.allsolid"
-	},
-	"trace_t.startsolid":{
-		"prefix": "trace_t.startsolid",
-		"body": "trace_t.startsolid",
-		"description": "trace_t.startsolid"
-	},
-	"trace_t.hit_entity_index":{
-		"prefix": "trace_t.hit_entity_index",
-		"body": "trace_t.hit_entity_index",
-		"description": "trace_t.hit_entity_index"
-	},
-	"trace_t.hitgroup":{
-		"prefix": "trace_t.hitgroup",
-		"body": "trace_t.hitgroup",
-		"description": "trace_t.hitgroup"
-	},
-	"trace_t.hitbox":{
-		"prefix": "trace_t.hitbox",
-		"body": "trace_t.hitbox",
-		"description": "trace_t.hitbox"
 	},
 	"vec2_t constructor": {
 		"prefix": "vec2_t.new",
@@ -401,7 +340,7 @@
 	"Returns the length of vec2_t": {
 		"prefix": "vec2:length",
 		"body": [
-			"vec2:length()"
+			":length()"
 		],
 		"description": "Returns the length of vec2_t"
 	},
@@ -415,14 +354,14 @@
 	"Returns the length of vec3_t": {
 		"prefix": "vec3:length",
 		"body": [
-			"vec3:length()"
+			":length()"
 		],
 		"description": "Returns the length of vec3_t"
 	},
 	"Returns the distance between 2 vectors": {
 		"prefix": "vec3:dist_to",
 		"body": [
-			"vec3:dist_to(${1:other})"
+			":dist_to(${1:other})"
 		],
 		"description": "Returns the distance between 2 vectors"
 	},
@@ -450,91 +389,91 @@
 	"Returns the event name": {
 		"prefix": "event:get_name",
 		"body": [
-			"event:get_name()"
+			":get_name()"
 		],
 		"description": "Returns the event name"
 	},
 	"Returns the boolean value from event": {
 		"prefix": "event:get_bool",
 		"body": [
-			"event:get_name(${1:key_name}, ${2:def_value})"
+			":get_bool(${1:key_name}, ${2:def_value})"
 		],
 		"description": "Returns the boolean value from event"
 	},
 	"Returns the int value from event": {
 		"prefix": "event:get_int",
 		"body": [
-			"event:get_int(${1:key_name}, ${2:def_value})"
+			":get_int(${1:key_name}, ${2:def_value})"
 		],
 		"description": "Returns the int value from event"
 	},
 	"Returns the float value from event": {
 		"prefix": "event:get_float",
 		"body": [
-			"event:get_float(${1:key_name}, ${2:def_value})"
+			":get_float(${1:key_name}, ${2:def_value})"
 		],
 		"description": "Returns the float value from event"
 	},
 	"Returns the string from event": {
 		"prefix": "event:get_string",
 		"body": [
-			"event:get_string(${1:key_name}, ${2:def_value})"
+			":get_string(${1:key_name}, ${2:def_value})"
 		],
 		"description": "Returns the string from event"
 	},
 	"Changes the bool key value": {
 		"prefix": "event:set_bool",
 		"body": [
-			"event:set_bool(${1:key_name}, ${2:value})"
+			":set_bool(${1:key_name}, ${2:value})"
 		],
 		"description": "Changes the bool key value"
 	},
 	"Changes the int key value": {
 		"prefix": "event:set_int",
 		"body": [
-			"event:set_int(${1:key_name}, ${2:value})"
+			":set_int(${1:key_name}, ${2:value})"
 		],
 		"description": "Changes the int key value"
 	},
 	"Changes the float key value": {
 		"prefix": "event:set_float",
 		"body": [
-			"event:set_float(${1:key_name}, ${2:value})"
+			":set_float(${1:key_name}, ${2:value})"
 		],
 		"description": "Changes the float key value"
 	},
 	"Changes the string key value": {
 		"prefix": "event:set_string",
 		"body": [
-			"event:set_string(${1:key_name}, ${2:value})"
+			":set_string(${1:key_name}, ${2:value})"
 		],
 		"description": "Changes the string key value"
 	},
 	"view_setup_t Camera position": {
 		"prefix": "view_setup.camera_pos",
 		"body": [
-			"view_setup.camera_pos"
+			".camera_pos"
 		],
 		"description": "Camera position"
 	},
 	"view_setup_t Pitch view angle": {
 		"prefix": "view_setup.pitch",
 		"body": [
-			"view_setup.pitch"
+			".pitch"
 		],
 		"description": "Pitch view angle"
 	},
 	"view_setup_t Yaw view angle": {
 		"prefix": "view_setup.yaw",
 		"body": [
-			"view_setup.yaw"
+			".yaw"
 		],
 		"description": "Yaw view angle"
 	},
 	"view_setup_t Field of view": {
 		"prefix": "view_setup.fov",
 		"body": [
-			"view_setup.fov"
+			".fov"
 		],
 		"description": "Field of view"
 	},
@@ -618,294 +557,294 @@
 	"Returns the int value": {
 		"prefix": "convar:get_int",
 		"body": [
-			"convar:get_int()"
+			":get_int()"
 		],
 		"description": "Returns the int value"
 	},
 	"Returns the float value": {
 		"prefix": "convar:get_float",
 		"body": [
-			"convar:get_float()"
+			":get_float()"
 		],
 		"description": "Returns the float value"
 	},
 	"Returns the string": {
 		"prefix": "convar:get_string",
 		"body": [
-			"convar:get_string()"
+			":get_string()"
 		],
 		"description": "Returns the string"
 	},
 	"Setting the int value": {
 		"prefix": "convar:set_int",
 		"body": [
-			"convar:set_int(${1:value})"
+			":set_int(${1:value})"
 		],
 		"description": "Setting the int value"
 	},
 	"Setting the float value": {
 		"prefix": "convar:set_float",
 		"body": [
-			"convar:set_float(${1:value})"
+			":set_float(${1:value})"
 		],
 		"description": "Setting the float value"
 	},
 	"Setting the string": {
 		"prefix": "convar:set_string",
 		"body": [
-			"convar:set_string(${1:value})"
+			":set_string(${1:value})"
 		],
 		"description": "Setting the string"
 	},
 	"Returns true if entity is in dormant": {
 		"prefix": "entity:is_dormant",
 		"body": [
-			"entity:is_dormant()"
+			":is_dormant()"
 		],
 		"description": "Returns true if entity is in dormant"
 	},
 	"Returns true if entity is alive": {
 		"prefix": "entity:is_alive",
 		"body": [
-			"entity:is_alive()"
+			":is_alive()"
 		],
 		"description": "Returns true if entity is alive"
 	},
 	"Returns the bounding box, or nil if the world position is not visible on your screen.": {
 		"prefix": "entity:get_bbox",
 		"body": [
-			"entity:get_bbox()"
+			":get_bbox()"
 		],
 		"description": "Returns the bounding box, or nil if the world position is not visible on your screen."
 	},
 	"Returns the hitbox pos": {
 		"prefix": "entity:get_player_hitbox_pos",
 		"body": [
-			"entity:get_player_hitbox_pos(${1:hitbox_num})"
+			":get_player_hitbox_pos(${1:hitbox_num})"
 		],
 		"description": "Returns the hitbox pos"
 	},
 	"Returns the entity index": {
 		"prefix": "entity:get_index",
 		"body": [
-			"entity:get_index()"
+			":get_index()"
 		],
 		"description": "Returns the entity index"
 	},
 	"Returns the entity address": {
 		"prefix": "entity:get_address",
 		"body": [
-			"entity:get_address()"
+			":get_address()"
 		],
 		"description": "Returns the entity address"
 	},
 	"Returns the boolean value by offset": {
 		"prefix": "entity:get_prop_bool",
 		"body": [
-			"entity:get_prop_bool(${1:offset})"
+			":get_prop_bool(${1:offset})"
 		],
 		"description": "Returns the boolean value by offset"
 	},
 	"Returns the integer value by offset": {
 		"prefix": "entity:get_prop_int",
 		"body": [
-			"entity:get_prop_int(${1:offset})"
+			":get_prop_int(${1:offset})"
 		],
 		"description": "Returns the integer value by offset"
 	},
 	"Returns the float value by offset": {
 		"prefix": "entity:get_prop_float",
 		"body": [
-			"entity:get_prop_float(${1:offset})"
+			":get_prop_float(${1:offset})"
 		],
 		"description": "Returns the float value by offset"
 	},
 	"Returns the short value by offset": {
 		"prefix": "entity:get_prop_short",
 		"body": [
-			"entity:get_prop_short(${1:offset})"
+			":get_prop_short(${1:offset})"
 		],
 		"description": "Returns the short value by offset"
 	},
 	"Returns the double value by offset": {
 		"prefix": "entity:get_prop_double",
 		"body": [
-			"entity:get_prop_double(${1:offset})"
+			":get_prop_double(${1:offset})"
 		],
 		"description": "Returns the double value by offset"
 	},
 	"Returns the vector by offset": {
 		"prefix": "entity:get_prop_vector",
 		"body": [
-			"entity:get_prop_vector(${1:offset})"
+			":get_prop_vector(${1:offset})"
 		],
 		"description": "Returns the vector by offset"
 	},
 	"Returns the angle by offset": {
 		"prefix": "entity:get_prop_angle",
 		"body": [
-			"entity:get_prop_angle(${1:offset})"
+			":get_prop_angle(${1:offset})"
 		],
 		"description": "Returns the angle by offset"
 	},
 	"Setting the boolean value by offset": {
 		"prefix": "entity:set_prop_bool",
 		"body": [
-			"entity:set_prop_bool(${1:offset}, ${2:value})"
+			":set_prop_bool(${1:offset}, ${2:value})"
 		],
 		"description": "Setting the boolean value by offset"
 	},
 	"Setting the integer value by offset": {
 		"prefix": "entity:set_prop_int",
 		"body": [
-			"entity:set_prop_int(${1:offset}, ${2:value})"
+			":set_prop_int(${1:offset}, ${2:value})"
 		],
 		"description": "Setting the integer value by offset"
 	},
 	"Setting the float value by offset": {
 		"prefix": "entity:set_prop_float",
 		"body": [
-			"entity:set_prop_float(${1:offset}, ${2:value})"
+			":set_prop_float(${1:offset}, ${2:value})"
 		],
 		"description": "Setting the float value by offset"
 	},
 	"Setting the short value by offset": {
 		"prefix": "entity:set_prop_short",
 		"body": [
-			"entity:set_prop_short(${1:offset}, ${2:value})"
+			":set_prop_short(${1:offset}, ${2:value})"
 		],
 		"description": "Setting the short value by offset"
 	},
 	"Setting the double value by offset": {
 		"prefix": "entity:set_prop_double",
 		"body": [
-			"entity:set_prop_double(${1:offset}, ${2:value})"
+			":set_prop_double(${1:offset}, ${2:value})"
 		],
 		"description": "Setting the double value by offset"
 	},
 	"Setting the vector by offset": {
 		"prefix": "entity:set_prop_vector",
 		"body": [
-			"entity:set_prop_vector(${1:offset}, ${2:value})"
+			":set_prop_vector(${1:offset}, ${2:value})"
 		],
 		"description": "Setting the vector by offset"
 	},
 	"Setting the angle by offset": {
 		"prefix": "entity:set_prop_angle",
 		"body": [
-			"entity:set_prop_angle(${1:offset}, ${2:value})"
+			":set_prop_angle(${1:offset}, ${2:value})"
 		],
 		"description": "Setting the angle by offset"
 	},
 	"player_info_t steam_id64": {
 		"prefix": "player_info.steam_id64",
 		"body": [
-			"player_info.steam_id64"
+			".steam_id64"
 		],
 		"description": "player_info_t steam_id64"
 	},
 	"player_info_t name": {
 		"prefix": "player_info.name",
 		"body": [
-			"player_info.name"
+			".name"
 		],
 		"description": "player_info_t name"
 	},
 	"player_info_t user_id": {
 		"prefix": "player_info.user_id",
 		"body": [
-			"player_info.user_id"
+			".user_id"
 		],
 		"description": "player_info_t user_id"
 	},
 	"player_info_t is_bot": {
 		"prefix": "player_info.is_bot",
 		"body": [
-			"player_info.is_bot"
+			".is_bot"
 		],
 		"description": "player_info_t is_bot"
 	},
 	"Is manual shot": {
 		"prefix": "shot_info.manual",
 		"body": [
-			"shot_info.manual"
+			".manual"
 		],
 		"description": "Is manual shot"
 	},
 	"Target player": {
 		"prefix": "shot_info.target",
 		"body": [
-			"shot_info.target"
+			".target"
 		],
 		"description": "Target player"
 	},
 	"How many ticks have been backtracked": {
 		"prefix": "shot_info.backtrack",
 		"body": [
-			"shot_info.backtrack"
+			".backtrack"
 		],
 		"description": "How many ticks have been backtracked"
 	},
 	"Shot hitchance": {
 		"prefix": "shot_info.hitchance",
 		"body": [
-			"shot_info.hitchance"
+			".hitchance"
 		],
 		"description": "Shot hitchance"
 	},
 	"Target hitbox": {
 		"prefix": "shot_info.hitbox",
 		"body": [
-			"shot_info.hitbox"
+			".hitbox"
 		],
 		"description": "Target hitbox"
 	},
 	"Server hitgroup (on hit)": {
 		"prefix": "shot_info.server_hitgroup",
 		"body": [
-			"shot_info.server_hitgroup"
+			".server_hitgroup"
 		],
 		"description": "Server hitgroup (on hit)"
 	},
 	"Result of current shot (hit/spread/desync/unk)": {
 		"prefix": "shot_info.result",
 		"body": [
-			"shot_info.result"
+			".result"
 		],
 		"description": "Result of current shot (hit/spread/desync/unk)"
 	},
 	"Expected damage": {
 		"prefix": "shot_info.client_damage",
 		"body": [
-			"shot_info.client_damage"
+			".client_damage"
 		],
 		"description": "Expected damage"
 	},
 	"Actual damage (on hit)": {
 		"prefix": "shot_info.server_damage",
 		"body": [
-			"shot_info.server_damage"
+			".server_damage"
 		],
 		"description": "Actual damage (on hit)"
 	},
 	"Shot tick": {
 		"prefix": "shot_info.tick",
 		"body": [
-			"shot_info.tick"
+			".tick"
 		],
 		"description": "Shot tick"
 	},
 	"Did shoot into safe point": {
 		"prefix": "shot_info.safe_point",
 		"body": [
-			"shot_info.safe_point"
+			".safe_point"
 		],
 		"description": "Did shoot into safe point"
 	},
 	"Aimpoint position": {
 		"prefix": "shot_info.aim_point",
 		"body": [
-			"shot_info.aim_point"
+			".aim_point"
 		],
 		"description": "Aimpoint position"
 	},
@@ -1178,260 +1117,285 @@
 	"Returns value from ui checkbox": {
 		"prefix": "checkbox:get_value()",
 		"body": [
-			"checkbox:get_value()"
+			":get_value()"
 		],
 		"description": "Returns value from ui checkbox"
 	},
 	"Setting checkbox value": {
 		"prefix": "checkbox:set_value",
 		"body": [
-			"checkbox:set_value(${1:val})"
+			":set_value(${1:val})"
 		],
 		"description": "Setting checkbox value"
 	},
 	"Setting checkbox visiblity, works only for script variables": {
 		"prefix": "checkbox:set_visible",
 		"body": [
-			"checkbox:set_visible(${1:val})"
+			":set_visible(${1:val})"
 		],
 		"description": "Setting checkbox visiblity, works only for script variables"
 	},
 	"Setting checkbox label, works only for script variables": {
 		"prefix": "checkbox:set_label",
 		"body": [
-			"checkbox:set_label(${1:label})"
+			":set_label(${1:label})"
 		],
 		"description": "Setting checkbox label, works only for script variables"
 	},
 	"Returns value from color edit": {
 		"prefix": "color_edit:get_value()",
 		"body": [
-			"color_edit:get_value()"
+			":get_value()"
 		],
 		"description": "Returns value from color edit"
 	},
 	"Setting color edit value": {
 		"prefix": "color_edit:set_value",
 		"body": [
-			"color_edit:set_value(${1:val})"
+			":set_value(${1:val})"
 		],
 		"description": "Setting color edit value"
 	},
 	"Setting color edit visiblity, works only for script variables": {
 		"prefix": "color_edit:set_visible",
 		"body": [
-			"color_edit:set_visible(${1:val})"
+			":set_visible(${1:val})"
 		],
 		"description": "Setting color edit visiblity, works only for script variables"
 	},
 	"Setting color edit label, works only for script variables": {
 		"prefix": "color_edit:set_label",
 		"body": [
-			"color_edit:set_label(${1:label})"
+			":set_label(${1:label})"
 		],
 		"description": "Setting color edit label, works only for script variables"
 	},
 	"Returns value from combo box": {
 		"prefix": "combo_box:get_value()",
 		"body": [
-			"combo_box:get_value()"
+			":get_value()"
 		],
 		"description": "Returns value from combo box"
 	},
 	"Setting combo box value": {
 		"prefix": "combo_box:set_value",
 		"body": [
-			"combo_box:set_value(${1:val})"
+			":set_value(${1:val})"
 		],
 		"description": "Setting combo box value"
 	},
 	"Setting combobox visiblity, works only for script variables": {
 		"prefix": "combo_box:set_visible",
 		"body": [
-			"combo_box:set_visible(${1:val})"
+			":set_visible(${1:val})"
 		],
 		"description": "Setting combobox visiblity, works only for script variables"
 	},
 	"Setting combobox label, works only for script variables": {
 		"prefix": "combo_box:set_label",
 		"body": [
-			"combo_box:set_label(${1:label})"
+			":set_label(${1:label})"
 		],
 		"description": "Setting combobox label, works only for script variables"
 	},
 	"Setting combobox items, works only for script variables": {
 		"prefix": "combo_box:set_items",
 		"body": [
-			"combo_box:set_items(${1:items})"
+			":set_items(${1:items})"
 		],
 		"description": "Setting combobox items, works only for script variables"
 	},
 	"Returns value from multi combo box": {
 		"prefix": "multi_combo_box:get_value()",
 		"body": [
-			"multi_combo_box:get_value(${1:index})"
+			":get_value(${1:index})"
 		],
 		"description": "Returns value from multi combo box"
 	},
 	"Setting multi combo box value": {
 		"prefix": "multi_combo_box:set_value",
 		"body": [
-			"multi_combo_box:set_value(${1:val})"
+			":set_value(${1:val})"
 		],
 		"description": "Setting multi combo box value"
 	},
 	"Setting multi combo box visiblity, works only for script variables": {
 		"prefix": "multi_combo_box:set_visible",
 		"body": [
-			"multi_combo_box:set_visible(${1:val})"
+			":set_visible(${1:val})"
 		],
 		"description": "Setting multi combo box visiblity, works only for script variables"
 	},
 	"Setting multi combo box label, works only for script variables": {
 		"prefix": "multi_combo_box:set_label",
 		"body": [
-			"multi_combo_box:set_label(${1:label})"
+			":set_label(${1:label})"
 		],
 		"description": "Setting multi combo box label, works only for script variables"
 	},
 	"Setting multi combo box items, works only for script variables": {
 		"prefix": "multi_combo_box:set_items",
 		"body": [
-			"multi_combo_box:set_items(${1:items})"
+			":set_items(${1:items})"
 		],
 		"description": "Setting multi combo box items, works only for script variables"
 	},
 	"Returns the key code from keybind": {
 		"prefix": "key_bind:get_key",
 		"body": [
-			"key_bind:get_key()"
+			":get_key()"
 		],
 		"description": "Returns the key code from keybind"
     },
     "Returns keybind type": {
 		"prefix": "key_bind:get_type",
 		"body": [
-			"key_bind:get_type()"
+			":get_type()"
 		],
 		"description": "Returns keybind type"
     },
     "Setting the key for keybind": {
 		"prefix": "key_bind:set_key",
 		"body": [
-			"key_bind:set_key(${1:key})"
+			":set_key(${1:key})"
 		],
 		"description": "Setting the key for keybind"
     },
     "Setting the type for keybind": {
 		"prefix": "key_bind:set_type",
 		"body": [
-			"key_bind:set_type(${1:type})"
+			":set_type(${1:type})"
 		],
 		"description": "Setting the type for keybind"
     },
     "Returns keybind state": {
 		"prefix": "key_bind:is_active",
 		"body": [
-			"key_bind:is_active()"
+			":is_active()"
 		],
 		"description": "Returns keybind state"
 	},
 	"Setting keybind visiblity, works only for script variables": {
 		"prefix": "key_bind:set_visible",
 		"body": [
-			"key_bind:set_visible(${1:val})"
+			":set_visible(${1:val})"
 		],
 		"description": "Setting keybind visiblity, works only for script variables"
 	},
 	"Setting keybind label, works only for script variables": {
 		"prefix": "key_bind:set_label",
 		"body": [
-			"key_bind:set_label(${1:label})"
+			":set_label(${1:label})"
 		],
 		"description": "Setting keybind label, works only for script variables"
 	},
     "Returns value from slider float": {
 		"prefix": "slider_float:get_value()",
 		"body": [
-			"slider_float:get_value()"
+			":get_value()"
 		],
 		"description": "Returns value from slider float"
 	},
 	"Setting slider float value": {
 		"prefix": "slider_float:set_value",
 		"body": [
-			"slider_float:set_value(${1:val})"
+			":set_value(${1:val})"
 		],
 		"description": "Setting slider float value"
 	},
 	"Setting slider float visiblity, works only for script variables": {
 		"prefix": "slider_float:set_visible",
 		"body": [
-			"slider_float:set_visible(${1:val})"
+			":set_visible(${1:val})"
 		],
 		"description": "Setting slider float visiblity, works only for script variables"
 	},
 	"Setting slider float label, works only for script variables": {
 		"prefix": "slider_float:set_label",
 		"body": [
-			"slider_float:set_label(${1:label})"
+			":set_label(${1:label})"
 		],
 		"description": "Setting slider float label, works only for script variables"
 	},
     "Returns value from slider int": {
 		"prefix": "slider_int:get_value()",
 		"body": [
-			"slider_int:get_value()"
+			":get_value()"
 		],
 		"description": "Returns value from slider int"
 	},
 	"Setting slider int value": {
 		"prefix": "slider_int:set_value",
 		"body": [
-			"slider_int:set_value(${1:val})"
+			":set_value(${1:val})"
 		],
 		"description": "Setting slider int value"
 	},
 	"Setting slider int visiblity, works only for script variables": {
 		"prefix": "slider_int:set_visible",
 		"body": [
-			"slider_int:set_visible(${1:val})"
+			":set_visible(${1:val})"
 		],
 		"description": "Setting slider int visiblity, works only for script variables"
 	},
 	"Setting slider int label, works only for script variables": {
 		"prefix": "slider_int:set_label",
 		"body": [
-			"slider_int:set_label(${1:val})"
+			":set_label(${1:val})"
 		],
 		"description": "Setting slider int label, works only for script variables"
 	},
     "Returns value from text input": {
 		"prefix": "text_input:get_value()",
 		"body": [
-			"text_input:get_value()"
+			":get_value()"
 		],
 		"description": "Returns value from text input"
 	},
 	"Setting text input value": {
 		"prefix": "text_input:set_value",
 		"body": [
-			"text_input:set_value(${1:val})"
+			":set_value(${1:val})"
 		],
 		"description": "Setting text input value"
 	},
 	"Setting text input visiblity, works only for script variables": {
 		"prefix": "text_input:set_visible",
 		"body": [
-			"text_input:set_visible(${1:val})"
+			":set_visible(${1:val})"
 		],
 		"description": "Setting text input visiblity, works only for script variables"
 	},
 	"Setting text input label, works only for script variables": {
 		"prefix": "text_input:set_label()",
 		"body": [
-			"text_input:set_label(${1:label})"
+			":set_label(${1:label})"
 		],
 		"description": "Setting text input label, works only for script variables"
-	}
+	}/* ,
+	"for loop": {
+		"prefix": "for Key = Min, Max do end",
+		"body": "for ${1:Key} = ${2:StartValue}, ${3:EndValue} do\n\nend",
+		"description": "for-key loop"
+	},
+	"pairs loop":{
+		"prefix": "for Key, Value in pairs() do end",
+		"body": "for ${1:Key}, ${2:Value} in pairs(${3:Table}) do\n\nend",
+		"description": "pairs loop"
+	},
+	"ipairs loop":{
+		"prefix": "for Key, Value in ipairs() do end",
+		"body": "for ${1:Key}, ${2:Value} in ipairs(${3:Table}) do\n\nend",
+		"description": "ipairs loop"
+	},
+	"while loop":{
+		"prefix": "while condition do end",
+		"body": "while ${1:condition} do\n\nend",
+		"description": "while loop"
+	},
+	"function":{
+		"prefix": "function() end",
+		"body": "function()\n\nend",
+		"description": "create function"
+	} */
 }
