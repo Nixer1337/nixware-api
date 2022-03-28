@@ -1372,30 +1372,5 @@
 			":set_label(${1:label})"
 		],
 		"description": "Setting text input label, works only for script variables"
-	}/* ,
-	"for loop": {
-		"prefix": "for Key = Min, Max do end",
-		"body": "for ${1:Key} = ${2:StartValue}, ${3:EndValue} do\n\nend",
-		"description": "for-key loop"
-	},
-	"pairs loop":{
-		"prefix": "for Key, Value in pairs() do end",
-		"body": "for ${1:Key}, ${2:Value} in pairs(${3:Table}) do\n\nend",
-		"description": "pairs loop"
-	},
-	"ipairs loop":{
-		"prefix": "for Key, Value in ipairs() do end",
-		"body": "for ${1:Key}, ${2:Value} in ipairs(${3:Table}) do\n\nend",
-		"description": "ipairs loop"
-	},
-	"while loop":{
-		"prefix": "while condition do end",
-		"body": "while ${1:condition} do\n\nend",
-		"description": "while loop"
-	},
-	"function":{
-		"prefix": "function() end",
-		"body": "function()\n\nend",
-		"description": "create function"
-	} */
+	}
 }
