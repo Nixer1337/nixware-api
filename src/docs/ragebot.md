@@ -134,7 +134,7 @@ ragebot.override_head_scale(entity_index, 50)
 Type | Name | Description
 ------------ | ------------- | ------------
 number | index | Entity index
-number | scale | Bofy pointscale
+number | scale | Body pointscale
 
 Overrides body point scale on player
 ```lua
