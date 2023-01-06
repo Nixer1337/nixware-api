@@ -227,7 +227,7 @@ ui.set_visible(false)
 ```
 ---
 
-## **get_menu_rect()**: [vec4_t](../types/vec4_t)
+## **get_menu_rect()**: [vec4_t](../../types/vec4_t)
 
 Returns menu coordinates
 ```lua
