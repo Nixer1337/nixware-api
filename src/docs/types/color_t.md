@@ -1,21 +1,21 @@
 # color_t
 
-Type | Name
------------- | -------------
-number | r
-number | g
-number | b
-number | a
+Type | Name | Description
+------------ | ------------- | -------------
+number | red | Red color range as a percentage in the range [0.0, 1.0]
+number | green | Green color range as a percentage in the range [0.0, 1.0]
+number | blue | Blue color range as a percentage in the range [0.0, 1.0]
+number | alpha | Alpha color range as a percentage in the range [0.0, 1.0]
 
 ## Functions
 
 ## **new(red, green, blue, alpha)**: color_t
-Type | Name
------------- | -------------
-number | red
-number | green
-number | blue
-number | alpha
+Type | Name | Description
+------------ | ------------- | -------------
+number | red | Red color range as a percentage in the range [0, 255]
+number | green | Green color range as a percentage in the range [0, 255]
+number | blue | Blue color range as a percentage in the range [0, 255]
+number | alpha | Alpha color range as a percentage in the range [0, 255]
 
 Constructor
 ```lua

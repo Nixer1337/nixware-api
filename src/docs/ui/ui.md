@@ -225,3 +225,12 @@ Setting menu visibility
 -- close menu
 ui.set_visible(false)
 ```
+---
+
+## **get_menu_rect()**: [vec4_t](../types/vec4_t)
+
+Returns menu coordinates
+```lua
+local menu_rect = ui.get_menu_rect()
+renderer.rect_filled(vec2_t.new(menu_rect.z + 10, menu_rect.y), vec2_t.new(menu_rect.z + 50, menu_rect.w), color_t.new(255, 255, 255, 255))
+```

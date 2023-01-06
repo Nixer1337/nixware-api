@@ -193,11 +193,30 @@ client.register_callback("paint", on_paint)
 ```
 ---
 
+## **circle_fade(pos, radius, color_in, color_out)**
+
+Type | Name | Description
+------------ | ------------- | ------------
+[vec2_t](../types/vec2_t/) | pos | Position
+number | radius | Circle radius
+[color_t](../types/color_t/) | color_in | Circle color
+[color_t](../types/color_t/) | color_out | Circle color
+
+Drawing the faded circle
+```lua
+local function on_paint()
+    renderer.circle_fade(vec2_t.new(100, 100), 30, color_t.new(255, 0, 0, 0), color_t.new(255, 0, 0, 255))
+end
+
+client.register_callback("paint", on_paint)
+```
+---
+
 ## **circle(pos, radius, segments, filled, color)**
 
 Type | Name | Description
 ------------ | ------------- | ------------
-[vec2_t](../types/vec2_t/) | pos | Start position
+[vec2_t](../types/vec2_t/) | pos | Position
 number | radius | Circle radius
 number | segments | Circle segments
 bool | filled | Filled circle

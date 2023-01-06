@@ -71,6 +71,34 @@ ragebot.override_hitscan(entity_index, SCAN_FOOT, false)
 ```
 ---
 
+## **override_skip_unsafe_points(index, hitbox, scan)**
+Type | Name | Description
+------------ | ------------- | ------------
+number | index | Entity index
+number | hitbox | Hitbox
+bool | scan | Enables scan this hitbox
+
+Overrides skip unsafe points on player
+```lua
+local SCAN_HEAD = 0
+local SCAN_CHEST = 1
+local SCAN_PELVIS = 2
+local SCAN_STOMACH = 3
+local SCAN_LEGS = 4
+local SCAN_FOOT = 5
+
+local entity_index = player:get_index()
+
+ragebot.override_skip_unsafe_points(entity_index, SCAN_HEAD, true)
+ragebot.override_skip_unsafe_points(entity_index, SCAN_CHEST, false)
+ragebot.override_skip_unsafe_points(entity_index, SCAN_PELVIS, false)
+ragebot.override_skip_unsafe_points(entity_index, SCAN_STOMACH, false)
+ragebot.override_skip_unsafe_points(entity_index, SCAN_LEGS, false)
+ragebot.override_skip_unsafe_points(entity_index, SCAN_FOOT, false)
+
+```
+---
+
 ## **override_min_damage(index, damage)**
 Type | Name | Description
 ------------ | ------------- | ------------

@@ -53,15 +53,6 @@ local index = entity:get_index()
 
 ---
 
-## **get_address()**: number
-
-Returns the entity address
-```lua
-local addr = entity:get_address()
-```
-
----
-
 ## **get_prop_bool(offset)**: bool
 Type | Name | Description
 ------------ | ------------- | ------------

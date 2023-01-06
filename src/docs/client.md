@@ -88,28 +88,6 @@ local hours, minutes, seconds = client.get_system_time()
 ```
 ---
 
-## **is_key_pressed(key)**: bool
-Type | Name | Description
------------- | ------------- | ------------
-number | key | Virtual key code
-
-Returns true if key pressed
-```lua
-local pressed = client.is_key_pressed(1)
-```
----
-
-## **is_key_clicked(key)**: bool
-Type | Name | Description
------------- | ------------- | ------------
-number | key | Virtual key code
-
-Returns true if key clicked
-```lua
-local clicked = client.is_key_clicked(1)
-```
----
-
 ## **find_pattern(module, pattern)**: number
 Type | Name | Description
 ------------ | ------------- | ------------
