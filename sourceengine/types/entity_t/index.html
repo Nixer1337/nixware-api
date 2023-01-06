@@ -425,8 +425,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../types/angle_t/" title="angle_t" class="md-nav__link">
-      angle_t
+    <a href="../../../types/vec4_t/" title="vec4_t" class="md-nav__link">
+      vec4_t
     </a>
   </li>
 
@@ -437,8 +437,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../types/rect_t/" title="rect_t" class="md-nav__link">
-      rect_t
+    <a href="../../../types/angle_t/" title="angle_t" class="md-nav__link">
+      angle_t
     </a>
   </li>
 
@@ -628,13 +628,6 @@
         <li class="md-nav__item">
   <a href="#get_index-number" class="md-nav__link">
     get_index(): number
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get_address-number" class="md-nav__link">
-    get_address(): number
   </a>
   
 </li>
@@ -954,13 +947,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#get_address-number" class="md-nav__link">
-    get_address(): number
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#get_prop_booloffset-bool" class="md-nav__link">
     get_prop_bool(offset): bool
   </a>
@@ -1078,29 +1064,26 @@
 <h2 id="functions">Functions</h2>
 <h2 id="is_dormant-bool"><strong>is_dormant()</strong>: bool</h2>
 <p>Returns true if entity is in dormant</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">is_dormant</span> <span class="o">=</span> <span class="n">entity</span><span class="p">:</span><span class="n">is_dormant</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">is_dormant</span> <span class="o">=</span> <span class="n">entity</span><span class="p">:</span><span class="n">is_dormant</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="is_alive-bool"><strong>is_alive()</strong>: bool</h2>
 <p>Returns true if entity is alive</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">is_alive</span> <span class="o">=</span> <span class="n">entity</span><span class="p">:</span><span class="n">is_alive</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">is_alive</span> <span class="o">=</span> <span class="n">entity</span><span class="p">:</span><span class="n">is_alive</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="get_bbox-rect_t"><strong>get_bbox()</strong>: <a href="../../../types/rect_t/">rect_t</a></h2>
 <p>Returns the bounding box, or nil if the world position is not visible on your screen.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">bbox</span> <span class="o">=</span> <span class="n">entity</span><span class="p">:</span><span class="n">get_bbox</span><span class="p">()</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">bbox</span> <span class="o">=</span> <span class="n">entity</span><span class="p">:</span><span class="n">get_bbox</span><span class="p">()</span>
 <span class="kr">if</span> <span class="n">bbox</span> <span class="o">~=</span> <span class="kc">nil</span> <span class="kr">then</span>
     <span class="n">renderer</span><span class="p">.</span><span class="n">rect</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="n">bbox</span><span class="p">.</span><span class="n">left</span><span class="p">,</span> <span class="n">bbox</span><span class="p">.</span><span class="n">top</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="n">bbox</span><span class="p">.</span><span class="n">right</span><span class="p">,</span> <span class="n">bbox</span><span class="p">.</span><span class="n">bottom</span><span class="p">),</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
 <span class="kr">end</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="get_player_hitbox_poshitbox_num-vec3_t"><strong>get_player_hitbox_pos(hitbox_num)</strong>: <a href="../../../types/vec3_t/">vec3_t</a></h2>
@@ -1121,23 +1104,14 @@
 </tbody>
 </table>
 <p>Returns the hitbox pos</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">headpos</span> <span class="o">=</span> <span class="n">entity</span><span class="p">:</span><span class="n">get_player_hitbox_pos</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">headpos</span> <span class="o">=</span> <span class="n">entity</span><span class="p">:</span><span class="n">get_player_hitbox_pos</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="get_index-number"><strong>get_index()</strong>: number</h2>
 <p>Returns the entity index</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">index</span> <span class="o">=</span> <span class="n">entity</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
-
-<hr />
-<h2 id="get_address-number"><strong>get_address()</strong>: number</h2>
-<p>Returns the entity address</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">addr</span> <span class="o">=</span> <span class="n">entity</span><span class="p">:</span><span class="n">get_address</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">index</span> <span class="o">=</span> <span class="n">entity</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="get_prop_booloffset-bool"><strong>get_prop_bool(offset)</strong>: bool</h2>

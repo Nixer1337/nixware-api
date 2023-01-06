@@ -15,7 +15,7 @@
     
     
       
-        <title>vec3_t - Nixware Lua API</title>
+        <title>vec4_t - Nixware Lua API</title>
       
     
     
@@ -48,7 +48,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vec3_t" class="md-skip">
+        <a href="#vec4_t" class="md-skip">
           Skip to content
         </a>
       
@@ -75,7 +75,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              vec3_t
+              vec4_t
             
           </span>
         </div>
@@ -413,6 +413,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../vec3_t/" title="vec3_t" class="md-nav__link">
+      vec3_t
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -424,14 +436,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        vec3_t
+        vec4_t
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="vec3_t" class="md-nav__link md-nav__link--active">
-      vec3_t
+    <a href="./" title="vec4_t" class="md-nav__link md-nav__link--active">
+      vec4_t
     </a>
     
       
@@ -457,22 +469,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#newx-y-z-vec3_t" class="md-nav__link">
-    new(x, y, z): vec3_t
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#length-number" class="md-nav__link">
-    length(): number
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dist_toother-number" class="md-nav__link">
-    dist_to(other): number
+  <a href="#newx-y-z-w-vec4_t" class="md-nav__link">
+    new(x, y, z, w): vec4_t
   </a>
   
 </li>
@@ -481,18 +479,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../vec4_t/" title="vec4_t" class="md-nav__link">
-      vec4_t
-    </a>
   </li>
 
         
@@ -798,22 +784,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#newx-y-z-vec3_t" class="md-nav__link">
-    new(x, y, z): vec3_t
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#length-number" class="md-nav__link">
-    length(): number
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dist_toother-number" class="md-nav__link">
-    dist_to(other): number
+  <a href="#newx-y-z-w-vec4_t" class="md-nav__link">
+    new(x, y, z, w): vec4_t
   </a>
   
 </li>
@@ -834,7 +806,7 @@
                   
                 
                 
-                <h1 id="vec3_t">vec3_t</h1>
+                <h1 id="vec4_t">vec4_t</h1>
 <table>
 <thead>
 <tr>
@@ -854,11 +826,15 @@
 <tr>
 <td>number</td>
 <td>z</td>
+</tr>
+<tr>
+<td>number</td>
+<td>w</td>
 </tr>
 </tbody>
 </table>
 <h2 id="functions">Functions</h2>
-<h2 id="newx-y-z-vec3_t"><strong>new(x, y, z)</strong>: vec3_t</h2>
+<h2 id="newx-y-z-w-vec4_t"><strong>new(x, y, z, w)</strong>: vec4_t</h2>
 <table>
 <thead>
 <tr>
@@ -879,44 +855,14 @@
 <td>number</td>
 <td>z</td>
 </tr>
+<tr>
+<td>number</td>
+<td>w</td>
+</tr>
 </tbody>
 </table>
 <p>Constructor</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">vector</span> <span class="o">=</span> <span class="n">vec3_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-
-<hr />
-<h2 id="length-number"><strong>length()</strong>: number</h2>
-<p>Returns the length of vector</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">vector</span> <span class="o">=</span> <span class="n">vec3_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="kd">local</span> <span class="n">vector_length</span> <span class="o">=</span> <span class="n">vector</span><span class="p">:</span><span class="n">length</span><span class="p">()</span>
-</code></pre></div></td></tr></table></div>
-
-<hr />
-<h2 id="dist_toother-number"><strong>dist_to(other)</strong>: number</h2>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>vec3_t</td>
-<td>other</td>
-</tr>
-</tbody>
-</table>
-<p>Returns the distance between 2 vectors</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">vector</span> <span class="o">=</span> <span class="n">vec3_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">)</span>
-<span class="kd">local</span> <span class="n">vector2</span> <span class="o">=</span> <span class="n">vec3_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-
-<span class="kd">local</span> <span class="n">distance</span> <span class="o">=</span> <span class="n">vector</span><span class="p">:</span><span class="n">dist_to</span><span class="p">(</span><span class="n">vector2</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">vec4</span> <span class="o">=</span> <span class="n">vec4_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
                 
               
@@ -936,7 +882,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../vec2_t/" title="vec2_t" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../vec3_t/" title="vec3_t" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -945,19 +891,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                vec2_t
+                vec3_t
               </div>
             </div>
           </a>
         
         
-          <a href="../vec4_t/" title="vec4_t" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../angle_t/" title="angle_t" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                vec4_t
+                angle_t
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

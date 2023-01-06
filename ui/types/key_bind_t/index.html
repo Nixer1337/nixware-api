@@ -520,8 +520,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../types/angle_t/" title="angle_t" class="md-nav__link">
-      angle_t
+    <a href="../../../types/vec4_t/" title="vec4_t" class="md-nav__link">
+      vec4_t
     </a>
   </li>
 
@@ -532,8 +532,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../types/rect_t/" title="rect_t" class="md-nav__link">
-      rect_t
+    <a href="../../../types/angle_t/" title="angle_t" class="md-nav__link">
+      angle_t
     </a>
   </li>
 
@@ -896,20 +896,18 @@
 <h2 id="functions">Functions</h2>
 <h2 id="get_key-number"><strong>get_key()</strong>: number</h2>
 <p>Returns the key code from keybind</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">rage_enable_bind</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_key_bind</span><span class="p">(</span><span class="s2">&quot;rage_enable_bind&quot;</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">rage_enable_bind</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_key_bind</span><span class="p">(</span><span class="s2">&quot;rage_enable_bind&quot;</span><span class="p">)</span>
 <span class="kd">local</span> <span class="n">rage_enable_bind_key</span> <span class="o">=</span> <span class="n">rage_enable_bind</span><span class="p">:</span><span class="n">get_key</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="get_type-number"><strong>get_type()</strong>: number</h2>
 <p>Returns keybind type</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">rage_enable_bind</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_key_bind</span><span class="p">(</span><span class="s2">&quot;rage_enable_bind&quot;</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">rage_enable_bind</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_key_bind</span><span class="p">(</span><span class="s2">&quot;rage_enable_bind&quot;</span><span class="p">)</span>
 <span class="kd">local</span> <span class="n">rage_enable_bind_type</span> <span class="o">=</span> <span class="n">rage_enable_bind</span><span class="p">:</span><span class="n">get_type</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="set_keykey"><strong>set_key(key)</strong></h2>
@@ -930,13 +928,12 @@
 </tbody>
 </table>
 <p>Setting the key for keybind</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1">-- https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">-- https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes</span>
 <span class="kd">local</span> <span class="n">rage_enable_bind</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_key_bind</span><span class="p">(</span><span class="s2">&quot;rage_enable_bind&quot;</span><span class="p">)</span>
 <span class="n">rage_enable_bind</span><span class="p">:</span><span class="n">set_key</span><span class="p">(</span><span class="mh">0x01</span><span class="p">)</span> <span class="c1">-- Left mouse button</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="set_typetype"><strong>set_type(type)</strong></h2>
@@ -957,20 +954,18 @@
 </tbody>
 </table>
 <p>Setting the type for keybind</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">rage_enable_bind</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_key_bind</span><span class="p">(</span><span class="s2">&quot;rage_enable_bind&quot;</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">rage_enable_bind</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_key_bind</span><span class="p">(</span><span class="s2">&quot;rage_enable_bind&quot;</span><span class="p">)</span>
 <span class="n">rage_enable_bind</span><span class="p">:</span><span class="n">set_type</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1">-- always on</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="is_active-bool"><strong>is_active()</strong>: bool</h2>
 <p>Returns keybind state</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">rage_enable_bind</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_key_bind</span><span class="p">(</span><span class="s2">&quot;rage_enable_bind&quot;</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">rage_enable_bind</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_key_bind</span><span class="p">(</span><span class="s2">&quot;rage_enable_bind&quot;</span><span class="p">)</span>
 <span class="kd">local</span> <span class="n">bind_active</span> <span class="o">=</span> <span class="n">rage_enable_bind</span><span class="p">:</span><span class="n">is_active</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="set_visibleval"><strong>set_visible(val)</strong></h2>
@@ -991,11 +986,10 @@
 </tbody>
 </table>
 <p>Setting keybind visiblity, works only for script variables</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">my_keybind</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">add_key_bind</span><span class="p">(</span><span class="s2">&quot;lua key bind&quot;</span><span class="p">,</span> <span class="s2">&quot;lua_keybind&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">my_keybind</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">add_key_bind</span><span class="p">(</span><span class="s2">&quot;lua key bind&quot;</span><span class="p">,</span> <span class="s2">&quot;lua_keybind&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">my_keybind</span><span class="p">:</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="set_labellabel"><strong>set_label(label)</strong></h2>
@@ -1016,11 +1010,10 @@
 </tbody>
 </table>
 <p>Setting keybind label, works only for script variables</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">my_keybind</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">add_key_bind</span><span class="p">(</span><span class="s2">&quot;lua key bind&quot;</span><span class="p">,</span> <span class="s2">&quot;lua_keybind&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">my_keybind</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">add_key_bind</span><span class="p">(</span><span class="s2">&quot;lua key bind&quot;</span><span class="p">,</span> <span class="s2">&quot;lua_keybind&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">my_keybind</span><span class="p">:</span><span class="n">set_label</span><span class="p">(</span><span class="s2">&quot;123123&quot;</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
                 
               
               

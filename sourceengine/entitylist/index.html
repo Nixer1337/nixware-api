@@ -425,8 +425,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../types/angle_t/" title="angle_t" class="md-nav__link">
-      angle_t
+    <a href="../../types/vec4_t/" title="vec4_t" class="md-nav__link">
+      vec4_t
     </a>
   </li>
 
@@ -437,8 +437,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../types/rect_t/" title="rect_t" class="md-nav__link">
-      rect_t
+    <a href="../../types/angle_t/" title="angle_t" class="md-nav__link">
+      angle_t
     </a>
   </li>
 
@@ -894,16 +894,14 @@
 <h2 id="functions">Functions</h2>
 <h2 id="get_highest_entity_index-number"><strong>get_highest_entity_index()</strong>: number</h2>
 <p>Returns the highest entity index</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">entitylist</span><span class="p">.</span><span class="n">get_highest_entity_index</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">entitylist</span><span class="p">.</span><span class="n">get_highest_entity_index</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="get_local_player-entity_t"><strong>get_local_player()</strong>: <a href="../types/entity_t/">entity_t</a></h2>
 <p>Returns the local player object</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">localplayer</span> <span class="o">=</span> <span class="n">entitylist</span><span class="p">.</span><span class="n">get_local_player</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">localplayer</span> <span class="o">=</span> <span class="n">entitylist</span><span class="p">.</span><span class="n">get_local_player</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="get_entity_by_indexindex-entity_t"><strong>get_entity_by_index(index)</strong>: <a href="../types/entity_t/">entity_t</a></h2>
@@ -924,9 +922,8 @@
 </tbody>
 </table>
 <p>Returns the <a href="../types/entity_t/">entity_t</a> object by index</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">lp</span> <span class="o">=</span> <span class="n">entitylist</span><span class="p">.</span><span class="n">get_entity_by_index</span><span class="p">(</span><span class="n">entitylist</span><span class="p">.</span><span class="n">get_local_player</span><span class="p">())</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">lp</span> <span class="o">=</span> <span class="n">entitylist</span><span class="p">.</span><span class="n">get_entity_by_index</span><span class="p">(</span><span class="n">entitylist</span><span class="p">.</span><span class="n">get_local_player</span><span class="p">())</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="get_entity_from_handlehandle-entity_t"><strong>get_entity_from_handle(handle)</strong>: <a href="../types/entity_t/">entity_t</a></h2>
@@ -947,17 +944,16 @@
 </tbody>
 </table>
 <p>Returns the <a href="../types/entity_t/">entity_t</a> object by handle</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">m_hActiveWeapon</span> <span class="o">=</span> <span class="n">se</span><span class="p">.</span><span class="n">get_netvar</span><span class="p">(</span><span class="s2">&quot;DT_BaseCombatCharacter&quot;</span><span class="p">,</span> <span class="s2">&quot;m_hActiveWeapon&quot;</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">m_hActiveWeapon</span> <span class="o">=</span> <span class="n">se</span><span class="p">.</span><span class="n">get_netvar</span><span class="p">(</span><span class="s2">&quot;DT_BaseCombatCharacter&quot;</span><span class="p">,</span> <span class="s2">&quot;m_hActiveWeapon&quot;</span><span class="p">)</span>
 
 <span class="c1">-- getting local weapon</span>
 <span class="kd">local</span> <span class="n">active_weapon_handle</span> <span class="o">=</span> <span class="n">local_player</span><span class="p">:</span><span class="n">get_prop_int</span><span class="p">(</span><span class="n">m_hActiveWeapon</span><span class="p">)</span>
 <span class="kd">local</span> <span class="n">active_weapon</span> <span class="o">=</span> <span class="n">entitylist</span><span class="p">.</span><span class="n">get_entity_from_handle</span><span class="p">(</span><span class="n">active_weapon_handle</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="get_playerstype-entity_t-array"><strong>get_players(type)</strong>: <a href="../types/entity_t/">entity_t</a> array</h2>
@@ -981,15 +977,14 @@
 <p>0 - enemies only</p>
 <p>1 - teammates only</p>
 <p>2 - all players</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>  <span class="kd">local</span> <span class="n">players</span> <span class="o">=</span> <span class="n">entitylist</span><span class="p">.</span><span class="n">get_players</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>  <span class="kd">local</span> <span class="n">players</span> <span class="o">=</span> <span class="n">entitylist</span><span class="p">.</span><span class="n">get_players</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
   <span class="kr">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="o">#</span><span class="n">players</span> <span class="kr">do</span>
       <span class="kd">local</span> <span class="n">player</span> <span class="o">=</span> <span class="n">players</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
   <span class="kr">end</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="get_entities_by_classclassname-entity_t-array"><strong>get_entities_by_class(classname)</strong>: <a href="../types/entity_t/">entity_t</a> array</h2>
@@ -1010,9 +1005,8 @@
 </tbody>
 </table>
 <p>Returns the entities array by class name</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>  <span class="kd">local</span> <span class="n">entities</span> <span class="o">=</span> <span class="n">entitylist</span><span class="p">.</span><span class="n">get_entities_by_class</span><span class="p">(</span><span class="s2">&quot;CFogController&quot;</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>  <span class="kd">local</span> <span class="n">entities</span> <span class="o">=</span> <span class="n">entitylist</span><span class="p">.</span><span class="n">get_entities_by_class</span><span class="p">(</span><span class="s2">&quot;CFogController&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="get_entities_by_class_idclassid-entity_t-array"><strong>get_entities_by_class_id(classid)</strong>: <a href="../types/entity_t/">entity_t</a> array</h2>
@@ -1033,9 +1027,8 @@
 </tbody>
 </table>
 <p>Returns the entities array by class id</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>  <span class="kd">local</span> <span class="n">entities</span> <span class="o">=</span> <span class="n">entitylist</span><span class="p">.</span><span class="n">get_entities_by_class_id</span><span class="p">(</span><span class="mi">78</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>  <span class="kd">local</span> <span class="n">entities</span> <span class="o">=</span> <span class="n">entitylist</span><span class="p">.</span><span class="n">get_entities_by_class_id</span><span class="p">(</span><span class="mi">78</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
                 
               
               

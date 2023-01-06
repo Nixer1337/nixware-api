@@ -464,6 +464,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#circle_fadepos-radius-color_in-color_out" class="md-nav__link">
+    circle_fade(pos, radius, color_in, color_out)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#circlepos-radius-segments-filled-color" class="md-nav__link">
     circle(pos, radius, segments, filled, color)
   </a>
@@ -551,8 +558,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../types/angle_t/" title="angle_t" class="md-nav__link">
-      angle_t
+    <a href="../types/vec4_t/" title="vec4_t" class="md-nav__link">
+      vec4_t
     </a>
   </li>
 
@@ -563,8 +570,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../types/rect_t/" title="rect_t" class="md-nav__link">
-      rect_t
+    <a href="../types/angle_t/" title="angle_t" class="md-nav__link">
+      angle_t
     </a>
   </li>
 
@@ -929,6 +936,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#circle_fadepos-radius-color_in-color_out" class="md-nav__link">
+    circle_fade(pos, radius, color_in, color_out)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#circlepos-radius-segments-filled-color" class="md-nav__link">
     circle(pos, radius, segments, filled, color)
   </a>
@@ -988,21 +1002,21 @@
 </tbody>
 </table>
 <p>Creates new font</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cm">--[[</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">--[[</span>
 <span class="cm">    Freetype font flags:</span>
 <span class="cm">    -- By default, hinting is enabled and the font&#39;s native hinter is preferred over the auto-hinter.</span>
 <span class="cm">        NoHinting = 1 -- Disable hinting. This generally generates &#39;blurrier&#39; bitmap glyphs when the glyph are rendered in any of the anti-aliased modes.</span>
@@ -1017,8 +1031,7 @@
 
 
 <span class="kd">local</span> <span class="n">tahoma_bold</span> <span class="o">=</span> <span class="n">renderer</span><span class="p">.</span><span class="n">setup_font</span><span class="p">(</span><span class="s2">&quot;C:/windows/fonts/tahomabd.ttf&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="setup_texturefilename-texture"><strong>setup_texture(filename)</strong>: texture</h2>
@@ -1039,9 +1052,8 @@
 </tbody>
 </table>
 <p>Creates new texture</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">my_texture</span> <span class="o">=</span> <span class="n">renderer</span><span class="p">.</span><span class="n">setup_texture</span><span class="p">(</span><span class="s2">&quot;C:/nixware/example.png&quot;</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">my_texture</span> <span class="o">=</span> <span class="n">renderer</span><span class="p">.</span><span class="n">setup_texture</span><span class="p">(</span><span class="s2">&quot;C:/nixware/example.png&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="texttext-font-pos-size-color"><strong>text(text, font, pos, size, color)</strong></h2>
@@ -1082,21 +1094,20 @@
 </tbody>
 </table>
 <p>Drawing the text</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">tahoma_bold</span> <span class="o">=</span> <span class="n">renderer</span><span class="p">.</span><span class="n">setup_font</span><span class="p">(</span><span class="s2">&quot;C:/windows/fonts/tahomabd.ttf&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">tahoma_bold</span> <span class="o">=</span> <span class="n">renderer</span><span class="p">.</span><span class="n">setup_font</span><span class="p">(</span><span class="s2">&quot;C:/windows/fonts/tahomabd.ttf&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 
 <span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
     <span class="n">renderer</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;hello world!&quot;</span><span class="p">,</span> <span class="n">tahoma_bold</span><span class="p">,</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="mi">50</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
 <span class="kr">end</span>
 
 <span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;paint&quot;</span><span class="p">,</span> <span class="n">on_paint</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="texturetex-from-to-color"><strong>texture(tex, from, to, color)</strong></h2>
@@ -1132,21 +1143,20 @@
 </tbody>
 </table>
 <p>Drawing the texture</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">my_texture</span> <span class="o">=</span> <span class="n">renderer</span><span class="p">.</span><span class="n">setup_texture</span><span class="p">(</span><span class="s2">&quot;C:/nixware/example.png&quot;</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">my_texture</span> <span class="o">=</span> <span class="n">renderer</span><span class="p">.</span><span class="n">setup_texture</span><span class="p">(</span><span class="s2">&quot;C:/nixware/example.png&quot;</span><span class="p">)</span>
 
 <span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
     <span class="n">renderer</span><span class="p">.</span><span class="n">texture</span><span class="p">(</span><span class="n">my_texture</span><span class="p">,</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">),</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
 <span class="kr">end</span>
 
 <span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;paint&quot;</span><span class="p">,</span> <span class="n">on_paint</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="get_text_sizefont-size-text-vec2_t"><strong>get_text_size(font, size, text)</strong>: <a href="../types/vec2_t/">vec2_t</a></h2>
@@ -1177,36 +1187,34 @@
 </tbody>
 </table>
 <p>Returns the text size</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">tahoma_bold</span> <span class="o">=</span> <span class="n">renderer</span><span class="p">.</span><span class="n">setup_font</span><span class="p">(</span><span class="s2">&quot;C:/windows/fonts/tahomabd.ttf&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">tahoma_bold</span> <span class="o">=</span> <span class="n">renderer</span><span class="p">.</span><span class="n">setup_font</span><span class="p">(</span><span class="s2">&quot;C:/windows/fonts/tahomabd.ttf&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 
 <span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
     <span class="kd">local</span> <span class="n">hello_world_size</span> <span class="o">=</span> <span class="n">renderer</span><span class="p">.</span><span class="n">get_text_size</span><span class="p">(</span><span class="n">tahoma_bold</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="s2">&quot;hello world!&quot;</span><span class="p">)</span>
 <span class="kr">end</span>
 
 <span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;paint&quot;</span><span class="p">,</span> <span class="n">on_paint</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="get_cursor_pos-vec2_t"><strong>get_cursor_pos()</strong>: <a href="../types/vec2_t/">vec2_t</a></h2>
 <p>Returns the cursor position</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
     <span class="kd">local</span> <span class="n">mouse_pos</span> <span class="o">=</span> <span class="n">renderer</span><span class="p">.</span><span class="n">get_cursor_pos</span><span class="p">()</span>
 <span class="kr">end</span>
 
 <span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;paint&quot;</span><span class="p">,</span> <span class="n">on_paint</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="linefrom-to-color"><strong>line(from, to, color)</strong></h2>
@@ -1237,17 +1245,16 @@
 </tbody>
 </table>
 <p>Drawing the line</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
     <span class="n">renderer</span><span class="p">.</span><span class="n">line</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
 <span class="kr">end</span>
 
 <span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;paint&quot;</span><span class="p">,</span> <span class="n">on_paint</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="rectfrom-to-color"><strong>rect(from, to, color)</strong></h2>
@@ -1278,17 +1285,16 @@
 </tbody>
 </table>
 <p>Drawing the rect</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
     <span class="n">renderer</span><span class="p">.</span><span class="n">rect</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
 <span class="kr">end</span>
 
 <span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;paint&quot;</span><span class="p">,</span> <span class="n">on_paint</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="rect_filledfrom-to-color"><strong>rect_filled(from, to, color)</strong></h2>
@@ -1319,17 +1325,16 @@
 </tbody>
 </table>
 <p>Drawing the filled rect</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
     <span class="n">renderer</span><span class="p">.</span><span class="n">rect_filled</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
 <span class="kr">end</span>
 
 <span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;paint&quot;</span><span class="p">,</span> <span class="n">on_paint</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="rect_filled_fadefrom-to-col_upr_left-col_upr_right-col_bot_right-col_bot_left"><strong>rect_filled_fade(from, to, col_upr_left, col_upr_right, col_bot_right, col_bot_left)</strong></h2>
@@ -1375,17 +1380,61 @@
 </tbody>
 </table>
 <p>Drawing the faded rect</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
     <span class="n">renderer</span><span class="p">.</span><span class="n">rect_filled_fade</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">),</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
 <span class="kr">end</span>
 
 <span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;paint&quot;</span><span class="p">,</span> <span class="n">on_paint</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
+
+<hr />
+<h2 id="circle_fadepos-radius-color_in-color_out"><strong>circle_fade(pos, radius, color_in, color_out)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../types/vec2_t/">vec2_t</a></td>
+<td>pos</td>
+<td>Position</td>
+</tr>
+<tr>
+<td>number</td>
+<td>radius</td>
+<td>Circle radius</td>
+</tr>
+<tr>
+<td><a href="../types/color_t/">color_t</a></td>
+<td>color_in</td>
+<td>Circle color</td>
+</tr>
+<tr>
+<td><a href="../types/color_t/">color_t</a></td>
+<td>color_out</td>
+<td>Circle color</td>
+</tr>
+</tbody>
+</table>
+<p>Drawing the faded circle</p>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
+    <span class="n">renderer</span><span class="p">.</span><span class="n">circle_fade</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="mi">30</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+<span class="kr">end</span>
+
+<span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;paint&quot;</span><span class="p">,</span> <span class="n">on_paint</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="circlepos-radius-segments-filled-color"><strong>circle(pos, radius, segments, filled, color)</strong></h2>
@@ -1401,7 +1450,7 @@
 <tr>
 <td><a href="../types/vec2_t/">vec2_t</a></td>
 <td>pos</td>
-<td>Start position</td>
+<td>Position</td>
 </tr>
 <tr>
 <td>number</td>
@@ -1426,17 +1475,16 @@
 </tbody>
 </table>
 <p>Drawing the circle</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
     <span class="n">renderer</span><span class="p">.</span><span class="n">circle</span><span class="p">(</span><span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
 <span class="kr">end</span>
 
 <span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;paint&quot;</span><span class="p">,</span> <span class="n">on_paint</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="filled_polygonpoints-color"><strong>filled_polygon(points, color)</strong></h2>
@@ -1462,21 +1510,20 @@
 </tbody>
 </table>
 <p>Drawing the textured polygon</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="kr">function</span> <span class="nf">on_paint</span><span class="p">()</span>
     <span class="c1">-- trigon</span>
     <span class="kd">local</span> <span class="n">points</span> <span class="o">=</span> <span class="p">{</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">vec2_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span> <span class="p">}</span>
     <span class="n">renderer</span><span class="p">.</span><span class="n">filled_polygon</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
 <span class="kr">end</span>
 
 <span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;paint&quot;</span><span class="p">,</span> <span class="n">on_paint</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
                 
               
               

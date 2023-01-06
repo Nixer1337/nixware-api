@@ -506,8 +506,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../types/angle_t/" title="angle_t" class="md-nav__link">
-      angle_t
+    <a href="../../../types/vec4_t/" title="vec4_t" class="md-nav__link">
+      vec4_t
     </a>
   </li>
 
@@ -518,8 +518,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../types/rect_t/" title="rect_t" class="md-nav__link">
-      rect_t
+    <a href="../../../types/angle_t/" title="angle_t" class="md-nav__link">
+      angle_t
     </a>
   </li>
 
@@ -868,11 +868,10 @@
 <h2 id="functions">Functions</h2>
 <h2 id="get_value-number"><strong>get_value()</strong>: number</h2>
 <p>Returns value from combo box</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">ragebot_active_exploit</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_combo_box</span><span class="p">(</span><span class="s2">&quot;ragebot_active_exploit&quot;</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">ragebot_active_exploit</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_combo_box</span><span class="p">(</span><span class="s2">&quot;ragebot_active_exploit&quot;</span><span class="p">)</span>
 <span class="kd">local</span> <span class="n">active_exploit</span> <span class="o">=</span> <span class="n">ragebot_active_exploit</span><span class="p">:</span><span class="n">get_value</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="set_valueval"><strong>set_value(val)</strong></h2>
@@ -893,11 +892,10 @@
 </tbody>
 </table>
 <p>Setting combobox value</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">ragebot_active_exploit</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_combo_box</span><span class="p">(</span><span class="s2">&quot;ragebot_active_exploit&quot;</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">ragebot_active_exploit</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_combo_box</span><span class="p">(</span><span class="s2">&quot;ragebot_active_exploit&quot;</span><span class="p">)</span>
 <span class="n">ragebot_active_exploit</span><span class="p">:</span><span class="n">set_value</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="set_visibleval"><strong>set_visible(val)</strong></h2>
@@ -918,11 +916,10 @@
 </tbody>
 </table>
 <p>Setting combobox visiblity, works only for script variables</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">my_combo</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">add_combo_box</span><span class="p">(</span><span class="s2">&quot;lua combo&quot;</span><span class="p">,</span> <span class="s2">&quot;lua_integer&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;item1&quot;</span><span class="p">,</span> <span class="s2">&quot;item2&quot;</span><span class="p">,</span> <span class="s2">&quot;item3&quot;</span> <span class="p">},</span> <span class="mi">0</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">my_combo</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">add_combo_box</span><span class="p">(</span><span class="s2">&quot;lua combo&quot;</span><span class="p">,</span> <span class="s2">&quot;lua_integer&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;item1&quot;</span><span class="p">,</span> <span class="s2">&quot;item2&quot;</span><span class="p">,</span> <span class="s2">&quot;item3&quot;</span> <span class="p">},</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">my_combo</span><span class="p">:</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="set_labellabel"><strong>set_label(label)</strong></h2>
@@ -943,11 +940,10 @@
 </tbody>
 </table>
 <p>Setting combobox label, works only for script variables</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">my_combo</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">add_combo_box</span><span class="p">(</span><span class="s2">&quot;lua combo&quot;</span><span class="p">,</span> <span class="s2">&quot;lua_integer&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;item1&quot;</span><span class="p">,</span> <span class="s2">&quot;item2&quot;</span><span class="p">,</span> <span class="s2">&quot;item3&quot;</span> <span class="p">},</span> <span class="mi">0</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">my_combo</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">add_combo_box</span><span class="p">(</span><span class="s2">&quot;lua combo&quot;</span><span class="p">,</span> <span class="s2">&quot;lua_integer&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;item1&quot;</span><span class="p">,</span> <span class="s2">&quot;item2&quot;</span><span class="p">,</span> <span class="s2">&quot;item3&quot;</span> <span class="p">},</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">my_combo</span><span class="p">:</span><span class="n">set_label</span><span class="p">(</span><span class="s2">&quot;123123&quot;</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="set_itemsitems"><strong>set_items(items)</strong></h2>
@@ -968,11 +964,10 @@
 </tbody>
 </table>
 <p>Setting combobox items, works only for script variables</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">my_combo</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">add_combo_box</span><span class="p">(</span><span class="s2">&quot;lua combo&quot;</span><span class="p">,</span> <span class="s2">&quot;lua_integer&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;item1&quot;</span><span class="p">,</span> <span class="s2">&quot;item2&quot;</span><span class="p">,</span> <span class="s2">&quot;item3&quot;</span> <span class="p">},</span> <span class="mi">0</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">my_combo</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">add_combo_box</span><span class="p">(</span><span class="s2">&quot;lua combo&quot;</span><span class="p">,</span> <span class="s2">&quot;lua_integer&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;item1&quot;</span><span class="p">,</span> <span class="s2">&quot;item2&quot;</span><span class="p">,</span> <span class="s2">&quot;item3&quot;</span> <span class="p">},</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">my_combo</span><span class="p">:</span><span class="n">set_items</span><span class="p">(</span> <span class="p">{</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span> <span class="p">})</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
                 
               
               

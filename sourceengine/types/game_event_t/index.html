@@ -425,8 +425,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../types/angle_t/" title="angle_t" class="md-nav__link">
-      angle_t
+    <a href="../../../types/vec4_t/" title="vec4_t" class="md-nav__link">
+      vec4_t
     </a>
   </li>
 
@@ -437,8 +437,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../types/rect_t/" title="rect_t" class="md-nav__link">
-      rect_t
+    <a href="../../../types/angle_t/" title="angle_t" class="md-nav__link">
+      angle_t
     </a>
   </li>
 
@@ -924,9 +924,8 @@
 <h2 id="functions">Functions</h2>
 <h2 id="get_name-string"><strong>get_name():</strong> string</h2>
 <p>Returns the event name</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">event_name</span> <span class="o">=</span> <span class="n">event</span><span class="p">:</span><span class="n">get_name</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">event_name</span> <span class="o">=</span> <span class="n">event</span><span class="p">:</span><span class="n">get_name</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="get_boolkey_name-def_value-bool"><strong>get_bool(key_name, def_value):</strong> bool</h2>
@@ -952,13 +951,12 @@
 </tbody>
 </table>
 <p>Returns the boolean value from event</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;player_chat&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;player_chat&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
     <span class="kd">local</span> <span class="n">teamonly</span> <span class="o">=</span> <span class="n">event</span><span class="p">:</span><span class="n">get_bool</span><span class="p">(</span><span class="s2">&quot;teamonly&quot;</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
 <span class="kr">end</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="get_intkey_name-def_value-number"><strong>get_int(key_name, def_value):</strong> number</h2>
@@ -984,13 +982,12 @@
 </tbody>
 </table>
 <p>Returns the int value from event</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;player_death&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;player_death&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
     <span class="kd">local</span> <span class="n">attacker</span> <span class="o">=</span> <span class="n">event</span><span class="p">:</span><span class="n">get_int</span><span class="p">(</span><span class="s2">&quot;attacker&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="kr">end</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="get_floatkey_name-def_value-number"><strong>get_float(key_name, def_value):</strong> number</h2>
@@ -1016,13 +1013,12 @@
 </tbody>
 </table>
 <p>Returns the float value from event</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;bullet_impact&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;bullet_impact&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
     <span class="kd">local</span> <span class="n">impact_x</span> <span class="o">=</span> <span class="n">event</span><span class="p">:</span><span class="n">get_float</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="kr">end</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="get_stringkey_name-def_value-string"><strong>get_string(key_name, def_value):</strong> string</h2>
@@ -1048,13 +1044,12 @@
 </tbody>
 </table>
 <p>Returns the string from event</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;bullet_impact&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;bullet_impact&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
     <span class="kd">local</span> <span class="n">weapon</span> <span class="o">=</span> <span class="n">event</span><span class="p">:</span><span class="n">get_string</span><span class="p">(</span><span class="s2">&quot;weapon&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
 <span class="kr">end</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="set_boolkey_name-value"><strong>set_bool(key_name, value)</strong></h2>
@@ -1080,13 +1075,12 @@
 </tbody>
 </table>
 <p>Changes the key value</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;player_chat&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;player_chat&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
     <span class="n">event</span><span class="p">:</span><span class="n">set_bool</span><span class="p">(</span><span class="s2">&quot;teamonly&quot;</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
 <span class="kr">end</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="set_intkey_name-value"><strong>set_int(key_name, value)</strong></h2>
@@ -1112,13 +1106,12 @@
 </tbody>
 </table>
 <p>Changes the key value</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;player_death&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;player_death&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
     <span class="n">event</span><span class="p">:</span><span class="n">set_int</span><span class="p">(</span><span class="s2">&quot;attacker&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="kr">end</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="set_floatkey_name-value"><strong>set_float(key_name, value)</strong></h2>
@@ -1144,13 +1137,12 @@
 </tbody>
 </table>
 <p>Changes the key value</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;bullet_impact&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;bullet_impact&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
     <span class="n">event</span><span class="p">:</span><span class="n">set_float</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="kr">end</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="set_stringkey_name-value"><strong>set_string(key_name, value)</strong></h2>
@@ -1176,13 +1168,12 @@
 </tbody>
 </table>
 <p>Changes the key value</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;player_death&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">client</span><span class="p">.</span><span class="n">register_callback</span><span class="p">(</span><span class="s2">&quot;player_death&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
     <span class="n">event</span><span class="p">:</span><span class="n">set_string</span><span class="p">(</span><span class="s2">&quot;weapon&quot;</span><span class="p">,</span> <span class="s2">&quot;knife_karambit&quot;</span><span class="p">)</span>
 <span class="kr">end</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
                 
               
               

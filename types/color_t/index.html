@@ -427,8 +427,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../angle_t/" title="angle_t" class="md-nav__link">
-      angle_t
+    <a href="../vec4_t/" title="vec4_t" class="md-nav__link">
+      vec4_t
     </a>
   </li>
 
@@ -439,8 +439,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../rect_t/" title="rect_t" class="md-nav__link">
-      rect_t
+    <a href="../angle_t/" title="angle_t" class="md-nav__link">
+      angle_t
     </a>
   </li>
 
@@ -812,24 +812,29 @@
 <tr>
 <th>Type</th>
 <th>Name</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>number</td>
-<td>r</td>
+<td>red</td>
+<td>Red color range as a percentage in the range [0.0, 1.0]</td>
 </tr>
 <tr>
 <td>number</td>
-<td>g</td>
+<td>green</td>
+<td>Green color range as a percentage in the range [0.0, 1.0]</td>
 </tr>
 <tr>
 <td>number</td>
-<td>b</td>
+<td>blue</td>
+<td>Blue color range as a percentage in the range [0.0, 1.0]</td>
 </tr>
 <tr>
 <td>number</td>
-<td>a</td>
+<td>alpha</td>
+<td>Alpha color range as a percentage in the range [0.0, 1.0]</td>
 </tr>
 </tbody>
 </table>
@@ -840,31 +845,35 @@
 <tr>
 <th>Type</th>
 <th>Name</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>number</td>
 <td>red</td>
+<td>Red color range as a percentage in the range [0, 255]</td>
 </tr>
 <tr>
 <td>number</td>
 <td>green</td>
+<td>Green color range as a percentage in the range [0, 255]</td>
 </tr>
 <tr>
 <td>number</td>
 <td>blue</td>
+<td>Blue color range as a percentage in the range [0, 255]</td>
 </tr>
 <tr>
 <td>number</td>
 <td>alpha</td>
+<td>Alpha color range as a percentage in the range [0, 255]</td>
 </tr>
 </tbody>
 </table>
 <p>Constructor</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">color</span> <span class="o">=</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">color</span> <span class="o">=</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
                 
               
               
@@ -883,7 +892,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../rect_t/" title="rect_t" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../angle_t/" title="angle_t" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -892,7 +901,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                rect_t
+                angle_t
               </div>
             </div>
           </a>

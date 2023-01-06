@@ -434,6 +434,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#override_skip_unsafe_pointsindex-hitbox-scan" class="md-nav__link">
+    override_skip_unsafe_points(index, hitbox, scan)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#override_min_damageindex-damage" class="md-nav__link">
     override_min_damage(index, damage)
   </a>
@@ -530,8 +537,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../types/angle_t/" title="angle_t" class="md-nav__link">
-      angle_t
+    <a href="../types/vec4_t/" title="vec4_t" class="md-nav__link">
+      vec4_t
     </a>
   </li>
 
@@ -542,8 +549,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../types/rect_t/" title="rect_t" class="md-nav__link">
-      rect_t
+    <a href="../types/angle_t/" title="angle_t" class="md-nav__link">
+      angle_t
     </a>
   </li>
 
@@ -866,6 +873,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#override_skip_unsafe_pointsindex-hitbox-scan" class="md-nav__link">
+    override_skip_unsafe_points(index, hitbox, scan)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#override_min_damageindex-damage" class="md-nav__link">
     override_min_damage(index, damage)
   </a>
@@ -940,11 +954,10 @@
 </tbody>
 </table>
 <p>Disable ragebot on this player</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
 <span class="n">ragebot</span><span class="p">.</span><span class="n">ignore_player</span><span class="p">(</span><span class="n">entity_index</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="override_wall_penetrationindex-penetrate"><strong>override_wall_penetration(index, penetrate)</strong></h2>
@@ -970,11 +983,10 @@
 </tbody>
 </table>
 <p>Overrides wall penetration on player</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
 <span class="n">ragebot</span><span class="p">.</span><span class="n">override_wall_penetration</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span> <span class="c1">-- disable autowall on this player</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="override_desync_correctionindex-correct"><strong>override_desync_correction(index, correct)</strong></h2>
@@ -1000,11 +1012,10 @@
 </tbody>
 </table>
 <p>Overrides desync correction on player</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
 <span class="n">ragebot</span><span class="p">.</span><span class="n">override_desync_correction</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span> <span class="c1">-- disable resolver on this player</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="override_hitscanindex-hitbox-scan"><strong>override_hitscan(index, hitbox, scan)</strong></h2>
@@ -1035,21 +1046,21 @@
 </tbody>
 </table>
 <p>Overrides hitscan on player</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">SCAN_HEAD</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">SCAN_HEAD</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="kd">local</span> <span class="n">SCAN_CHEST</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="kd">local</span> <span class="n">SCAN_PELVIS</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="kd">local</span> <span class="n">SCAN_STOMACH</span> <span class="o">=</span> <span class="mi">3</span>
@@ -1064,8 +1075,67 @@
 <span class="n">ragebot</span><span class="p">.</span><span class="n">override_hitscan</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="n">SCAN_STOMACH</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
 <span class="n">ragebot</span><span class="p">.</span><span class="n">override_hitscan</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="n">SCAN_LEGS</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
 <span class="n">ragebot</span><span class="p">.</span><span class="n">override_hitscan</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="n">SCAN_FOOT</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
+
+<hr />
+<h2 id="override_skip_unsafe_pointsindex-hitbox-scan"><strong>override_skip_unsafe_points(index, hitbox, scan)</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>index</td>
+<td>Entity index</td>
+</tr>
+<tr>
+<td>number</td>
+<td>hitbox</td>
+<td>Hitbox</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>scan</td>
+<td>Enables scan this hitbox</td>
+</tr>
+</tbody>
+</table>
+<p>Overrides skip unsafe points on player</p>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">SCAN_HEAD</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="kd">local</span> <span class="n">SCAN_CHEST</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="kd">local</span> <span class="n">SCAN_PELVIS</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="kd">local</span> <span class="n">SCAN_STOMACH</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="kd">local</span> <span class="n">SCAN_LEGS</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="kd">local</span> <span class="n">SCAN_FOOT</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
+
+<span class="n">ragebot</span><span class="p">.</span><span class="n">override_skip_unsafe_points</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="n">SCAN_HEAD</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+<span class="n">ragebot</span><span class="p">.</span><span class="n">override_skip_unsafe_points</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="n">SCAN_CHEST</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
+<span class="n">ragebot</span><span class="p">.</span><span class="n">override_skip_unsafe_points</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="n">SCAN_PELVIS</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
+<span class="n">ragebot</span><span class="p">.</span><span class="n">override_skip_unsafe_points</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="n">SCAN_STOMACH</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
+<span class="n">ragebot</span><span class="p">.</span><span class="n">override_skip_unsafe_points</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="n">SCAN_LEGS</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
+<span class="n">ragebot</span><span class="p">.</span><span class="n">override_skip_unsafe_points</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="n">SCAN_FOOT</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="override_min_damageindex-damage"><strong>override_min_damage(index, damage)</strong></h2>
@@ -1091,11 +1161,10 @@
 </tbody>
 </table>
 <p>Overrides min damage on player</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
 <span class="n">ragebot</span><span class="p">.</span><span class="n">override_min_damage</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="override_safe_pointindex-mode"><strong>override_safe_point(index, mode)</strong></h2>
@@ -1124,11 +1193,10 @@
 <p>0 - default</p>
 <p>1 - prefer</p>
 <p>2 - force</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
 <span class="n">ragebot</span><span class="p">.</span><span class="n">override_safe_point</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="c1">-- force safepoints</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="override_max_missesindex-misses"><strong>override_max_misses(index, misses)</strong></h2>
@@ -1154,11 +1222,10 @@
 </tbody>
 </table>
 <p>Overrides max misses on player</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
 <span class="n">ragebot</span><span class="p">.</span><span class="n">override_max_misses</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="override_head_scaleindex-scale"><strong>override_head_scale(index, scale)</strong></h2>
@@ -1184,11 +1251,10 @@
 </tbody>
 </table>
 <p>Overrides head point scale on player</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
 <span class="n">ragebot</span><span class="p">.</span><span class="n">override_head_scale</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="override_body_scaleindex-scale"><strong>override_body_scale(index, scale)</strong></h2>
@@ -1214,11 +1280,10 @@
 </tbody>
 </table>
 <p>Overrides body point scale on player</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">entity_index</span> <span class="o">=</span> <span class="n">player</span><span class="p">:</span><span class="n">get_index</span><span class="p">()</span>
 <span class="n">ragebot</span><span class="p">.</span><span class="n">override_body_scale</span><span class="p">(</span><span class="n">entity_index</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
                 

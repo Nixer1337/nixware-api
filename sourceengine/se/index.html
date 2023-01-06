@@ -425,8 +425,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../types/angle_t/" title="angle_t" class="md-nav__link">
-      angle_t
+    <a href="../../types/vec4_t/" title="vec4_t" class="md-nav__link">
+      vec4_t
     </a>
   </li>
 
@@ -437,8 +437,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../types/rect_t/" title="rect_t" class="md-nav__link">
-      rect_t
+    <a href="../../types/angle_t/" title="angle_t" class="md-nav__link">
+      angle_t
     </a>
   </li>
 
@@ -910,15 +910,14 @@
 </tbody>
 </table>
 <p>Returns two screen coordinates <a href="../../types/vec2_t/">vec2_t</a>, or nil if the world position is not visible on your screen.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">pos2d</span> <span class="o">=</span> <span class="n">se</span><span class="p">.</span><span class="n">world_to_screen</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">pos2d</span> <span class="o">=</span> <span class="n">se</span><span class="p">.</span><span class="n">world_to_screen</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
 <span class="kr">if</span> <span class="n">pos2d</span> <span class="o">~=</span> <span class="kc">nil</span> <span class="kr">then</span>
     <span class="n">renderer</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;pos: &quot;</span> <span class="o">..</span> <span class="n">pos2d</span><span class="p">.</span><span class="n">x</span> <span class="o">..</span> <span class="s2">&quot;, &quot;</span> <span class="o">..</span> <span class="n">pos2d</span><span class="p">.</span><span class="n">y</span><span class="p">,</span> <span class="n">font</span><span class="p">,</span> <span class="n">pos2d</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
 <span class="kr">end</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="set_clantagtag"><strong>set_clantag(tag)</strong></h2>
@@ -939,9 +938,8 @@
 </tbody>
 </table>
 <p>Setting the clantag</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">se</span><span class="p">.</span><span class="n">set_clantag</span><span class="p">(</span><span class="s2">&quot;nixware.cc&quot;</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">se</span><span class="p">.</span><span class="n">set_clantag</span><span class="p">(</span><span class="s2">&quot;nixware.cc&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="set_namename"><strong>set_name(name)</strong></h2>
@@ -962,9 +960,8 @@
 </tbody>
 </table>
 <p>Setting the name</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">se</span><span class="p">.</span><span class="n">set_name</span><span class="p">(</span><span class="s2">&quot;nixware.cc&quot;</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">se</span><span class="p">.</span><span class="n">set_name</span><span class="p">(</span><span class="s2">&quot;nixware.cc&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="get_convarname-convar_t"><strong>get_convar(name)</strong>: <a href="../types/convar_t/">convar_t</a></h2>
@@ -985,9 +982,8 @@
 </tbody>
 </table>
 <p>Finds convar by name. Returns nil if failed</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">sv_skyname</span> <span class="o">=</span> <span class="n">se</span><span class="p">.</span><span class="n">get_convar</span><span class="p">(</span><span class="s2">&quot;sv_skyname&quot;</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">sv_skyname</span> <span class="o">=</span> <span class="n">se</span><span class="p">.</span><span class="n">get_convar</span><span class="p">(</span><span class="s2">&quot;sv_skyname&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="get_netvartable-netvar-number"><strong>get_netvar(table, netvar)</strong>: number</h2>
@@ -1013,16 +1009,14 @@
 </tbody>
 </table>
 <p>Returns the netvar offset, or nil if failed</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">se</span><span class="p">.</span><span class="n">get_netvar</span><span class="p">(</span><span class="s2">&quot;DT_BasePlayer&quot;</span><span class="p">,</span> <span class="s2">&quot;m_iHealth&quot;</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">se</span><span class="p">.</span><span class="n">get_netvar</span><span class="p">(</span><span class="s2">&quot;DT_BasePlayer&quot;</span><span class="p">,</span> <span class="s2">&quot;m_iHealth&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="get_latency-number"><strong>get_latency()</strong>: number</h2>
 <p>Returns current latency</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">ping</span> <span class="o">=</span> <span class="n">se</span><span class="p">.</span><span class="n">get_latency</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">ping</span> <span class="o">=</span> <span class="n">se</span><span class="p">.</span><span class="n">get_latency</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="create_interfacemodule_name-interface_version-number"><strong>create_interface(module_name, interface_version)</strong>: number</h2>
@@ -1048,9 +1042,8 @@
 </tbody>
 </table>
 <p>Returns the interface address</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">g_model_info</span> <span class="o">=</span> <span class="n">se</span><span class="p">.</span><span class="n">create_interface</span><span class="p">(</span><span class="s2">&quot;engine.dll&quot;</span><span class="p">,</span> <span class="s2">&quot;VModelInfoClient004&quot;</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">g_model_info</span> <span class="o">=</span> <span class="n">se</span><span class="p">.</span><span class="n">create_interface</span><span class="p">(</span><span class="s2">&quot;engine.dll&quot;</span><span class="p">,</span> <span class="s2">&quot;VModelInfoClient004&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
                 
               
               

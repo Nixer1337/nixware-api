@@ -425,8 +425,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../types/angle_t/" title="angle_t" class="md-nav__link">
-      angle_t
+    <a href="../../types/vec4_t/" title="vec4_t" class="md-nav__link">
+      vec4_t
     </a>
   </li>
 
@@ -437,8 +437,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../types/rect_t/" title="rect_t" class="md-nav__link">
-      rect_t
+    <a href="../../types/angle_t/" title="angle_t" class="md-nav__link">
+      angle_t
     </a>
   </li>
 
@@ -936,30 +936,26 @@
 <h2 id="functions">Functions</h2>
 <h2 id="get_screen_size-vec2_t"><strong>get_screen_size()</strong>: <a href="../../types/vec2_t/">vec2_t</a></h2>
 <p>Returns the screen size</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">screen_size</span> <span class="o">=</span> <span class="n">engine</span><span class="p">.</span><span class="n">get_screen_size</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">screen_size</span> <span class="o">=</span> <span class="n">engine</span><span class="p">.</span><span class="n">get_screen_size</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="is_connected-bool"><strong>is_connected()</strong>: bool</h2>
 <p>Returns true if connected to server</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">is_connected</span> <span class="o">=</span> <span class="n">engine</span><span class="p">.</span><span class="n">is_connected</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">is_connected</span> <span class="o">=</span> <span class="n">engine</span><span class="p">.</span><span class="n">is_connected</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="is_in_game-bool"><strong>is_in_game()</strong>: bool</h2>
 <p>Returns true if in game</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">is_in_game</span> <span class="o">=</span> <span class="n">engine</span><span class="p">.</span><span class="n">is_in_game</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">is_in_game</span> <span class="o">=</span> <span class="n">engine</span><span class="p">.</span><span class="n">is_in_game</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="get_local_player-number"><strong>get_local_player()</strong>: number</h2>
 <p>Returns the local player index</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">lp_index</span> <span class="o">=</span> <span class="n">engine</span><span class="p">.</span><span class="n">get_local_player</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">lp_index</span> <span class="o">=</span> <span class="n">engine</span><span class="p">.</span><span class="n">get_local_player</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="get_player_infoindex-player_info_t"><strong>get_player_info(index)</strong>: <a href="../types/player_info_t/">player_info_t</a></h2>
@@ -980,16 +976,14 @@
 </tbody>
 </table>
 <p>Returns the <a href="../types/player_info_t/">player_info_t</a> object</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">local_info</span> <span class="o">=</span> <span class="n">engine</span><span class="p">.</span><span class="n">get_player_info</span><span class="p">(</span><span class="n">engine</span><span class="p">.</span><span class="n">get_local_player</span><span class="p">())</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">local_info</span> <span class="o">=</span> <span class="n">engine</span><span class="p">.</span><span class="n">get_player_info</span><span class="p">(</span><span class="n">engine</span><span class="p">.</span><span class="n">get_local_player</span><span class="p">())</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="get_level_name_short-string"><strong>get_level_name_short()</strong>: string</h2>
 <p>Returns current level name (example: de_mirage)</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">current_map</span> <span class="o">=</span> <span class="n">engine</span><span class="p">.</span><span class="n">get_level_name_short</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">current_map</span> <span class="o">=</span> <span class="n">engine</span><span class="p">.</span><span class="n">get_level_name_short</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="get_player_for_user_iduserid-number"><strong>get_player_for_user_id(userid)</strong>: number</h2>
@@ -1010,9 +1004,8 @@
 </tbody>
 </table>
 <p>Returns the player index from user id</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">ent_idx</span> <span class="o">=</span> <span class="n">engine</span><span class="p">.</span><span class="n">get_player_for_user_id</span><span class="p">(</span><span class="n">userid</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">ent_idx</span> <span class="o">=</span> <span class="n">engine</span><span class="p">.</span><span class="n">get_player_for_user_id</span><span class="p">(</span><span class="n">userid</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="set_view_anglesviewangles"><strong>set_view_angles(viewangles)</strong></h2>
@@ -1033,16 +1026,14 @@
 </tbody>
 </table>
 <p>Setting the viewangles</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">engine</span><span class="p">.</span><span class="n">set_view_angles</span><span class="p">(</span><span class="n">angle_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">engine</span><span class="p">.</span><span class="n">set_view_angles</span><span class="p">(</span><span class="n">angle_t</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="get_view_angles-angle_t"><strong>get_view_angles()</strong>: <a href="../../types/angle_t/">angle_t</a></h2>
 <p>Returns the camera angles</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">view_ang</span> <span class="o">=</span> <span class="n">engine</span><span class="p">.</span><span class="n">get_view_angles</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">view_ang</span> <span class="o">=</span> <span class="n">engine</span><span class="p">.</span><span class="n">get_view_angles</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="execute_client_cmdcmd"><strong>execute_client_cmd(cmd)</strong></h2>
@@ -1063,9 +1054,8 @@
 </tbody>
 </table>
 <p>Executes command in console</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">engine</span><span class="p">.</span><span class="n">execute_client_cmd</span><span class="p">(</span><span class="s2">&quot;clear&quot;</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">engine</span><span class="p">.</span><span class="n">execute_client_cmd</span><span class="p">(</span><span class="s2">&quot;clear&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
                 
               
               

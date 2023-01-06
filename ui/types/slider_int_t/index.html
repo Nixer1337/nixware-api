@@ -499,8 +499,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../types/angle_t/" title="angle_t" class="md-nav__link">
-      angle_t
+    <a href="../../../types/vec4_t/" title="vec4_t" class="md-nav__link">
+      vec4_t
     </a>
   </li>
 
@@ -511,8 +511,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../types/rect_t/" title="rect_t" class="md-nav__link">
-      rect_t
+    <a href="../../../types/angle_t/" title="angle_t" class="md-nav__link">
+      angle_t
     </a>
   </li>
 
@@ -854,11 +854,10 @@
 <h2 id="functions">Functions</h2>
 <h2 id="get_value-number"><strong>get_value()</strong>: number</h2>
 <p>Returns value from slider int</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">visuals_other_nightmode</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_slider_int</span><span class="p">(</span><span class="s2">&quot;visuals_other_nightmode&quot;</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">visuals_other_nightmode</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_slider_int</span><span class="p">(</span><span class="s2">&quot;visuals_other_nightmode&quot;</span><span class="p">)</span>
 <span class="kd">local</span> <span class="n">nightmode_amt</span> <span class="o">=</span> <span class="n">visuals_other_nightmode</span><span class="p">:</span><span class="n">get_value</span><span class="p">()</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="set_valueval"><strong>set_value(val)</strong></h2>
@@ -879,11 +878,10 @@
 </tbody>
 </table>
 <p>Setting slider int value</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">visuals_other_nightmode</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_slider_int</span><span class="p">(</span><span class="s2">&quot;visuals_other_nightmode&quot;</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">visuals_other_nightmode</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">get_slider_int</span><span class="p">(</span><span class="s2">&quot;visuals_other_nightmode&quot;</span><span class="p">)</span>
 <span class="n">visuals_other_nightmode</span><span class="p">:</span><span class="n">set_value</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="set_visibleval"><strong>set_visible(val)</strong></h2>
@@ -904,11 +902,10 @@
 </tbody>
 </table>
 <p>Setting slider int visiblity, works only for script variables</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">my_slider_int</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">add_slider_int</span><span class="p">(</span><span class="s2">&quot;lua int slider&quot;</span><span class="p">,</span> <span class="s2">&quot;lua_integer&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">my_slider_int</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">add_slider_int</span><span class="p">(</span><span class="s2">&quot;lua int slider&quot;</span><span class="p">,</span> <span class="s2">&quot;lua_integer&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 <span class="n">my_slider_int</span><span class="p">:</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
 
 <hr />
 <h2 id="set_labellabel"><strong>set_label(label)</strong></h2>
@@ -929,11 +926,10 @@
 </tbody>
 </table>
 <p>Setting slider int label, works only for script variables</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">local</span> <span class="n">my_slider_int</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">add_slider_int</span><span class="p">(</span><span class="s2">&quot;lua int slider&quot;</span><span class="p">,</span> <span class="s2">&quot;lua_integer&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">local</span> <span class="n">my_slider_int</span> <span class="o">=</span> <span class="n">ui</span><span class="p">.</span><span class="n">add_slider_int</span><span class="p">(</span><span class="s2">&quot;lua int slider&quot;</span><span class="p">,</span> <span class="s2">&quot;lua_integer&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 <span class="n">my_slider_int</span><span class="p">:</span><span class="n">set_label</span><span class="p">(</span><span class="s2">&quot;123123&quot;</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
+</code></pre></div></td></tr></table></div>
                 
               
               
