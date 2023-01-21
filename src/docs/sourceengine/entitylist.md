@@ -66,14 +66,14 @@ Returns the players array
 ```
 ---
 
-## **get_entities_by_class(classname)**: [entity_t](../types/entity_t/) array
+## **get_entities_by_class_name(classname)**: [entity_t](../types/entity_t/) array
 Type | Name | Description
 ------------ | ------------- | ------------
 string | classname | Class name
 
 Returns the entities array by class name
 ```lua
-  local entities = entitylist.get_entities_by_class("CFogController")
+  local entities = entitylist.get_entities_by_class_name("CFogController")
 ```
 ---
 
